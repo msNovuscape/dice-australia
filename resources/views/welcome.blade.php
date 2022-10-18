@@ -217,6 +217,47 @@
         </div>
     </section>
     <!-- customer section -->
+    <!-- acknowledgement section -->
+    <section class="acknowledgement-section">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <img src="{{url('frontend/images/flag.png')}}" class="img-fluid"/>
+            </div>
+            <div class="col-md-12">
+                <div class="acknowledgement-desc">
+                    <h1>Acknowledgement of Country</h1>
+                    <p>DICE recognise the rich Indigenous heritage of this country and acknowledge the Wurundjeri Willum Clan and the Gunung-Willam-Balluk people as the traditional owners of the land. We pay our respects to the people, the cultures and the elders past, present and emerging.We pay our respects to the people, the cultures and the elders past, present and emerging.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- acknowledgement section -->
+    <!-- subscription section -->
+    <section class="subscription-section">
+        <div class="row">
+            <div class="col-md-7">
+                <img src="{{url('frontend/images/subscription-image.png')}}" class="img-fluid"/>
+            </div>
+            <div class="col-md-5">
+                <div class="subscription-desc">
+                    <h1>Join DICE Family</h1>
+                    <p>We're committed to your privacy. DICE uses the information you provide to us to contact you about our relevant content, products, and services.</p>
+                    <form>
+                        <div class="mb-3">
+                            <input type="text" class="dice-from" id="fname" placeholder="FullName">
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="dice-from" id="email" placeholder="Email address">
+                        </div>
+                        <div class="mb-3">
+                            <button type="submit" class="subscribe-btn">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- acknowledgement section -->
 @endsection
 @section('script')
 

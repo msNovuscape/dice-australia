@@ -592,6 +592,74 @@ Responsive Codes
     padding: 0 60px;
 }
 /* pricing section css */
+/* acknowledgement section css */
+.acknowledgement-section{
+    padding: 6rem;
+    background: #F9F9F9;
+}
+.acknowledgement-desc h1{
+    font-family: 'Delius';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 1.8rem;
+    text-align: center;
+    letter-spacing: 0.001em;
+    color: #1A2E35;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+.acknowledgement-desc p{
+    font-family: 'Delius';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 2rem;
+    text-align: center;
+    color: #1A2E35;
+    padding: 0 10%;
+}
+/* acknowledgement section css */
+/* subscription section css */
+.subscription-section{
+    background: #FFFFFF;
+}
+.subscription-section .row{
+    display: flex;
+    align-items: center;
+}
+.subscription-desc{
+    padding-left: 6rem;
+}
+.subscription-desc h1{
+    font-weight: 800;
+    font-size: 26px;
+    color: #6B2976;
+}
+.subscription-desc p{
+    font-weight: 400;
+    font-size: 16px;
+    color: #1A2E35;
+    padding-right: 30%;
+}
+.dice-from{
+    display: block;
+    width: 60%;
+    border: 1px solid #6B2976;
+    padding: 10px;
+}
+.subscribe-btn{
+    display: block;
+    width: 60%;
+    border: none;
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 20px;
+    text-align: center;
+    background: #6B2976;
+    padding: 10px;
+}
+/* subscription section css */
 /* Footer Css */
 .footer{
     background: #1A2E35;
