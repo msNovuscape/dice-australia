@@ -4,27 +4,35 @@
     box-sizing: border-box;
 }
 body {
-    font-family: "Poppins", sans-serif !important;
+    font-family: 'Lato', sans-serif important;
     overflow-x: hidden;
 }
 p{
     font-weight: 400;
     font-size: 16px;
     line-height: 1.8rem;
+    letter-spacing: 0.001em;
     color: #221415;
 }
-h2{
-    font-weight: 700;
+h1{
+    font-weight: 800;
     font-size: 38px;
     line-height: 2.8rem;
     letter-spacing: 0.001em;
     color: #221415;
 }
+h2{
+    font-weight: 700;
+    font-weight: 800;
+    font-size: 28px;
+    line-height: 34px;
+    color: #262535;
+}
 h5{
     font-weight: 600;
     font-size: 18px;
     line-height: 2rem;
-    color: #F15B5B;
+    color: #262535;
 }
 h4{
     font-weight: 700;
@@ -64,10 +72,11 @@ h4{
 }
 .nav-link{
     text-decoration: none;
-    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
     font-size: 16px;
     line-height: 20px;
-    color: #2B2A29 !important;
+    color: #3C3B3B !important;
 }
 
 .nav-link:hover,
@@ -310,6 +319,279 @@ Responsive Codes
 }
 /* Header css */
 
+
+/* ndis section css */
+.ndis-section{
+    padding: 2rem 6rem;
+    background: #FFFAF9;
+}
+.ndis-section .row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.ndis-view-btn{
+    text-decoration: none;
+    background: #E54E2E;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    border-radius: 25px;
+}
+.ndis-love{
+    display: flex;
+    gap: 10rem;
+    padding: 1rem 0;
+    align-items: center;
+}
+.box-border{
+    width: 15px;
+    height: 250px;
+    border-left: 2px solid;
+    border-image: linear-gradient(to top, #262535 25%, #262535 25%, #E54E2E 50%,#E54E2E 50%, #E54E2E 75%, #E54E2E 75%) 5;
+}
+.ndis-desc h2{
+    font-weight: 800;
+    font-size: 26px;
+    line-height: 34px;
+    margin-bottom: 20px;
+    color: #262535;
+}
+/* ndis section css */
+/* Service section css */
+.services-section{
+    padding: 6rem 6rem 0 6rem;
+    background: #F9F9F9;
+}
+.service-desc h1{
+    font-weight: 800;
+    font-size: 38px;
+    line-height: 46px;
+    text-align: center;
+    color: #262535;
+}
+.service-desc p{
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    padding: 0 27%;
+    text-align: center;
+    color: #262535;
+}
+.service-card-desc h1{
+    font-weight: 800;
+    font-size: 22px;
+    line-height: 26px;
+    letter-spacing: 0.001em;
+    color: #262535;
+}
+.service-card-desc p{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    letter-spacing: 0.001em;
+    color: #262535;
+}
+.service-card{
+    background: #F5E5F8;
+    padding: 20px;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.service-card-second{
+    background: #F0EFFD;
+    padding: 20px;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.service-card-third{
+    background: #F8D9D3;
+    padding: 20px;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.service-card-fixth{
+    background: #FFFFFF;
+    padding: 20px;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.services{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.learn-more-btn{
+    border: none;
+    background: none;
+    display: flex;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    letter-spacing: 0.001em;
+    color: #262535;
+    align-items: center;
+    gap: 10px;
+}
+/* Service section css */
+/* Service section css */
+.about-section{
+    padding: 6rem;
+    background: #F9F9F9;
+}
+.about-section .row{
+    display: flex;
+    align-items: center;
+}
+.about-left h2{
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 46px;
+    letter-spacing: 0.001em;
+    color: #262535;
+    margin-bottom: 15px;
+}
+.about-left h5{
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 154.5%;
+    color: #262535;
+    margin-bottom: 20px;
+}
+.about-left p{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.8rem;
+    color: #262535;
+    margin-bottom: 40px;
+}
+.about-left a{
+    text-decoration: none;
+    background: #1A2E35;
+    border-radius: 25px;
+    padding: 10px 20px;
+    color: #F9F9F9;
+}
+.about-image{
+    padding: 0 60px;
+}
+/* Service section css */
+/* customer section css */
+.customer-section{
+    padding: 6rem;
+    background: #F9F9F9;
+}
+.customer-header h1{
+    font-weight: 700;
+    font-size: 40px;
+    text-align: center;
+    letter-spacing: 0.001em;
+    color: #1A2E35;
+    margin-bottom: 20px;
+}
+.customer-header p{
+    font-weight: 400;
+    font-size: 18px;
+    text-align: center;
+    padding: 0 30%;
+    color: #1A2E35;
+}
+.customer-review{
+    margin-top: 30px;
+    display: flex;
+    gap: 20px;
+}
+.customer-review-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 27px rgba(100, 98, 98, 0.1);
+    border-radius: 26px;
+}
+.customer-card-review p{
+    margin-top: 20px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: #1A2E35;
+    
+}
+.cutomer-details{
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+}
+.cutomer-detail h3{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    color: #1A2E35;
+    margin-bottom: 0;
+}
+.cutomer-detail h5{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    color: #1A2E35;
+}
+.cutomer-image{
+    width: 50px;
+    height: 50px;
+}
+.customer-img{
+    border-radius: 50% !important;
+}
+/* customer section css */
+/* pricing section css */
+.pricing-section{
+    padding: 6rem;
+    background: #F9F9F9;
+}
+.pricing-section .row{
+    display: flex;
+    align-items: center;
+}
+.pricing-detail h2{
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 46px;
+    letter-spacing: 0.001em;
+    color: #6B2976;
+}
+.pricing-detail h5{
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 173.5%;
+    color: #1A2E35;
+}
+.pricing-detail p{
+    font-weight: 400;
+    font-size: 16px;
+    margin-bottom: 40px;
+    color: #262535;
+}
+.pricing-detail a{
+    text-decoration: none;
+    background: #6B2976;
+    padding: 10px 30px;
+    color: #F9F9F9;
+    border-radius: 25px;
+}
+.pricing-image{
+    padding: 0 60px;
+}
+/* pricing section css */
 /* Footer Css */
 .footer{
     background: #1A2E35;

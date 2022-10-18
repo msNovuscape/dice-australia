@@ -11,7 +11,7 @@
     <!-- google fonts link -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <!-- google fonts link -->
     <!-- Bootstrap link -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -35,7 +35,7 @@
             </div>
 
             <div>
-                <img src=" {{url('frontend/icons/email.svg')}}" class="img-fluid"/>
+                <img src=" {{url('frontend/icons/top-email.svg')}}" class="img-fluid"/>
                 <span><a href="mailto: contact@dice.org.au" class="text-decoration-none text-white">contact@dice.org.au</a></span></i>
             </div>
         </div>
@@ -44,7 +44,6 @@
             <a href="https://www.facebook.com/profile.php?id=100069618114233" target="_blank" class="facebook"><i class="fa-brands fa-facebook"></i></a>
             <a href="https://www.instagram.com/explore/tags/taxmateaustralia/" target="_blank" class="instagram"><i class="fa-brands fa-instagram"></i></a>
             <a href="https://www.instagram.com/explore/tags/taxmateaustralia/" target="_blank" class="linkdin"><i class="fa-brands fa-linkedin"></i></a>
-            <a>Help</a>
             <!-- Button trigger modal -->
             <a type="button" class="quick-enq-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 Quick enquiry
