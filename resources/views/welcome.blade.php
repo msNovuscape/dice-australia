@@ -7,12 +7,56 @@
 @endsection
 @section('content')
     <!-- Slider -->
-    
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="{{url('frontend/images/test-banner.jpg')}}" class="d-block w-100" alt="...">
+                <div class="slider-content">
+                    <h3>Services Based on Principles of</h3>
+                    <h2>Inclusion & Diversity</h2>
+                    <p>We Respect & Recognize the Rich Indigenous Heritage of Australia & Provide Services for all under our Care</p>
+                    <a href=".contact">Get a Free Consultation</a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="{{url('frontend/images/test-banner.jpg')}}" class="d-block w-100" alt="...">
+                <div class="slider-content">
+                    <h3>Services Based on Principles of</h3>
+                    <h2>Inclusion & Diversity</h2>
+                    <p>We Respect & Recognize the Rich Indigenous Heritage of Australia & Provide Services for all under our Care</p>
+                    <a href=".contact">Get a Free Consultation</a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="{{url('frontend/images/test-banner.jpg')}}" class="d-block w-100" alt="...">
+                <div class="slider-content">
+                    <h3>Services Based on Principles of</h3>
+                    <h2>Inclusion & Diversity</h2>
+                    <p>We Respect & Recognize the Rich Indigenous Heritage of Australia & Provide Services for all under our Care</p>
+                    <a href=".contact">Get a Free Consultation</a>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <!-- Slider -->
     <!-- NDIS section -->
     <section class="ndis-section">
         <div class="row">
             <div class="col-md-5">
-                <div>
+                <div class="ndis-left-desc">
                     <h1>Registered NDIS Provider</h1>
                     <p>We're registered NDIS Service provider for people with disability.</p>
                 </div>
@@ -217,6 +261,47 @@
         </div>
     </section>
     <!-- customer section -->
+    <!-- acknowledgement section -->
+    <section class="acknowledgement-section">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <img src="{{url('frontend/images/flag.png')}}" class="img-fluid"/>
+            </div>
+            <div class="col-md-12">
+                <div class="acknowledgement-desc">
+                    <h1>Acknowledgement of Country</h1>
+                    <p>DICE recognise the rich Indigenous heritage of this country and acknowledge the Wurundjeri Willum Clan and the Gunung-Willam-Balluk people as the traditional owners of the land. We pay our respects to the people, the cultures and the elders past, present and emerging.We pay our respects to the people, the cultures and the elders past, present and emerging.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- acknowledgement section -->
+    <!-- subscription section -->
+    <section class="subscription-section">
+        <div class="row">
+            <div class="col-md-7">
+                <img src="{{url('frontend/images/subscription-image.png')}}" class="img-fluid"/>
+            </div>
+            <div class="col-md-5">
+                <div class="subscription-desc">
+                    <h1>Join DICE Family</h1>
+                    <p>We're committed to your privacy. DICE uses the information you provide to us to contact you about our relevant content, products, and services.</p>
+                    <form>
+                        <div class="mb-3">
+                            <input type="text" class="dice-from" id="fname" placeholder="FullName">
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="dice-from" id="email" placeholder="Email address">
+                        </div>
+                        <div class="mb-3">
+                            <button type="submit" class="subscribe-btn">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- acknowledgement section -->
 @endsection
 @section('script')
 
