@@ -57,7 +57,7 @@ h4{
 }
 
 .header .logo{
-    height: 4rem;
+   padding: 4px 0;
 }
 
 .navbar-list {
@@ -73,7 +73,7 @@ h4{
 .nav-link{
     text-decoration: none;
     font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
+    font-weight: 600;
     font-size: 16px;
     line-height: 20px;
     color: #3C3B3B !important;
@@ -144,12 +144,6 @@ Responsive Codes
         display: block;
         z-index: 999;
     }
-
-
-    .header .logo {
-        padding: 10px;
-    }
-
     .navbar-list {
         /* display: none; */
         width: 100%;
@@ -205,13 +199,17 @@ Responsive Codes
 
 /* new nav */
 /* bootstrap modal */
+.enquiry-header{
+    background: #6B2976;
+    display: block;
+}
 .modal-title{
     font-weight: 700;
     font-size: 32px;
     line-height: 55px;
     text-align: center;
     letter-spacing: 0.001em;
-    color: #6B2976;
+    color: #FFFFFF;
 }
 .modal-detail .form-control .form-select {
     width: 100%;
@@ -414,6 +412,11 @@ Responsive Codes
     color: #FFFFFF;
     padding: 10px 20px;
     border-radius: 25px;
+    transition: 0.4s;
+}
+.ndis-view-btn:hover{
+    background: #1A2E35;
+    color: #FFFFFF;
 }
 .ndis-love{
     display: flex;
@@ -517,6 +520,22 @@ Responsive Codes
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 }
+.services a:hover{
+    background: #FFFFFF;
+}
+.learn-more-icon{
+    width: 20px;
+    transition: 160ms ease-out 80ms;
+    transition-duration: 0.2s;
+    margin-top: 2px;
+}
+.services a:hover .learn-more-icon{
+    width: 25px;
+    transform: translateX(5px) rotate(0deg);
+}
+.services a:hover .learn-more-btn{
+    color: #6B2976;
+}
 .learn-more-btn{
     border: none;
     background: none;
@@ -567,6 +586,11 @@ Responsive Codes
     border-radius: 25px;
     padding: 10px 20px;
     color: #F9F9F9;
+    transition: 0.4s;
+}
+.about-left a:hover{
+    background: #E54E2E;
+    color: #F9F9F9;
 }
 .about-image{
     padding: 0 60px;
@@ -602,9 +626,20 @@ Responsive Codes
     flex-direction: column;
     justify-content: space-between;
     padding: 20px;
+    margin: 0 12px;
     background: #FFFFFF;
-    box-shadow: 0px 4px 27px rgba(100, 98, 98, 0.1);
     border-radius: 26px;
+}
+.customer-review .slick-dots li button:before{
+    font-size: 16px;
+    top: 30px;
+    border: 3px solid #1A2E35;
+    border-radius: 50%;
+    color: transparent;
+    opacity: 1;
+}
+.customer-review .slick-dots li.slick-active button:before{
+    background: #DD6227;
 }
 .customer-card-review p{
     margin-top: 20px;
@@ -677,6 +712,11 @@ Responsive Codes
     padding: 10px 30px;
     color: #F9F9F9;
     border-radius: 25px;
+    transition: 0.4s;
+}
+.pricing-detail a:hover{
+    background: #1A2E35;
+    color: #F9F9F9;
 }
 .pricing-image{
     padding: 0 60px;
@@ -741,13 +781,17 @@ Responsive Codes
 .subscribe-btn{
     display: block;
     width: 60%;
-    border: none;
+    border: 2px solid #6B2976;
     color: #FFFFFF;
     font-weight: 700;
-    font-size: 20px;
+    font-size: 18px;
     text-align: center;
     background: #6B2976;
     padding: 10px;
+}
+.subscribe-btn:hover{
+    background: #FFFFFF;
+    color: #6B2976;
 }
 /* subscription section css */
 /* Footer Css */
@@ -880,7 +924,7 @@ Responsive Codes
     text-decoration: none;
 }
 .bootom-nav ul li a:hover{
-    color: #6B2976;
+    color: #aaaeb1;
     text-decoration: underline;
 }
 /* Footer Css */

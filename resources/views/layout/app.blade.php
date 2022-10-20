@@ -53,32 +53,32 @@
             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
-                        <div class="modal-header">
+                        <div class="modal-header enquiry-header">
                             <h5 class="modal-title" id="exampleModalLabel">Quick Enquiry</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            <!-- <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button> -->
                         </div>
                         <div class="modal-body modal-detail">
                             <form onsubmit="return validateform()" method="POST" action="">
                                 @csrf
                                 <div class="row">
                                     <div class="col-md-6 mb-3">
-                                        <input type="text" class="form-control" id="app-fname" name="full_name" placeholder="Patient full name" value="" onkeyup="validatefullname()">
+                                        <input type="text" class="form-control" id="app-fname" name="fname" placeholder="First Name" value="" onkeyup="validatefullname()">
                                         <span class="error-msg" id="app-fname-error"></span>
                                     </div>
                                     <div class="col-md-6">
-                                        <input type="number" class="form-control" id="app-phonenumber" placeholder="Phone" name="phone" value="" onkeyup="validatephone()">
-                                        <span class="error-msg" id="app-phone-error"></span>
+                                        <input type="text" class="form-control" id="app-getlname" placeholder="Last Name" name="lname" value="" onkeyup="validateemail()">
+                                        <span class="error-msg" id="app-email-error"></span>
                                     </div>
                                     <div class="col-md-6">
                                         <input type="email" class="form-control" id="app-getemail" placeholder="Email" name="email" value="" onkeyup="validateemail()">
                                         <span class="error-msg" id="app-email-error"></span>
                                     </div>
                                     <div class="col-md-6 mb-3">
-                                        <input type="text" onfocus="(this.type='date')" onblur="if(!this.value)this.type='text'" class="form-control" id="app-date" placeholder="Choose the date" aria-label="Date" value="" name="date" onkeyup="validateDate()">
-                                        <span class="error-msg" id="app-date-error"></span>
+                                        <input type="number" class="form-control" id="app-phonenumber" placeholder="Phone" name="phone" value="" onkeyup="validatephone()">
+                                        <span class="error-msg" id="app-phone-error"></span>
                                     </div>
                                     <div class="col-md-12 mb-3">
-                                        <textarea type="text" class="form-control" id="getmessage" placeholder="Explain your problem" name="app-message" value="" onkeyup="validatemessage()"></textarea>
+                                        <textarea type="text" class="form-control" id="getmessage" placeholder="Let us know how can we help" name="app-message" value="" onkeyup="validatemessage()"></textarea>
                                         <span class="app-error-msg" id="message-error"></span>
                                     </div>
                                 </div>
@@ -101,7 +101,7 @@
 <!-- Header section -->
 <header class="header">
     <a class="navbar-brand" href="/">
-        <img src="" class="img-fluid"  alt="">
+        <img src="{{url('frontend/images/logo.png')}}" class="img-fluid logo"  alt="">
     </a>
     <ul class="nav nav-inner navbar-list" id="navigation-links">
         <li class="nav-item">
