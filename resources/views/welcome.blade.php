@@ -95,7 +95,7 @@
                             <p>Our daily tasks and shared living support aims to enable ourclients to live independently & carry out their everyday tasks intheir homes and communities</p>
                         </div>
                     </div>
-                    <button class="learn-more-btn">Learn more <img src="{{url('frontend/icons/right-arrow.svg')}}"/></button>
+                    <button class="learn-more-btn">Learn more <img src="{{url('frontend/icons/right-arrow.svg')}}" class="learn-more-icon"/></button>
                 </a>
                 <a href="/service/" class="service-card-second">
                     <div>
@@ -106,7 +106,7 @@
                             <h1>Daily Living Support</h1>
                             <p>Our daily tasks and shared living support aims to enable ourclients to live independently & carry out their everyday tasks intheir homes and communities</p>
                         </div>
-                        <button class="learn-more-btn">Learn more <img src="{{url('frontend/icons/right-arrow.svg')}}"/></button>
+                        <button class="learn-more-btn">Learn more <img src="{{url('frontend/icons/right-arrow.svg')}}" class="learn-more-icon"/></button>
                     </div>
                 </a>
                 <a href="/service/" class="service-card-third">
@@ -118,7 +118,7 @@
                             <h1>Community Participation</h1>
                             <p>Every action we take has the participants as its focal point. We interact with clients, their families, caregivers, the disability sector, and other stakeholders for efficient community...</p>
                         </div>
-                        <button class="learn-more-btn">Learn more <img src="{{url('frontend/icons/right-arrow.svg')}}"/></button>
+                        <button class="learn-more-btn">Learn more <img src="{{url('frontend/icons/right-arrow.svg')}}" class="learn-more-icon"/></button>
                     </div>
                 </a>
                 <a href="/service/" class="service-card-second">
@@ -131,7 +131,7 @@
                             <p>Choosing us as your plan manager saves you hours of time and the headache of endless admin.</p>
                         </div>
                     </div>
-                    <button class="learn-more-btn">Learn more <img src="{{url('frontend/icons/right-arrow.svg')}}"/></button>
+                    <button class="learn-more-btn">Learn more <img src="{{url('frontend/icons/right-arrow.svg')}}" class="learn-more-icon"/></button>
                 </a>
                 <a href="/service/" class="service-card-fixth">
                     <div>
@@ -142,7 +142,7 @@
                             <h1>Household Task</h1>
                             <p>Our qualified and professional staff at Agility HomeCare provide NDIS household tasks to aid daily lives of our clients and enable them to live more independently</p>
                         </div>
-                        <button class="learn-more-btn">Learn more <img src="{{url('frontend/icons/right-arrow.svg')}}"/></button>
+                        <button class="learn-more-btn">Learn more <img src="{{url('frontend/icons/right-arrow.svg')}}" class="learn-more-icon"/></button>
                     </div>
                 </a>
                 <a href="/service/" class="service-card-second">
@@ -154,7 +154,7 @@
                             <h1>Respite Care</h1>
                             <p>Every action we take has the participants as its focal point. We interact with clients, their families, caregivers, the disability sector, and other stakeholders for efficient community...</p>
                         </div>
-                        <button class="learn-more-btn">Learn more <img src="{{url('frontend/icons/right-arrow.svg')}}"/></button>
+                        <button class="learn-more-btn">Learn more <img src="{{url('frontend/icons/right-arrow.svg')}}" class="learn-more-icon"/></button>
                     </div>
                 </a>
             </div>
@@ -257,6 +257,22 @@
                         </div>
                     </div>
                 </div>
+                <div class="customer-review-card">
+                    <div class="customer-card-review">
+                        <img src="{{url('frontend/icons/quoteicon.svg')}}"/>
+                        <p>I loved the service that I received at DICE. It was wonderful, caring member always helped me to accomplish my daily task. I highly recommend them!!</p>
+                        <img src="{{url('frontend/images/starts.png')}}"/>
+                    </div>
+                    <div class="cutomer-details">
+                        <div class="cutomer-image">
+                            <img src="{{url('frontend/images/profile.png')}}" class="img-fluid customer-img"/>
+                        </div>
+                        <div class="cutomer-detail">
+                            <h3>Saroj  Dhakal</h3>
+                            <h5>Manager, Esewa</h5>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -304,6 +320,43 @@
     <!-- acknowledgement section -->
 @endsection
 @section('script')
-
+    <script>
+        var $slider = $('.customer-review');
+        $slider.slick({
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 4000,
+            prevArrow: false,
+            nextArrow: false,
+            dots: true,
+            centerMode: false,
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1,
+                        infinite: true,
+                        dots: false
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+            ]
+        });
+    </script>
 @endsection
 
