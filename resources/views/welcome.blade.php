@@ -1,8 +1,8 @@
 @extends('layout.app')
 @section('title')
     <title>DICE</title>
-    <meta name="description" content="Welcome to Baneshwor Smile Family Dental Care(BSFDC), a leading visionary dental care center, committed to expert oral health care and treatment. With a team of specialists, we aspire to provide outstanding dental services that are easily accessible to our clients and patients."/>
-    <meta name="og:title" content="BANESHWOR SMILES"/>
+    <meta name="description" content="Based in VIC, Australia, Agility HomeCare is a practitioner of disability assistance services. We provide a variety of disability assistance services with the aim to improve the lives of people with impairments, limitations, and disabilities."/>
+    <meta name="og:title" content="DICE"/>
     <meta name="og:image" content="{{url('frontend/images/about-image.png')}}"/>
 @endsection
 @section('content')

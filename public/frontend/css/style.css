@@ -928,3 +928,98 @@ Responsive Codes
     text-decoration: underline;
 }
 /* Footer Css */
+
+
+/* about us page images */
+.about-page-section{
+    padding: 3rem 6rem;
+}
+.about-page-section .row{
+    display: flex;
+    align-items: center;
+}
+.about-page-image{
+    padding: 0 50px;
+    width: 600px;
+    float: right;
+}
+.about-page-desc h5{
+    font-weight: 600;
+    font-size: 20px;
+    letter-spacing: 0.25em;
+    color: #E54E2E;
+}
+.about-page-desc h2{
+    font-weight: 700;
+    font-size: 35px;
+    color: #000000;
+    margin-bottom: 20px;
+}
+.team-support-section{
+    padding: 3rem 6rem;
+    background: #F8D9D3;
+}
+.team-support-section .row{
+    display: flex;
+    align-items: center;
+}
+.about-team-image{
+    padding: 0 50px;
+    width: 600px;
+}
+.team-support-desc h2 {
+    font-weight: 700;
+    font-size: 35px;
+    color: #000000;
+    margin-bottom: 20px;
+}
+.our-value-section{
+    padding: 3rem 6rem;
+    background: #F0EFFD;
+}
+.our-value-section .row{
+    margin: 40px 0;
+}
+.our-value-header h2 {
+    font-weight: 700;
+    font-size: 35px;
+    color: #000000;
+    margin-bottom: 20px;
+}
+.about-value-card{
+    background: #6B2976;
+    box-shadow: 4px 4px 9px rgba(0, 0, 0, 0.15);
+    border-radius: 11px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    min-height: 330px;
+}
+.about-value-image{
+    width: 80px;
+    height: 80px;
+    margin-bottom: 25px;
+}
+.about-value-image img{
+    border-radius: 50%;
+}
+.about-value-card-content h3{
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 2rem;
+    text-align: center;
+    color: #FFFFFF;
+}
+.about-value-card-content p{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 2rem;
+    text-align: center;
+    color: #FFFFFF;
+}
+.about-regirtered{
+    padding: 3rem 6rem;
+    background: #FFFFFF;
+}
