@@ -1025,6 +1025,122 @@ Responsive Codes
     padding: 3rem 6rem;
     background: #FFFFFF;
 }
+
+/* contact us page css */
+.contactus-section{
+    padding: 6rem;
+    background-repeat: no-repeat;
+    height: 40vh;
+    box-shadow: inset 0 1700px rgb(0 0 0 / 30%);
+    background-size: cover!important;
+    position: relative;
+}
+.contact-form-section .row{
+    display: flex;
+    align-items: center;
+}
+.contactus-header{
+    text-align: center;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.contactus-icons{
+    position: absolute;
+    bottom: 10%;
+    left: 40%;
+    transform: translate(-30%, -50%);
+    margin: 0;
+    display: flex;
+    gap: 50px;
+}
+.contactus-icons a{
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 1.6rem;
+    color: #ffffff;
+}
+.contactus-icons .fa-solid{
+    color: #FFFFFF;
+}
+.contactus-header h1{
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 55px;
+    text-align: center;
+    letter-spacing: 0.001em;
+    color: #ffffff;
+}
+.contactus-header p{
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 1.6rem;
+    color: #ffffff;
+}
+.contactus-email{
+    display: flex;
+    gap: 4px;
+}
+.contactus-location{
+    display: flex;
+    gap: 4px;
+}
+.contactus-location a{
+    padding-right: 20%;
+}
+.contact-form-section{
+    padding: 3rem 6rem;
+}
+.form-header{
+    margin-bottom: 30px;
+}
+.form-header h5{
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 26px;
+    color: #6B2976;
+}
+.form-header h2{
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 46px;
+    color: #000000;
+}
+.contactus-form .form-control{
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #6B2976;
+    padding: 10px;
+    font-size: 17px;
+    color: #6B2976;
+    margin-top: 12px;
+    border-radius: 0;
+}
+.contactus-form input::-webkit-input-placeholder {
+    color: #6B2976;
+    font-size: 17px;
+    line-height: 21px;
+}
+
+.contactus-form input:-moz-placeholder {
+    color: #6B2976;
+    font-size: 17px;
+    line-height: 21px;
+}
+.submit-btn{
+    background: #6B2976;
+    border: 1px solid #6B2976;
+    border-radius: 0px 9px 9px 9px;
+    padding: 14px 40px;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: -0.015em;
+    color: #FFFFFF;
+}
+/* contact us page css */
 /* large screen */
 @media screen and (min-width: 1600px){
     .about-page-image, .about-team-image, .pricing-image{
