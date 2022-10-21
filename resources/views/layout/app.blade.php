@@ -119,7 +119,7 @@
             <a class="nav-link" href="/events-blogs">NDIS</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="/contact">Make a Referal</a>
+            <a class="nav-link" href="/referral">Make a Referal</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="/contact">Gallery</a>

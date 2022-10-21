@@ -1141,6 +1141,173 @@ Responsive Codes
     color: #FFFFFF;
 }
 /* contact us page css */
+/* referral section */
+.referral-section{
+    padding: 60px;
+}
+.referralform-top{
+    text-align: center;
+}
+.gender-checkbox{
+    display: flex;
+}
+.referralform-top h1{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 36px;
+    letter-spacing: 0.001em;
+    color: #6B2976;
+    display: inline-block;
+}
+.referralform-top h1::after{
+    content: '';
+    margin-top: 8px;
+    margin-bottom: 10px;
+    border-bottom: 5px solid #6B2976;
+    width: 100%;
+    display: block;
+}
+.referralform-top p{
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 139.7%;
+    /* or 53px */
+    text-align: center;
+    letter-spacing: 0.001em;
+    margin: 0 20%;
+    color: #202420;
+}
+.referral-section h1{
+    margin-bottom: 5px;
+}
+.referral-section p{
+    font-size: 20px;
+}
+.error{
+    color: red;
+    float: left;
+    font-size: 12px;
+    margin: 10px 0px;
+}
+.referral-section .card{
+    border: none;
+    background: #F9F8F9;
+    margin-bottom: 40px;
+}
+.referral-section .card .card-title{
+    display: flex;
+    gap: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #1e1c1c;
+}
+.referral-section .card .card-title svg{
+    margin-right: 10px;
+}
+.referral-section .card label{
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+.referral-section .card input, .referral-section .card select{
+    padding: 10px;
+    border: 2px solid #6B2976;
+}
+.referral-section .card input::placeholder{
+    color: #6B2976 !important;
+}
+.referral-section .textarea::placeholder{
+    color: #6B2976 !important;
+}
+.referral-section .card .gender-radio .form-check{
+    padding-left: 0px;
+    margin-right: 15px;
+    display: flex;
+}
+.referral-section .card .gender-radio .form-check input{
+    font-size: 20px;
+    border: 1px solid #6B2976;
+    border-radius: 50%;
+    margin-left: 5px;
+    margin-bottom: 0;
+}
+.referral-section .form-select{
+    color: #6B2976!important;
+}
+.form-check .form-check-label{
+    margin-left: 0.75rem;
+    margin-top: 0.3rem;
+}
+.referral-section .next-button .next-submit{
+    border:none;
+    background: #6B2976;
+    border-radius: 4px;
+    font-size: 18px;
+    color:#fff;
+    padding: 10px 50px;
+}
+.next-submit{
+    width: 250px;
+    height: 52px;
+    border: none;
+    background: #6B2976;
+    border-radius: 4px;
+    box-shadow: inset 0 0 0 0 #E54E2E;
+    color: #FFFFFF;
+    margin: 0 -.25rem;
+    padding: 0 .25rem;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+.next-submit:hover {
+    box-shadow: inset 250px 0 0 0 #E54E2E;
+    color: white;
+}
+.referral-section .next-button .back{
+    border:none;
+    background: none;
+    float: left;
+    font-size: 25px;
+    color:#d833a2;
+}
+.privacy-section .card ul{
+    padding-left: 0px;
+}
+.privacy-section .card ul li{
+    color:#353030;
+    padding: 5px;
+}
+.privacy-section .form-check input{
+    border-radius: 2px;
+    border: 1px solid grey;
+    margin-top: 4px;
+    font-size: 15px;
+}
+.privacy-section .declare-text{
+    text-align: left;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 178%;
+    /* or 28px */
+
+
+    color: #606161;
+}
+.card-title h1{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 139.7%;
+    /* or 53px */
+
+    letter-spacing: 0.001em;
+
+    color: #6B2976;
+}
+.fa-solid{
+    color: #6B2976;
+}
+/* referral section */
 /* large screen */
 @media screen and (min-width: 1600px){
     .about-page-image, .about-team-image, .pricing-image{
