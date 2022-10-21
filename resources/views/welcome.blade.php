@@ -164,7 +164,7 @@
     <!-- about section -->
     <section class="about-section">
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-7">
                 <div class="about-left">
                     <h2>Why Choose us?</h2>
                     <h5>We support people with disability of all ages and needs in their homes and community with quality services.</h5>
@@ -172,7 +172,7 @@
                     <a href="/about">View More</a>
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-5">
                 <div class="about-image">
                     <img src="{{url('frontend/images/about-image.png')}}" class="w-100" alt="about-image"/>
                 </div>
@@ -183,12 +183,12 @@
     <!-- pricing section -->
     <section class="pricing-section">
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-5">
                 <div class="pricing-image">
                     <img src="{{url('frontend/images/pricing.png')}}" class="w-100"/>
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-7">
                 <div class="pricing-detail">
                     <h2>NDIS Pricing</h2>
                     <h5>NDIS pricing arrangements and price limits</h5>

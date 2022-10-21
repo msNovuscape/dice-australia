@@ -10,7 +10,7 @@
         <div class="row">
             <div class="col-md-5">
                 <div class="about-page-image">
-                    <img src="{{url('frontend/images/about-page-image.png')}}" alt="" class="w-100"/>
+                    <img src="{{url('frontend/images/about-test.png')}}" alt="" class="w-100"/>
                 </div>
             </div>
             <div class="col-md-7">

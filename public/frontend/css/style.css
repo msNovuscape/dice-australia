@@ -594,6 +594,7 @@ Responsive Codes
 }
 .about-image{
     padding: 0 60px;
+    width: 600px;
 }
 /* Service section css */
 /* customer section css */
@@ -719,7 +720,8 @@ Responsive Codes
     color: #F9F9F9;
 }
 .pricing-image{
-    padding: 0 60px;
+    padding: 0 80px 0 0;
+    width: 600px;
 }
 /* pricing section css */
 /* acknowledgement section css */
@@ -1022,4 +1024,15 @@ Responsive Codes
 .about-regirtered{
     padding: 3rem 6rem;
     background: #FFFFFF;
+}
+/* large screen */
+@media screen and (min-width: 1600px){
+    .about-page-image, .about-team-image, .pricing-image{
+        width: 700px;
+        padding: 0 70px 0 0;
+    }
+    .about-image{
+        width: 700px;
+        padding: 0 0 0 70px;
+    }
 }
