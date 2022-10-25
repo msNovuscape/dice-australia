@@ -56,9 +56,9 @@ h4{
     box-shadow: 0 2px 4px rgb(0 0 0 / 25%);
 }
 
-.header .logo{
+/* .header .logo{
    padding: 4px 0;
-}
+} */
 
 .navbar-list {
     display: flex;
@@ -301,7 +301,7 @@ Responsive Codes
 }
 .quick-enq-btn{
     margin: 10px;
-    padding: 6px 26px;
+    padding: 4px 26px;
     color: white;
     display: flex !important;
     align-items: center;
@@ -349,7 +349,7 @@ Responsive Codes
     font-size: 20px;
     line-height: 166%;
     color: #262535;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
 }
 .slider-content a{
     text-decoration: none;
@@ -594,6 +594,7 @@ Responsive Codes
 }
 .about-image{
     padding: 0 60px;
+    width: 600px;
 }
 /* Service section css */
 /* customer section css */
@@ -627,6 +628,7 @@ Responsive Codes
     justify-content: space-between;
     padding: 20px;
     margin: 0 12px;
+    min-height: 360px;
     background: #FFFFFF;
     border-radius: 26px;
 }
@@ -719,7 +721,8 @@ Responsive Codes
     color: #F9F9F9;
 }
 .pricing-image{
-    padding: 0 60px;
+    padding: 0 80px 0 0;
+    width: 600px;
 }
 /* pricing section css */
 /* acknowledgement section css */
@@ -928,3 +931,636 @@ Responsive Codes
     text-decoration: underline;
 }
 /* Footer Css */
+
+
+/* about us page images */
+.about-page-section{
+    padding: 3rem 6rem;
+}
+.about-page-section .row{
+    display: flex;
+    align-items: center;
+}
+.about-page-image{
+    padding: 0 50px;
+    width: 600px;
+    float: right;
+}
+.about-page-desc h5{
+    font-weight: 600;
+    font-size: 20px;
+    letter-spacing: 0.25em;
+    color: #E54E2E;
+}
+.about-page-desc h2{
+    font-weight: 700;
+    font-size: 35px;
+    color: #000000;
+    margin-bottom: 20px;
+}
+.team-support-section{
+    padding: 3rem 6rem;
+    background: #F8D9D3;
+}
+.team-support-section .row{
+    display: flex;
+    align-items: center;
+}
+.about-team-image{
+    padding: 0 50px;
+    width: 600px;
+}
+.team-support-desc h2 {
+    font-weight: 700;
+    font-size: 35px;
+    color: #000000;
+    margin-bottom: 20px;
+}
+.our-value-section{
+    padding: 3rem 6rem;
+    background: #F0EFFD;
+}
+.our-value-section .row{
+    margin: 40px 0;
+}
+.our-value-header h2 {
+    font-weight: 700;
+    font-size: 35px;
+    color: #000000;
+    margin-bottom: 20px;
+}
+.about-value-card{
+    background: #6B2976;
+    box-shadow: 4px 4px 9px rgba(0, 0, 0, 0.15);
+    border-radius: 11px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    min-height: 330px;
+}
+.about-value-image{
+    width: 80px;
+    height: 80px;
+    margin-bottom: 25px;
+}
+.about-value-image img{
+    border-radius: 50%;
+}
+.about-value-card-content h3{
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 2rem;
+    text-align: center;
+    color: #FFFFFF;
+}
+.about-value-card-content p{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 2rem;
+    text-align: center;
+    color: #FFFFFF;
+}
+.about-regirtered{
+    padding: 3rem 6rem;
+    background: #FFFFFF;
+}
+
+/* contact us page css */
+.contactus-section{
+    padding: 6rem;
+    background-repeat: no-repeat;
+    height: 40vh;
+    box-shadow: inset 0 1700px rgb(0 0 0 / 30%);
+    background-size: cover!important;
+    position: relative;
+}
+.contact-form-section .row{
+    display: flex;
+    align-items: center;
+}
+.contactus-header{
+    text-align: center;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.contactus-icons{
+    position: absolute;
+    bottom: 10%;
+    left: 40%;
+    transform: translate(-30%, -50%);
+    margin: 0;
+    display: flex;
+    gap: 50px;
+}
+.contactus-icons a{
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 1.6rem;
+    color: #ffffff;
+}
+.contactus-icons .fa-solid{
+    color: #FFFFFF;
+}
+.contactus-header h1{
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 55px;
+    text-align: center;
+    letter-spacing: 0.001em;
+    color: #ffffff;
+}
+.contactus-header p{
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 1.6rem;
+    color: #ffffff;
+}
+.contactus-email{
+    display: flex;
+    gap: 4px;
+}
+.contactus-location{
+    display: flex;
+    gap: 4px;
+}
+.contactus-location a{
+    padding-right: 20%;
+}
+.contact-form-section{
+    padding: 3rem 6rem;
+}
+.form-header{
+    margin-bottom: 30px;
+}
+.form-header h5{
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 26px;
+    color: #6B2976;
+}
+.form-header h2{
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 46px;
+    color: #000000;
+}
+.contactus-form .form-control{
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #6B2976;
+    padding: 10px;
+    font-size: 17px;
+    color: #6B2976;
+    margin-top: 12px;
+    border-radius: 0;
+}
+.contactus-form input::-webkit-input-placeholder {
+    color: #6B2976;
+    font-size: 17px;
+    line-height: 21px;
+}
+
+.contactus-form input:-moz-placeholder {
+    color: #6B2976;
+    font-size: 17px;
+    line-height: 21px;
+}
+.submit-btn{
+    background: #6B2976;
+    border: 1px solid #6B2976;
+    border-radius: 0px 9px 9px 9px;
+    padding: 14px 40px;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: -0.015em;
+    color: #FFFFFF;
+}
+/* contact us page css */
+/* referral section */
+.referral-section{
+    padding: 60px;
+}
+.referralform-top{
+    text-align: center;
+}
+.gender-checkbox{
+    display: flex;
+}
+.referralform-top h1{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 36px;
+    letter-spacing: 0.001em;
+    color: #6B2976;
+    display: inline-block;
+}
+.referralform-top h1::after{
+    content: '';
+    margin-top: 8px;
+    margin-bottom: 10px;
+    border-bottom: 5px solid #6B2976;
+    width: 100%;
+    display: block;
+}
+.referralform-top p{
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 139.7%;
+    /* or 53px */
+    text-align: center;
+    letter-spacing: 0.001em;
+    margin: 0 20%;
+    color: #202420;
+}
+.referral-section h1{
+    margin-bottom: 5px;
+}
+.referral-section p{
+    font-size: 20px;
+}
+.error{
+    color: red;
+    float: left;
+    font-size: 12px;
+    margin: 10px 0px;
+}
+.referral-section .card{
+    border: none;
+    background: #F9F8F9;
+    margin-bottom: 40px;
+}
+.referral-section .card .card-title{
+    display: flex;
+    gap: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #1e1c1c;
+}
+.referral-section .card .card-title svg{
+    margin-right: 10px;
+}
+.referral-section .card label{
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+.referral-section .card input, .referral-section .card select{
+    padding: 10px;
+    border: 2px solid #6B2976;
+}
+.referral-section .card input::placeholder{
+    color: #6B2976 !important;
+}
+.referral-section .textarea::placeholder{
+    color: #6B2976 !important;
+}
+.referral-section .card .gender-radio .form-check{
+    padding-left: 0px;
+    margin-right: 15px;
+    display: flex;
+}
+.referral-section .card .gender-radio .form-check input{
+    font-size: 20px;
+    border: 1px solid #6B2976;
+    border-radius: 50%;
+    margin-left: 5px;
+    margin-bottom: 0;
+}
+.referral-section .form-select{
+    color: #6B2976!important;
+}
+.form-check .form-check-label{
+    margin-left: 0.75rem;
+    margin-top: 0.3rem;
+}
+.referral-section .next-button .next-submit{
+    border:none;
+    background: #6B2976;
+    border-radius: 4px;
+    font-size: 18px;
+    color:#fff;
+    padding: 10px 50px;
+}
+.next-submit{
+    width: 250px;
+    height: 52px;
+    border: none;
+    background: #6B2976;
+    border-radius: 4px;
+    box-shadow: inset 0 0 0 0 #E54E2E;
+    color: #FFFFFF;
+    margin: 0 -.25rem;
+    padding: 0 .25rem;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+.next-submit:hover {
+    box-shadow: inset 250px 0 0 0 #E54E2E;
+    color: white;
+}
+.referral-section .next-button .back{
+    border:none;
+    background: none;
+    float: left;
+    font-size: 25px;
+    color:#d833a2;
+}
+.privacy-section .card ul{
+    padding-left: 0px;
+}
+.privacy-section .card ul li{
+    color:#353030;
+    padding: 5px;
+}
+.privacy-section .form-check input{
+    border-radius: 2px;
+    border: 1px solid grey;
+    margin-top: 4px;
+    font-size: 15px;
+}
+.privacy-section .declare-text{
+    text-align: left;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 178%;
+    /* or 28px */
+
+
+    color: #606161;
+}
+.card-title h1{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 139.7%;
+    /* or 53px */
+
+    letter-spacing: 0.001em;
+
+    color: #6B2976;
+}
+.fa-solid{
+    color: #6B2976;
+}
+/* referral section */
+/* gallery section */
+.gallery-section{
+    padding: 3rem 6rem;
+}
+.gallery-header h2{
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 48px;
+    text-align: center;
+    color: #6B2976;
+    margin-bottom: 30px;
+}
+.gallery-header p{
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
+    padding: 0 20%;
+    color: #121212;
+    margin-bottom: 50px;
+}
+.gallery-slider .slick-track{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.gallery-slider .slick-center img{
+    height: 500px !important;
+}
+.gallery-slider .slick-center{
+    width: 440px !important;
+}
+.gallery-slider .slick-active img{
+    height: 450px;
+}
+.gallery-section .slick-next:before, .gallery-section .slick-prev:before{
+    color: #6B2976 !important;
+}
+/* gallery section */
+/* service detail section */
+.service-slider-section, .service-first-content-section, .service-second-content-section{
+    padding: 3rem 6rem;
+}
+.service-slider-section .row, .service-first-content-section .row, .service-second-content-section .row{
+    display: flex;
+    align-items: center;
+}
+.service-detail-banner h3{
+    font-weight: 700;
+    font-size: 30px;
+    color: #47465C;
+    line-height: 44px;
+    margin-bottom: 15px;
+}
+.service-detail-banner h4, .first-content-desc h4, .second-content-desc h4{
+    font-weight: 700;
+    font-size: 30px;
+    color: #6B2976;
+    line-height: 44px;
+    margin-bottom: 10px;
+}
+.service-detail-banner p{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 148.5%;
+    color: #121212;
+}
+.first-content-desc h5, .second-content-desc h5{
+    font-weight: 700;
+    font-size: 20px;
+    color: #000000;
+}
+.service-first-img{
+    width: 600px;
+}
+.service-second-img{
+    width: 600px;
+    float: right;
+}
+.second-content-desc ul {
+    padding-left: 20px;
+}
+.second-content-desc ul li::before{
+    content: "\f058";
+    color: #6B2976;
+    font-family: FontAwesome;
+    display: inline-block;
+    margin-right: 0.6em;
+    margin-left: -1.3em;
+    width: 1.3em;
+}
+.second-content-desc ul li{
+    list-style: none;
+}
+.support-section{
+    padding: 6rem;
+    background: #F0EFFD;
+}
+.support-desc h1{
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 55px;
+    text-align: center;
+    letter-spacing: 0.001em;
+    color: #6B2976;
+}
+.support-desc p{
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 2rem;
+    margin: 0 20%;
+    text-align: center;
+    color: #000000;
+    margin-bottom: 30px;
+ }
+ /* .services{
+     background: #6B2976;
+     border: 1px solid #6B2976;
+     box-shadow: 0px 18px 25px rgba(32, 31, 30, 0.04);
+     border-radius: 12px;
+ } */
+.support-service-card{
+    background: #6B2976;
+    box-shadow: 0px 18px 25px rgba(32, 31, 30, 0.04);
+    border-radius: 12px;
+    padding: 20px;
+    text-decoration: none;
+    position: relative;
+    min-height: 24pc;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.support-service-card h1{
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 34px;
+    letter-spacing: 0.001em;
+    color: #FFFFFF;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.support-service-card p{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 2rem;
+    color: #FFFFFF;
+    text-align: center;
+}
+.support-service-icon{
+    background: #4B220E;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    padding: 20px;
+}
+/* service detail section */
+/* large screen */
+@media screen and (min-width: 1600px){
+    .about-page-image, .about-team-image, .pricing-image{
+        width: 700px;
+        padding: 0 70px 0 0;
+    }
+    .about-image{
+        width: 700px;
+        padding: 0 0 0 70px;
+    }
+    .gallery-slider .slick-center img{
+        height: 630px !important;
+    }
+    .gallery-slider .slick-active img{
+        height: 550px;
+    }
+    .gallery-slider .slick-center{
+        width: 580px !important;
+    }
+    .service-first-img{
+        width: 780px;
+        padding: 0 0 0 80px;
+    }
+    .service-second-img{
+        width: 780px;
+        padding: 0 80 0 0;
+        float: right;
+    }
+}
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+    #topbar {
+        padding: 10px 2rem;
+    }
+    .slider-content {
+        position: absolute;
+        padding: 2rem;
+        z-index: 1;
+        width: 100%;
+        top: 40%;
+        transform: translate(0%, -50%);
+    }
+    .slider-content h3{
+        font-size: 21px;
+        line-height: 1.6rem;
+    }
+    .slider-content h2{
+        font-size: 21px;
+        line-height: 1.6rem;
+        margin-bottom: 20px;
+    }
+    .slider-content p, .box-border{
+        display: none;
+    }
+    .slider-content a{
+        padding: 4px 10px;
+        font-size: 12px;
+    }
+    .ndis-section,.services-section, .about-section, .pricing-section, .customer-section, .acknowledgement-section, .subscription-desc{
+        padding: 2rem;
+    }
+    .ndis-love{
+        gap: 6rem;
+        padding: 2rem 0;
+    }
+    .service-desc p, .customer-header p, .acknowledgement-desc p{
+        padding: 0;
+    }
+    .service-desc h1 , .customer-header h1{
+        font-size: 32px;
+        line-height: 44px;
+    }
+    .services {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .about-image{
+        margin-top: 30px;
+        padding: 0;
+        width: auto;
+    }
+    .pricing-image{
+        margin-bottom: 30px;
+        padding: 0;
+        width: auto;
+    }
+    .acknowledgement-desc h1 {
+        font-family: 'Delius';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 34px;
+        line-height: 2.8rem;
+        text-align: center;
+        letter-spacing: 0.001em;
+        color: #1A2E35;
+        margin-top: 50px;
+        margin-bottom: 16px;
+    }
+}

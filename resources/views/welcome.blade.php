@@ -1,8 +1,8 @@
 @extends('layout.app')
 @section('title')
     <title>DICE</title>
-    <meta name="description" content="Welcome to Baneshwor Smile Family Dental Care(BSFDC), a leading visionary dental care center, committed to expert oral health care and treatment. With a team of specialists, we aspire to provide outstanding dental services that are easily accessible to our clients and patients."/>
-    <meta name="og:title" content="BANESHWOR SMILES"/>
+    <meta name="description" content="At DICE, we work hard to create a comprehensive program that is tailored to your unique needs and requirements. We recognize that results alone are not nearly as essential as pleasant outcomes. Our ultimate goal thus, is for our participants to experience success; this is our passion. We don't just have one program that works for everyone; instead, we will take the time to get to know you and your family's requirements."/>
+    <meta name="og:title" content="DICE"/>
     <meta name="og:image" content="{{url('frontend/images/about-image.png')}}"/>
 @endsection
 @section('content')
@@ -15,7 +15,7 @@
         </div>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="{{url('frontend/images/test-banner.jpg')}}" class="d-block w-100" alt="...">
+                <img src="{{url('frontend/images/banner-two.png')}}" class="d-block w-100" alt="...">
                 <div class="slider-content">
                     <h3>Services Based on Principles of</h3>
                     <h2>Inclusion & Diversity</h2>
@@ -26,18 +26,18 @@
             <div class="carousel-item">
                 <img src="{{url('frontend/images/test-banner.jpg')}}" class="d-block w-100" alt="...">
                 <div class="slider-content">
-                    <h3>Services Based on Principles of</h3>
-                    <h2>Inclusion & Diversity</h2>
-                    <p>We Respect & Recognize the Rich Indigenous Heritage of Australia & Provide Services for all under our Care</p>
+                    <h3>Customized Service Tailored to</h3>
+                    <h2>Your Needs</h2>
+                    <p>Dedicated to giving you and your family nursing, domestic, and personal care help that is specifically catered to your requirements. We aim to promote good experiences and increase your confidence through tailored experiences.</p>
                     <a href=".contact">Get a Free Consultation</a>
                 </div>
             </div>
             <div class="carousel-item">
                 <img src="{{url('frontend/images/test-banner.jpg')}}" class="d-block w-100" alt="...">
                 <div class="slider-content">
-                    <h3>Services Based on Principles of</h3>
-                    <h2>Inclusion & Diversity</h2>
-                    <p>We Respect & Recognize the Rich Indigenous Heritage of Australia & Provide Services for all under our Care</p>
+                    <h3>Assistance for Your</h3>
+                    <h2>Independence</h2>
+                    <p>Our welcoming team assists you and helps you gain independence while delivering services in the convenience of your home, adhering to the strict guidelines established by the Quality & Safeguards Commission for NDIS providers.</p>
                     <a href=".contact">Get a Free Consultation</a>
                 </div>
             </div>
@@ -68,8 +68,8 @@
             <span class="col-md-1 box-border"></span>
             <div class="col-md-6">
                 <div class="ndis-desc">
-                    <h2>The National Disability Insurance Scheme (NDIS)</h2>
-                    <p>The NDIS can provide all people with disability with information and connections to services in their communities such as doctors, sporting clubs, support groups, libraries and schools, as well as information about what support is provided by each state and territory government.</p>
+                    <h2>The National Insurance Disability Scheme (NDIS)</h2>
+                    <p>We provide various assistance options to help you reach your objectives, whether you're searching for someone to handle all of your needs (full agency) or to assist you in handling key aspects of your care (plan management or self-management). As a certified NDIS care service provider, Disability Inclusion for Community Empowerment (DICE) will collaborate with you to comprehend your unique preferences and manage a team whose objective is to maximize your independence and provide you the opportunity to live your life howsoever you see fit.</p>
                 </div>
             </div>
         </div>
@@ -80,8 +80,8 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12 service-desc mb-4">
-                    <h1>Services Dedicated to You</h1>
-                    <p>Our innovative support services enable and celebrate the achievements of theamazing people we work with.</p>
+                    <h1>Services Personalized to You</h1>
+                    <p>We collaborate closely with you to ensure that you and your loved one are receiving proper care that thoroughly satisfies the objectives specified in your care plan.</p>
                 </div>
             </div>
             <div class="services mt-4">
@@ -92,7 +92,7 @@
                         </div>
                         <div class="service-card-desc">
                             <h1>Support Coordination</h1>
-                            <p>Our daily tasks and shared living support aims to enable ourclients to live independently & carry out their everyday tasks intheir homes and communities</p>
+                            <p>We encourage you to continue living independently & participating actively in your community by offering a wide variety of specially-designed support coordination.</p>
                         </div>
                     </div>
                     <button class="learn-more-btn">Learn more <img src="{{url('frontend/icons/right-arrow.svg')}}" class="learn-more-icon"/></button>
@@ -104,7 +104,7 @@
                         </div>
                         <div class="service-card-desc">
                             <h1>Daily Living Support</h1>
-                            <p>Our daily tasks and shared living support aims to enable ourclients to live independently & carry out their everyday tasks intheir homes and communities</p>
+                            <p>We give participants the fair and essential assistance they need to engage in regular community engagement activities.</p>
                         </div>
                         <button class="learn-more-btn">Learn more <img src="{{url('frontend/icons/right-arrow.svg')}}" class="learn-more-icon"/></button>
                     </div>
@@ -116,7 +116,7 @@
                         </div>
                         <div class="service-card-desc">
                             <h1>Community Participation</h1>
-                            <p>Every action we take has the participants as its focal point. We interact with clients, their families, caregivers, the disability sector, and other stakeholders for efficient community...</p>
+                            <p>We help you achieve goals related to taking part in community, social, or recreational activities</p>
                         </div>
                         <button class="learn-more-btn">Learn more <img src="{{url('frontend/icons/right-arrow.svg')}}" class="learn-more-icon"/></button>
                     </div>
@@ -128,7 +128,7 @@
                         </div>
                         <div class="service-card-desc">
                             <h1>Plan Management</h1>
-                            <p>Choosing us as your plan manager saves you hours of time and the headache of endless admin.</p>
+                            <p>In order for you to live the greatest life possible, we aim to maximize the advantages of your NDIS plan, from process payments to handling finances</p>
                         </div>
                     </div>
                     <button class="learn-more-btn">Learn more <img src="{{url('frontend/icons/right-arrow.svg')}}" class="learn-more-icon"/></button>
@@ -140,7 +140,7 @@
                         </div>
                         <div class="service-card-desc">
                             <h1>Household Task</h1>
-                            <p>Our qualified and professional staff at Agility HomeCare provide NDIS household tasks to aid daily lives of our clients and enable them to live more independently</p>
+                            <p>We help you to keep your home in good condition with NDIS household task services, whether it's for cleaning, washing, cooking, yard work, or general maintenance.</p>
                         </div>
                         <button class="learn-more-btn">Learn more <img src="{{url('frontend/icons/right-arrow.svg')}}" class="learn-more-icon"/></button>
                     </div>
@@ -152,7 +152,7 @@
                         </div>
                         <div class="service-card-desc">
                             <h1>Respite Care</h1>
-                            <p>Every action we take has the participants as its focal point. We interact with clients, their families, caregivers, the disability sector, and other stakeholders for efficient community...</p>
+                            <p>Disability clients and their caregivers might both benefit from a break or a change of scenery thanks to our respite care. When a regular caregiver is not available, alternate care is provided.</p>
                         </div>
                         <button class="learn-more-btn">Learn more <img src="{{url('frontend/icons/right-arrow.svg')}}" class="learn-more-icon"/></button>
                     </div>
@@ -164,15 +164,15 @@
     <!-- about section -->
     <section class="about-section">
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-7">
                 <div class="about-left">
                     <h2>Why Choose us?</h2>
-                    <h5>We support people with disability of all ages and needs in their homes and community with quality services.</h5>
-                    <p>DICE is a qualified NDIS disability assistance and care provider. We offer premium, dependable, and customized NDIS home care assistance for our clients, assisting them in achieving the objectives listed in their NDIS plan. These might be short-term objectives like improving daily life skills, or long-term objectives like building the physical capacity to take part in community events. Providing a range of NDIS assistance to accommodate a variety of clients, all of our services are tailored to each client's needs and delivered by certified NDIS personal care assistants and disability support professionals. We take great pride in our dependability, openness, and dedication to always providing high-quality services, and we offer a wide range of client-focused care, each tailored to precise requirements and preferences. This is the foundation of our strategy for providing support services. </p>
+                    <h5>We think that every person has unique wants and demands.</h5>
+                    <p>At DICE, we work hard to create a comprehensive program that is tailored to your unique needs and requirements. We recognize that results alone are not nearly as essential as pleasant outcomes. Our ultimate goal thus, is for our participants to experience success; this is our passion. We don't just have one program that works for everyone; instead, we will take the time to get to know you and your family's requirements. In order to create the most advantageous program that meets your needs, our committed specialists will collaborate closely with you and your family. You will be given the ability to develop, control, and own their rehabilitation strategy, and we will help you find the strength and perseverance to pursue your objectives. We know that establishing care at home can be difficult and stressful, but we make the process easy and transparent since your needs and preferences should come first when planning your care. You can stay secure and independent in your own home with our support and wide variety of services we provide. We wish to support you in maintaining your desired standard of living.</p>
                     <a href="/about">View More</a>
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-5">
                 <div class="about-image">
                     <img src="{{url('frontend/images/about-image.png')}}" class="w-100" alt="about-image"/>
                 </div>
@@ -183,18 +183,17 @@
     <!-- pricing section -->
     <section class="pricing-section">
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-5">
                 <div class="pricing-image">
                     <img src="{{url('frontend/images/pricing.png')}}" class="w-100"/>
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-7">
                 <div class="pricing-detail">
                     <h2>NDIS Pricing</h2>
                     <h5>NDIS pricing arrangements and price limits</h5>
-                    <p>NDIS Pricing Arrangements and Price Limits (previously the NDIS Price Guide) assist participants and disability support providers to understand the way that price controls for supports and services work in the NDIS.
-                        <br><br>
-                    Price regulation is in place to ensure that participants receive value for money in the supports that they receive.</p>
+                    <p>We operate under NDIS Pricing Arrangements and Price Limits (formerly the NDIS Price Guide) to help participants better understand how pricing restrictions for supports and services operate. Price control is in place to guarantee that participants get the most for their money from the assistance they receive from us. The maximum fees that registered providers like us can bill NDIS participants for particular supports are known as pricing limitations, and we make sure that all our participants get the best services for the price they pay. We understand that when providing assistance to participants who are under the management of the NDIA or a plan, the regulations specified in the NDIS Pricing Arrangements and Price Limits must be adhered to, and we carefully follow the guidelines to provide excellent services in line with them.
+                    <br><br> Price regulation is in place to ensure that participants receive value for money in the supports that they receive.</p>
                     <a href="/ndis-pricing">NDIS Price Guide</a>
                 </div>
             </div>
@@ -212,7 +211,7 @@
                 <div class="customer-review-card">
                     <div class="customer-card-review">
                         <img src="{{url('frontend/icons/quoteicon.svg')}}"/>
-                        <p>I loved the service that I received at DICE. It was wonderful, caring member always helped me to accomplish my daily task. I highly recommend them!!</p>
+                        <p>At DICE, I was given the best treatment from my care-givers. I was always looked-after and made to feel welcome and comfortable, which gave me the boost to participate more and be more socially active. Thank you DICE!</p>
                         <img src="{{url('frontend/images/starts.png')}}"/>
                     </div>
                     <div class="cutomer-details">
@@ -228,7 +227,7 @@
                 <div class="customer-review-card">
                     <div class="customer-card-review">
                         <img src="{{url('frontend/icons/quoteicon.svg')}}"/>
-                        <p>I loved the service that I received at DICE. It was wonderful, caring member always helped me to accomplish my daily task. I highly recommend them!!</p>
+                        <p>All of the staff at DICE are so professional and patient. I am halfway through my treatment and I cannot recommend them enough.</p>
                         <img src="{{url('frontend/images/starts.png')}}"/>
                     </div>
                     <div class="cutomer-details">
@@ -244,7 +243,7 @@
                 <div class="customer-review-card">
                     <div class="customer-card-review">
                         <img src="{{url('frontend/icons/quoteicon.svg')}}"/>
-                        <p>I loved the service that I received at DICE. It was wonderful, caring member always helped me to accomplish my daily task. I highly recommend them!!</p>
+                        <p>Support, care, and patience, these are the experiences that stand out our the most. I am very satisfied with my services at DICE and am grateful for their wonderful company.</p>
                         <img src="{{url('frontend/images/starts.png')}}"/>
                     </div>
                     <div class="cutomer-details">
