@@ -628,6 +628,7 @@ Responsive Codes
     justify-content: space-between;
     padding: 20px;
     margin: 0 12px;
+    min-height: 360px;
     background: #FFFFFF;
     border-radius: 26px;
 }
@@ -1492,5 +1493,74 @@ Responsive Codes
         width: 780px;
         padding: 0 80 0 0;
         float: right;
+    }
+}
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+    #topbar {
+        padding: 10px 2rem;
+    }
+    .slider-content {
+        position: absolute;
+        padding: 2rem;
+        z-index: 1;
+        width: 100%;
+        top: 40%;
+        transform: translate(0%, -50%);
+    }
+    .slider-content h3{
+        font-size: 21px;
+        line-height: 1.6rem;
+    }
+    .slider-content h2{
+        font-size: 21px;
+        line-height: 1.6rem;
+        margin-bottom: 20px;
+    }
+    .slider-content p, .box-border{
+        display: none;
+    }
+    .slider-content a{
+        padding: 4px 10px;
+        font-size: 12px;
+    }
+    .ndis-section,.services-section, .about-section, .pricing-section, .customer-section, .acknowledgement-section, .subscription-desc{
+        padding: 2rem;
+    }
+    .ndis-love{
+        gap: 6rem;
+        padding: 2rem 0;
+    }
+    .service-desc p, .customer-header p, .acknowledgement-desc p{
+        padding: 0;
+    }
+    .service-desc h1 , .customer-header h1{
+        font-size: 32px;
+        line-height: 44px;
+    }
+    .services {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .about-image{
+        margin-top: 30px;
+        padding: 0;
+        width: auto;
+    }
+    .pricing-image{
+        margin-bottom: 30px;
+        padding: 0;
+        width: auto;
+    }
+    .acknowledgement-desc h1 {
+        font-family: 'Delius';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 34px;
+        line-height: 2.8rem;
+        text-align: center;
+        letter-spacing: 0.001em;
+        color: #1A2E35;
+        margin-top: 50px;
+        margin-bottom: 16px;
     }
 }
