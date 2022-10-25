@@ -112,7 +112,7 @@
                 Our services
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href=""></a></li>
+                    <li><a class="dropdown-item" href="/service-detail">Service detail</a></li>
             </ul>
         </li>
         <li class="nav-item">
@@ -122,7 +122,7 @@
             <a class="nav-link" href="/referral">Make a Referal</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="/contact">Gallery</a>
+            <a class="nav-link" href="/gallery">Gallery</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="/contact">Contact us </a>

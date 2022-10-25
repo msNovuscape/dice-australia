@@ -28,3 +28,11 @@ Route::get('/contact', function(){
 Route::get('/referral', function(){
     return view('referral');
 });
+
+Route::get('/gallery', function(){
+    return view('gallery');
+});
+
+Route::get('/service-detail', function(){
+    return view('services.service-detail');
+});

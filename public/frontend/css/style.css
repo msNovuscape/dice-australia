@@ -56,9 +56,9 @@ h4{
     box-shadow: 0 2px 4px rgb(0 0 0 / 25%);
 }
 
-.header .logo{
+/* .header .logo{
    padding: 4px 0;
-}
+} */
 
 .navbar-list {
     display: flex;
@@ -301,7 +301,7 @@ Responsive Codes
 }
 .quick-enq-btn{
     margin: 10px;
-    padding: 6px 26px;
+    padding: 4px 26px;
     color: white;
     display: flex !important;
     align-items: center;
@@ -349,7 +349,7 @@ Responsive Codes
     font-size: 20px;
     line-height: 166%;
     color: #262535;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
 }
 .slider-content a{
     text-decoration: none;
@@ -1308,6 +1308,163 @@ Responsive Codes
     color: #6B2976;
 }
 /* referral section */
+/* gallery section */
+.gallery-section{
+    padding: 3rem 6rem;
+}
+.gallery-header h2{
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 48px;
+    text-align: center;
+    color: #6B2976;
+    margin-bottom: 30px;
+}
+.gallery-header p{
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
+    padding: 0 20%;
+    color: #121212;
+    margin-bottom: 50px;
+}
+.gallery-slider .slick-track{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.gallery-slider .slick-center img{
+    height: 500px !important;
+}
+.gallery-slider .slick-center{
+    width: 440px !important;
+}
+.gallery-slider .slick-active img{
+    height: 450px;
+}
+.gallery-section .slick-next:before, .gallery-section .slick-prev:before{
+    color: #6B2976 !important;
+}
+/* gallery section */
+/* service detail section */
+.service-slider-section, .service-first-content-section, .service-second-content-section{
+    padding: 3rem 6rem;
+}
+.service-slider-section .row, .service-first-content-section .row, .service-second-content-section .row{
+    display: flex;
+    align-items: center;
+}
+.service-detail-banner h3{
+    font-weight: 700;
+    font-size: 30px;
+    color: #47465C;
+    line-height: 44px;
+    margin-bottom: 15px;
+}
+.service-detail-banner h4, .first-content-desc h4, .second-content-desc h4{
+    font-weight: 700;
+    font-size: 30px;
+    color: #6B2976;
+    line-height: 44px;
+    margin-bottom: 10px;
+}
+.service-detail-banner p{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 148.5%;
+    color: #121212;
+}
+.first-content-desc h5, .second-content-desc h5{
+    font-weight: 700;
+    font-size: 20px;
+    color: #000000;
+}
+.service-first-img{
+    width: 600px;
+}
+.service-second-img{
+    width: 600px;
+    float: right;
+}
+.second-content-desc ul {
+    padding-left: 20px;
+}
+.second-content-desc ul li::before{
+    content: "\f058";
+    color: #6B2976;
+    font-family: FontAwesome;
+    display: inline-block;
+    margin-right: 0.6em;
+    margin-left: -1.3em;
+    width: 1.3em;
+}
+.second-content-desc ul li{
+    list-style: none;
+}
+.support-section{
+    padding: 6rem;
+    background: #F0EFFD;
+}
+.support-desc h1{
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 55px;
+    text-align: center;
+    letter-spacing: 0.001em;
+    color: #6B2976;
+}
+.support-desc p{
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 2rem;
+    margin: 0 20%;
+    text-align: center;
+    color: #000000;
+    margin-bottom: 30px;
+ }
+ /* .services{
+     background: #6B2976;
+     border: 1px solid #6B2976;
+     box-shadow: 0px 18px 25px rgba(32, 31, 30, 0.04);
+     border-radius: 12px;
+ } */
+.support-service-card{
+    background: #6B2976;
+    box-shadow: 0px 18px 25px rgba(32, 31, 30, 0.04);
+    border-radius: 12px;
+    padding: 20px;
+    text-decoration: none;
+    position: relative;
+    min-height: 24pc;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.support-service-card h1{
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 34px;
+    letter-spacing: 0.001em;
+    color: #FFFFFF;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.support-service-card p{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 2rem;
+    color: #FFFFFF;
+    text-align: center;
+}
+.support-service-icon{
+    background: #4B220E;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    padding: 20px;
+}
+/* service detail section */
 /* large screen */
 @media screen and (min-width: 1600px){
     .about-page-image, .about-team-image, .pricing-image{
@@ -1317,5 +1474,23 @@ Responsive Codes
     .about-image{
         width: 700px;
         padding: 0 0 0 70px;
+    }
+    .gallery-slider .slick-center img{
+        height: 630px !important;
+    }
+    .gallery-slider .slick-active img{
+        height: 550px;
+    }
+    .gallery-slider .slick-center{
+        width: 580px !important;
+    }
+    .service-first-img{
+        width: 780px;
+        padding: 0 0 0 80px;
+    }
+    .service-second-img{
+        width: 780px;
+        padding: 0 80 0 0;
+        float: right;
     }
 }
