@@ -20,7 +20,7 @@
                     <h3>Services Based on Principles of</h3>
                     <h2>Inclusion & Diversity</h2>
                     <p>We Respect & Recognize the Rich Indigenous Heritage of Australia & Provide Services for all under our Care</p>
-                    <a href=".contact">Get a Free Consultation</a>
+                    <a href="contact">Get a Free Consultation</a>
                 </div>
             </div>
             <div class="carousel-item">
