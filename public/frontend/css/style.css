@@ -1537,7 +1537,7 @@ Responsive Codes
     }
     .ndis-section,.services-section, .about-section, .pricing-section, .customer-section, 
     .acknowledgement-section, .subscription-desc, .footer, .about-page-section, .team-support-section,
-    .our-value-section, .about-regirtered {
+    .our-value-section, .about-regirtered, .gallery-section, .contact-form-section {
         padding: 2rem;
     }
     .referral-section{
@@ -1625,7 +1625,7 @@ Responsive Codes
         padding: 0;
         margin-bottom: 40px;
     }
-    .about-team-image{
+    .about-team-image, .gallery-header p{
         width: 100%;
         padding: 0;
     }
@@ -1636,10 +1636,43 @@ Responsive Codes
     .referralform-top p{
         margin: 0;
     }
+    /* gallery page */
+    .gallery-header h2 {
+        font-size: 32px;
+        line-height: 42px;
+    }
+    /* contact us */
+    .contactus-header{
+        transform: translate(-50%, -50%);
+        left: 30%;
+        top: 18%;
+    }
+    .contactus-icons{
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        bottom: 0;
+        top: 30%;
+        width: 80%;
+        transform: translate(-34%, 0);
+    }
+    .contactus-header h1 {
+        font-size: 22px;
+        line-height: 32px;
+    }
+    .contactus-header p{
+        display: none;
+    }
+    .dice-map{
+        margin-top: 40px;
+    }
 }
 @media only screen and (min-width: 768px) and (max-width: 1024px){
     .header, #topbar{
         padding: 0 2rem;
+    }
+    .footer{
+        padding: 3rem;
     }
     .slider-content {
         width: 55%;
@@ -1661,7 +1694,8 @@ Responsive Codes
         padding: 2rem 0;
     }
     .ndis-section, .services-section, .about-section, .customer-section, .acknowledgement-section, 
-    .about-page-section, .team-support-section, .our-value-section, .about-regirtered, .referral-section{
+    .about-page-section, .team-support-section, .our-value-section, .about-regirtered, .referral-section, 
+    .contact-form-section{
         padding: 3rem;
     }
     .service-desc p{
@@ -1703,6 +1737,20 @@ Responsive Codes
     /* referral page */
     .referral-section .card {
         padding: 10px !important;
+    }
+    /* contact us page */
+    .contactus-icons {
+        position: absolute;
+        bottom: 0%;
+        left: 40%;
+        transform: translate(-25%, -80%);
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .contactus-header{
+        top: 30%;
     }
 }
 @media only screen and (min-width: 1024px) and (max-width: 1366px) {
