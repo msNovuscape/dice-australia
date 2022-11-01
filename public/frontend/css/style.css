@@ -1537,7 +1537,8 @@ Responsive Codes
     }
     .ndis-section,.services-section, .about-section, .pricing-section, .customer-section, 
     .acknowledgement-section, .subscription-desc, .footer, .about-page-section, .team-support-section,
-    .our-value-section, .about-regirtered, .gallery-section, .contact-form-section {
+    .our-value-section, .about-regirtered, .gallery-section, .contact-form-section, .service-slider-section, 
+    .service-first-content-section, .service-second-content-section, .support-section{
         padding: 2rem;
     }
     .referral-section{
@@ -1625,7 +1626,7 @@ Responsive Codes
         padding: 0;
         margin-bottom: 40px;
     }
-    .about-team-image, .gallery-header p{
+    .about-team-image, .gallery-header p, .service-first-img, .service-second-img{
         width: 100%;
         padding: 0;
     }
@@ -1633,11 +1634,11 @@ Responsive Codes
     .referral-section .card {
         padding: 10px 0 !important;
     }
-    .referralform-top p{
+    .referralform-top p, .support-desc p{
         margin: 0;
     }
     /* gallery page */
-    .gallery-header h2 {
+    .gallery-header h2, .support-desc h1 {
         font-size: 32px;
         line-height: 42px;
     }
@@ -1663,8 +1664,18 @@ Responsive Codes
     .contactus-header p{
         display: none;
     }
-    .dice-map{
+    .dice-map, .first-content-desc{
         margin-top: 40px;
+    }
+    .first-content-desc h4, .service-detail-banner h3, .service-detail-banner h4,
+    .second-content-desc h4, .support-desc h1{
+        font-size: 28px;
+        line-height: 42px;
+    }
+    .support-desc p{
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.6rem;
     }
 }
 @media only screen and (min-width: 768px) and (max-width: 1024px){
@@ -1695,26 +1706,28 @@ Responsive Codes
     }
     .ndis-section, .services-section, .about-section, .customer-section, .acknowledgement-section, 
     .about-page-section, .team-support-section, .our-value-section, .about-regirtered, .referral-section, 
-    .contact-form-section{
+    .contact-form-section, .service-slider-section, .service-first-content-section, .service-second-content-section, 
+    .support-section{
         padding: 3rem;
     }
     .service-desc p{
         padding: 0 8%;
     }
     .about-section .row, .pricing-section .row, .subscription-section .row, 
-    .about-page-section .row, .team-support-section .row{
+    .about-page-section .row, .team-support-section .row, .service-slider-section .row, 
+    .service-first-content-section .row, .service-second-content-section .row{
         flex-direction: column;
         align-items: flex-start;
     }
     .about-section .row .col-md-7, .pricing-section .row .col-md-7, .subscription-section .row .col-md-7, 
     .subscription-section .row .col-md-5, .about-page-section .row .col-md-5, .about-page-section .row .col-md-7,
-    .team-support-section .row .col-md-5, .team-support-section .row .col-md-7{
+    .team-support-section .row .col-md-5, .team-support-section .row .col-md-7, .service-slider-section .row .col-md-6, 
+    .service-first-content-section .row .col-md-6, .service-second-content-section .row .col-md-6{
         width: 100%;
     }
-    .about-image, .pricing-detail, .about-page-desc{
+    .about-image, .pricing-detail, .about-page-desc, .service-second-img, .first-content-desc, .service-detail-img{
         margin-top: 40px;
     }
-    
     .customer-review-card{
         min-height: 500px;
     }
@@ -1751,6 +1764,13 @@ Responsive Codes
     }
     .contactus-header{
         top: 30%;
+    }
+    /* service detail page */
+    .support-desc p{
+        margin: 0;
+    }
+    .service-first-img, .service-second-img{
+        width: 100%;
     }
 }
 @media only screen and (min-width: 1024px) and (max-width: 1366px) {
