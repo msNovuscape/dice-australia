@@ -974,6 +974,7 @@ Responsive Codes
     font-weight: 700;
     font-size: 35px;
     color: #000000;
+    line-height: 42px;
     margin-bottom: 20px;
 }
 .our-value-section{
@@ -987,6 +988,7 @@ Responsive Codes
     font-weight: 700;
     font-size: 35px;
     color: #000000;
+    line-height: 42px;
     margin-bottom: 20px;
 }
 .about-value-card{
@@ -1533,7 +1535,9 @@ Responsive Codes
         padding: 4px 10px;
         font-size: 12px;
     }
-    .ndis-section,.services-section, .about-section, .pricing-section, .customer-section, .acknowledgement-section, .subscription-desc, .footer {
+    .ndis-section,.services-section, .about-section, .pricing-section, .customer-section, 
+    .acknowledgement-section, .subscription-desc, .footer, .about-page-section, .team-support-section,
+    .our-value-section, .about-regirtered {
         padding: 2rem;
     }
     .ndis-love{
@@ -1612,6 +1616,16 @@ Responsive Codes
         padding-left: 0px;
         align-items: center;
     }
+    /* about us page */
+    .about-page-image{
+        width: 100%;
+        padding: 0;
+        margin-bottom: 40px;
+    }
+    .about-team-image{
+        width: 100%;
+        padding: 0;
+    }
 }
 @media only screen and (min-width: 768px) and (max-width: 1024px){
     .header{
@@ -1636,20 +1650,24 @@ Responsive Codes
         gap: 3rem;
         padding: 2rem 0;
     }
-    .ndis-section, .services-section, .about-section, .customer-section, .acknowledgement-section{
+    .ndis-section, .services-section, .about-section, .customer-section, .acknowledgement-section, 
+    .about-page-section, .team-support-section, .our-value-section, .about-regirtered{
         padding: 3rem;
     }
     .service-desc p{
         padding: 0 8%;
     }
-    .about-section .row, .pricing-section .row, .subscription-section .row{
+    .about-section .row, .pricing-section .row, .subscription-section .row, 
+    .about-page-section .row, .team-support-section .row{
         flex-direction: column;
         align-items: flex-start;
     }
-    .about-section .row .col-md-7, .pricing-section .row .col-md-7, .subscription-section .row .col-md-7, .subscription-section .row .col-md-5{
+    .about-section .row .col-md-7, .pricing-section .row .col-md-7, .subscription-section .row .col-md-7, 
+    .subscription-section .row .col-md-5, .about-page-section .row .col-md-5, .about-page-section .row .col-md-7,
+    .team-support-section .row .col-md-5, .team-support-section .row .col-md-7{
         width: 100%;
     }
-    .about-image, .pricing-detail{
+    .about-image, .pricing-detail, .about-page-desc{
         margin-top: 40px;
     }
     
@@ -1661,6 +1679,16 @@ Responsive Codes
     }
     .dice-from, .subscribe-btn{
         width: 80%;
+    }
+    .pricing-image, .about-image{
+        padding: 0;
+    }
+    .about-page-image, .about-team-image{
+        padding: 0;
+        width: 100%;
+    }
+    .about-value-card {
+        min-height: 460px;
     }
 }
 @media only screen and (min-width: 1024px) and (max-width: 1366px) {
@@ -1711,5 +1739,8 @@ Responsive Codes
 
     .active .mobile-navbar-btn .mobile-nav-icon[name="menu-outline"] {
         display: none;
+    }
+    .pricing-image, .about-image{
+        width: 700px;
     }
 }
