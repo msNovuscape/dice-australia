@@ -1509,7 +1509,7 @@ Responsive Codes
 }
 @media only screen and (min-width: 320px) and (max-width: 480px) {
     #topbar {
-        padding: 10px 2rem;
+        padding: 10px 0;
     }
     .slider-content {
         position: absolute;
@@ -1539,6 +1539,9 @@ Responsive Codes
     .acknowledgement-section, .subscription-desc, .footer, .about-page-section, .team-support-section,
     .our-value-section, .about-regirtered {
         padding: 2rem;
+    }
+    .referral-section{
+        padding: 12px;
     }
     .ndis-love{
         gap: 6rem;
@@ -1626,9 +1629,16 @@ Responsive Codes
         width: 100%;
         padding: 0;
     }
+    /* referral page */
+    .referral-section .card {
+        padding: 10px 0 !important;
+    }
+    .referralform-top p{
+        margin: 0;
+    }
 }
 @media only screen and (min-width: 768px) and (max-width: 1024px){
-    .header{
+    .header, #topbar{
         padding: 0 2rem;
     }
     .slider-content {
@@ -1651,7 +1661,7 @@ Responsive Codes
         padding: 2rem 0;
     }
     .ndis-section, .services-section, .about-section, .customer-section, .acknowledgement-section, 
-    .about-page-section, .team-support-section, .our-value-section, .about-regirtered{
+    .about-page-section, .team-support-section, .our-value-section, .about-regirtered, .referral-section{
         padding: 3rem;
     }
     .service-desc p{
@@ -1689,6 +1699,10 @@ Responsive Codes
     }
     .about-value-card {
         min-height: 460px;
+    }
+    /* referral page */
+    .referral-section .card {
+        padding: 10px !important;
     }
 }
 @media only screen and (min-width: 1024px) and (max-width: 1366px) {
