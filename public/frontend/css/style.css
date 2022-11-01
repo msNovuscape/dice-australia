@@ -1581,7 +1581,8 @@ Responsive Codes
     .ndis-section,.services-section, .about-section, .pricing-section, .customer-section, 
     .acknowledgement-section, .subscription-desc, .footer, .about-page-section, .team-support-section,
     .our-value-section, .about-regirtered, .gallery-section, .contact-form-section, .service-slider-section, 
-    .service-first-content-section, .service-second-content-section, .support-section{
+    .service-first-content-section, .service-second-content-section, .support-section, .ndis-top-section, 
+    .ndis-scheme-section, .ndis-run-section, .ndis-finance-section{
         padding: 2rem;
     }
     .referral-section{
@@ -1669,7 +1670,7 @@ Responsive Codes
         padding: 0;
         margin-bottom: 40px;
     }
-    .about-team-image, .gallery-header p, .service-first-img, .service-second-img{
+    .about-team-image, .gallery-header p, .service-first-img, .service-second-img, .ndis-scheme-img, .ndis-run-img, .ndis-finance-img{
         width: 100%;
         padding: 0;
     }
@@ -1700,18 +1701,19 @@ Responsive Codes
         width: 80%;
         transform: translate(-34%, 0);
     }
-    .contactus-header h1 {
+    .contactus-header h1, .ndis-top-section p{
         font-size: 22px;
         line-height: 32px;
     }
     .contactus-header p{
         display: none;
     }
-    .dice-map, .first-content-desc{
+    .dice-map, .first-content-desc, .ndis-scheme-content, .ndis-finance-content{
         margin-top: 40px;
     }
     .first-content-desc h4, .service-detail-banner h3, .service-detail-banner h4,
-    .second-content-desc h4, .support-desc h1{
+    .second-content-desc h4, .support-desc h1, .ndis-scheme-content h4, .ndis-finance-content h4,
+    .ndis-top-section h2 {
         font-size: 28px;
         line-height: 42px;
     }
@@ -1750,7 +1752,7 @@ Responsive Codes
     .ndis-section, .services-section, .about-section, .customer-section, .acknowledgement-section, 
     .about-page-section, .team-support-section, .our-value-section, .about-regirtered, .referral-section, 
     .contact-form-section, .service-slider-section, .service-first-content-section, .service-second-content-section, 
-    .support-section{
+    .support-section, .ndis-top-section, .ndis-scheme-section, .ndis-run-section, .ndis-finance-section{
         padding: 3rem;
     }
     .service-desc p{
@@ -1758,17 +1760,21 @@ Responsive Codes
     }
     .about-section .row, .pricing-section .row, .subscription-section .row, 
     .about-page-section .row, .team-support-section .row, .service-slider-section .row, 
-    .service-first-content-section .row, .service-second-content-section .row{
+    .service-first-content-section .row, .service-second-content-section .row, 
+    .ndis-scheme-section .row, .ndis-run-section .row, .ndis-finance-section .row{
         flex-direction: column;
         align-items: flex-start;
     }
     .about-section .row .col-md-7, .pricing-section .row .col-md-7, .subscription-section .row .col-md-7, 
     .subscription-section .row .col-md-5, .about-page-section .row .col-md-5, .about-page-section .row .col-md-7,
     .team-support-section .row .col-md-5, .team-support-section .row .col-md-7, .service-slider-section .row .col-md-6, 
-    .service-first-content-section .row .col-md-6, .service-second-content-section .row .col-md-6{
+    .service-first-content-section .row .col-md-6, .service-second-content-section .row .col-md-6, 
+    .ndis-scheme-section .row .col-md-6, .ndis-run-section .row .col-md-6, .ndis-finance-section .row .col-md-7, 
+    .ndis-finance-section .row .col-md-5, .ndis-scheme-img, .ndis-run-img, .ndis-finance-img{
         width: 100%;
     }
-    .about-image, .pricing-detail, .about-page-desc, .service-second-img, .first-content-desc, .service-detail-img{
+    .about-image, .pricing-detail, .about-page-desc, .service-second-img, .first-content-desc, .service-detail-img, 
+    .ndis-scheme-content{
         margin-top: 40px;
     }
     .customer-review-card{
@@ -1867,5 +1873,8 @@ Responsive Codes
     }
     .pricing-image, .about-image{
         width: 700px;
+    }
+    .ndis-scheme-img, .ndis-run-img, .ndis-finance-img{
+        width: 100%;
     }
 }
