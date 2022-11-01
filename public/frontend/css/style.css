@@ -1468,6 +1468,45 @@ Responsive Codes
     padding: 20px;
 }
 /* service detail section */
+/* ndis page */
+.ndis-top-section, .ndis-scheme-section, .ndis-run-section{
+    padding: 3rem 6rem;
+}
+.ndis-top-section h2{
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 48px;
+    text-align: center;
+    color: #6B2976;
+}
+.ndis-top-section p{
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 38px;
+    text-align: center;
+    color: #121212;
+}
+.ndis-scheme-section{
+    background: #FFF6F2;
+}
+.ndis-scheme-section .row, .ndis-run-section .row, .ndis-finance-section .row{
+    display: flex;
+    align-items: center;
+}
+.ndis-scheme-img, .ndis-run-img, .ndis-finance-img{
+    width: 600px;
+}
+.ndis-scheme-content h4, .ndis-finance-content h4{
+    font-weight: 700;
+    font-size: 32px;
+    color: #000000;
+    line-height: 42px;
+    margin-bottom: 20px;
+}
+.ndis-finance-section{
+    padding: 3rem 6rem;
+    background: #F0EFFD;
+}
 /* large screen */
 @media screen and (min-width: 1600px){
     .navbar-list {
@@ -1484,8 +1523,12 @@ Responsive Codes
         width: 700px;
         padding: 0 70px 0 0;
     }
-    .about-image{
+    .about-image, .ndis-run-img, .ndis-finance-img{
         width: 700px;
+        padding: 0 0 0 70px;
+    }
+    .ndis-scheme-img{
+        width: 800px;
         padding: 0 0 0 70px;
     }
     .gallery-slider .slick-center img{

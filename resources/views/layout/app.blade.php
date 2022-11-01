@@ -116,7 +116,7 @@
             </ul>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="/events-blogs">NDIS</a>
+            <a class="nav-link" href="/ndis">NDIS</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="/referral">Make a Referal</a>
