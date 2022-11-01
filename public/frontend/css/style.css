@@ -465,7 +465,7 @@ Responsive Codes
 .service-desc p{
     font-weight: 700;
     font-size: 16px;
-    line-height: 22px;
+    line-height: 32px;
     padding: 0 27%;
     text-align: center;
     color: #262535;
@@ -1543,9 +1543,13 @@ Responsive Codes
     .service-desc p, .customer-header p, .acknowledgement-desc p{
         padding: 0;
     }
-    .service-desc h1 , .customer-header h1{
+    .service-desc h1 , .customer-header h1, .ndis-left-desc h1{
         font-size: 32px;
-        line-height: 44px;
+        line-height: 42px;
+    }
+    .about-left h2, .pricing-detail h2{
+        font-size: 32px;
+        line-height: 38px;
     }
     .services {
         display: grid;
@@ -1607,6 +1611,56 @@ Responsive Codes
         gap: 10px;
         padding-left: 0px;
         align-items: center;
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px){
+    .header{
+        padding: 0 2rem;
+    }
+    .slider-content {
+        width: 55%;
+        padding: 3rem;
+    }
+    .slider-content p{
+        display: none;
+    }
+    .slider-content h2{
+        font-size: 32px;
+        line-height: 42px;
+        margin-bottom: 40px;
+    }
+    .slider-content a {
+        padding: 8px 16px;
+    }
+    .ndis-love{
+        gap: 3rem;
+        padding: 2rem 0;
+    }
+    .ndis-section, .services-section, .about-section, .customer-section, .acknowledgement-section{
+        padding: 3rem;
+    }
+    .service-desc p{
+        padding: 0 8%;
+    }
+    .about-section .row, .pricing-section .row, .subscription-section .row{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .about-section .row .col-md-7, .pricing-section .row .col-md-7, .subscription-section .row .col-md-7, .subscription-section .row .col-md-5{
+        width: 100%;
+    }
+    .about-image, .pricing-detail{
+        margin-top: 40px;
+    }
+    
+    .customer-review-card{
+        min-height: 500px;
+    }
+    .subscription-desc{
+        margin: 40px 0;
+    }
+    .dice-from, .subscribe-btn{
+        width: 80%;
     }
 }
 @media only screen and (min-width: 1024px) and (max-width: 1366px) {
