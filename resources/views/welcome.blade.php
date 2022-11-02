@@ -301,15 +301,33 @@
                 <div class="subscription-desc">
                     <h1>Join DICE Family</h1>
                     <p>We're committed to your privacy. DICE uses the information you provide to us to contact you about our relevant content, products, and services.</p>
-                    <form>
-                        <div class="mb-3">
-                            <input type="text" class="dice-from" id="fname" placeholder="FullName">
+                    <form onsubmit="return validateSubscription()">
+                        <div class="">
+                            <input type="text" class="dice-from" id="subs-fname" name="" placeholder="FullName" onkeyup="subsFname()">
+                            <span id="subs-fname-error" class="error-msg"></span>
                         </div>
-                        <div class="mb-3">
-                            <input type="email" class="dice-from" id="email" placeholder="Email address">
+                        <div class="">
+                            <input type="email" class="dice-from" id="subs-email" name="" placeholder="Email address" onkeyup="subsEmail()">
+                            <span id="subs-email-error" class="error-msg"></span>
                         </div>
                         <div class="mb-3">
                             <button type="submit" class="subscribe-btn">Subscribe</button>
+                            <div class="modal fade" id="subsModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content footer-content">
+                                        <div class="modal-header submit-header-modal">
+                                            <img src="{{url('frontend/icons/success.svg')}}"/>
+                                        </div>
+                                        <div class="modal-body" style="background: #FFFFFF">
+                                            <h2 style="color: #3A3A3A; font-weight: 700; font-size: 24px; line-height: 2rem">Success!</h2>
+                                            <p id = "success">This is success message</p>
+                                        </div>
+                                        <div class="modal-footer submit-footer-modal">
+                                            <a type="button" class="submit-close-btn" href="/contact">Close</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </form>
                 </div>
@@ -356,6 +374,39 @@
                 }
             ]
         });
+
+
+        var subsfnamError = document.getElementById('subs-fname-error');
+        var subsEmailError = document.getElementById('subs-email-error');
+
+        function subsFname() {
+            if (document.getElementById('subs-fname').value.length == 0) {
+                $('#subs-fname').focus();
+                subsfnamError.innerHTML = 'Please enter your Full Name !!';
+                return false;
+            } else {
+                subsfnamError.innerHTML = '';
+                return true;
+            }
+        }
+        function subsEmail() {
+            if (document.getElementById('subs-email').value.length == 0) {
+                $('#subs-email').focus();
+                subsEmailError.innerHTML = 'Please enter your email !!';
+                return false;
+            } else {
+                subsEmailError.innerHTML = '';
+                return true;
+            }
+        }
+
+        function validateSubscription() {
+            if (!subsFname() || !subsEmail()) {
+                return false;
+            } else {
+                $('#subsModal').modal('show');
+            }
+        }
     </script>
 @endsection
 

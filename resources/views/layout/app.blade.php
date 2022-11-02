@@ -58,35 +58,34 @@
                             <!-- <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button> -->
                         </div>
                         <div class="modal-body modal-detail">
-                            <form onsubmit="return validateform()" method="POST" action="">
-                                @csrf
+                            <form onsubmit="return validatetopform()" action="">
                                 <div class="row">
                                     <div class="col-md-6 mb-3">
-                                        <input type="text" class="form-control" id="app-fname" name="fname" placeholder="First Name" value="" onkeyup="validatefullname()">
+                                        <input type="text" class="form-control" id="app-fname" name="fname" placeholder="First Name" value="" onkeyup="validatetopfname()">
                                         <span class="error-msg" id="app-fname-error"></span>
                                     </div>
                                     <div class="col-md-6">
-                                        <input type="text" class="form-control" id="app-getlname" placeholder="Last Name" name="lname" value="" onkeyup="validateemail()">
-                                        <span class="error-msg" id="app-email-error"></span>
+                                        <input type="text" class="form-control" id="app-lname" placeholder="Last Name" name="lname" value="" onkeyup="validatetoplname()">
+                                        <span class="error-msg" id="app-lname-error"></span>
                                     </div>
                                     <div class="col-md-6">
-                                        <input type="email" class="form-control" id="app-getemail" placeholder="Email" name="email" value="" onkeyup="validateemail()">
+                                        <input type="email" class="form-control" id="app-email" placeholder="Email" name="email" value="" onkeyup="validatetopemail()">
                                         <span class="error-msg" id="app-email-error"></span>
                                     </div>
                                     <div class="col-md-6 mb-3">
-                                        <input type="number" class="form-control" id="app-phonenumber" placeholder="Phone" name="phone" value="" onkeyup="validatephone()">
+                                        <input type="number" class="form-control" id="app-phone" placeholder="Phone" name="phone" value="" onkeyup="validatetopPhone()">
                                         <span class="error-msg" id="app-phone-error"></span>
                                     </div>
                                     <div class="col-md-12 mb-3">
-                                        <textarea type="text" class="form-control" id="getmessage" placeholder="Let us know how can we help" name="app-message" value="" onkeyup="validatemessage()"></textarea>
-                                        <span class="app-error-msg" id="message-error"></span>
+                                        <textarea type="text" class="form-control" id="app-message" placeholder="Let us know how can we help" name="app-message" value="" onkeyup="validatetopmessage()"></textarea>
+                                        <span class="error-msg" id="app-message-error"></span>
                                     </div>
                                 </div>
 
                                 <div class="modal-footer">
                                     <button type="button" class="modal-close-btn" data-bs-dismiss="modal">Close</button>
                                     <button type="submit" class="modal-submit-btn">Submit</button>
-                                    </div>
+                                </div>
                                 </div>
                             </form>
                         </div>
@@ -205,6 +204,83 @@
 
 <!-- hamburger link -->
 <script type="text/javascript" src="{{url('frontend/js/index.js')}}"></script>
+<script>
+        var topfnameError = document.getElementById('app-fname-error')
+        var toplnameError = document.getElementById('app-lname-error')
+        var topemailError = document.getElementById('app-email-error')
+        var topphoneError = document.getElementById('app-phone-error')
+        var topmessageError = document.getElementById('app-message-error')
+
+        function validatetopfname(){
+            var topfname = document.getElementById('app-fname').value;
+            if(topfname.length == 0){
+                $('#app-fname').focus();
+                topfnameError.innerHTML = "First name is required!";
+                return false;
+            }
+            topfnameError.innerHTML = '';
+            return true;
+        }
+
+        function validatetoplname(){
+            var topllname = document.getElementById('app-lname').value;
+            if(topllname.length == 0){
+                $('#app-phone').focus();
+                toplnameError.innerHTML= "Last name is required!"
+                return false
+            }
+            else {
+                toplnameError.innerHTML= ""
+                return true
+            }
+        }
+
+        function validatetopemail(){
+            var topemailtype = document.getElementById('app-email').value;
+            if(topemailtype.length == 0){
+                $('#app-appointment-type').focus();
+                topemailError.innerHTML = "Email field is required!";
+                return false;
+            }
+            topemailError.innerHTML = '';
+            return true;
+        }
+
+        function validatetopPhone(){
+            var topphone = document.getElementById('app-phone').value;
+            if(topphone.length == 0){
+                $('#app-date').focus();
+                topphoneError.innerHTML = "Phone field is required!"
+            }
+            if(!topphone.match(/^\d{10}$/)){
+                topphoneError.innerHTML = "Invalid mobile number";
+                return false;
+            }
+            else {
+                topphoneError.innerHTML = "";
+                return true;
+            }
+        }
+        function validatetopmessage(){
+            var topmessage = document.getElementById('app-message').value;
+            if(topmessage.length == 0){
+                $('#app-time').focus();
+                topmessageError.innerHTML = "Message field is required!"
+            }
+            else {
+                topmessageError.innerHTML = "";
+                return true;
+            }
+        }
+        function validatetopform(){
+            if(!validatetopfname() || !validatetoplname() || !validatetopemail() || !validatetopPhone() || !validatetopmessage()){
+                return false
+            }
+            else {
+                return true
+            }
+        }
+</script>
 @yield('script')
 </body>
 </html>

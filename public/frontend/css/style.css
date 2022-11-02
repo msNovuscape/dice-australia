@@ -1121,13 +1121,13 @@ Responsive Codes
     margin-top: 12px;
     border-radius: 0;
 }
-.contactus-form input::-webkit-input-placeholder {
+.contactus-form input::-webkit-input-placeholder, .contactus-form textarea::-webkit-input-placeholder{
     color: #6B2976;
     font-size: 17px;
     line-height: 21px;
 }
 
-.contactus-form input:-moz-placeholder {
+.contactus-form input:-moz-placeholder, .contactus-form textarea:-moz-placeholder{
     color: #6B2976;
     font-size: 17px;
     line-height: 21px;
@@ -1142,11 +1142,34 @@ Responsive Codes
     line-height: 18px;
     letter-spacing: -0.015em;
     color: #FFFFFF;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+
+.submit-btn:hover {
+    box-shadow: inset 150px 0 0 0 #E54E2E;
+    color: white;
+    border: 1px solid #E54E2E;
+}
+.error-msg{
+    color: red;
+    font-size: 15px;
+    font-weight: 600;
+    margin: 8px;
+}
+.submit-header-modal{
+    justify-content: center !important;
+    border-bottom: none !important;
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
 }
 /* contact us page css */
 /* referral section */
 .referral-section{
     padding: 60px;
+}
+.hideandshow{
+    display:none !important;
 }
 .referralform-top{
     text-align: center;
@@ -1210,12 +1233,13 @@ Responsive Codes
     margin-right: 10px;
 }
 .referral-section .card label{
-    font-size: 15px;
+    font-weight: 600;
+    font-size: 17px;
     margin-bottom: 5px;
 }
 .referral-section .card input, .referral-section .card select{
     padding: 10px;
-    border: 2px solid #6B2976;
+    border: 2px solid #6B2976 !important;
 }
 .referral-section .card input::placeholder{
     color: #6B2976 !important;
