@@ -74,7 +74,7 @@
                     <p>As part of the NDIS's assistance with life stage transition, we encourage participants to move to new places and facilitate a smooth transition by providing them with housing, social connections, financial resources, and leisure activities that will make them feel comfortable.</p>
                 </div>
             </div>
-            <div class="row gx-4">
+            <div class="row g-4">
                 <div class="col-lg-3 col-md-6">
                     <div class="support-services">
                         <div class="support-service-card">

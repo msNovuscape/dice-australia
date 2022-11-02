@@ -65,7 +65,7 @@ h4{
     justify-content: center;
     align-items: center;
     text-align: center;
-    gap: 3rem;
+    gap: 1.7rem;
     text-decoration: none;
     padding: 0 0.8rem !important;
     list-style: none;
@@ -380,7 +380,7 @@ Responsive Codes
     height:10px !important;
     background: none !important;
     border-radius:100% !important;
-    border: 2px solid #FFFFFF !important;
+    border: 2px solid #6B2976 !important;
     display:inline-block;
     margin-right:7px;
     cursor:pointer;
@@ -465,7 +465,7 @@ Responsive Codes
 .service-desc p{
     font-weight: 700;
     font-size: 16px;
-    line-height: 22px;
+    line-height: 32px;
     padding: 0 27%;
     text-align: center;
     color: #262535;
@@ -974,6 +974,7 @@ Responsive Codes
     font-weight: 700;
     font-size: 35px;
     color: #000000;
+    line-height: 42px;
     margin-bottom: 20px;
 }
 .our-value-section{
@@ -987,6 +988,7 @@ Responsive Codes
     font-weight: 700;
     font-size: 35px;
     color: #000000;
+    line-height: 42px;
     margin-bottom: 20px;
 }
 .about-value-card{
@@ -1466,14 +1468,67 @@ Responsive Codes
     padding: 20px;
 }
 /* service detail section */
+/* ndis page */
+.ndis-top-section, .ndis-scheme-section, .ndis-run-section{
+    padding: 3rem 6rem;
+}
+.ndis-top-section h2{
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 48px;
+    text-align: center;
+    color: #6B2976;
+}
+.ndis-top-section p{
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 38px;
+    text-align: center;
+    color: #121212;
+}
+.ndis-scheme-section{
+    background: #FFF6F2;
+}
+.ndis-scheme-section .row, .ndis-run-section .row, .ndis-finance-section .row{
+    display: flex;
+    align-items: center;
+}
+.ndis-scheme-img, .ndis-run-img, .ndis-finance-img{
+    width: 600px;
+}
+.ndis-scheme-content h4, .ndis-finance-content h4{
+    font-weight: 700;
+    font-size: 32px;
+    color: #000000;
+    line-height: 42px;
+    margin-bottom: 20px;
+}
+.ndis-finance-section{
+    padding: 3rem 6rem;
+    background: #F0EFFD;
+}
 /* large screen */
 @media screen and (min-width: 1600px){
+    .navbar-list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 4rem;
+        text-decoration: none;
+        padding: 0 0.8rem !important;
+        list-style: none;
+    }
     .about-page-image, .about-team-image, .pricing-image{
         width: 700px;
         padding: 0 70px 0 0;
     }
-    .about-image{
+    .about-image, .ndis-run-img, .ndis-finance-img{
         width: 700px;
+        padding: 0 0 0 70px;
+    }
+    .ndis-scheme-img{
+        width: 800px;
         padding: 0 0 0 70px;
     }
     .gallery-slider .slick-center img{
@@ -1497,7 +1552,7 @@ Responsive Codes
 }
 @media only screen and (min-width: 320px) and (max-width: 480px) {
     #topbar {
-        padding: 10px 2rem;
+        padding: 10px 0;
     }
     .slider-content {
         position: absolute;
@@ -1523,8 +1578,15 @@ Responsive Codes
         padding: 4px 10px;
         font-size: 12px;
     }
-    .ndis-section,.services-section, .about-section, .pricing-section, .customer-section, .acknowledgement-section, .subscription-desc{
+    .ndis-section,.services-section, .about-section, .pricing-section, .customer-section, 
+    .acknowledgement-section, .subscription-desc, .footer, .about-page-section, .team-support-section,
+    .our-value-section, .about-regirtered, .gallery-section, .contact-form-section, .service-slider-section, 
+    .service-first-content-section, .service-second-content-section, .support-section, .ndis-top-section, 
+    .ndis-scheme-section, .ndis-run-section, .ndis-finance-section{
         padding: 2rem;
+    }
+    .referral-section{
+        padding: 12px;
     }
     .ndis-love{
         gap: 6rem;
@@ -1533,9 +1595,13 @@ Responsive Codes
     .service-desc p, .customer-header p, .acknowledgement-desc p{
         padding: 0;
     }
-    .service-desc h1 , .customer-header h1{
+    .service-desc h1 , .customer-header h1, .ndis-left-desc h1{
         font-size: 32px;
-        line-height: 44px;
+        line-height: 42px;
+    }
+    .about-left h2, .pricing-detail h2{
+        font-size: 32px;
+        line-height: 38px;
     }
     .services {
         display: grid;
@@ -1562,5 +1628,253 @@ Responsive Codes
         color: #1A2E35;
         margin-top: 50px;
         margin-bottom: 16px;
+    }
+    .subscription-desc p{
+        padding-right: 0;
+    }
+    .dice-from, .subscribe-btn{
+        width: 100%;
+    }
+    .foot-location{
+        gap: 25px;
+        margin-bottom: 10px;
+        justify-content: center;
+    }
+    .bottom-footer{
+        display: flex;
+        flex-direction: column;
+        padding: 0 !important;
+        align-items: center;
+        justify-content: center;
+    }
+    .bottom-footer p{
+        display: flex;
+        justify-content: flex-start;
+        gap: 10px;
+    }
+    .bootom-nav{
+        justify-content: center;
+        padding: 2rem 0;
+    }
+    .bootom-nav ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+        padding-left: 0px;
+        align-items: center;
+    }
+    /* about us page */
+    .about-page-image{
+        width: 100%;
+        padding: 0;
+        margin-bottom: 40px;
+    }
+    .about-team-image, .gallery-header p, .service-first-img, .service-second-img, .ndis-scheme-img, .ndis-run-img, .ndis-finance-img{
+        width: 100%;
+        padding: 0;
+    }
+    /* referral page */
+    .referral-section .card {
+        padding: 10px 0 !important;
+    }
+    .referralform-top p, .support-desc p{
+        margin: 0;
+    }
+    /* gallery page */
+    .gallery-header h2, .support-desc h1 {
+        font-size: 32px;
+        line-height: 42px;
+    }
+    /* contact us */
+    .contactus-header{
+        transform: translate(-50%, -50%);
+        left: 30%;
+        top: 18%;
+    }
+    .contactus-icons{
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        bottom: 0;
+        top: 30%;
+        width: 80%;
+        transform: translate(-34%, 0);
+    }
+    .contactus-header h1, .ndis-top-section p{
+        font-size: 22px;
+        line-height: 32px;
+    }
+    .contactus-header p{
+        display: none;
+    }
+    .dice-map, .first-content-desc, .ndis-scheme-content, .ndis-finance-content{
+        margin-top: 40px;
+    }
+    .first-content-desc h4, .service-detail-banner h3, .service-detail-banner h4,
+    .second-content-desc h4, .support-desc h1, .ndis-scheme-content h4, .ndis-finance-content h4,
+    .ndis-top-section h2 {
+        font-size: 28px;
+        line-height: 42px;
+    }
+    .support-desc p{
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.6rem;
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px){
+    .header, #topbar{
+        padding: 0 2rem;
+    }
+    .footer{
+        padding: 3rem;
+    }
+    .slider-content {
+        width: 55%;
+        padding: 3rem;
+    }
+    .slider-content p{
+        display: none;
+    }
+    .slider-content h2{
+        font-size: 32px;
+        line-height: 42px;
+        margin-bottom: 40px;
+    }
+    .slider-content a {
+        padding: 8px 16px;
+    }
+    .ndis-love{
+        gap: 3rem;
+        padding: 2rem 0;
+    }
+    .ndis-section, .services-section, .about-section, .customer-section, .acknowledgement-section, 
+    .about-page-section, .team-support-section, .our-value-section, .about-regirtered, .referral-section, 
+    .contact-form-section, .service-slider-section, .service-first-content-section, .service-second-content-section, 
+    .support-section, .ndis-top-section, .ndis-scheme-section, .ndis-run-section, .ndis-finance-section{
+        padding: 3rem;
+    }
+    .service-desc p{
+        padding: 0 8%;
+    }
+    .about-section .row, .pricing-section .row, .subscription-section .row, 
+    .about-page-section .row, .team-support-section .row, .service-slider-section .row, 
+    .service-first-content-section .row, .service-second-content-section .row, 
+    .ndis-scheme-section .row, .ndis-run-section .row, .ndis-finance-section .row{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .about-section .row .col-md-7, .pricing-section .row .col-md-7, .subscription-section .row .col-md-7, 
+    .subscription-section .row .col-md-5, .about-page-section .row .col-md-5, .about-page-section .row .col-md-7,
+    .team-support-section .row .col-md-5, .team-support-section .row .col-md-7, .service-slider-section .row .col-md-6, 
+    .service-first-content-section .row .col-md-6, .service-second-content-section .row .col-md-6, 
+    .ndis-scheme-section .row .col-md-6, .ndis-run-section .row .col-md-6, .ndis-finance-section .row .col-md-7, 
+    .ndis-finance-section .row .col-md-5, .ndis-scheme-img, .ndis-run-img, .ndis-finance-img{
+        width: 100%;
+    }
+    .about-image, .pricing-detail, .about-page-desc, .service-second-img, .first-content-desc, .service-detail-img, 
+    .ndis-scheme-content{
+        margin-top: 40px;
+    }
+    .customer-review-card{
+        min-height: 500px;
+    }
+    .subscription-desc{
+        margin: 40px 0;
+    }
+    .dice-from, .subscribe-btn{
+        width: 80%;
+    }
+    .pricing-image, .about-image{
+        padding: 0;
+    }
+    .about-page-image, .about-team-image{
+        padding: 0;
+        width: 100%;
+    }
+    .about-value-card {
+        min-height: 460px;
+    }
+    /* referral page */
+    .referral-section .card {
+        padding: 10px !important;
+    }
+    /* contact us page */
+    .contactus-icons {
+        position: absolute;
+        bottom: 0%;
+        left: 40%;
+        transform: translate(-25%, -80%);
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .contactus-header{
+        top: 30%;
+    }
+    /* service detail page */
+    .support-desc p{
+        margin: 0;
+    }
+    .service-first-img, .service-second-img{
+        width: 100%;
+    }
+}
+@media only screen and (min-width: 1024px) and (max-width: 1366px) {
+    html {
+        overflow-x: hidden;
+    }
+    .mobile-navbar-btn {
+        display: block;
+        z-index: 999;
+    }
+    .navbar-list {
+        /* display: none; */
+        width: 100%;
+        height: 100vh;
+        background: #FFFFFF;
+        position: absolute;
+        top: 0;
+        left: 0;
+        gap: 4rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: translateX(100%);
+        transition: all 0.5s linear;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+    }
+    .nav-inner{
+        background: #ffffff;
+    }
+
+    .navbar-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .active .navbar-list {
+        transform: translateX(0);
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    }
+
+    .active .mobile-navbar-btn .mobile-nav-icon[name="close-outline"] {
+        display: block;
+    }
+
+    .active .mobile-navbar-btn .mobile-nav-icon[name="menu-outline"] {
+        display: none;
+    }
+    .pricing-image, .about-image{
+        width: 700px;
+    }
+    .ndis-scheme-img, .ndis-run-img, .ndis-finance-img{
+        width: 100%;
     }
 }

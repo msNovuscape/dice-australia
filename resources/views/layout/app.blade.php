@@ -42,8 +42,8 @@
         <div class="social-links d-none d-md-flex align-items-center">
             <!-- <a href="#" class="twitter"><i class="bi bi-twitter"></i></a> -->
             <a href="https://www.facebook.com/profile.php?id=100069618114233" target="_blank" class="facebook"><i class="fa-brands fa-facebook"></i></a>
-            <a href="https://www.instagram.com/explore/tags/taxmateaustralia/" target="_blank" class="instagram"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://www.instagram.com/explore/tags/taxmateaustralia/" target="_blank" class="linkdin"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/baneshwor_smiles/" target="_blank" class="instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://twitter.com/baneshworsmiles" target="_blank" class="linkdin"><i class="fa-brands fa-twitter"></i></a>
             <!-- Button trigger modal -->
             <a type="button" class="quick-enq-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 Quick enquiry
@@ -116,7 +116,7 @@
             </ul>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="/events-blogs">NDIS</a>
+            <a class="nav-link" href="/ndis">NDIS</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="/referral">Make a Referal</a>
@@ -178,7 +178,7 @@
             <p>ABN : 97654871011</p>
             <p>NDIS : 4050102564</p>
             <p>DICE © 2022. All Rights Reserved.</p>
-            <p><a href='/disclaimer'>Disclaimer</a>  |  <a href='/privacy'>Privacy Policy</a></p>
+            <p><a>Disclaimer</a>  |  <a>Privacy Policy</a></p>
             <p>Designed & Developed By: <a href="www.extratechs.com.au">Extratech</a></p>
         </div>
     </div>

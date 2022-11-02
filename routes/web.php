@@ -36,3 +36,7 @@ Route::get('/gallery', function(){
 Route::get('/service-detail', function(){
     return view('services.service-detail');
 });
+
+Route::get('/ndis', function(){
+    return view('ndis');
+});
