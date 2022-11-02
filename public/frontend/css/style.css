@@ -1213,8 +1213,9 @@ Responsive Codes
 }
 .error{
     color: red;
+    font-weight: 600;
     float: left;
-    font-size: 12px;
+    font-size: 16px;
     margin: 10px 0px;
 }
 .referral-section .card{

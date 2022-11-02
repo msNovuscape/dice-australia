@@ -33,7 +33,7 @@
                                     <div class="form-group">
                                         <label for="input-first-name">Name</label>
                                         <input type="text" class="form-control" placeholder="Enter your First Name" id="fname" onkeyup="validatefname()" name="name" value="{{old('name')}}">
-                                        <span id="fname-error" class="error">
+                                        <span id="fname-error" class="error"></span>
                                     </span>
                                     </div>
                                 </div>
@@ -70,36 +70,28 @@
                                     <div class="form-group">
                                         <label>Email Address</label>
                                         <input  type="email" class="form-control" placeholder="Enter your E-mail Address" name="email" value="{{old('email')}}"  id="email"/>
-                                        <div id="email-error" class="error">
-
-                                        </div>
+                                        <span id="email-error" class="error"></span>
                                     </div>
                                 </div>
                                 <div class='col-md-6'>
                                     <div class="form-group">
                                         <label>Date of Birth</label>
                                         <input type="date" class="form-control getDate" placeholder="Select your date of birth" name="dob" value="{{old('dob')}}" id="dob" />
-                                        <div id="dob-error" class="error">
-
-                                        </div>
+                                        <span id="dob-error" class="error"></span>
                                     </div>
                                 </div>
                                 <div class='col-md-4'>
                                     <div class="form-group">
                                         <label>Mobile Number</label>
-                                        <input type="number" class="form-control" name="mobile_no" placeholder="Enter your Mobile Number" id="mobnum" value = "{{old('mobile_no')}}"/>
-                                        <div id="mobile-error" class="error">
-
-                                        </div>
+                                        <input type="text" class="form-control" name="mobile_no" placeholder="Enter your Mobile Number" id="mobnum" value = "{{old('mobile_no')}}"/>
+                                        <span id="mobile-error" class="error"></span>
                                     </div>
                                 </div>
                                 <div class='col-md-4'>
                                     <div class="form-group">
                                         <label>Preferred Language</label>
                                         <input type="text" class="form-control" name="preferred_language" placeholder="Enter your Preferred Language" id="resaddress" value="{{old('preferred_language')}}"/>
-                                        <div id="language-error" class="error">
-
-                                        </div>
+                                        <span id="language-error" class="error"></span>
                                     </div>
                                 </div>
 
@@ -111,8 +103,7 @@
 
                                           <option value = "1" {{(old('is_ndis')=='1') ? 'selected':''}}>Yes</option>
                                         </select>
-                                        <div id="language-error" class="error">
-                                        </div>
+                                        <span id="ndis-plan-error" class="error"></span>
                                     </div>
                                 </div>
 
@@ -123,8 +114,7 @@
                                     <div class="form-group">
                                         <label for="Ndis-number">Enter your NDIS Number</label>
                                         <input type="text" class="form-control" placeholder="Enter your NDIS number" value="{{old('ndis_no')}}" name="ndis_number">
-                                        <span id="fname-error" class="error">
-                                    </span>
+                                        <span id="ndis-number-error" class="error"></span>
                                     </div>
                                 </div>
 
@@ -132,8 +122,7 @@
                                     <div class="form-group">
                                         <label for="expiry-date">Choose Expiry Date</label>
                                         <input type="date" class="form-control" placeholder="Choose Expiry Date" value="{{old('ndis_expiry_date')}}" name="ndis_expiry_date">
-                                        <span id="fname-error" class="error">
-                                    </span>
+                                        <span id="expiry-date-error" class="error"></span>
                                     </div>
                                 </div>
 
@@ -145,8 +134,7 @@
                                             <option value="index" selected>test</option>
                                         
                                         </select>
-                                        <span id="date-error" class="error">
-                                    </span>
+                                        <span id="ndis-plan-error" class="error"></span>
                                     </div>
                                 </div>
 
@@ -168,54 +156,42 @@
                                     <div class="form-group">
                                         <label>Unit Number</label>
                                         <input type="text" class="form-control" placeholder="Enter your Unit Number" name='unit_number' value="{{old('unit_number')}}"  id="unitNum" required/>
-                                        <div id="unit-error" class="error">
-
-                                        </div>
+                                        <span id="unit-error" class="error"></span>
                                     </div>
                                 </div>
                                 <div class='col-md-6'>
                                     <div class="form-group">
                                         <label>Street Number</label>
                                         <input type="text" class="form-control" placeholder="Enter your Street Number" name='street_number' value="{{old('street_number')}}"  id="streetNum" required/>
-                                        <div id="streetnum-error" class="error">
-
-                                        </div>
+                                        <span id="streetnum-error" class="error"></span>
                                     </div>
                                 </div>
                                 <div class='col-md-6'>
                                     <div class="form-group">
                                         <label>Street Name</label>
                                         <input type="text" class="form-control getDate" placeholder="Select your date of Street Name" name="street_name" value="{{old('street_name')}}" id="passexp" required/>
-                                        <div id="passportexp-error" class="error">
-
-                                        </div>
+                                        <span id="street-name-error" class="error"></span>
                                     </div>
                                 </div>
                                 <div class='col-md-6'>
                                     <div class="form-group">
                                         <label>Suburb</label>
                                         <input type="text" class="form-control" placeholder="Enter your Suburb" name='suburb' value="{{old('suburb')}}"  id="suburb" required/>
-                                        <div id="suburb-error" class="error">
-
-                                        </div>
+                                        <span id="suburb-error" class="error"></span>
                                     </div>
                                 </div>
                                 <div class='col-md-6'>
                                     <div class="form-group">
                                         <label>State / Province / Region </label>
                                         <input type="text" class="form-control" placeholder="Enter state" name='state_name' value="{{old('state_name')}}"  id="stateName" required/>
-                                        <div id="statename-error" class="error">
-
-                                        </div>
+                                        <span id="statename-error" class="error"></span>
                                     </div>
                                 </div>
                                 <div class='col-md-6'>
                                     <div class="form-group">
                                         <label>Postal Code</label>
                                         <input type="text" class="form-control getDate" placeholder="Enter Postal Code" name="postalcode" value="{{old('postalcode')}}" id="postalcode" required/>
-                                        <div id="postalcode-error" class="error">
-
-                                        </div>
+                                        <div id="postalcode-error" class="error"></div>
                                     </div>
                                 </div>
                             </div>
@@ -239,26 +215,22 @@
                                             <input class="form-check-input" type="checkbox" id="serviceid" name = "services[]" value="service-id">
                                             <label class="form-check-label" for="serviceid">servicename</label>
                                         </div>
-                                        <!-- <div class="form-check form-check-inline">
+                                        <div class="form-check form-check-inline">
                                             <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
                                             <label class="form-check-label" for="inlineCheckbox2">Speech Theraphy</label>
                                         </div>
                                         <div class="form-check form-check-inline">
                                             <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
                                             <label class="form-check-label" for="inlineCheckbox3">Positive Behaviour Support</label>
-                                        </div> -->
+                                        </div>
                                     </div>
-                                    <div id="gender-error" class="error">
-
-                                    </div>
+                                    <span id="service-error" class="error"></span>
                                 </div>
                                 <div class='col-md-12'>
                                     <div class="form-group">
                                         <label for="input-last-name">Provide details related to services </label>
                                         <textarea class="form-control textarea" name="services_details" placeholder="Provide details related to services" rows="5" cols="50">{{old('details_services')}}</textarea>
-                                        <div id="detailservices-error" class="error">
-
-                                        </div>
+                                        <span id="detailservices-error" class="error"></span>
                                     </div>
                                 </div>
                             </div>
@@ -277,18 +249,14 @@
                                     <div class="form-group">
                                         <label for="input-first-name">Full Name</label>
                                         <input type="text" class="form-control" name="referrer_full_name" value="{{old('referrer_full_name')}}" placeholder="Enter Full Name" id="fullname" onkeyup="validatefullname()"/>
-                                        <div id="fullname-error" class="error">
-
-                                        </div>
+                                        <span id="fullname-error" class="error"></span>
                                     </div>
                                 </div>
                                 <div class='col-md-6'>
                                     <div class="form-group">
                                         <label for="input-last-name">Contact number</label>
                                         <input type="number" class="form-control" name="referrer_contact_no" value="{{old('referrer_contact_no')}}" placeholder="Enter Contact Number"  id="contact" onkeyup="validatecontact()"/>
-                                        <div id="contact-error" class="error">
-
-                                        </div>
+                                        <span id="contact-num-error" class="error"></span>
                                     </div>
                                 </div>
                             </div>
@@ -309,9 +277,7 @@
                                                 I accept the Privacy Policy
                                             </label>
                                         </div>
-                                        <div id="privacy-error" class="error">
-
-                                        </div>
+                                        <span id="privacy-error" class="error"></span>
                                     </div>
                                 </div>
                             </div>
