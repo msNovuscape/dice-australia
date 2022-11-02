@@ -297,17 +297,17 @@
 @section('script')
 <script>
     var element = document.getElementById('ndis');
-     function show(value){
+        function show(value){
 
-        if(value == '1'){
-            element.classList.remove('hideandshow');
-        }else{
-            element.classList.add('hideandshow');
+            if(value == '1'){
+                element.classList.remove('hideandshow');
+            }else{
+                element.classList.add('hideandshow');
+            }
         }
-    }
-    if(document.getElementById('is_ndis').value == "1") {
-        element.classList.remove('hideandshow');
-    }
+        if(document.getElementById('is_ndis').value == "1") {
+            element.classList.remove('hideandshow');
+        }
     </script>
 @endsection
 
