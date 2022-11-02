@@ -28,22 +28,40 @@
 <!-- Top section -->
 <section id="topbar" class="d-flex align-items-center">
     <div class="container-fluid d-flex justify-content-center justify-content-md-between">
-        <div class="contact-info">
+            <div class="contact-info">
+                    @php
+                      $services = \App\Models\Service::where('status','1')->orderByRaw('CONVERT(order_by, SIGNED) asc')->get();
+                      $phone = \App\Models\Setting::where('slug','phone')->get('value')->first()->value ?? '';
+                      $email = \App\Models\Setting::where('slug','email')->get('value')->first()->value ?? '';
+                    @endphp
+            @if($phone !== '')        
             <div>
                 <img src="{{url('frontend/icons/phone-call.svg')}}" class="img-fluid"/>
-                <span><a href="tel: 1300 050 051" class="text-decoration-none text-white ">1300 050 051</a></span></i>
+                <span><a href="tel:{{$phone}}" class="text-decoration-none text-white ">{{$phone}}</a></span></i>
             </div>
-
+            @endif
+            @if($email !== '')
             <div>
                 <img src=" {{url('frontend/icons/top-email.svg')}}" class="img-fluid"/>
-                <span><a href="mailto: contact@dice.org.au" class="text-decoration-none text-white">contact@dice.org.au</a></span></i>
+                <span><a href="mailto: {{$email}}" class="text-decoration-none text-white">{{$email}}</a></span></i>
             </div>
+            @endif
         </div>
         <div class="social-links d-none d-md-flex align-items-center">
             <!-- <a href="#" class="twitter"><i class="bi bi-twitter"></i></a> -->
-            <a href="https://www.facebook.com/profile.php?id=100069618114233" target="_blank" class="facebook"><i class="fa-brands fa-facebook"></i></a>
+            <!-- <a href="https://www.facebook.com/profile.php?id=100069618114233" target="_blank" class="facebook"><i class="fa-brands fa-facebook"></i></a>
             <a href="https://www.instagram.com/baneshwor_smiles/" target="_blank" class="instagram"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://twitter.com/baneshworsmiles" target="_blank" class="linkdin"><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://twitter.com/baneshworsmiles" target="_blank" class="linkdin"><i class="fa-brands fa-twitter"></i></a> -->
+
+            <?php if(\App\Models\Setting::where('slug','facebook-link')->exists()) : ?>
+                    <a href="{{url(\App\Models\Setting::where('slug','facebook-link')->first()->value ?? '')}}" target="_blank" class="facebook"><i class="fa-brands fa-facebook"></i></a>
+                    <?php endif; ?>
+                    <?php if(\App\Models\Setting::where('slug','instagram-link')->exists()) : ?>
+                        <a href="{{url(\App\Models\Setting::where('slug','instagram-link')->first()->value ?? '')}}" target="_blank" class="instagram"><i class="fa-brands fa-instagram"></i></a>                    
+                    <?php endif; ?>
+                    <?php if(\App\Models\Setting::where('slug','twitter-link')->exists()) : ?>
+                        <a href="{{url(\App\Models\Setting::where('slug','twitter-link')->first()->value ?? '')}}" target="_blank" class="twitter"><i class="fa-brands fa-twitter"></i></a>
+                    <?php endif; ?>
             <!-- Button trigger modal -->
             <a type="button" class="quick-enq-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 Quick enquiry
@@ -101,7 +119,7 @@
 <!-- Header section -->
 <header class="header">
     <a class="navbar-brand" href="/">
-        <img src="{{url('frontend/images/logo.png')}}" class="img-fluid logo"  alt="">
+        <img src="{{url(\App\Models\Setting::where('slug','logo')->first()->value ?? '')}}" class="img-fluid logo"  alt="">
     </a>
     <ul class="nav nav-inner navbar-list" id="navigation-links">
         <li class="nav-item">
@@ -112,7 +130,9 @@
                 Our services
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="/service-detail">Service detail</a></li>
+                @foreach($services as $service)
+                    <li><a class="dropdown-item" href="{{url('/service/'.$service->slug)}}">{{$service->name}}</a></li>
+                @endforeach    
             </ul>
         </li>
         <li class="nav-item">
@@ -170,7 +190,7 @@
                 <li><a href="/home">Home</a></li>
                 <li><a href="/about">About us</a></li>
                 <li><a href="/service">Services</a></li>
-                <li><a href="/referal">Make a Referal</a></li>
+                <li><a href="/referral">Make a Referal</a></li>
                 <li><a href="/contact">Contact us</a></li>
             </ul>
         </div>

@@ -15,7 +15,12 @@
             <p>A picture speaks a thousand words. Here are some wonderful interactions and beautiful moments we shared with the NDIS participants who selected us as their service providers.</p>    
         </div>
         <div class="gallery-slider">
+            @foreach($gallery as $gal)
             <div class="gallery-image">
+                <img src="{{url($gal->image ?? '')}}" alt="" class="img-fluid">
+            </div>
+            @endforeach
+            <!-- <div class="gallery-image">
                 <img src="{{url('frontend/images/gallery-one.png')}}" alt="" class="img-fluid">
             </div>
             <div class="gallery-image">
@@ -26,10 +31,7 @@
             </div>
             <div class="gallery-image">
                 <img src="{{url('frontend/images/gallery-one.png')}}" alt="" class="img-fluid">
-            </div>
-            <div class="gallery-image">
-                <img src="{{url('frontend/images/gallery-one.png')}}" alt="" class="img-fluid">
-            </div>
+            </div> -->
         </div>
     </section>
 @endsection

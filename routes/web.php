@@ -40,9 +40,7 @@ use App\Http\Controllers\Admin\TeamController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [HomeController::class,'index']);
 
 Route::get('/about', function () {
     return view('about');
@@ -56,13 +54,9 @@ Route::get('/referral', function(){
     return view('referral');
 });
 
-Route::get('/gallery', function(){
-    return view('gallery');
-});
+Route::get('/gallery', [HomeController::class, 'gallery']);
 
-Route::get('/service-detail', function(){
-    return view('services.service-detail');
-});
+Route::get('/service/{slug}', [FrontendServiceController::class,'single_service']);
 
 Route::get('/ndis', function(){
     return view('ndis');
