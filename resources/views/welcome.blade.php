@@ -14,33 +14,18 @@
             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
         </div>
         <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="{{url('frontend/images/banner-two.png')}}" class="d-block w-100" alt="...">
+            @foreach($sliders as $slider)
+            <div class="carousel-item {{$loop->first ? 'active' : ''}}">
+                <img src="{{url($slider->image ?? 'frontend/images/banner-two.png')}}" class="d-block w-100" alt="...">
                 <div class="slider-content">
-                    <h3>Services Based on Principles of</h3>
-                    <h2>Inclusion & Diversity</h2>
-                    <p>We Respect & Recognize the Rich Indigenous Heritage of Australia & Provide Services for all under our Care</p>
+                    <h3>{{$slider->title1}}</h3>
+                    <h2>{{$slider->title1}}</h2>
+                    <p>{{$slider->short_description}}</p>
                     <a href="contact">Get a Free Consultation</a>
                 </div>
             </div>
-            <div class="carousel-item">
-                <img src="{{url('frontend/images/test-banner.jpg')}}" class="d-block w-100" alt="...">
-                <div class="slider-content">
-                    <h3>Customized Service Tailored to</h3>
-                    <h2>Your Needs</h2>
-                    <p>Dedicated to giving you and your family nursing, domestic, and personal care help that is specifically catered to your requirements. We aim to promote good experiences and increase your confidence through tailored experiences.</p>
-                    <a href=".contact">Get a Free Consultation</a>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="{{url('frontend/images/test-banner.jpg')}}" class="d-block w-100" alt="...">
-                <div class="slider-content">
-                    <h3>Assistance for Your</h3>
-                    <h2>Independence</h2>
-                    <p>Our welcoming team assists you and helps you gain independence while delivering services in the convenience of your home, adhering to the strict guidelines established by the Quality & Safeguards Commission for NDIS providers.</p>
-                    <a href=".contact">Get a Free Consultation</a>
-                </div>
-            </div>
+            @endforeach
+            
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -85,19 +70,21 @@
                 </div>
             </div>
             <div class="services mt-4">
-            <a href="/service/" class="service-card">
+                @foreach($services as $service)
+                <a href="/service/{{$service->slug}}" class="service-card{{(($loop->index == 1) || ($loop->index == 3) || ($loop->index == 5))  ? '-second' : ''}}">
                     <div>
                         <div class="service-icon mb-4">
-                            <img src="{{url('frontend/icons/support-coordination.svg')}}" alt="">
+                            <img src="{{url($service->icon ?? 'frontend/icons/support-coordination.svg')}}" alt="">
                         </div>
                         <div class="service-card-desc">
-                            <h1>Support Coordination</h1>
-                            <p>We encourage you to continue living independently & participating actively in your community by offering a wide variety of specially-designed support coordination.</p>
+                            <h1>{{$service->name}}</h1>
+                            <p>{{strip_tags($service->short_description)}}</p>
                         </div>
                     </div>
                     <button class="learn-more-btn">Learn more <img src="{{url('frontend/icons/right-arrow.svg')}}" class="learn-more-icon"/></button>
                 </a>
-                <a href="/service/" class="service-card-second">
+                @endforeach
+                <!-- <a href="/service/" class="service-card-second">
                     <div>
                         <div class="service-icon mb-4">
                             <img src="{{url('frontend/icons/daily-living-support.svg')}}" alt="">
@@ -156,7 +143,7 @@
                         </div>
                         <button class="learn-more-btn">Learn more <img src="{{url('frontend/icons/right-arrow.svg')}}" class="learn-more-icon"/></button>
                     </div>
-                </a>
+                </a> -->
             </div>
         </div>
     </section>
@@ -167,14 +154,14 @@
             <div class="col-md-7">
                 <div class="about-left">
                     <h2>Why Choose us?</h2>
-                    <h5>We think that every person has unique wants and demands.</h5>
-                    <p>At DICE, we work hard to create a comprehensive program that is tailored to your unique needs and requirements. We recognize that results alone are not nearly as essential as pleasant outcomes. Our ultimate goal thus, is for our participants to experience success; this is our passion. We don't just have one program that works for everyone; instead, we will take the time to get to know you and your family's requirements. In order to create the most advantageous program that meets your needs, our committed specialists will collaborate closely with you and your family. You will be given the ability to develop, control, and own their rehabilitation strategy, and we will help you find the strength and perseverance to pursue your objectives. We know that establishing care at home can be difficult and stressful, but we make the process easy and transparent since your needs and preferences should come first when planning your care. You can stay secure and independent in your own home with our support and wide variety of services we provide. We wish to support you in maintaining your desired standard of living.</p>
-                    <a href="/about">View More</a>
+                    <h5>{!!strip_tags($about_us->first()->description ?? '')!!}</h5>
+                    <p>{!!strip_tags($about_us->first()->sub_description ?? '')!!}</p>
+                    <a href="{{url('/about')}}">View More</a>
                 </div>
             </div>
             <div class="col-md-5">
                 <div class="about-image">
-                    <img src="{{url('frontend/images/about-image.png')}}" class="w-100" alt="about-image"/>
+                    <img src="{{url($about_us->first()->image ?? '')}}" class="w-100" alt="about-image"/>
                 </div>
             </div>
         </div>
@@ -208,23 +195,25 @@
                 <p>The words from our customers always persuades us to bring more happiness to people with disability</p>
             </div>
             <div class="customer-review">
+            @foreach($testimonials as $testimonial)
                 <div class="customer-review-card">
                     <div class="customer-card-review">
                         <img src="{{url('frontend/icons/quoteicon.svg')}}"/>
-                        <p>At DICE, I was given the best treatment from my care-givers. I was always looked-after and made to feel welcome and comfortable, which gave me the boost to participate more and be more socially active. Thank you DICE!</p>
+                        <p>{{strip_tags($testimonial->review)}}</p>
                         <img src="{{url('frontend/images/starts.png')}}"/>
                     </div>
                     <div class="cutomer-details">
                         <div class="cutomer-image">
-                            <img src="{{url('frontend/images/profile.png')}}" class="img-fluid customer-img"/>
+                            <img src="{{url($testimonial->image ?? 'frontend/images/starts.png')}}" class="img-fluid customer-img"/>
                         </div>
                         <div class="cutomer-detail">
-                            <h3>Suman Thoker Tamang</h3>
-                            <h5>Manager, Extratech Nepal</h5>
+                            <h3>{{$testimonial->author_name}}</h3>
+                            <h5>{{$testimonial->author_designation}}</h5>
                         </div>
                     </div>
                 </div>
-                <div class="customer-review-card">
+            @endforeach    
+                <!-- <div class="customer-review-card">
                     <div class="customer-card-review">
                         <img src="{{url('frontend/icons/quoteicon.svg')}}"/>
                         <p>All of the staff at DICE are so professional and patient. I am halfway through my treatment and I cannot recommend them enough.</p>
@@ -271,7 +260,7 @@
                             <h5>Manager, Esewa</h5>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </section>
@@ -301,33 +290,15 @@
                 <div class="subscription-desc">
                     <h1>Join DICE Family</h1>
                     <p>We're committed to your privacy. DICE uses the information you provide to us to contact you about our relevant content, products, and services.</p>
-                    <form onsubmit="return validateSubscription()">
-                        <div class="">
-                            <input type="text" class="dice-from" id="subs-fname" name="" placeholder="FullName" onkeyup="subsFname()">
-                            <span id="subs-fname-error" class="error-msg"></span>
+                    <form>
+                        <div class="mb-3">
+                            <input type="text" class="dice-from" id="fname" placeholder="FullName">
                         </div>
-                        <div class="">
-                            <input type="email" class="dice-from" id="subs-email" name="" placeholder="Email address" onkeyup="subsEmail()">
-                            <span id="subs-email-error" class="error-msg"></span>
+                        <div class="mb-3">
+                            <input type="email" class="dice-from" id="email" placeholder="Email address">
                         </div>
                         <div class="mb-3">
                             <button type="submit" class="subscribe-btn">Subscribe</button>
-                            <div class="modal fade" id="subsModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                <div class="modal-dialog modal-dialog-centered">
-                                    <div class="modal-content footer-content">
-                                        <div class="modal-header submit-header-modal">
-                                            <img src="{{url('frontend/icons/success.svg')}}"/>
-                                        </div>
-                                        <div class="modal-body" style="background: #FFFFFF">
-                                            <h2 style="color: #3A3A3A; font-weight: 700; font-size: 24px; line-height: 2rem">Success!</h2>
-                                            <p id = "success">This is success message</p>
-                                        </div>
-                                        <div class="modal-footer submit-footer-modal">
-                                            <a type="button" class="submit-close-btn" href="/contact">Close</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </form>
                 </div>
@@ -374,39 +345,6 @@
                 }
             ]
         });
-
-
-        var subsfnamError = document.getElementById('subs-fname-error');
-        var subsEmailError = document.getElementById('subs-email-error');
-
-        function subsFname() {
-            if (document.getElementById('subs-fname').value.length == 0) {
-                $('#subs-fname').focus();
-                subsfnamError.innerHTML = 'Please enter your Full Name !!';
-                return false;
-            } else {
-                subsfnamError.innerHTML = '';
-                return true;
-            }
-        }
-        function subsEmail() {
-            if (document.getElementById('subs-email').value.length == 0) {
-                $('#subs-email').focus();
-                subsEmailError.innerHTML = 'Please enter your email !!';
-                return false;
-            } else {
-                subsEmailError.innerHTML = '';
-                return true;
-            }
-        }
-
-        function validateSubscription() {
-            if (!subsFname() || !subsEmail()) {
-                return false;
-            } else {
-                $('#subsModal').modal('show');
-            }
-        }
     </script>
 @endsection
 

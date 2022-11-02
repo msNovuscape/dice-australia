@@ -28,22 +28,40 @@
 <!-- Top section -->
 <section id="topbar" class="d-flex align-items-center">
     <div class="container-fluid d-flex justify-content-center justify-content-md-between">
-        <div class="contact-info">
+            <div class="contact-info">
+                    @php
+                      $services = \App\Models\Service::where('status','1')->orderByRaw('CONVERT(order_by, SIGNED) asc')->get();
+                      $phone = \App\Models\Setting::where('slug','phone')->get('value')->first()->value ?? '';
+                      $email = \App\Models\Setting::where('slug','email')->get('value')->first()->value ?? '';
+                    @endphp
+            @if($phone !== '')        
             <div>
                 <img src="{{url('frontend/icons/phone-call.svg')}}" class="img-fluid"/>
-                <span><a href="tel: 1300 050 051" class="text-decoration-none text-white ">1300 050 051</a></span></i>
+                <span><a href="tel:{{$phone}}" class="text-decoration-none text-white ">{{$phone}}</a></span></i>
             </div>
-
+            @endif
+            @if($email !== '')
             <div>
                 <img src=" {{url('frontend/icons/top-email.svg')}}" class="img-fluid"/>
-                <span><a href="mailto: contact@dice.org.au" class="text-decoration-none text-white">contact@dice.org.au</a></span></i>
+                <span><a href="mailto: {{$email}}" class="text-decoration-none text-white">{{$email}}</a></span></i>
             </div>
+            @endif
         </div>
         <div class="social-links d-none d-md-flex align-items-center">
             <!-- <a href="#" class="twitter"><i class="bi bi-twitter"></i></a> -->
-            <a href="https://www.facebook.com/profile.php?id=100069618114233" target="_blank" class="facebook"><i class="fa-brands fa-facebook"></i></a>
+            <!-- <a href="https://www.facebook.com/profile.php?id=100069618114233" target="_blank" class="facebook"><i class="fa-brands fa-facebook"></i></a>
             <a href="https://www.instagram.com/baneshwor_smiles/" target="_blank" class="instagram"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://twitter.com/baneshworsmiles" target="_blank" class="linkdin"><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://twitter.com/baneshworsmiles" target="_blank" class="linkdin"><i class="fa-brands fa-twitter"></i></a> -->
+
+            <?php if(\App\Models\Setting::where('slug','facebook-link')->exists()) : ?>
+                    <a href="{{url(\App\Models\Setting::where('slug','facebook-link')->first()->value ?? '')}}" target="_blank" class="facebook"><i class="fa-brands fa-facebook"></i></a>
+                    <?php endif; ?>
+                    <?php if(\App\Models\Setting::where('slug','instagram-link')->exists()) : ?>
+                        <a href="{{url(\App\Models\Setting::where('slug','instagram-link')->first()->value ?? '')}}" target="_blank" class="instagram"><i class="fa-brands fa-instagram"></i></a>                    
+                    <?php endif; ?>
+                    <?php if(\App\Models\Setting::where('slug','twitter-link')->exists()) : ?>
+                        <a href="{{url(\App\Models\Setting::where('slug','twitter-link')->first()->value ?? '')}}" target="_blank" class="twitter"><i class="fa-brands fa-twitter"></i></a>
+                    <?php endif; ?>
             <!-- Button trigger modal -->
             <a type="button" class="quick-enq-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 Quick enquiry
@@ -58,34 +76,35 @@
                             <!-- <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button> -->
                         </div>
                         <div class="modal-body modal-detail">
-                            <form onsubmit="return validatetopform()" action="">
+                            <form onsubmit="return validateform()" method="POST" action="">
+                                @csrf
                                 <div class="row">
                                     <div class="col-md-6 mb-3">
-                                        <input type="text" class="form-control" id="app-fname" name="fname" placeholder="First Name" value="" onkeyup="validatetopfname()">
+                                        <input type="text" class="form-control" id="app-fname" name="fname" placeholder="First Name" value="" onkeyup="validatefullname()">
                                         <span class="error-msg" id="app-fname-error"></span>
                                     </div>
                                     <div class="col-md-6">
-                                        <input type="text" class="form-control" id="app-lname" placeholder="Last Name" name="lname" value="" onkeyup="validatetoplname()">
-                                        <span class="error-msg" id="app-lname-error"></span>
+                                        <input type="text" class="form-control" id="app-getlname" placeholder="Last Name" name="lname" value="" onkeyup="validateemail()">
+                                        <span class="error-msg" id="app-email-error"></span>
                                     </div>
                                     <div class="col-md-6">
-                                        <input type="email" class="form-control" id="app-email" placeholder="Email" name="email" value="" onkeyup="validatetopemail()">
+                                        <input type="email" class="form-control" id="app-getemail" placeholder="Email" name="email" value="" onkeyup="validateemail()">
                                         <span class="error-msg" id="app-email-error"></span>
                                     </div>
                                     <div class="col-md-6 mb-3">
-                                        <input type="number" class="form-control" id="app-phone" placeholder="Phone" name="phone" value="" onkeyup="validatetopPhone()">
+                                        <input type="number" class="form-control" id="app-phonenumber" placeholder="Phone" name="phone" value="" onkeyup="validatephone()">
                                         <span class="error-msg" id="app-phone-error"></span>
                                     </div>
                                     <div class="col-md-12 mb-3">
-                                        <textarea type="text" class="form-control" id="app-message" placeholder="Let us know how can we help" name="app-message" value="" onkeyup="validatetopmessage()"></textarea>
-                                        <span class="error-msg" id="app-message-error"></span>
+                                        <textarea type="text" class="form-control" id="getmessage" placeholder="Let us know how can we help" name="app-message" value="" onkeyup="validatemessage()"></textarea>
+                                        <span class="app-error-msg" id="message-error"></span>
                                     </div>
                                 </div>
 
                                 <div class="modal-footer">
                                     <button type="button" class="modal-close-btn" data-bs-dismiss="modal">Close</button>
                                     <button type="submit" class="modal-submit-btn">Submit</button>
-                                </div>
+                                    </div>
                                 </div>
                             </form>
                         </div>
@@ -100,7 +119,7 @@
 <!-- Header section -->
 <header class="header">
     <a class="navbar-brand" href="/">
-        <img src="{{url('frontend/images/logo.png')}}" class="img-fluid logo"  alt="">
+        <img src="{{url(\App\Models\Setting::where('slug','logo')->first()->value ?? '')}}" class="img-fluid logo"  alt="">
     </a>
     <ul class="nav nav-inner navbar-list" id="navigation-links">
         <li class="nav-item">
@@ -111,7 +130,9 @@
                 Our services
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="/service-detail">Service detail</a></li>
+                @foreach($services as $service)
+                    <li><a class="dropdown-item" href="{{url('/service/'.$service->slug)}}">{{$service->name}}</a></li>
+                @endforeach    
             </ul>
         </li>
         <li class="nav-item">
@@ -169,7 +190,7 @@
                 <li><a href="/home">Home</a></li>
                 <li><a href="/about">About us</a></li>
                 <li><a href="/service">Services</a></li>
-                <li><a href="/referal">Make a Referal</a></li>
+                <li><a href="/referral">Make a Referal</a></li>
                 <li><a href="/contact">Contact us</a></li>
             </ul>
         </div>
@@ -204,83 +225,6 @@
 
 <!-- hamburger link -->
 <script type="text/javascript" src="{{url('frontend/js/index.js')}}"></script>
-<script>
-        var topfnameError = document.getElementById('app-fname-error')
-        var toplnameError = document.getElementById('app-lname-error')
-        var topemailError = document.getElementById('app-email-error')
-        var topphoneError = document.getElementById('app-phone-error')
-        var topmessageError = document.getElementById('app-message-error')
-
-        function validatetopfname(){
-            var topfname = document.getElementById('app-fname').value;
-            if(topfname.length == 0){
-                $('#app-fname').focus();
-                topfnameError.innerHTML = "First name is required!";
-                return false;
-            }
-            topfnameError.innerHTML = '';
-            return true;
-        }
-
-        function validatetoplname(){
-            var topllname = document.getElementById('app-lname').value;
-            if(topllname.length == 0){
-                $('#app-phone').focus();
-                toplnameError.innerHTML= "Last name is required!"
-                return false
-            }
-            else {
-                toplnameError.innerHTML= ""
-                return true
-            }
-        }
-
-        function validatetopemail(){
-            var topemailtype = document.getElementById('app-email').value;
-            if(topemailtype.length == 0){
-                $('#app-appointment-type').focus();
-                topemailError.innerHTML = "Email field is required!";
-                return false;
-            }
-            topemailError.innerHTML = '';
-            return true;
-        }
-
-        function validatetopPhone(){
-            var topphone = document.getElementById('app-phone').value;
-            if(topphone.length == 0){
-                $('#app-date').focus();
-                topphoneError.innerHTML = "Phone field is required!"
-            }
-            if(!topphone.match(/^\d{10}$/)){
-                topphoneError.innerHTML = "Invalid mobile number";
-                return false;
-            }
-            else {
-                topphoneError.innerHTML = "";
-                return true;
-            }
-        }
-        function validatetopmessage(){
-            var topmessage = document.getElementById('app-message').value;
-            if(topmessage.length == 0){
-                $('#app-time').focus();
-                topmessageError.innerHTML = "Message field is required!"
-            }
-            else {
-                topmessageError.innerHTML = "";
-                return true;
-            }
-        }
-        function validatetopform(){
-            if(!validatetopfname() || !validatetoplname() || !validatetopemail() || !validatetopPhone() || !validatetopmessage()){
-                return false
-            }
-            else {
-                return true
-            }
-        }
-</script>
 @yield('script')
 </body>
 </html>

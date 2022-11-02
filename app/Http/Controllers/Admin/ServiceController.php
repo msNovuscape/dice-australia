@@ -65,7 +65,6 @@ class ServiceController extends Controller
             'icon' => 'file|mimes:jpeg,png,jpg,svg,'
         ]);
         $service = new Service();
-
         $service->name = \request('name');
         // $service->image = \request('image');
         // $service->image_title = \request('image_title');

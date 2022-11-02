@@ -54,6 +54,7 @@ class TestimonialController extends Controller
         if(isset($image_path1)){
             $requestData['image'] = $image_path1;
         }
+        $requestData['review'] = strip_tags($request['review']);
         Setting::create($requestData);
         Session::flash('success','Testimonial is created!');
         return redirect($this->redirect);
@@ -69,7 +70,7 @@ class TestimonialController extends Controller
         $setting = Testimonial::findorfail($id);
 
         $this->validate(\request(),[
-            'heading' =>'required',
+            // 'heading' =>'required',
             // 'title' =>'required',
 //            'image' =>'required|file|mimes:jpeg,png,jpg,pdf',
             'review' =>'required',
@@ -91,8 +92,9 @@ class TestimonialController extends Controller
         if(isset($image_path1)){
             $requestData['image'] = $image_path1;
         }
+        $requestData['review'] = strip_tags($request['review']);
         $setting->fill($requestData);
-     $setting->save();
+       $setting->save();
         Session::flash('success','Testimonial is Updated!');
         return redirect($this->redirect);
 

@@ -47,41 +47,21 @@
                     <h2>Talk to Us</h2>
                     <p>Please fill out the form below. Our caring, capable, knowledgeable team are ready and willing to answer any questions or concerns you may have and will get back to you shortly.</p>
                 </div>
-                <form class="contactus-form" action="" onsubmit="return contactValidation()">
+                <form class="contactus-form" action="">
                     <div class="mb-3">
-                        <input type="text" class="form-control" name="fullname" id="fullname" placeholder="Full Name" onkeyup="contactFname()">
-                        <span class="error-msg" id="contact-fname-error"></span>
+                        <input type="text" class="form-control" name="fullname" id="fullname" placeholder="Full Name">
                     </div>
                     <div class="mb-3">
-                        <input type="email" class="form-control" name="email" id="email" placeholder="Email" onkeyup="contactEmail()">
-                        <span class="error-msg" id="contact-email-error"></span>
+                        <input type="text" class="form-control" name="email" id="email" placeholder="Email">
                     </div>
                     <div class="mb-3">
-                        <input type="number" class="form-control" name="phone" id="phone" placeholder="Phone Number" onkeyup="contactPhone()">
-                        <span class="error-msg" id="contact-phone-error"></span>
+                        <input type="number" class="form-control" name="phone" id="phone" placeholder="Phone Number">
                     </div>
                     <div class="mb-3">
-                        <textarea name="" class="form-control" id="message" cols="50" rows="5" onkeyup="contactMessage()" placeholder="Type your message here"></textarea>
-                        <span class="error-msg" id="contact-message-error"></span>
+                        <textarea name="" class="form-control" id="" cols="50" rows="5">Message</textarea>
                     </div>
                     <div class="">
-                        <button type="submit" class="submit-btn">Submit</button>
-                        <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-centered">
-                                <div class="modal-content footer-content">
-                                    <div class="modal-header submit-header-modal">
-                                        <img src="{{url('frontend/icons/success.svg')}}"/>
-                                    </div>
-                                    <div class="modal-body" style="background: #FFFFFF">
-                                        <h2 style="color: #3A3A3A; font-weight: 700; font-size: 24px; line-height: 2rem">Success!</h2>
-                                        <p id = "success">This is success message</p>
-                                    </div>
-                                    <div class="modal-footer submit-footer-modal">
-                                        <a type="button" class="submit-close-btn" href="/contact">Close</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <button class="submit-btn">Submit</button>
                     </div>
                 </form>
             </div>
@@ -92,68 +72,4 @@
             </div>
         </div>
     </section>
-@endsection
-@section('script')
-    <script>
-       fnameError = document.getElementById('contact-fname-error');
-       emailError = document.getElementById('contact-email-error');
-       phoneError = document.getElementById('contact-phone-error');
-       messageError = document.getElementById('contact-message-error');
-
-       function contactFname(){
-            var fullname = document.getElementById('fullname').value;
-            if(fullname.length == 0){
-                $('#fullname').focus();
-                fnameError.innerHTML = "Full name is required !";
-                return false;
-            }
-            fnameError.innerHTML = '';
-            return true;
-       }
-
-        function contactEmail(){
-        var email = document.getElementById('email').value;
-        if(email.length == 0){
-            $('#email').focus();
-            emailError.innerHTML = "Email field is required !";
-            return false;
-        }
-        emailError.innerHTML = '';
-        return true;
-        }
-
-        function contactPhone(){
-            var phone = document.getElementById('phone').value;
-            if(phone.length == 0){
-                $('#phone').focus();
-                phoneError.innerHTML = "Phone number is required !";
-                return false;
-            }
-            if(!phone.match(/^\d{10}$/)){
-                phoneError.innerHTML = "Please provide valid 10 digit number";
-                return false;
-            }
-            phoneError.innerHTML = '';
-            return true;
-        }
-
-        function contactMessage(){
-            var message = document.getElementById('message').value;
-            if(message.length == 0){
-                $('#message').focus();
-                messageError.innerHTML = "Message field is required !";
-                return false;
-            }
-            messageError.innerHTML = '';
-            return true;
-        }
-       function contactValidation(){
-           if(!contactFname() || !contactEmail() || !contactPhone() || !contactMessage()){
-                return false;
-           }else{
-                $('#contactModal').modal('show');
-           }
-       }
-    </script>
-    
 @endsection

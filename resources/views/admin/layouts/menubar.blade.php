@@ -93,14 +93,7 @@
                         </a>
                     </li>
 
-                    <li class="nav-item">
-                        <a href="{{url('admin/blogs')}}" class="nav-link  {{(Request::segment(2) == 'blogs') ? 'active' : ''}}">
-                            <i class="fas fa-blog"></i>
-                            <p>
-                                Blogs
-                            </p>
-                        </a>
-                    </li>
+                    
 
                     <li class="nav-item">
                         <a href="{{url('admin/galleries')}}" class="nav-link  {{(Request::segment(2) == 'galleries') ? 'active' : ''}}">
@@ -130,14 +123,7 @@
                         </a>
                     </li>
 
-                    <li class="nav-item">
-                        <a href="{{url('admin/seo_titles')}}" class="nav-link {{(Request::segment(2) == 'departments') ? 'active' : ''}}">
-                            <i class="fa-solid fa-magnifying-glass"></i>
-                            <p>
-                                Seo Titles
-                            </p>
-                        </a>
-                    </li>
+                    
 
                     <li class="nav-item">
                         <a href="{{url('admin/subscriptions')}}" class="nav-link {{(Request::segment(2) == 'subscriptions') ? 'active' : ''}}">
@@ -174,14 +160,16 @@
                             </p>
                         </a>
                     </li>
+
                     <li class="nav-item">
-                        <a href="{{url('admin/accomodations')}}" class="nav-link">
-                            <i class="fa-solid fa-house-circle-check"></i>
+                        <a href="{{url('admin/seo_titles')}}" class="nav-link {{(Request::segment(2) == 'departments') ? 'active' : ''}}">
+                            <i class="fa-solid fa-magnifying-glass"></i>
                             <p>
-                                Accomodation
+                                Seo Titles
                             </p>
                         </a>
                     </li>
+                    
                     
                 </ul>
             </nav>

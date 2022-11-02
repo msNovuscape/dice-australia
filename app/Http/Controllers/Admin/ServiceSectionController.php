@@ -134,15 +134,16 @@ class ServiceSectionController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($secId,$id)
+    public function show($id,$secId)
     {
         
-        $service = new Service();
-        $service_section = new ServiceSection();
+        
+        // $service = new Service();
+        // $service_section = new ServiceSection();
+        $service = Service::findorfail($id);
 
+        $service_section = ServiceSection::findorfail($secId);
 
-        $service = $service->findorfail($id);
-        $service_section = $service_section->findorfail($secId);
 
 
         return view($this->view . 'show', compact('service','service_section'));
