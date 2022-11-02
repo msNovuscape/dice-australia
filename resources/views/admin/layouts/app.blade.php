@@ -8,33 +8,33 @@
 
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
-{!! HTML::style('admin/plugins/fontawesome-free/css/all.min.css') !!}
+{!! Html::style('admin/plugins/fontawesome-free/css/all.min.css') !!}
 <!-- Ionicons -->
-    {!! HTML::style('admin/css/ionicons/2.0.1/css/ionicons.min.css') !!}
+    {!! Html::style('admin/css/ionicons/2.0.1/css/ionicons.min.css') !!}
     <!-- Tempusdominus Bootstrap 4 -->
 {{--    <link rel="stylesheet" href="plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">--}}
-{!! HTML::style('admin/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css') !!}
+{!! Html::style('admin/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css') !!}
 
 <!-- iCheck -->
 {{--    <link rel="stylesheet" href="plugins/icheck-bootstrap/icheck-bootstrap.min.css">--}}
-{!! HTML::style('admin/plugins/icheck-bootstrap/icheck-bootstrap.min.css') !!}
+{!! Html::style('admin/plugins/icheck-bootstrap/icheck-bootstrap.min.css') !!}
 
 <!-- JQVMap -->
 {{--    <link rel="stylesheet" href="plugins/jqvmap/jqvmap.min.css">--}}
-{!! HTML::style('admin/plugins/jqvmap/jqvmap.min.css') !!}
+{!! Html::style('admin/plugins/jqvmap/jqvmap.min.css') !!}
 <!-- Theme style -->
 {{--    <link rel="stylesheet" href="dist/css/adminlte.min.css">--}}
-{!! HTML::style('admin/dist/css/adminlte.min.css') !!}
+{!! Html::style('admin/dist/css/adminlte.min.css') !!}
 <!-- overlayScrollbars -->
 {{--    <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">--}}
-{!! HTML::style('admin/plugins/overlayScrollbars/css/OverlayScrollbars.min.css') !!}
+{!! Html::style('admin/plugins/overlayScrollbars/css/OverlayScrollbars.min.css') !!}
 <!-- Daterange picker -->
 {{--    <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">--}}
-{!! HTML::style('admin/plugins/daterangepicker/daterangepicker.css') !!}
+{!! Html::style('admin/plugins/daterangepicker/daterangepicker.css') !!}
 <!-- summernote -->
     {{--    <link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css">--}}
-    {!! HTML::style('admin/plugins/summernote/summernote-bs4.min.css') !!}
-    {!! HTML::style('admin/flatpickr/dist/flatpickr.min.css') !!}
+    {!! Html::style('admin/plugins/summernote/summernote-bs4.min.css') !!}
+    {!! Html::style('admin/flatpickr/dist/flatpickr.min.css') !!}
 
     <!-- fontawesome link -->
     <script src="https://kit.fontawesome.com/794cc97646.js" crossorigin="anonymous"></script>
@@ -43,7 +43,7 @@
             'url': '{{url("")}}'
         }
     </script>
-    {!! HTML::style('admin/css/custom-admin.css') !!}
+    {!! Html::style('admin/css/custom-admin.css') !!}
 
 @yield('style')
 
@@ -62,57 +62,57 @@
 
 <!-- jQuery -->
 {{--<script src="plugins/jquery/jquery.min.js"></script>--}}
-{!! HTML::script('admin/plugins/jquery/jquery.min.js') !!}
+{!! Html::script('admin/plugins/jquery/jquery.min.js') !!}
 <!-- jQuery UI 1.11.4 -->
 {{--<script src="plugins/jquery-ui/jquery-ui.min.js"></script>--}}
-{!! HTML::script('admin/plugins/jquery-ui/jquery-ui.min.js') !!}
+{!! Html::script('admin/plugins/jquery-ui/jquery-ui.min.js') !!}
 <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
 <script>
     $.widget.bridge('uibutton', $.ui.button)
 </script>
 <!-- Bootstrap 4 -->
 {{--<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>--}}
-{!! HTML::script('admin/plugins/bootstrap/js/bootstrap.bundle.min.js') !!}
+{!! Html::script('admin/plugins/bootstrap/js/bootstrap.bundle.min.js') !!}
 <!-- ChartJS -->
 {{--<script src="plugins/chart.js/Chart.min.js"></script>--}}
-{!! HTML::script('admin/plugins/chart.js/Chart.min.js') !!}
+{!! Html::script('admin/plugins/chart.js/Chart.min.js') !!}
 <!-- Sparkline -->
 {{--<script src="plugins/sparklines/sparkline.js"></script>--}}
-{!! HTML::script('admin/plugins/sparklines/sparkline.js') !!}
+{!! Html::script('admin/plugins/sparklines/sparkline.js') !!}
 <!-- JQVMap -->
 {{--<script src="plugins/jqvmap/jquery.vmap.min.js"></script>--}}
-{!! HTML::script('admin/plugins/jqvmap/jquery.vmap.min.js') !!}
+{!! Html::script('admin/plugins/jqvmap/jquery.vmap.min.js') !!}
 {{--<script src="plugins/jqvmap/maps/jquery.vmap.usa.js"></script>--}}
-{!! HTML::script('admin/plugins/jqvmap/maps/jquery.vmap.usa.js') !!}
+{!! Html::script('admin/plugins/jqvmap/maps/jquery.vmap.usa.js') !!}
 <!-- jQuery Knob Chart -->
 {{--<script src="plugins/jquery-knob/jquery.knob.min.js"></script>--}}
-{!! HTML::script('admin/plugins/jquery-knob/jquery.knob.min.js') !!}
+{!! Html::script('admin/plugins/jquery-knob/jquery.knob.min.js') !!}
 <!-- daterangepicker -->
 {{--<script src="plugins/moment/moment.min.js"></script>--}}
-{!! HTML::script('admin/plugins/moment/moment.min.js') !!}
+{!! Html::script('admin/plugins/moment/moment.min.js') !!}
 {{--<script src="plugins/daterangepicker/daterangepicker.js"></script>--}}
-{!! HTML::script('admin/plugins/daterangepicker/daterangepicker.js') !!}
+{!! Html::script('admin/plugins/daterangepicker/daterangepicker.js') !!}
 <!-- Tempusdominus Bootstrap 4 -->
 {{--<script src="plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>--}}
-{!! HTML::script('admin/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js') !!}
+{!! Html::script('admin/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js') !!}
 <!-- Summernote -->
 {{--<script src="plugins/summernote/summernote-bs4.min.js"></script>--}}
-{!! HTML::script('admin/plugins/summernote/summernote-bs4.min.js') !!}
+{!! Html::script('admin/plugins/summernote/summernote-bs4.min.js') !!}
 <!-- overlayScrollbars -->
 {{--<script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>--}}
-{!! HTML::script('admin/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js') !!}
+{!! Html::script('admin/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js') !!}
 <!-- AdminLTE App -->
 {{--<script src="dist/js/adminlte.js"></script>--}}
-{!! HTML::script('admin/dist/js/adminlte.js') !!}
+{!! Html::script('admin/dist/js/adminlte.js') !!}
 <!-- AdminLTE for demo purposes -->
 {{--<script src="dist/js/demo.js"></script>--}}
-{!! HTML::script('admin/dist/js/demo.js') !!}
+{!! Html::script('admin/dist/js/demo.js') !!}
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 {{--<script src="dist/js/services/dashboard.js"></script>--}}
-{!! HTML::script('admin/dist/js/services/dashboard.js') !!}
-{!! HTML::script('admintheme/tinymce/tinymce.min.js') !!}
-{!! HTML::script('admin/flatpickr/dist/flatpickr.js') !!}
-{!! HTML::style('admin/css/custom-admin.css') !!}
+{!! Html::script('admin/dist/js/services/dashboard.js') !!}
+{!! Html::script('admintheme/tinymce/tinymce.min.js') !!}
+{!! Html::script('admin/flatpickr/dist/flatpickr.js') !!}
+{!! Html::style('admin/css/custom-admin.css') !!}
 
 
 

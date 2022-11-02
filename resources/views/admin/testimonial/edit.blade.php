@@ -30,15 +30,15 @@
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label>Heading <span style="color: red">*</span> </label>
-                                    <input type="text" class="form-control"  id="heading" name="heading" required value="{{$setting->heading}}">
+                                    <input type="text" class="form-control"  id="heading" name="heading" value="{{$setting->heading}}">
                                 </div>
                             </div>
-                            <div class="col-md-4">
+                            <!-- <div class="col-md-4">
                                 <div class="form-group">
                                     <label>Title <span style="color: red">*</span> </label>
-                                    <input type="text" class="form-control"  id="title" name="title" required value="{{$setting->title}}">
+                                    <input type="text" class="form-control"  id="title" name="title" value="{{$setting->title}}">
                                 </div>
-                            </div>
+                            </div> -->
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label>Image</label>
