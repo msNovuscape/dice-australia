@@ -23,7 +23,7 @@ use App\Http\Controllers\Admin\DepartmentController;
 use App\Http\Controllers\Admin\TestimonialController;
 use App\Http\Controllers\Admin\ClientController;
 use App\Http\Controllers\Admin\CareerController;
-use App\Http\Controllers\Admin\CourseFaqController;
+use App\Http\Controllers\Admin\NdisPricingController;
 use App\Http\Controllers\Admin\ServiceFaqController;
 use App\Http\Controllers\Admin\AddSectionController;
 use App\Http\Controllers\Admin\SeoTitleController;
@@ -50,9 +50,9 @@ Route::get('/contact', function(){
     return view('contact');
 });
 
-Route::get('/referral', function(){
-    return view('referral');
-});
+Route::get('/referral', [ReferralController::class, 'create']);
+
+Route::post('/referral', [ReferralController::class, 'store']);
 
 Route::get('/gallery', [HomeController::class, 'gallery']);
 
@@ -136,6 +136,13 @@ Route::group(['middleware'=>['auth']],function (){
         Route::post('referrals/{id}/update',[ReferralAdminController::class,'update']);
         Route::get('referrals/{id}/delete',[ReferralAdminController::class,'delete']);
 
+        Route::get('ndis_pricing',[NdisPricingController::class,'index']);
+        Route::get('ndis_pricing/create',[NdisPricingController::class,'create']);
+        Route::post('ndis_pricing',[NdisPricingController::class,'store']);
+        Route::get('ndis_pricing/{id}/view',[NdisPricingController::class,'show']);
+        Route::get('ndis_pricing/{id}/edit',[NdisPricingController::class,'edit']);
+        Route::post('ndis_pricing/{id}',[NdisPricingController::class,'update']);
+        Route::get('ndis_pricing/{id}/delete',[NdisPricingController::class,'destroy']);
 
         Route::get('sub_offices',[SubOfficeController::class,'index']);
         Route::get('sub_offices/create',[SubOfficeController::class,'create']);

@@ -11,6 +11,7 @@ use App\Models\Slider;
 use App\Models\Contact;
 use App\Models\Setting;
 use App\Models\Career;
+use App\Models\NdisPricing;
 use App\Models\Subscription;
 use App\Models\SupportCoordination;
 use App\Models\Testimonial;
@@ -33,11 +34,12 @@ class HomeController extends Controller
         $news_and_updates= NewsAndUpdate::where(['status'=>'1'])->orderBy('id','desc')->get();
         $sliders = Slider::where('status',1)->get();
         $services = Service::where('status',1)->orderByRaw('CONVERT(order_by, SIGNED) asc')->limit(6)->get();
+        $ndis_pricing = NdisPricing::where('status',1)->first();
 
         $phone = Setting::where(['key' => 'phone','status' => '1'])->first();
         $email = Setting::where(['key' => 'email','status' => '1'])->first();
         $address = Setting::where(['key' => 'address','status' => '1'])->first();
-        return view('welcome',compact('services','sliders','about_us','news_and_updates','testimonials','phone','email','address'));
+        return view('welcome',compact('services','sliders','about_us','news_and_updates','testimonials','phone','email','address','ndis_pricing'));
     }
 
     public function service(){

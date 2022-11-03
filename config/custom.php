@@ -35,7 +35,7 @@ return [
         '9' => 'testimonial',
         '10' => 'accomodation',
         '11'=>'add_section',
-        '12'=>'placement'
+        '12'=>'ndis_pricing'
 
     ],
     'course_types'=>[

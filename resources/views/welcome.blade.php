@@ -172,16 +172,16 @@
         <div class="row">
             <div class="col-md-5">
                 <div class="pricing-image">
-                    <img src="{{url('frontend/images/pricing.png')}}" class="w-100"/>
+                    <img src="{{url($ndis_pricing->image)}}" class="w-100"/>
                 </div>
             </div>
             <div class="col-md-7">
                 <div class="pricing-detail">
-                    <h2>NDIS Pricing</h2>
-                    <h5>NDIS pricing arrangements and price limits</h5>
-                    <p>We operate under NDIS Pricing Arrangements and Price Limits (formerly the NDIS Price Guide) to help participants better understand how pricing restrictions for supports and services operate. Price control is in place to guarantee that participants get the most for their money from the assistance they receive from us. The maximum fees that registered providers like us can bill NDIS participants for particular supports are known as pricing limitations, and we make sure that all our participants get the best services for the price they pay. We understand that when providing assistance to participants who are under the management of the NDIA or a plan, the regulations specified in the NDIS Pricing Arrangements and Price Limits must be adhered to, and we carefully follow the guidelines to provide excellent services in line with them.
-                    <br><br> Price regulation is in place to ensure that participants receive value for money in the supports that they receive.</p>
-                    <a href="/ndis-pricing">NDIS Price Guide</a>
+                    <h2>{{$ndis_pricing->title}}</h2>
+                    <h5>{{$ndis_pricing->sub_title}}</h5>
+                    <p>{!!$ndis_pricing->description!!}
+                    <br><br> {!!$ndis_pricing->sub_description!!}</p>
+                    <a target = "_blank" href="{{$ndis_pricing->link}}">{{$ndis_pricing->button}}</a>
                 </div>
             </div>
         </div>

@@ -36,15 +36,19 @@
                                                 </li>
                                                 <li class="d-flex">
                                                     <span>Gender:</span>
-                                                    <span>{{$referral->gender}}</span>
+                                                    <span>@if($referral->gender == '1') Male @elseif($referral->gender == '2') Female @else Other @endif</span>
                                                 </li>
                                                 <li class="d-flex">
-                                                    <span>Age:</span>
-                                                    <span>{{$referral->age}}</span>
+                                                    <span>Email:</span>
+                                                    <span>{{$referral->email}}</span>
                                                 </li>
                                                 <li class="d-flex">
-                                                    <span>Diasbility Type:</span>
-                                                    <span>{{$referral->disability_type}}</span>
+                                                    <span>Date of Birth:</span>
+                                                    <span>{{$referral->dob}}</span>
+                                                </li>
+                                                <li class="d-flex">
+                                                    <span>Phone:</span>
+                                                    <span>{{$referral->mobile_no}}</span>
                                                 </li>
                                             </ul>
                                         </div>
@@ -81,7 +85,7 @@
                                                 </li>
                                                 <li class="d-flex">
                                                     <span>NDIS Plan:</span>
-                                                    <span>{{$referral->ndis_plane}}</span>
+                                                    <span>{{config('custom.ndis_plan')[$referral->ndis_plan]}}</span>
                                                 </li>
                                             </ul>
                                         </div>
@@ -117,10 +121,7 @@
                                                     <span>Referrer Contact Number:</span>
                                                     <span>{{$referral->referrer_contact_no}}</span>
                                                 </li>
-                                                <li class="d-flex">
-                                                    <span>Referrer Email:</span>
-                                                    <span>{{$referral->referrer_email}}</span>
-                                                </li>
+                                             
                                             </ul>
                                         </div>
                                     </div>

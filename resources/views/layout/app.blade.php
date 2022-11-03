@@ -33,6 +33,7 @@
                       $services = \App\Models\Service::where('status','1')->orderByRaw('CONVERT(order_by, SIGNED) asc')->get();
                       $phone = \App\Models\Setting::where('slug','phone')->get('value')->first()->value ?? '';
                       $email = \App\Models\Setting::where('slug','email')->get('value')->first()->value ?? '';
+                      $address = \App\Models\Setting::where('slug','address')->get('value')->first()->value ?? '';
                     @endphp
             @if($phone !== '')        
             <div>
@@ -164,31 +165,38 @@
         </div>
     </div>
     <div class="row footer-details">
+    @if($address !== '')
         <div class="col-md-4">
             <div class="foot-location">
                 <img src="{{url('frontend/icons/location.svg')}}"/>
-                <span>Suite 614, 343, Little Collins Street, Melbourne, VIC 3000</span>
+                <span>{{$address}}</span>
             </div>
         </div>
+        @endif
+            
+        @if($phone !== '')        
         <div class="col-md-4">
             <div class="foot-location">
                 <img src="{{url('frontend/icons/phone.svg')}}"/>
-                <a href="tel: 1300 050 051">1300 050 051</a>
+                <a href="tel: {{$phone}}">{{$phone}}</a>
             </div>
         </div>
+        @endif
+        @if($email !== '') 
         <div class="col-md-4">
             <div class="foot-location">
                 <img src="{{url('frontend/icons/email.svg')}}"/>
-                <a href="mailto: contact@dice.org.au">contact@dice.org.au</a>
+                <a href="mailto: {{$email}}">{{$email}}</a>
             </div>
         </div>
+        @endif
     </div>
     <div class="booton-section">
         <div class="bootom-nav">
             <ul>
                 <li><a href="/home">Home</a></li>
                 <li><a href="/about">About us</a></li>
-                <li><a href="/service">Services</a></li>
+                <!-- <li><a href="/service">Services</a></li> -->
                 <li><a href="/referral">Make a Referal</a></li>
                 <li><a href="/contact">Contact us</a></li>
             </ul>
@@ -198,7 +206,7 @@
             <p>NDIS : 4050102564</p>
             <p>DICE © 2022. All Rights Reserved.</p>
             <p><a>Disclaimer</a>  |  <a>Privacy Policy</a></p>
-            <p>Designed & Developed By: <a href="www.extratechs.com.au">Extratech</a></p>
+            <p>Designed & Developed By: <a target="_blank" rel="noreferrer" href="https://www.extratechs.com.au/">Extratech</a></p>
         </div>
     </div>
 </section>

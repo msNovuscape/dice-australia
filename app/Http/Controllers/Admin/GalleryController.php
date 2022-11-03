@@ -139,14 +139,14 @@ class GalleryController extends Controller
         return redirect($this->redirect);
     }
 
-    public function blog_point($blog_point_id)
-    {
-        if(Auth::user()){
-            $setting = BlogPoint::findorfail($blog_point_id);
-            $setting->delete();
-            return response()->json(['blog_point_id' => $blog_point_id]);
-        }
+    // public function blog_point($blog_point_id)
+    // {
+    //     if(Auth::user()){
+    //         $setting = BlogPoint::findorfail($blog_point_id);
+    //         $setting->delete();
+    //         return response()->json(['blog_point_id' => $blog_point_id]);
+    //     }
 
-    }
+    // }
 
 }

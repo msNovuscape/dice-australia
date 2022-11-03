@@ -123,6 +123,15 @@
                         </a>
                     </li>
 
+                    <li class="nav-item">
+                        <a href="{{url('admin/ndis_pricing')}}" class="nav-link {{(Request::segment(2) == 'ndis_pricing') ? 'active' : ''}}">
+                            <i class="fa fa-quote-right" aria-hidden="true"></i>
+                            <p>
+                                NDIS PRICING
+                            </p>
+                        </a>
+                    </li>
+
                     
 
                     <li class="nav-item">
@@ -161,14 +170,14 @@
                         </a>
                     </li>
 
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <a href="{{url('admin/seo_titles')}}" class="nav-link {{(Request::segment(2) == 'departments') ? 'active' : ''}}">
                             <i class="fa-solid fa-magnifying-glass"></i>
                             <p>
                                 Seo Titles
                             </p>
                         </a>
-                    </li>
+                    </li> -->
                     
                     
                 </ul>

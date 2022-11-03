@@ -143,6 +143,12 @@ class User extends Authenticatable
             }
             return $directory = 'images/accomodation/' . $year . '/' . $month . '/' . $day . '/';
         }
+        if(config('custom.image_folders')[$image_folder_type] == 'ndis_pricing') {
+            if (!is_dir(public_path() . '/images/ndis_pricing/' . $year . '/' . $month . '/' . $day)) {
+                mkdir(public_path() . '/images/ndis_pricing/' . $year . '/' . $month . '/' . $day, 0755, true);
+            }
+            return $directory = 'images/ndis_pricing/' . $year . '/' . $month . '/' . $day . '/';
+        }
 
     }
 

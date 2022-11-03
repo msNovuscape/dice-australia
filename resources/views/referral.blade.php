@@ -9,10 +9,13 @@
     <meta property="og:description" content="Please read the form carefully and complete all the sections.."/>
 @endsection
 @section('content')
+@php
+          $msg =Session::get('msg') ?? null; 
+        @endphp
     <section class="referral-section">
         <div class="container-fluid">
             <div class="referral-form">
-                <form class="form-row" method="post" action = "/referral">
+                <form class="form-row" method="post" action = "{{url('/referral')}}">
                 @csrf
                     <div class="row">
                         <div class="referralform-top">
@@ -141,8 +144,9 @@
                                     <div class="form-group">
                                         <label for="ndis plan">Choose NDIS Plan</label>
                                         <select class="form-select form-control" aria-label="" name = "ndis_plan">
-                                        <option value="" selected disabled>Please Select Plan</option>
-                                            <option value="index" selected>test</option>
+                                        @foreach(config('custom.ndis_plan') as $index => $value)
+                                            <option value="{{$index}}" {{(old('ndis_plan')==$index) ? 'selected':''}}>{{$value}}</option>
+                                        @endforeach
                                         
                                         </select>
                                         <span id="date-error" class="error">
@@ -235,18 +239,13 @@
                                         Services Required
                                     </label>
                                     <div class="servicedetail-checkbox">
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="checkbox" id="serviceid" name = "services[]" value="service-id">
-                                            <label class="form-check-label" for="serviceid">servicename</label>
-                                        </div>
-                                        <!-- <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-                                            <label class="form-check-label" for="inlineCheckbox2">Speech Theraphy</label>
-                                        </div>
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
-                                            <label class="form-check-label" for="inlineCheckbox3">Positive Behaviour Support</label>
-                                        </div> -->
+                                        @foreach($services as $service)
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="checkbox" id="{{$service->id}}" name = "services[]" value="{{$service->id}}" {{ in_array($service->id, old('services', [])) ? 'checked' : '' }}>
+                                                <label class="form-check-label" for="{{$service->id}}">{{$service->name}}</label>
+                                            </div>
+                                        @endforeach
+                                     
                                     </div>
                                     <div id="gender-error" class="error">
 
@@ -329,6 +328,8 @@
 @endsection
 
 @section('script')
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script>
     var element = document.getElementById('ndis');
      function show(value){
@@ -342,5 +343,13 @@
     if(document.getElementById('is_ndis').value == "1") {
         element.classList.remove('hideandshow');
     }
+    var php_var = "<?php echo $msg; ?>";
+        if(php_var.length !== 0){
+              Swal.fire({
+                  title: 'Submitted!!',
+                  text: php_var,
+                  icon: 'success'
+              })
+        }
     </script>
 @endsection
