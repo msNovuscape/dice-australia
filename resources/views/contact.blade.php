@@ -47,7 +47,7 @@
                     <h2>Talk to Us</h2>
                     <p>Please fill out the form below. Our caring, capable, knowledgeable team are ready and willing to answer any questions or concerns you may have and will get back to you shortly.</p>
                 </div>
-                <form class="contactus-form" action="" onsubmit="return contactValidation()">
+                <form class="contactus-form" id="contact_form">
                     <div class="mb-3">
                         <input type="text" class="form-control" name="fullname" id="fullname" placeholder="Full Name" onkeyup="contactFname()">
                         <span class="error-msg" id="contact-fname-error"></span>
@@ -74,7 +74,7 @@
                                     </div>
                                     <div class="modal-body" style="background: #FFFFFF">
                                         <h2 style="color: #3A3A3A; font-weight: 700; font-size: 24px; line-height: 2rem">Success!</h2>
-                                        <p id = "success">This is success message</p>
+                                        <p id = "success"></p>
                                     </div>
                                     <div class="modal-footer submit-footer-modal">
                                         <a type="button" class="submit-close-btn" href="/contact">Close</a>
@@ -94,7 +94,13 @@
     </section>
 @endsection
 @section('script')
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script>
+        $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+      });
        fnameError = document.getElementById('contact-fname-error');
        emailError = document.getElementById('contact-email-error');
        phoneError = document.getElementById('contact-phone-error');
@@ -147,13 +153,52 @@
             messageError.innerHTML = '';
             return true;
         }
-       function contactValidation(){
+        $('#contact_form').on('submit', function (e) {
+           e.preventDefault();
            if(!contactFname() || !contactEmail() || !contactPhone() || !contactMessage()){
                 return false;
            }else{
-                $('#contactModal').modal('show');
+            let fullname = $('#fullname').val();
+            let email = $('#email').val();
+            let phone = $('#phone').val();
+            let message = $('#message').val();
+            
+            start_loader();
+            $.ajax({
+
+                url: "/contact_mail",
+                type:"POST",
+                data:{
+                    fullname:fullname,
+                    email:email,
+                    phone:phone,
+                    // service_id:service_id,
+                    message:message,
+                },
+
+                    success:function(response){
+                        end_loader()
+                    console.log(response);
+                    if (response) {
+                        $('#success').text(response.success);
+                        $('#contactModal').modal('show');
+                    }
+                    },
+                    error: function(response) {
+
+                    }
+                });
+                
            }
-       }
+        });
+        //starting loader
+    function start_loader() {
+        $('#loader').addClass('is-active');
+    }
+    //ending loader
+    function end_loader() {
+        $('#loader').removeClass('is-active');
+    }
     </script>
     
 @endsection

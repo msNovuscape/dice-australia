@@ -55,6 +55,7 @@
                                     <thead>
                                     <tr>
                                         <th style="width: 10px">S.N.</th>
+                                        <th class="text-center">Full Name</th>
                                         <th class="text-center">Email</th>
                                         <th class="text-center">Status</th>
                                         <th class="text-center">Action</th>
@@ -64,6 +65,7 @@
                                     @foreach($subscriptions as $subscription)
                                         <tr>
                                             <th scope="row">{{$loop->iteration}}</th>
+                                            <td class="text-center">{{$subscription->name}}</td>
                                             <td class="text-center">{{$subscription->email}}</td>
                                             <td class="text-center">{{$subscription->status == 1 ? 'Active' : 'Deactive'}}</td>
                                       

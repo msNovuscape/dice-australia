@@ -35,7 +35,7 @@
                                     <div class="row">
                                         <div class="col-md-4">
                                             <div class="input-group input-group-sm mb-3 table-search w-100">
-                                                <input type="search"  name="name" class="form-control ds-input" placeholder="Name / Query Type" aria-label="Small" aria-describedby="inputGroup-sizing-sm" onchange="filterList()">
+                                                <input type="search"  name="fullname" class="form-control ds-input" placeholder="Name" aria-label="Small" aria-describedby="inputGroup-sizing-sm" onchange="filterList()">
                                             </div>
                                         </div>
                                         <div class="col-md-4">
@@ -55,8 +55,8 @@
                                     <thead>
                                     <tr>
                                         <th style="width: 10px">S.N.</th>
-                                        <th class="text-center">Service</th>
-                                        <th class="text-center">Name</th>
+                                        <!-- <th class="text-center">Service</th> -->
+                                        <th class="text-center">Full Name</th>
                                         <th class="text-center">Email</th>
                                         <th class="text-center">Message</th>
                                         <th class="text-center">Action</th>
@@ -66,11 +66,11 @@
                                     @foreach($contacts as $contact)
                                         <tr>
                                             <th scope="row">{{$loop->iteration}}</th>
-                                            @if($contact->service()->count() > 0)
+                                            <!-- @if($contact->service()->count() > 0)
                                             <td class="text-center">Enquiry|{{$contact->service->name}}</td>
                                             @else
                                             <td class="text-center">Contact</td>
-                                            @endif
+                                            @endif -->
                                             <td class="text-center">{{$contact->fullname}}</td>
                                             <td class="text-center">{{$contact->email}}</td>
                                             <td class="text-center">{{$contact->message}}</td>

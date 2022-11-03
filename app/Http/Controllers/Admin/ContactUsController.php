@@ -16,7 +16,16 @@ class ContactUsController extends Controller
 
     public function index()
     {
-        $contacts = Contact::paginate(config('custom.per_page'));
+        $settings = Contact::orderBy('id','DESC');
+        if(\request('fullname')){
+            $key = \request('fullname');
+            $settings = $settings->where('fullname','like','%'.$key.'%');
+        }
+        if(\request('status')){
+            $key = \request('status');
+            $settings = $settings->where('status',$key);
+        }
+        $contacts = $settings->paginate(config('custom.per_page'));
         return view($this->view.'index',compact('contacts'));
     }
 

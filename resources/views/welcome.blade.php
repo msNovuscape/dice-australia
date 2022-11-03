@@ -290,7 +290,7 @@
                 <div class="subscription-desc">
                     <h1>Join DICE Family</h1>
                     <p>We're committed to your privacy. DICE uses the information you provide to us to contact you about our relevant content, products, and services.</p>
-                    <form onsubmit="return validateSubscription()">
+                    <form id="subs_form">
                         <div class="">
                             <input type="text" class="dice-from" id="subs-fname" name="" placeholder="FullName" onkeyup="subsFname()">
                             <span id="subs-fname-error" class="error-msg"></span>
@@ -309,10 +309,10 @@
                                         </div>
                                         <div class="modal-body" style="background: #FFFFFF">
                                             <h2 style="color: #3A3A3A; font-weight: 700; font-size: 24px; line-height: 2rem">Success!</h2>
-                                            <p id = "success">This is success message</p>
+                                            <p id = "success"></p>
                                         </div>
                                         <div class="modal-footer submit-footer-modal">
-                                            <a type="button" class="submit-close-btn" href="/contact">Close</a>
+                                            <a type="button" class="submit-close-btn" href="/">Close</a>
                                         </div>
                                     </div>
                                 </div>
@@ -389,13 +389,44 @@
             }
         }
 
-        function validateSubscription() {
+        $('#subs_form').on('submit', function (e) {
+            e.preventDefault();
             if (!subsFname() || !subsEmail()) {
                 return false;
             } else {
-                $('#subsModal').modal('show');
+                var email = document.getElementById('subs-email');
+                var name = document.getElementById('subs-fname');
+
+            $.ajax({
+
+            url: "/subscribe",
+            type:"POST",
+            data:{
+              email:email.value,
+              name:name.value
+            },
+
+            success:function(response){
+
+                if (response) {
+
+                    // alert(response.success);
+                //   $('#success-message').text(response.success);
+                    $('#success').text(response.success);  
+                    $('#subsModal').modal('show');
+
+                  email.value = '';
+                  name.value = '';
+              //   $("#contactForm")[0].reset();
+              }
+            },
+            error: function(response) {
+
             }
-        }
+
+            });
+            }
+        });
     </script>
 
 @endsection

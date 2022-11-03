@@ -77,7 +77,7 @@
                             <!-- <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button> -->
                         </div>
                         <div class="modal-body modal-detail">
-                        <form onsubmit="return validatetopform()" action="">
+                        <form id="enquiry_form">
                                 <div class="row">
                                     <div class="col-md-6 mb-3">
                                         <input type="text" class="form-control" id="app-fname" name="fname" placeholder="First Name" value="" onkeyup="validatetopfname()">
@@ -103,7 +103,7 @@
 
                                 <div class="modal-footer">
                                     <button type="button" class="modal-close-btn" data-bs-dismiss="modal">Close</button>
-                                    <button type="submit" class="modal-submit-btn">Submit</button>
+                                    <button type="submit" id = "enquiry-submit" class="modal-submit-btn">Submit</button>
                                 </div>
                                 </div>
                             </form>
@@ -232,7 +232,13 @@
 
 <!-- hamburger link -->
 <script type="text/javascript" src="{{url('frontend/js/index.js')}}"></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script>
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
         var topfnameError = document.getElementById('app-fname-error')
         var toplnameError = document.getElementById('app-lname-error')
         var topemailError = document.getElementById('app-email-error')
@@ -300,14 +306,59 @@
                 return true;
             }
         }
-        function validatetopform(){
+        $('#enquiry_form').on('submit', function (e) {
+            e.preventDefault();
             if(!validatetopfname() || !validatetoplname() || !validatetopemail() || !validatetopPhone() || !validatetopmessage()){
                 return false
             }
             else {
-                return true
+            document.getElementById('enquiry-submit').disabled=true;
+
+                let firstname = $('#app-fname').val();
+                let lastname = $('#app-lname').val();
+
+                let email = $('#app-email').val();
+                let phone = $('#app-phone').val();
+
+                let message = $('#app-message').val();
+
+                $.ajax({
+
+                    url: "/contact_mail",
+                    type:"POST",
+                    data:{
+                        firstname:firstname,
+                        lastname:lastname,
+                        email:email,
+                        phone:phone,
+                    // service_id:service_id,
+                    message:message,
+                    },
+
+                success:function(response){
+  
+                if (response) {
+                    Swal.fire({
+                        title: 'Submitted!!',
+                        text: (response.success),
+                        icon: 'success'
+                    }).then(function (){
+                    $('#enquiry_form')[0].reset();
+                    document.getElementById('enquiry-submit').disabled=false;
+
+
+                    $('#exampleModal').modal('hide');
+                    })
+            //   $('#success-message').text(response.success);
+
+                }
+                },
+                error: function(response) {
+                    document.getElementById('enquiry-submit').disabled=false;
+                }
+                });
             }
-        }
+            });
 </script>
 @yield('script')
 </body>

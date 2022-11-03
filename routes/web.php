@@ -57,7 +57,8 @@ Route::post('/referral', [ReferralController::class, 'store']);
 Route::get('/gallery', [HomeController::class, 'gallery']);
 
 Route::get('/service/{slug}', [FrontendServiceController::class,'single_service']);
-
+Route::post('/contact_mail', [HomeController::class, 'send_contact_mail']);
+Route::post('/subscribe', [HomeController::class, 'subscribe']);
 Route::get('/ndis', function(){
     return view('ndis');
 });

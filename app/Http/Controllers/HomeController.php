@@ -72,7 +72,7 @@ class HomeController extends Controller
     public function send_contact_mail(Request $request){
        $contact = new Contact();
        $service = '';
-       $name = ($request['first_name'] != null) ? ($request['first_name'].' '.$request['last_name']) : $request['fullname'] ;
+       $name = ($request['firstname'] != null) ? ($request['firstname'].' '.$request['lastname']) : $request['fullname'] ;
 
        $contact->fullname = $name;
        $contact->email = $request['email'];
@@ -80,16 +80,16 @@ class HomeController extends Controller
        $contact->message = $request['message'];
 
        
-        if($request->service_id != null){
-          $service = Service::find($request['service_id'])->name ;
-          $contact->service_id = $request['service_id'];
-        }
+        // if($request->service_id != null){
+        //   $service = Service::find($request['service_id'])->name ;
+        //   $contact->service_id = $request['service_id'];
+        // }
         $contact->save();
 
-        dispatch(function() use ($name, $service, $contact) {
+        dispatch(function() use ($name,$service, $contact) {
         \Mail::send('contact_mail', array(
 
-            'full_name' =>$name,
+            'full_name' =>$contact['fullname'],
 
             'email' =>$contact['email'],
 
@@ -97,21 +97,20 @@ class HomeController extends Controller
 
             'contact_message' =>$contact['message'],
 
-            'service' =>$service ?? null,
+            // 'service' =>$service ?? null,
 
            ), function($message) use ($service){
-
-            $subject=($service!= '') ? 'Enquiry for '.$service : 'Contact/Feedback';
+            $subject = 'Contact/Enquiry';
+            // $subject=($service!= '') ? 'Enquiry for '.$service : 'Contact/Feedback';
             $message->subject($subject);
             // $message->to('info@agilityhomecare.com.au', 'AgilityHomeCare')->subject($subject);
             $message->to('mahesh@extratechs.com.au', 'Extratech')->subject($subject);
 
-            $message->cc('extratechweb@gmail.com', 'Extratech')->subject($subject);
 
            });
         });
 
-           return response()->json(['success' => 'Thank you for your interest. We will get back to you soon.','status' =>'Ok'],200);
+        return response()->json(['success' => 'Thank you for your interest. We will get back to you soon.','status' =>'Ok'],200);
 
     }
 
@@ -161,7 +160,6 @@ class HomeController extends Controller
             'email'=>'required',
             'password'=>'required',
         ]);
-//        dd(\request()->all());
 
 
 
@@ -188,24 +186,27 @@ class HomeController extends Controller
     {
 
         $email = $request->email;
+        $name = $request->name;
         $subscription = new Subscription();
         $subscription->email = $email;
+        $subscription->name = $name;
         $subscription->save();
 
 
         \Mail::send('subscribe_mail', array(
 
-
             'email' =>\request('email'),
 
+            'name' =>\request('name'),
 
             'subject' => 'Subscription Notice',
 
            ), function($message) use ($request){
+               
             $subject = 'Subscription Notice';
             $message->subject('Subscription Notice');
             // $message->to('info@agilityhomecare.com.au', 'Qualuty Allied Health')->subject($subject);
-            $message->to('extratechweb@gmail.com', 'Extratech')->subject($subject);
+            $message->to('mahesh@extratechs.com.au', 'Extratech')->subject($subject);
             // $message->cc('info@extratechs.com.au', 'Extratech')->subject('Subscription Notice');
 
            });
@@ -217,162 +218,5 @@ class HomeController extends Controller
         // $services = Service::where('status',1)->get();
         return view('blog.single',compact('blog'));
     }
-
-    public function save_coordination(Request $request){
-
-        $this->validate(\request(),[
-            'file' => 'required|file|max:20000|mimes:docx,pdf,jpg',
-            'phone' => 'required|regex:/^([0-9\s\-\+\(\)]*)$/|min:10',
-           
-        ],
-        [
-        'file.max' => 'The file must not be greater than 18MB',
-
-        ]);
-      
-        if(!$request->is_sup_cor){
-            $this->validate(\request(),[
-            'sup_cor_com_name' => 'required',
-            'sup_cor_email' => 'required',
-            'sup_cor_com_phone' => 'required'
-            ],
-            [
-            'sup_cor_com_name.required' => 'Support Coordinator Company name is required',
-            'sup_cor_email.required' => 'Support Coordinator email is required',
-            'sup_cor_com_phone.required' => 'Support Coordinator phone is required',
-
-            ]);
-        }
-
-        if($request->is_nominee == '1'){
-            $this->validate(\request(),[
-                'nominee_name' => 'required',
-                'nominee_email' => 'required',
-                'nominee_phone' => 'required',
-            ],
-            [
-                'nominee_name.required' => 'Nominee name is required',
-                'nominee_email.required' => 'Nominee email is required',
-                'nominee_phone.required' => 'Nominee phone is required',
-            
-            ]);
-        }
-        if($request->myImage != null){
-            $folderPath = "signatures/";
-
-            $base64Image = explode(";base64,", $request->myImage);
-            $explodeImage = explode("image/", $base64Image[0]);
-            $imageType = $explodeImage[1];
-            $image_base64 = base64_decode($base64Image[1]);
-            $file = $folderPath . uniqid() .'_'.$request->first_name.'_'.$request->last_name. '.'.$imageType;
-            // $image_base64->store($file);
-
-            Storage::disk('local')->put($file, $image_base64);
-        }    
-        
-        $referral = new SupportCoordination();
-        $name = ucfirst($request['first_name']) . ' '. ucfirst($request['last_name']);
-        $referral->name = $name;
-        $referral->email = $request['email'];
-        $referral->phone = $request['phone'];
-        $referral->address = $request['address'];
-        $referral->ndis_number = $request['ndis_number'];
-        $referral->nominee_email = $request['nominee_email'];
-        $referral->nominee_name = $request['nominee_name'];
-        $referral->is_sup_cor = $request['is_sup_cor'] ?? false;
-        $referral->nominee_phone = $request['nominee_phone'];
-        $referral->is_nominee = $request['is_nominee'];
-        if(!$request->is_sup_cor){
-            $referral->sup_cor_com_name = $request['sup_cor_com_name'];
-            $referral->sup_cor_email = $request['sup_cor_email'];
-            $referral->sup_cor_com_phone = $request['sup_cor_com_phone'];
-        }
-        $referral->agreement_start_date = $request['agreement_start_date'];
-        if(!$request->is_further_notice){
-        $referral->agreement_end_date = $request['agreement_end_date'];
-        }
-        $referral->agreement_signature = $file ?? null;
-        $referral->dob = $request['dob'];
-        if($request->hasFile('file')){
-            $extension = \request()->file('file')->getClientOriginalExtension();
-            $image_folder_type = array_search('ndis_plan',config('custom.image_folders')); //for image saved in folder
-            $count = rand(100,999);
-            $out_put_path = User::save_image(\request('file'),$extension,$count,$image_folder_type);
-            
-            is_array($out_put_path) ? $referral->file = $out_put_path[0] : $referral->file = $out_put_path;
-        }
-        $referral->save();
-        dispatch(function() use ($referral,$name,$file) {
-            $pdf = PDF::loadView('support_coordination_mail',array(
-
-                'referral_id' => $referral->id,
     
-                'name' =>$name,
-        
-                'email' =>$referral['email'],
-    
-                'phone' =>$referral['phone'],
-        
-                'dob' =>$referral['dob'],
-        
-                'address' =>$referral['address'],
-        
-                'ndis_number' =>$referral['ndis_number'],
-        
-                'is_nominee' =>$referral['is_nominee'],
-        
-                'nominee_name' =>$referral['nominee_name'],
-        
-                'nominee_email' =>$referral['nominee_email'],
-        
-                'nominee_phone' =>$referral['nominee_phone'],
-        
-                'sup_cor_com_name' =>$referral['sup_cor_com_name'],
-        
-                'is_sup_cor' => $referral['is_sup_cor'],
-        
-                'sup_cor_com_phone' => $referral['sup_cor_com_phone'],
-        
-                'sup_cor_email' => $referral['sup_cor_email'],
-        
-                'agreement_start_date' =>$referral['agreement_start_date'],
-    
-                // 'is_further_notice' => $referral['is_further_notice'],
-        
-                'agreement_end_date' =>$referral['agreement_end_date'],
-    
-                'signature' =>$file ?? null,
-        
-        
-            ));
-               \Mail::send('support_coordination_sample_mail', array(
-                    
-               ), function($message) use ($pdf,$referral){
-                   if($referral->file != ''){
-                     $file = public_path().'/'.$referral->file;
-                     $message->attach($file);
-                   }
-                //    if($referral->agreement_signature != ''){
-                //     $file = asset('storage/'.$referral->agreement_signature);
-                //     // $file = public_path().'/storage/'.$referral->agreement_signature;
-                //     $message->attach($file);
-                //   }
-                 
-                $message->attachData($pdf->output(), 'support_cordination.pdf');
-                $message->subject('Support Coordination Enquiry');
-                // $message->to('info@agilityhomecare.com.au', 'Agility HomeCare')->subject('Support Coordination Enquiry');
-                // $message->to('extratechweb@gmail.com', 'Extratech')->subject('Support Coordination Enquiry');
-                $message->cc('mahesh@extratechs.com.au', 'Extratech')->subject('Support Coordination Enquiry');
-        
-               });
-         });
-     
-    
-           return redirect()->back()->with(['msg' => 'Successfully submitted.']);
-    }
-
-
-    public function audio_load(Request $request){
-        return response()->json(['src' => 'https://code.responsivevoice.org/responsivevoice.js?key=gqRRrSwU' ]);
-    }
 }
