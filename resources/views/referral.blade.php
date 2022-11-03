@@ -106,7 +106,7 @@
                                 <div class='col-md-4'>
                                     <div class="form-group">
                                         <label>Participant have a current NDIS plan?</label>
-                                        <select onchange = "show(this.value)" class="form-select form-control" aria-label="Default select example" name = "is_ndis" id = "is_ndis">
+                                        <select onchange = "show(this.value)" class="form-select form-control" aria-label="Default select example" name = "is_ndis" id ="is_ndis">
                                         <option value="0" {{(old('is_ndis') == '0') ? 'selected' : ''}}>No</option>
 
                                           <option value = "1" {{(old('is_ndis')=='1') ? 'selected':''}}>Yes</option>
@@ -331,17 +331,16 @@
 @section('script')
 <script>
     var element = document.getElementById('ndis');
-        function show(value){
+     function show(value){
 
-            if(value == '1'){
-                element.classList.remove('hideandshow');
-            }else{
-                element.classList.add('hideandshow');
-            }
-        }
-        if(document.getElementById('is_ndis').value == "1") {
+        if(value == '1'){
             element.classList.remove('hideandshow');
+        }else{
+            element.classList.add('hideandshow');
         }
+    }
+    if(document.getElementById('is_ndis').value == "1") {
+        element.classList.remove('hideandshow');
+    }
     </script>
 @endsection
-
