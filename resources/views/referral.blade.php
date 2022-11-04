@@ -8,6 +8,7 @@
     <meta property="og:title" content="Referral Page"/>
     <meta property="og:description" content="Please read the form carefully and complete all the sections.."/>
 @endsection
+{!! Html::style('frontend/css/css-loader.css') !!}
 @section('content')
 @php
           $msg =Session::get('msg') ?? null; 
@@ -15,7 +16,8 @@
     <section class="referral-section">
         <div class="container-fluid">
             <div class="referral-form">
-                <form class="form-row" id="referral" onsubmit="return refferalValidation()" method="post" action = "{{url('/referral')}}">
+                <form class="form-row" id="referral" name = "referral_form" method="post" action = "{{url('/referral')}}">
+                @csrf
                     <div class="row">
                         <div class="referralform-top">
                             <h1>REFERRAL</h1>
@@ -170,21 +172,30 @@
                                         <span id="ref-streetnum-error" class="error"></span>
                                     </div>
                                 </div>
-                                <div class='col-md-4'>
+
+                                <div class='col-md-6'>
+                                    <div class="form-group">
+                                        <label>Street Name</label>
+                                        <input type="text" class="form-control" placeholder="Enter your Street Name" name='street_name' value="{{old('street_number')}}"  id="refstreetNum" onkeyup="validaterefStreet()"/>
+                                        <span id="ref-streetnum-error" class="error"></span>
+                                    </div>
+                                </div>
+                                
+                                <div class='col-md-6'>
                                     <div class="form-group">
                                         <label>Suburb</label>
                                         <input type="text" class="form-control" placeholder="Enter your Suburb" name='suburb' value="{{old('suburb')}}"  id="refsuburb" onkeyup="validaterefSuburb()"/>
                                         <span id="ref-suburb-error" class="error"></span>
                                     </div>
                                 </div>
-                                <div class='col-md-4'>
+                                <div class='col-md-6'>
                                     <div class="form-group">
                                         <label>State / Province / Region </label>
                                         <input type="text" class="form-control" placeholder="Enter state" name='state_name' value="{{old('state_name')}}"  id="refstateName" onkeyup="validaterefState()"/>
                                         <span id="ref-statename-error" class="error"></span>
                                     </div>
                                 </div>
-                                <div class='col-md-4'>
+                                <div class='col-md-6'>
                                     <div class="form-group">
                                         <label>Postal Code</label>
                                         <input type="text" class="form-control getDate" placeholder="Enter Postal Code" name="postalcode" value="{{old('postalcode')}}" id="refpostalcode" onkeyup="validaterefPostal()"/>
@@ -276,7 +287,7 @@
                         </div>
                         <div class='row next-button'>
                             <div class='col-md-12 text-center'>
-                                <button type="submit" class='next-submit'>Submit</button>
+                                <button type="submit" onclick = "return refferalValidation()" class='next-submit'>Submit</button>
                             </div>
                         </div>
                     </div>
@@ -541,7 +552,7 @@
         !validaterefdetails() || !validatereffullname() || !validaterefcontact() || !validaterefprivacy()){
             return false;
         }else{
-            return true;
+            document.referral_form.submit();
         }
     }
     </script>

@@ -5,6 +5,7 @@
     <meta name="og:title" content="DICE"/>
     <meta name="og:image" content="{{url('frontend/images/about-image.png')}}"/>
 @endsection
+{!! Html::style('frontend/css/css-loader.css') !!}
 @section('content')
     <section class="contactus-section" style="background-image:url({{url('frontend/images/contact-bg.png')}})">
         {{--start loader--}}<div class="loader loader-default" id="loader"></div>{{--end loader--}}
@@ -13,30 +14,36 @@
                 <p>Contact us today to arrange free, no-obligation care consultation<br/> for you or your loved one.</p>
             </div>
             <div class="contactus-icons">
+                @if($phone !== null)
                 <div class="contactus-email">
                     <div class="contactus-icon">
                         <i class="fa-solid fa-phone fa-lg"></i>
                     </div>
                     <div>
-                        <a href="tel:1300 050 051">1300 050 051</a>
+                        <a href="tel:1300 050 051">{{$phone->value}}</a>
                     </div>
                 </div>
+                @endif
+                @if($email !== null)
                 <div class="contactus-email">
                     <div class="contactus-icon">
                         <i class="fa-solid fa-envelope fa-lg"></i>
                     </div>
                     <div>
-                        <a href="mailto:contact@dice.org.au">contact@dice.org.au</a>
+                        <a href="mailto:contact@dice.org.au">{{$email->value}}</a>
                     </div>
                 </div>
+                @endif
+                @if($address !== null)
                 <div class="contactus-location">
                     <div class="contactus-icon">
                         <i class="fa-solid fa-location-dot fa-lg"></i>
                     </div>
                     <div>
-                        <a href="https://goo.gl/maps/p6uwRWci1KUSYjtg9"  target="-_blank" rel="noreferrer">Suite 132 & 133, Level 3, 10 Park Road Hurstville NSW 2220</a>
+                        <a href="https://goo.gl/maps/p6uwRWci1KUSYjtg9"  target="-_blank" rel="noreferrer">{{$address->value}}</a>
                     </div>
                 </div>
+                @endif
             </div>
     </section>
     <section class="contact-form-section">

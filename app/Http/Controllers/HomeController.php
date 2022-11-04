@@ -57,11 +57,11 @@ class HomeController extends Controller
         return view('ndis-scheme');
     }
     public function contact(){
-        $services = Service::where('status',1)->get();
+        // $services = Service::where('status',1)->get();
         $phone = Setting::where(['key' => 'phone','status' => '1'])->first();
         $email = Setting::where(['key' => 'email','status' => '1'])->first();
         $address = Setting::where(['key' => 'address','status' => '1'])->first();
-        return view('contactus',compact('services','phone','email','address'));
+        return view('contact',compact('phone','email','address'));
     }
 
     public function accommodation_details($id){

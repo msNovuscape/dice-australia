@@ -70,8 +70,20 @@
                 </div>
             </div>
             <div class="services mt-4">
+                @php
+                $class = '' ;
+                @endphp
                 @foreach($services as $service)
-                <a href="/service/{{$service->slug}}" class="service-card{{(($loop->index == 1) || ($loop->index == 3) || ($loop->index == 5))  ? '-second' : ''}}">
+                @if($loop->iteration == 2 || $loop->iteration == 4 || $loop->iteration == 6 )
+                    @php $class = '-second'; @endphp
+                @endif
+                @if($loop->iteration == 3)
+                @php $class = '-third'; @endphp
+                @endif
+                @if($loop->iteration == 5)
+                @php $class = '-fixth'; @endphp
+                @endif
+                <a href="/service/{{$service->slug}}" class="service-card{{$class}}">
                     <div>
                         <div class="service-icon mb-4">
                             <img src="{{url($service->icon ?? 'frontend/icons/support-coordination.svg')}}" alt="">
