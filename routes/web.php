@@ -39,7 +39,7 @@ use App\Http\Controllers\Admin\TeamController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+Route::get('/mycron', [HomeController::class,'runQueueJobs']);
 Route::get('/', [HomeController::class,'index']);
 
 Route::get('/about', function () {

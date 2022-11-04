@@ -234,11 +234,7 @@
 <script type="text/javascript" src="{{url('frontend/js/index.js')}}"></script>
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script>
-    $.ajaxSetup({
-        headers: {
-            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-        }
-    });
+        
         var topfnameError = document.getElementById('app-fname-error')
         var toplnameError = document.getElementById('app-lname-error')
         var topemailError = document.getElementById('app-email-error')
@@ -306,6 +302,11 @@
                 return true;
             }
         }
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
         $('#enquiry_form').on('submit', function (e) {
             e.preventDefault();
             if(!validatetopfname() || !validatetoplname() || !validatetopemail() || !validatetopPhone() || !validatetopmessage()){

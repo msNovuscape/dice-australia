@@ -19,7 +19,7 @@
                 <img src="{{url($slider->image ?? 'frontend/images/banner-two.png')}}" class="d-block w-100" alt="...">
                 <div class="slider-content">
                     <h3>{{$slider->title1}}</h3>
-                    <h2>{{$slider->title1}}</h2>
+                    <h2>{{$slider->title2}}</h2>
                     <p>{{$slider->short_description}}</p>
                     <a href="contact">Get a Free Consultation</a>
                 </div>

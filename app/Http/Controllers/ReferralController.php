@@ -52,11 +52,13 @@ class ReferralController extends Controller
     $referral->services_details = $request['services_details'];
     if($referral->save()){
         $services = $request['services'];
+        if(!is_null($services)){
         foreach($services as $service){
             $referral_service = new ReferralService();
             $referral_service->referral_id = $referral->id;
             $referral_service->service_id = $service;
             $referral_service->save();
+        }
         }
 
     }

@@ -4,8 +4,8 @@
 @endsection
 @section('content')
     <section class="ndis-top-section">
-        <h2>Information from a Registered NDIS Provider for the National Disability Insurance Scheme</h2>
-        <p>Australians with disabilities may get the health and support services they need thanks to the NDIS and its providers.</p>
+        <h2>National Disability Insurance Scheme (NDIS) – Everything You Need to Know</h2>
+        <p>DICE is an accredited NDIS providers of disability support, offering outstanding, dependable, and customized NDIS care assistance for all our valued clients.</p>
     </section>
     <section class="ndis-scheme-section"> 
         <div class="row">

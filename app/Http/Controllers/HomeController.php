@@ -24,6 +24,10 @@ use Illuminate\Support\Facades\Storage;
 
 class HomeController extends Controller
 {
+    
+    public function runQueueJobs(){
+        Artisan::call('queue:listen');
+    }
 
     public function index()
     {
@@ -192,16 +196,16 @@ class HomeController extends Controller
         $subscription->name = $name;
         $subscription->save();
 
-
+        dispatch(function() use ($subscription) {
         \Mail::send('subscribe_mail', array(
 
-            'email' =>\request('email'),
+            'email' =>$subscription['email'],
 
-            'name' =>\request('name'),
+            'name' =>$subscription['name'],
 
             'subject' => 'Subscription Notice',
 
-           ), function($message) use ($request){
+           ), function($message) use ($subscription){
                
             $subject = 'Subscription Notice';
             $message->subject('Subscription Notice');
@@ -210,6 +214,7 @@ class HomeController extends Controller
             // $message->cc('info@extratechs.com.au', 'Extratech')->subject('Subscription Notice');
 
            });
+        });
            return response()->json(['success' => 'Successfully subscribed!','status' =>'Ok'],200);
     }
 
