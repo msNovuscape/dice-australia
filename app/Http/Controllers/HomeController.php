@@ -32,7 +32,6 @@ class HomeController extends Controller
     public function index()
     {
        
-
         $about_us = AboutUs::where('status',1)->get();
         $testimonials = Testimonial::where('status',1)->get();
         $news_and_updates= NewsAndUpdate::where(['status'=>'1'])->orderBy('id','desc')->get();
