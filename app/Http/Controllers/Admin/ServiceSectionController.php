@@ -208,8 +208,8 @@ class ServiceSectionController extends Controller
             
             $point_descriptions = $request->point_descriptions ?? [];
             $icons = $request->icons ?? [];
-            
-            if($points != null){
+
+            if($points[0] != null){
                 $service_point = $service_section->service_section_point();
                 $service_point->delete();
             foreach($points as $key => $point){

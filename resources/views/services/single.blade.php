@@ -6,9 +6,9 @@
     <meta name="og:image" content="{{url('frontend/images/about-image.png')}}"/>
 @endsection
 @section('content')
-@php $first_service = $service->service_sections()->orderby('order_by','asc')->get(); @endphp
+@php $first_service = $service->service_sections()->where('status','1')->orderby('order_by','asc')->get(); @endphp
     @if($first_service->count() > 0)
-        <section class="service-slider-section">
+        {{-- <section class="service-slider-section">
             <div class="row">
                 <div class="col-md-6">
                     <div class="service-detail-banner">
@@ -26,9 +26,9 @@
                     </div>
                 </div>
             </div>
-        </section>
-        @if($first_service->count() > 1)
-            @php $second_service = $first_service[1];@endphp
+        </section> --}}
+        @if($first_service->count() > 0)
+            @php $second_service = $first_service[0];@endphp
             <section class="service-first-content-section">
                 <div class="row">
                     <div class="col-md-6">
@@ -46,8 +46,8 @@
                 </div>
             </section>
         @endif
-        @if($first_service->count() > 2)
-        @php $third_service = $first_service[2];@endphp
+        @if($first_service->count() > 1)
+        @php $third_service = $first_service[1];@endphp
             <section class="service-second-content-section">
                 <div class="row">
                     <div class="col-md-6">
@@ -59,6 +59,9 @@
                               <li>{{$point->point}} </li>
                             @endforeach
                             </ul>
+                            @if($third_service->description != '')
+                                <p>{{$third_service->description}}</p>
+                            @endif
                         </div>
                     </div>
                     <div class="col-md-6">
@@ -69,8 +72,8 @@
                 </div>
             </section>
         @endif
-        @if($first_service->count() > 3)
-        @php $fourth_service = $first_service[3];@endphp
+        @if($first_service->count() > 2)
+        @php $fourth_service = $first_service[2];@endphp
         <section class="support-section">
             <div class="container-fluid">
                 <div class="row">

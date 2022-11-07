@@ -31,7 +31,7 @@
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                         <li><a class="dropdown-item" href="{{url('admin/change_password')}}">Change Password</a></li>
-                        <li><a class="dropdown-item" href="logout">Log Out</a></li>
+                        <li><a class="dropdown-item" href="{{url('admin/logout')}}">Log Out</a></li>
                     </ul>
                 </div>
             </li>
