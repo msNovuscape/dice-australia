@@ -169,7 +169,7 @@
         <div class="col-md-4">
             <div class="foot-location">
                 <img src="{{url('frontend/icons/location.svg')}}"/>
-                <span>{{$address}}</span>
+                <a href="https://goo.gl/maps/CGAWi13eiyLkCnzv7" target="_blank" rel="noreferrer">{{$address}}</a>
             </div>
         </div>
         @endif

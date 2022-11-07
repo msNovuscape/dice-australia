@@ -1084,10 +1084,12 @@ Responsive Codes
 }
 .contactus-email{
     display: flex;
+    align-items: center;
     gap: 4px;
 }
 .contactus-location{
     display: flex;
+    align-items: center;
     gap: 4px;
 }
 .contactus-location a{
