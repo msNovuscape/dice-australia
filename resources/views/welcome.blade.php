@@ -20,7 +20,7 @@
                 <div class="slider-content">
                     <h3>{{$slider->title1}}</h3>
                     <h2>{{$slider->title2}}</h2>
-                    <p>{{$slider->short_description}}</p>
+                    <p>{!!strip_tags($slider->description)!!}</p>
                     <a href="contact">Get a Free Consultation</a>
                 </div>
             </div>
