@@ -7,7 +7,7 @@
 @endsection
 {!! Html::style('frontend/css/css-loader.css') !!}
 @section('content')
-    <section class="contactus-section" style="background-image:url({{url('frontend/images/contact-bg.jpg')}})">
+    <section class="contactus-section" style="background-image:url({{url('frontend/images/contact-bg.png')}})">
         {{--start loader--}}<div class="loader loader-default" id="loader"></div>{{--end loader--}}
             <div class="contactus-header">
                 <h1>Contact Us</h1>
