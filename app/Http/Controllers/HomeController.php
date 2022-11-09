@@ -74,7 +74,12 @@ class HomeController extends Controller
 
     public function send_contact_mail(Request $request){
        $contact = new Contact();
-       $service = '';
+       $subject = 'Contact Enquiry';
+       $check = '';
+       if(isset($request['firstname'])){
+        $subject = 'Quick Enquiry';
+        $check = '1';
+       }
        $name = ($request['firstname'] != null) ? ($request['firstname'].' '.$request['lastname']) : $request['fullname'] ;
 
        $contact->fullname = $name;
@@ -89,7 +94,7 @@ class HomeController extends Controller
         // }
         $contact->save();
 
-        dispatch(function() use ($name,$service, $contact) {
+        dispatch(function() use ($check,$subject, $contact) {
         \Mail::send('contact_mail', array(
 
             'full_name' =>$contact['fullname'],
@@ -100,10 +105,11 @@ class HomeController extends Controller
 
             'contact_message' =>$contact['message'],
 
-            // 'service' =>$service ?? null,
+            'subject' =>$subject ,
 
-           ), function($message) use ($service){
-            $subject = 'Contact/Enquiry';
+            'check' => $check ?? ''
+
+           ), function($message) use ($subject){
             // $subject=($service!= '') ? 'Enquiry for '.$service : 'Contact/Feedback';
             $message->subject($subject);
             // $message->to('info@agilityhomecare.com.au', 'AgilityHomeCare')->subject($subject);

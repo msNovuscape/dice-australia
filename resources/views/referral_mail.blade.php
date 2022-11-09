@@ -91,7 +91,7 @@
         <h3>NDIS DETAILS</h3>
         <b>NDIS Number:</b>{{$ndis_number}}<br /><br />
         <b>NDIS Expiry Date:</b>{{$ndis_expiry_date}}<br /><br />
-        <b>NDIS Plan:</b> {{ config('custom.ndis_plan')[$referral->ndis_plan] }}<br /><br />
+        <b>NDIS Plan:</b> {{ config('custom.ndis_plan')[$ndis_plan] }}<br /><br />
 		
       </div>
 	  @endif

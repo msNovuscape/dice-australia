@@ -9,18 +9,15 @@
 		}
 	</style>
 
-
-    <h1>Enquiry From Contact Form</h1>
+    <h1>@if($check !== '') Quick Enquiry Details @else Contact Details @endif </h1>
     <br />
     <div class="main-column" style = "display:block; width:100%;">
       <div class="column-one" style = "display:block; width:100%;">
-        <h3>Please, find out the contact details</h3>
+        <h3>Please, find out the @if(($check !== '')) quick enquiry @else contact @endif details</h3>
         <b>Full Name:</b> {{ $full_name }}<br /><br />
         <b>Email:</b> {{ $email }}<br /><br />
         <b>Phone:</b> {{$phone}}<br /><br />
-        @if(isset($service))
-        <b>Service:</b> {{ $service }}<br /><br />
-        @endif
+      
         <b>Message:</b> {{ $contact_message }}<br /><br />
  
       </div>

@@ -64,7 +64,7 @@
                         <span class="error-msg" id="contact-email-error"></span>
                     </div>
                     <div class="mb-3">
-                        <input type="number" class="form-control" name="phone" id="phone" placeholder="Phone Number" onkeyup="contactPhone()">
+                        <input type="text" class="form-control" name="phone" id="phone" placeholder="Phone Number" onkeyup="contactPhone()">
                         <span class="error-msg" id="contact-phone-error"></span>
                     </div>
                     <div class="mb-3">
