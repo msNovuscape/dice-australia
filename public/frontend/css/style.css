@@ -997,30 +997,31 @@ Responsive Codes
     border-radius: 11px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     padding: 20px;
-    min-height: 330px;
+    min-height: 300px;
 }
 .about-value-image{
-    width: 80px;
-    height: 80px;
+    background: #FFFFFF;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    padding: 20px;
     margin-bottom: 25px;
 }
-.about-value-image img{
-    border-radius: 50%;
-}
+
 .about-value-card-content h3{
     font-weight: 700;
     font-size: 25px;
     line-height: 2rem;
     text-align: center;
     color: #FFFFFF;
+    margin-bottom: 10px;
 }
 .about-value-card-content p{
     font-weight: 400;
     font-size: 16px;
-    line-height: 2rem;
+    line-height: 1.8rem;
     text-align: center;
     color: #FFFFFF;
 }
@@ -1028,7 +1029,9 @@ Responsive Codes
     padding: 3rem 6rem;
     background: #FFFFFF;
 }
-
+.registered-header h2{
+    margin-bottom: 20px;
+}
 /* contact us page css */
 .contactus-section{
     padding: 6rem;
@@ -1092,9 +1095,6 @@ Responsive Codes
     align-items: center;
     gap: 4px;
 }
-.contactus-location a{
-    padding-right: 20%;
-}
 .contact-form-section{
     padding: 3rem 6rem;
 }
@@ -1123,6 +1123,15 @@ Responsive Codes
     margin-top: 12px;
     border-radius: 0;
 }
+.contactus-form .form-control:focus{
+    box-shadow: none;
+    border-bottom: 1px solid #6B2976;
+}
+.contactus-form .text-area{
+    margin-top: 30px;
+    border: 1px solid #6B2976;
+}
+
 .contactus-form input::-webkit-input-placeholder, .contactus-form textarea::-webkit-input-placeholder{
     color: #6B2976;
     font-size: 17px;
@@ -1243,6 +1252,9 @@ Responsive Codes
 .referral-section .card input, .referral-section .card select{
     padding: 10px;
     border: 2px solid #6B2976 !important;
+}
+.referral-section .card input:focus, .referral-section .card select:focus, .referral-section .card textarea:focus{
+    box-shadow: none;
 }
 .referral-section .card input::placeholder{
     color: #6B2976 !important;

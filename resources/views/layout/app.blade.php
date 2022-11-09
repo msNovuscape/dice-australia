@@ -205,8 +205,8 @@
             <p>ABN : 97654871011</p>
             <p>NDIS : 4050102564</p>
             <p>DICE © 2022. All Rights Reserved.</p>
-            <p><a>Disclaimer</a>  |  <a>Privacy Policy</a></p>
-            <p>Designed & Developed By: <a target="_blank" rel="noreferrer" href="https://www.extratechs.com.au/">Extratech</a></p>
+            <p><a>Disclaimer</a> &nbsp; | &nbsp; <a>Privacy Policy</a></p>
+            <p>Designed & Developed By: <a target="_blank" rel="noreferrer" href="https://www.extratechs.com.au/">&nbsp; Extratech</a></p>
         </div>
     </div>
 </section>

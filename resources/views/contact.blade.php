@@ -68,7 +68,7 @@
                         <span class="error-msg" id="contact-phone-error"></span>
                     </div>
                     <div class="mb-3">
-                        <textarea name="" class="form-control" id="message" cols="50" rows="5" onkeyup="contactMessage()" placeholder="Type your message here"></textarea>
+                        <textarea name="" class="form-control text-area" id="message" cols="50" rows="5" onkeyup="contactMessage()" placeholder="Type your message here"></textarea>
                         <span class="error-msg" id="contact-message-error"></span>
                     </div>
                     <div class="">

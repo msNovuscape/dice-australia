@@ -53,7 +53,7 @@
             <div class="col-md-4">
                 <div class="about-value-card">
                     <div class="about-value-image">
-                        <img src="{{url('frontend/images/profile.png')}}" alt="" class="img-fluid">
+                        <img src="{{url('frontend/images/about-icons/Peronsal-care.png')}}" alt="" class="img-fluid">
                     </div>
                     <div class="about-value-card-content">
                         <h3>Personalized Care</h3>
@@ -64,7 +64,7 @@
             <div class="col-md-4">
                 <div class="about-value-card">
                     <div class="about-value-image">
-                        <img src="{{url('frontend/images/profile.png')}}" alt="" class="img-fluid">
+                        <img src="{{url('frontend/images/about-icons/Sincerity.png')}}" alt="" class="img-fluid">
                     </div>
                     <div class="about-value-card-content">
                         <h3>Sincerity</h3>
@@ -75,7 +75,7 @@
             <div class="col-md-4">
                 <div class="about-value-card">
                     <div class="about-value-image">
-                        <img src="{{url('frontend/images/profile.png')}}" alt="" class="img-fluid">
+                        <img src="{{url('frontend/images/about-icons/Appreciate.png')}}" alt="" class="img-fluid">
                     </div>
                     <div class="about-value-card-content">
                         <h3>Appreciation</h3>
@@ -86,7 +86,7 @@
             <div class="col-md-4">
                 <div class="about-value-card">
                     <div class="about-value-image">
-                        <img src="{{url('frontend/images/profile.png')}}" alt="" class="img-fluid">
+                        <img src="{{url('frontend/images/about-icons/Resoponsibility.png')}}" alt="" class="img-fluid">
                     </div>
                     <div class="about-value-card-content">
                         <h3>Responsibility</h3>
@@ -97,7 +97,7 @@
             <div class="col-md-4">
                 <div class="about-value-card">
                     <div class="about-value-image">
-                        <img src="{{url('frontend/images/profile.png')}}" alt="" class="img-fluid">
+                        <img src="{{url('frontend/images/about-icons/Commitment.png')}}" alt="" class="img-fluid">
                     </div>
                     <div class="about-value-card-content">
                         <h3>Commitment</h3>
@@ -108,7 +108,7 @@
             <div class="col-md-4">
                 <div class="about-value-card">
                     <div class="about-value-image">
-                        <img src="{{url('frontend/images/profile.png')}}" alt="" class="img-fluid">
+                        <img src="{{url('frontend/images/about-icons/Passion.png')}}" alt="" class="img-fluid">
                     </div>
                     <div class="about-value-card-content">
                         <h3>Passion</h3>
