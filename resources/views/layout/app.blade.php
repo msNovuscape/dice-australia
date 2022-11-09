@@ -139,7 +139,7 @@
             <a class="nav-link" href="/ndis">NDIS</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="/referral">Make a Referal</a>
+            <a class="nav-link" href="/referral">Make a Referral</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="/gallery">Gallery</a>
@@ -197,7 +197,7 @@
                 <li><a href="/">Home</a></li>
                 <li><a href="/about">About us</a></li>
                 <!-- <li><a href="/service">Services</a></li> -->
-                <li><a href="/referral">Make a Referal</a></li>
+                <li><a href="/referral">Make a Referral</a></li>
                 <li><a href="/contact">Contact us</a></li>
             </ul>
         </div>

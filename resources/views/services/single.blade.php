@@ -38,9 +38,9 @@
                     </div>
                     <div class="col-md-6">
                         <div class="first-content-desc">
-                            <h4>{{$second_service->title}}</h4>
+                            <h2>{{$second_service->title}}</h2>
                             <h5>{{$second_service->sub_title}}</h5>
-                            <p>{{$second_service->description}}</p>
+                            <p>{!!strip_tags($second_service->description)!!}</p>
                         </div>
                     </div>
                 </div>
@@ -52,7 +52,7 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="second-content-desc">
-                            <h4>{{$third_service->title}}</h4>
+                            <h2>{{$third_service->title}}</h2>
                             <h5>{{$third_service->sub_title}}</h5>
                             <ul>
                             @foreach($third_service->service_section_point as $point)
@@ -60,7 +60,7 @@
                             @endforeach
                             </ul>
                             @if($third_service->description != '')
-                                <p>{{$third_service->description}}</p>
+                                <p>{!!strip_tags($third_service->description)!!}</p>
                             @endif
                         </div>
                     </div>
@@ -92,7 +92,7 @@
                                 </div>
                                 <div>
                                     <h1>{{$last_point->point}}</h1>
-                                    <p>{{strip_tags($last_point->point_description)}}</p>
+                                    <p>{!!strip_tags($last_point->point_description)!!}</p>
                                 </div>
                             </div>
                         </div>

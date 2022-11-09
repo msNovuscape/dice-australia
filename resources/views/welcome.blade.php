@@ -90,7 +90,7 @@
                         </div>
                         <div class="service-card-desc">
                             <h1>{{$service->name}}</h1>
-                            <p>{{strip_tags($service->short_description)}}</p>
+                            <p>{!!strip_tags($service->short_description)!!}</p>
                         </div>
                     </div>
                     <button class="learn-more-btn">Learn more <img src="{{url('frontend/icons/right-arrow.svg')}}" class="learn-more-icon"/></button>
