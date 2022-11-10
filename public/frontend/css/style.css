@@ -1728,11 +1728,23 @@ Responsive Codes
     .referralform-top p, .support-desc p{
         margin: 0;
     }
+    .referral-section .card-title{
+        margin: 1rem 1rem 0rem 1rem;
+    }
+    .card-body .g-4{
+        --bs-gutter-y: 0.5rem;
+    }
+    .privacy-section .next-submit{
+        margin-bottom: 2rem;
+    }
     /* gallery page */
     .gallery-header h2, .support-desc h1 {
         font-size: 32px;
         line-height: 42px;
     }
+    .gallery-slider .slick-active img {
+        height: auto!important;
+      }
     /* contact us */
     .contactus-header{
         transform: translate(-50%, -50%);
