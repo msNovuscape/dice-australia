@@ -1,9 +1,9 @@
 @extends("layout.app")
 @section('title')
     <title>Contact</title> 
-    <meta name="description" content="At DICE, we work hard to create a comprehensive program that is tailored to your unique needs and requirements. We recognize that results alone are not nearly as essential as pleasant outcomes. Our ultimate goal thus, is for our participants to experience success; this is our passion. We don't just have one program that works for everyone; instead, we will take the time to get to know you and your family's requirements."/>
+    <meta name="description" content="Contact us today to arrange free, no-obligation care consultation for you or your loved one."/>
     <meta name="og:title" content="DICE"/>
-    <meta name="og:image" content="{{url('frontend/images/about-image.png')}}"/>
+    <meta name="og:image" content="{{url('frontend/images/contact-bg.png')}}"/>
 @endsection
 {!! Html::style('frontend/css/css-loader.css') !!}
 @section('content')

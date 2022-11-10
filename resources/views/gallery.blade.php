@@ -1,12 +1,11 @@
 @extends('layout.app')
 @section('title')
     <title>Gallery</title>
-    <meta name="description" content="Please read the form carefully and complete all the sections..">
+    <meta name="description" content="A picture speaks a thousand words. Here are some wonderful interactions and beautiful moments we shared with the NDIS participants who selected us as their service providers.">
     <meta name="robots" content="index, follow" />
-    <meta property="og:url" content="https://www.qualityallied.com.au/referral" />
-    <meta property="og:image" content="https://www.qualityallied.com.au/2c6dd918dca09f627fa632ba8977c6cc.png"/>
-    <meta property="og:title" content="Referral Page"/>
-    <meta property="og:description" content="Please read the form carefully and complete all the sections.."/>
+    <meta property="og:image" content="{{url($gallery->first()->image)}}"/>
+    <meta property="og:title" content="Gallery"/>
+    <meta property="og:description" content="A picture speaks a thousand words. Here are some wonderful interactions and beautiful moments we shared with the NDIS participants who selected us as their service providers."/>
 @endsection
 @section('content')
     <section class="gallery-section">

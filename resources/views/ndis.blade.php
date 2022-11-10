@@ -1,6 +1,8 @@
 @extends('layout.app')
 @section('title')
     <title>NDIS</title>
+    <meta name="description" content="DICE is an accredited NDIS providers of disability support, offering outstanding, dependable, and customized NDIS care assistance for all our valued clients."/>
+    <meta name="og:title" content="NDIS"/>
 @endsection
 @section('content')
     <section class="ndis-top-section">

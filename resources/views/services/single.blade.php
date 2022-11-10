@@ -1,9 +1,9 @@
 @extends('layout.app')
 @section('title')
-    <title>Service Detail</title>
-    <meta name="description" content="At DICE, we work hard to create a comprehensive program that is tailored to your unique needs and requirements. We recognize that results alone are not nearly as essential as pleasant outcomes. Our ultimate goal thus, is for our participants to experience success; this is our passion. We don't just have one program that works for everyone; instead, we will take the time to get to know you and your family's requirements."/>
-    <meta name="og:title" content="DICE"/>
-    <meta name="og:image" content="{{url('frontend/images/about-image.png')}}"/>
+    <title>{{$service->seo_title}}</title>
+    <meta name="description" content="{!!strip_tags($service->short_description)!!}"/>
+    <meta name="og:title" content="{{$service->seo_title}}"/>
+    <meta name="og:image" content="{{url($service->service_sections->first()->image)}}"/>
 @endsection
 @section('content')
 @php $first_service = $service->service_sections()->where('status','1')->orderby('order_by','asc')->get(); @endphp
@@ -66,7 +66,7 @@
                     </div>
                     <div class="col-md-6">
                             <div class="service-second-img">
-                                <img src="{{url('frontend/images/independent-living-two.png')}}" alt="" class="w-100">
+                                <img src="{{url($third_service->image)}}" alt="" class="w-100">
                             </div>
                     </div>
                 </div>
