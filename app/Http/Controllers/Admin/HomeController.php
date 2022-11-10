@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Contact;
 use App\Models\Referral;
 use App\Models\Subscription;
-use App\Models\SupportCoordination;
+use App\Models\Service;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Route;
 use Illuminate\Support\Facades\Auth;
@@ -21,12 +21,12 @@ class HomeController extends Controller
     {
         if(Auth::check()){
             $settings= Referral::where('status',1);
-            $support= SupportCoordination::all();
+            $service= Service::where('status',true);
             $contact= Contact::all();
             $subscription= Subscription::all();
             $contacts = Contact::paginate(config('custom.per_page'));
             $referrals=Referral::paginate(config('custom.per_page'));
-            return view('admin.index', compact('settings', 'support', 'contact', 'subscription', 'contacts', 'referrals'));
+            return view('admin.index', compact('settings', 'service', 'contact', 'subscription', 'contacts', 'referrals'));
         }
         return view('admin.login');
     }

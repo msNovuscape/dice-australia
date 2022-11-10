@@ -192,8 +192,8 @@
                 <div class="pricing-detail">
                     <h2>{{$ndis_pricing->title}}</h2>
                     <h5>{{$ndis_pricing->sub_title}}</h5>
-                    <p>{!!$ndis_pricing->description!!}
-                    <br><br> {!!$ndis_pricing->sub_description!!}</p>
+                    <p>{!!strip_tags($ndis_pricing->description)!!}
+                    <br><br> {!!strip_tags($ndis_pricing->sub_description)!!}</p>
                     <a target = "_blank" href="{{$ndis_pricing->link}}">{{$ndis_pricing->button}}</a>
                 </div>
             </div>

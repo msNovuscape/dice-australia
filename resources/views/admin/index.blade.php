@@ -29,8 +29,8 @@
                         <!-- small box -->
                         <div class="small-box bg-info">
                             <div class="inner">
-                                <h3>{{$support-> count()}}</h3>
-                                <p>Support Coordination</p>
+                                <h3>{{$service-> count()}}</h3>
+                                <p>Service</p>
                             </div>
                             <div class="icon">
                                 <i class="fa-solid fa-headset"></i>
