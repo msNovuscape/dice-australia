@@ -10,7 +10,7 @@
 @endsection
 @section('content')
     <section class="gallery-section">
-        <div class="gallery-header">
+        <div class="gallery-header col-sm-12 col-md-10">
             <h2>A Peek at the Treasured Times We Spent with the People in Our Care</h2>
             <p>A picture speaks a thousand words. Here are some wonderful interactions and beautiful moments we shared with the NDIS participants who selected us as their service providers.</p>    
         </div>

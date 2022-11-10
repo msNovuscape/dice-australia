@@ -881,7 +881,7 @@ Responsive Codes
 }
 .bottom-footer a:hover{
     text-decoration: none;
-    color: #E12727;
+    color: #ffffff;
 }
 
 #ClickdeskofflineForm input.cdw-chat-contact-form-text{
@@ -1353,6 +1353,9 @@ Responsive Codes
 /* gallery section */
 .gallery-section{
     padding: 3rem 6rem;
+}
+.gallery-header{
+    margin:0 auto;
 }
 .gallery-header h2{
     font-weight: 700;
