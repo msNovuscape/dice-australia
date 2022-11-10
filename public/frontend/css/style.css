@@ -1656,8 +1656,11 @@ Responsive Codes
         padding: 0;
         width: auto;
     }
+    .pricing-section .row{
+        flex-direction:column-reverse;
+    }
     .pricing-image{
-        margin-bottom: 30px;
+        margin: 30px auto;
         padding: 0;
         width: auto;
     }
