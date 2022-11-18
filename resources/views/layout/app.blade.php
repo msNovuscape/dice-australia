@@ -142,7 +142,7 @@
             <a class="nav-link" href="/referral">Make a Referral</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="/gallery">Gallery</a>
+            <a class="nav-link" href="/working-dice">Working at DICE </a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="/contact">Contact us </a>

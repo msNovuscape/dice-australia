@@ -94,7 +94,7 @@
             </div>
             <div class="col-md-6">
                 <div class="dice-map">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3309.0069668805645!2d151.1031716767623!3d-33.96666042413612!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12b9bd323606ad%3A0x5c7d0c8b92f91e97!2s3%20Park%20Rd%2C%20Hurstville%20NSW%202220%2C%20Australia!5e0!3m2!1sen!2snp!4v1666328677294!5m2!1sen!2snp" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d100855.68390598494!2d144.9747537!3d-37.8195557!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642b4fba98713%3A0x1942f75072ac1f39!2sSuite%20614%2F343%20Little%20Collins%20St%2C%20Melbourne%20VIC%203000%2C%20Australia!5e0!3m2!1sen!2snp!4v1668771030232!5m2!1sen!2snp" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
         </div>

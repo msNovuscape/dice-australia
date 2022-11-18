@@ -156,6 +156,10 @@ class HomeController extends Controller
         return view('gallery',compact('gallery'));
     }
 
+    public function working_dice(){
+        return view('working-dice');
+    }
+
     public function getLogin()
     {
         if(Auth::check()){

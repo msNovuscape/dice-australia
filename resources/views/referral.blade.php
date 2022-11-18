@@ -22,7 +22,7 @@
                             <p>Please read the form carefully and complete all the sections.</p>
                         </div>
                     </div>
-                    <div class="card p-5 mt-5">
+                    <div class="card p-3 mt-5">
                         <div class='card-title'>
                             <div>
                                 <i class="fa-solid fa-user"></i>
@@ -31,7 +31,7 @@
                         </div>
                         <div class='card-body'>
                             <div class="row g-4">
-                                <div class="col-md-6">
+                                <div class="col-md-3">
                                     <div class="form-group">
                                         <label for="input-first-name">Name</label>
                                         <input type="text" class="form-control" placeholder="Enter your Full Name" id="reffullname" onkeyup="validatereffname()" name="name" value="{{old('name')}}">
@@ -39,7 +39,22 @@
                                     </span>
                                     </div>
                                 </div>
-                                <div class='col-md-6 gender-radio'>
+                                <div class='col-md-3'>
+                                    <div class="form-group">
+                                        <label>Email Address</label>
+                                        <input  type="email" class="form-control" placeholder="Enter your E-mail Address" name="email" value="{{old('email')}}"  id="refemail" onkeyup="validaterefemail()"/>
+                                        <span id="ref-email-error" class="error"></span>
+                                    </div>
+                                </div>
+                                <div class='col-md-3'>
+                                    <div class="form-group">
+                                        <label>Date of Birth</label>
+                                        <input type="date" class="form-control getDate" placeholder="Select your date of birth" name="dob" value="{{old('dob')}}" id="refdob" onkeyup="validaterefdob()"/>
+                                        <span id="ref-dob-error" class="error"></span>
+                                    </div>
+                                </div>
+
+                                <div class='col-md-3 gender-radio'>
                                     <label>
                                         Gender
                                     </label>
@@ -65,20 +80,6 @@
                                         </div>
                                     </div>
                                     <span id="ref-gender-error" class="error"></span>
-                                </div>
-                                <div class='col-md-6'>
-                                    <div class="form-group">
-                                        <label>Email Address</label>
-                                        <input  type="email" class="form-control" placeholder="Enter your E-mail Address" name="email" value="{{old('email')}}"  id="refemail" onkeyup="validaterefemail()"/>
-                                        <span id="ref-email-error" class="error"></span>
-                                    </div>
-                                </div>
-                                <div class='col-md-6'>
-                                    <div class="form-group">
-                                        <label>Date of Birth</label>
-                                        <input type="date" class="form-control getDate" placeholder="Select your date of birth" name="dob" value="{{old('dob')}}" id="refdob" onkeyup="validaterefdob()"/>
-                                        <span id="ref-dob-error" class="error"></span>
-                                    </div>
                                 </div>
                                 <div class='col-md-4'>
                                     <div class="form-group">
@@ -146,39 +147,22 @@
                             </div>
                             <!-- End of NDIS Plan Block -->
                         </div>
-                    </div>
-                    <div class="card mt-4 p-5">
                         <div class='card-title'>
                             <div>
                                 <i class="fa-solid fa-house-chimney"></i>
                             </div>
                             <h1>PARTICIPANT ADDRESS</h1>
                         </div>
+
                         <div class='card-body'>
                             <div class="row g-4">
                                 <div class='col-md-6'>
                                     <div class="form-group">
-                                        <label>Unit Number</label>
-                                        <input type="text" class="form-control" placeholder="Enter your Unit Number" name='unit_number' value="{{old('unit_number')}}"  id="refunitNum" onkeyup="validaterefUnit()"/>
-                                        <span id="ref-unit-error" class="error"></span>
-                                    </div>
-                                </div>
-                                <div class='col-md-6'>
-                                    <div class="form-group">
-                                        <label>Street Number</label>
+                                        <label>Street Number/Name</label>
                                         <input type="text" class="form-control" placeholder="Enter your Street Number" name='street_number' value="{{old('street_number')}}"  id="refstreetNum" onkeyup="validaterefStreet()"/>
                                         <span id="ref-streetnum-error" class="error"></span>
                                     </div>
                                 </div>
-
-                                <div class='col-md-6'>
-                                    <div class="form-group">
-                                        <label>Street Name</label>
-                                        <input type="text" class="form-control" placeholder="Enter your Street Name" name='street_name' value="{{old('street_number')}}"  id="refstreetNum" onkeyup="validaterefStreet()"/>
-                                        <span id="ref-streetnum-error" class="error"></span>
-                                    </div>
-                                </div>
-                                
                                 <div class='col-md-6'>
                                     <div class="form-group">
                                         <label>Suburb</label>
@@ -203,7 +187,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="card mt-4 p-5">
+                    <div class="card mt-4 p-3">
                         <div class='card-title'>
                             <div>
                                 <i class="fa-solid fa-gear"></i>
@@ -237,7 +221,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="card mt-4 p-5">
+                    <div class="card mt-4 p-3">
                         <div class='card-title'>
                             <div>
                                 <i class="fa-solid fa-phone"></i>

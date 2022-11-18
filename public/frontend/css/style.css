@@ -1248,6 +1248,7 @@ Responsive Codes
 }
 .referral-section .card .card-title{
     display: flex;
+    align-items: center;
     gap: 10px;
     font-size: 20px;
     font-weight: 600;
@@ -1353,7 +1354,7 @@ Responsive Codes
     font-size: 22px;
     line-height: 139.7%;
     /* or 53px */
-
+    margin-bottom: 0;
     letter-spacing: 0.001em;
 
     color: #6B2976;

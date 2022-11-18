@@ -53,6 +53,7 @@ Route::get('/referral', [ReferralController::class, 'create']);
 Route::post('/referral', [ReferralController::class, 'store']);
 
 Route::get('/gallery', [HomeController::class, 'gallery']);
+Route::get('/working-dice', [HomeController::class, 'working_dice']);
 
 Route::get('/service/{slug}', [FrontendServiceController::class,'single_service']);
 Route::post('/contact_mail', [HomeController::class, 'send_contact_mail']);
