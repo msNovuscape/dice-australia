@@ -3,10 +3,8 @@
     <title>Referral Page</title>
     <meta name="description" content="Please read the form carefully and complete all the sections..">
     <meta name="robots" content="index, follow" />
-    <meta property="og:url" content="https://www.qualityallied.com.au/referral" />
-    <meta property="og:image" content="https://www.qualityallied.com.au/2c6dd918dca09f627fa632ba8977c6cc.png"/>
-    <meta property="og:title" content="Referral Page"/>
-    <meta property="og:description" content="Please read the form carefully and complete all the sections.."/>
+    <meta name="og:title" content="Referral Page"/>
+    <meta name="og:image" content="{{url('frontend/images/contact-bg.png')}}"/>
 @endsection
 {!! Html::style('frontend/css/css-loader.css') !!}
 @section('content')
