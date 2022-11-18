@@ -117,7 +117,7 @@
                                     <select name="status" class="form-control" id="type" required>
                                         <option value="" selected disabled>Please select Status</option>
                                         @foreach(config('custom.status') as $in => $val)
-                                            c
+                                        <option value="{{$in}}" {{($$about_us->status ==$in) ? 'selected':''}}>{{$val}}</option>
                                         @endforeach
 
                                     </select>

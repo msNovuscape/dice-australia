@@ -19,28 +19,18 @@
                 <!-- SELECT2 EXAMPLE -->
                 <div class="card card-default">
                     <div class="card-header">
-                        <h3 class="card-title">Edit Blogs</h3>
-                        <a href="{{url('admin/gallery')}}" class="back-button btn-green">List</a>
+                        <h3 class="card-title">Edit Gallery</h3>
+                        <a href="{{url('admin/galleries')}}" class="back-button btn-green">List</a>
 
                     </div>
                     <div class="card-body">
                         @include('success.success')
                         @include('errors.error')
-                        {!! Form::open(['url' => '/admin/blogs/'.$setting->id, 'class' => 'form-horizontal', 'method'=> 'POST','files' => true]) !!}
+                        {!! Form::open(['url' => '/admin/galleries/'.$setting->id, 'class' => 'form-horizontal', 'method'=> 'POST','files' => true]) !!}
                         <div class="row">
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <label> Title <span style="color: red";> * </span> </label>
-                                    <input type="text" class="form-control"  id="inputPassword3" name="title" value="{{$setting->title}}">
-                                </div>
-                            </div>
+                            
 
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <label> Author </label>
-                                    <input type="text" class="form-control"  id="inputPassword3" name="author" value="{{$setting->author}}">
-                                </div>
-                            </div>
+                            
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label>Image</label>
@@ -53,19 +43,19 @@
                                     </span>
                                 </div>
                             </div>
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <label> Image Caption </label>
-                                    <input type="text" class="form-control"  id="inputPassword3" name="image_caption" value="{{$setting->image_caption}}">
-                                </div>
-                            </div>
+                            <!--<div class="col-md-4">-->
+                            <!--    <div class="form-group">-->
+                            <!--        <label> Image Caption </label>-->
+                            <!--        <input type="text" class="form-control"  id="inputPassword3" name="image_caption" value="{{$setting->image_caption}}">-->
+                            <!--    </div>-->
+                            <!--</div>-->
 
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <label> Image Credit </label>
-                                    <input type="text" class="form-control"  id="inputPassword3" name="image_credit" value="{{$setting->image_credit}}">
-                                </div>
-                            </div>
+                            <!--<div class="col-md-4">-->
+                            <!--    <div class="form-group">-->
+                            <!--        <label> Image Credit </label>-->
+                            <!--        <input type="text" class="form-control"  id="inputPassword3" name="image_credit" value="{{$setting->image_credit}}">-->
+                            <!--    </div>-->
+                            <!--</div>-->
 
 
                             <div class="col-md-4">
@@ -76,27 +66,27 @@
                             </div>
 
 
-                            <div class="col-md-12" >
-                                <div class="form-group" >
-                                    <label>Top Description <span style="color: red";> * </span></label>
-                                    <textarea name="description" class="summernote_class" rows="5" style="height: 658px;" >{{$setting->description}}
-                                     </textarea>
-                                </div>
-                            </div>
-                            <div class="col-md-12" >
-                                <div class="form-group" >
-                                    <label>Middle Description <span style="color: red";> * </span> </label>
-                                    <textarea name="middle_description" class="summernote_class" rows="5" style="height: 658px;" >{{$setting->middle_description}}
-                                     </textarea>
-                                </div>
-                            </div>
-                            <div class="col-md-12" >
-                                <div class="form-group" >
-                                    <label>Bottom Description <span style="color: red";> * </span> </label>
-                                    <textarea name="bottom_description" class="summernote_class" rows="5" style="height: 658px;" >{{$setting->bottom_description}}
-                                     </textarea>
-                                </div>
-                            </div>
+                            <!--<div class="col-md-12" >-->
+                            <!--    <div class="form-group" >-->
+                            <!--        <label>Top Description <span style="color: red";> * </span></label>-->
+                            <!--        <textarea name="description" class="summernote_class" rows="5" style="height: 658px;" >{{$setting->description}}-->
+                            <!--         </textarea>-->
+                            <!--    </div>-->
+                            <!--</div>-->
+                            <!--<div class="col-md-12" >-->
+                            <!--    <div class="form-group" >-->
+                            <!--        <label>Middle Description <span style="color: red";> * </span> </label>-->
+                            <!--        <textarea name="middle_description" class="summernote_class" rows="5" style="height: 658px;" >{{$setting->middle_description}}-->
+                            <!--         </textarea>-->
+                            <!--    </div>-->
+                            <!--</div>-->
+                            <!--<div class="col-md-12" >-->
+                            <!--    <div class="form-group" >-->
+                            <!--        <label>Bottom Description <span style="color: red";> * </span> </label>-->
+                            <!--        <textarea name="bottom_description" class="summernote_class" rows="5" style="height: 658px;" >{{$setting->bottom_description}}-->
+                            <!--         </textarea>-->
+                            <!--    </div>-->
+                            <!--</div>-->
 
                             <div class="col-md-6">
                                 <div class="form-group">
@@ -127,25 +117,14 @@
 
 
 
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <label> Publish Date <span style="color: red";> * </span> </label>
-                                    <input type="text" class="form-control getDate"  id="inputPassword3" name="publish_date" value="{{$setting->publish_date}}">
+                            <!--<div class="col-md-4">-->
+                            <!--    <div class="form-group">-->
+                            <!--        <label> Publish Date <span style="color: red";> * </span> </label>-->
+                            <!--        <input type="text" class="form-control getDate"  id="inputPassword3" name="publish_date" value="{{$setting->publish_date}}">-->
 
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <label>Type <span style="color: red";> * </span> </label>
-                                    <select name="blog_type" class="form-control" id="blog_type" required>
-                                        <option value="" selected disabled>Please select Type</option>
-                                        @foreach(config('custom.blog_types') as $index => $value)
-                                            <option value="{{$index}}" {{( $setting->blog_type ==$index) ? 'selected':''}}>{{$value}}</option>
-                                        @endforeach
-
-                                    </select>
-                                </div>
-                            </div>
+                            <!--    </div>-->
+                            <!--</div>-->
+                           
 
                             <div class="col-md-4">
                                 <div class="form-group">
