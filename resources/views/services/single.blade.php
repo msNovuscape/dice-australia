@@ -66,7 +66,7 @@
                     </div>
                     <div class="col-md-6">
                             <div class="service-second-img">
-                                <img src="{{url($third_service->image)}}" alt="" class="w-100">
+                                <img src="{{url($third_service->image ?? 'frontend/images/independent-living.png')}}" alt="" class="w-100">
                             </div>
                     </div>
                 </div>
