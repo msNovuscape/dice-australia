@@ -1257,22 +1257,23 @@ Responsive Codes
 .referral-section .card .card-title svg{
     margin-right: 10px;
 }
-.referral-section .card label{
+.referral-section .card label, .working-dice-form label{
     font-weight: 600;
     font-size: 17px;
     margin-bottom: 5px;
 }
-.referral-section .card input, .referral-section .card select{
+.referral-section .card input, .referral-section .card select, .working-dice-form select, .working-dice-form input{
     padding: 10px;
     border: 2px solid #6B2976 !important;
 }
-.referral-section .card input:focus, .referral-section .card select:focus, .referral-section .card textarea:focus{
+.referral-section .card input:focus, .referral-section .card select:focus, .referral-section .card textarea:focus,
+.working-dice-form select:focus, .working-dice-form input:focus{
     box-shadow: none;
 }
-.referral-section .card input::placeholder{
+.referral-section .card input::placeholder, .working-dice-form input::placeholder{
     color: #6B2976 !important;
 }
-.referral-section .textarea::placeholder{
+.referral-section .textarea::placeholder, .working-dice-form .textarea::placeholder{
     color: #6B2976 !important;
 }
 .referral-section .card .gender-radio .form-check{
@@ -1405,7 +1406,7 @@ Responsive Codes
 }
 /* gallery section */
 /* service detail section */
-.service-slider-section, .service-first-content-section, .service-second-content-section{
+.service-slider-section, .service-first-content-section, .service-second-content-section, .working-dice-section, .working-dice-form{
     padding: 3rem 6rem;
 }
 .service-slider-section .row, .service-first-content-section .row, .service-second-content-section .row{
@@ -1439,7 +1440,7 @@ Responsive Codes
     line-height: 1.9rem;
     margin-bottom: 10px;
 }
-.service-first-img{
+.service-first-img, .working-dice-img{
     width: 600px;
 }
 .service-second-img{
@@ -1576,7 +1577,7 @@ Responsive Codes
         padding: 0 0.8rem !important;
         list-style: none;
     }
-    .about-page-image, .about-team-image, .pricing-image{
+    .about-page-image, .about-team-image, .pricing-image, .working-dice-img{
         width: 700px;
         padding: 0 70px 0 0;
     }
@@ -1646,7 +1647,7 @@ Responsive Codes
     .acknowledgement-section, .subscription-desc, .footer, .about-page-section, .team-support-section,
     .our-value-section, .about-regirtered, .gallery-section, .contact-form-section, .service-slider-section, 
     .service-first-content-section, .service-second-content-section, .support-section, .ndis-top-section, 
-    .ndis-scheme-section, .ndis-run-section, .ndis-finance-section{
+    .ndis-scheme-section, .ndis-run-section, .ndis-finance-section, .working-dice-section, .working-dice-form{
         padding: 2rem;
     }
     .referral-section{
@@ -1735,7 +1736,7 @@ Responsive Codes
         align-items: center;
     }
     /* about us page */
-    .about-page-image{
+    .about-page-image, .working-dice-img{
         width: 100%;
         padding: 0;
         margin-bottom: 40px;
@@ -1820,6 +1821,10 @@ Responsive Codes
         display: flex;
         flex-direction: column-reverse;
     }
+    .dice-inp-file{
+        display: flex;
+        flex-direction: column;
+    }
 }
 @media only screen and (min-width: 768px) and (max-width: 1024px){
     .header, #topbar{
@@ -1850,7 +1855,7 @@ Responsive Codes
     .ndis-section, .services-section, .about-section, .customer-section, .acknowledgement-section, 
     .about-page-section, .team-support-section, .our-value-section, .about-regirtered, .referral-section, 
     .contact-form-section, .service-slider-section, .service-first-content-section, .service-second-content-section, 
-    .support-section, .ndis-top-section, .ndis-scheme-section, .ndis-run-section, .ndis-finance-section{
+    .support-section, .ndis-top-section, .ndis-scheme-section, .ndis-run-section, .ndis-finance-section, .working-dice-section, .working-dice-form{
         padding: 3rem;
     }
     .service-desc p{
@@ -1859,7 +1864,8 @@ Responsive Codes
     .about-section .row, .pricing-section .row, .subscription-section .row, 
     .about-page-section .row, .team-support-section .row, .service-slider-section .row, 
     .service-first-content-section .row, .service-second-content-section .row, 
-    .ndis-scheme-section .row, .ndis-run-section .row, .ndis-finance-section .row{
+    .ndis-scheme-section .row, .ndis-run-section .row, .ndis-finance-section .row,
+    .working-dice-section .row{
         flex-direction: column;
         align-items: flex-start;
     }
@@ -1868,7 +1874,8 @@ Responsive Codes
     .team-support-section .row .col-md-5, .team-support-section .row .col-md-7, .service-slider-section .row .col-md-6, 
     .service-first-content-section .row .col-md-6, .service-second-content-section .row .col-md-6, 
     .ndis-scheme-section .row .col-md-6, .ndis-run-section .row .col-md-6, .ndis-finance-section .row .col-md-7, 
-    .ndis-finance-section .row .col-md-5, .ndis-scheme-img, .ndis-run-img, .ndis-finance-img{
+    .ndis-finance-section .row .col-md-5, .ndis-scheme-img, .ndis-run-img, .ndis-finance-img,
+    .working-dice-section .row .col-md-6, .working-dice-img{
         width: 100%;
     }
     .about-image, .pricing-detail, .about-page-desc, .service-second-img, .first-content-desc, .service-detail-img, 
@@ -1890,7 +1897,7 @@ Responsive Codes
     .pricing-section .row{
         flex-direction: column-reverse;
     }
-    .about-page-image, .about-team-image{
+    .about-page-image, .about-team-image, .working-dice-img{
         padding: 0 200px;
         width: 100%;
     }
@@ -1990,4 +1997,19 @@ Responsive Codes
         padding: 0 280px;
         width: 100%;
     }
+}
+/* working at dice css */
+/* .working-dice-section, .working-dice-form{
+    padding: 2rem 6rem;
+} */
+.working-dice-section .row{
+    display: flex;
+    align-items: center;
+}
+.dice-inp-file input{
+    padding: 0;
+    border: none !important;  
+}
+.dice-inp-file{
+    display: flex;
 }

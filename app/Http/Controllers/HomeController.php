@@ -157,7 +157,8 @@ class HomeController extends Controller
     }
 
     public function working_dice(){
-        return view('working-dice');
+        $services = Service::where('status',1)->get();
+        return view('working-dice',compact('services'));
     }
 
     public function getLogin()
