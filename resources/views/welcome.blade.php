@@ -70,18 +70,19 @@
                 </div>
             </div>
             <div class="services mt-4">
+                
+                @foreach($services as $service)
                 @php
                 $class = '' ;
                 @endphp
-                @foreach($services as $service)
-                @if($loop->iteration == 2 || $loop->iteration == 4 || $loop->iteration == 6 )
-                    @php $class = '-second'; @endphp
-                @endif
-                @if($loop->iteration == 3)
-                @php $class = '-third'; @endphp
-                @endif
-                @if($loop->iteration == 5)
-                @php $class = '-fixth'; @endphp
+                    @if($loop->iteration == 2 || $loop->iteration == 4 || $loop->iteration == 6 || $loop->iteration == 8 )
+                        @php $class = '-second'; @endphp
+                    @endif
+                    @if($loop->iteration == 3 || $loop->iteration == 9)
+                    @php $class = '-third'; @endphp
+                    @endif
+                    @if($loop->iteration == 5)
+                    @php $class = '-fixth'; @endphp
                 @endif
                 <a href="/service/{{$service->slug}}" class="service-card{{$class}}">
                     <div>

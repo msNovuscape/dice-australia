@@ -36,7 +36,7 @@ class HomeController extends Controller
         $testimonials = Testimonial::where('status',1)->get();
         $news_and_updates= NewsAndUpdate::where(['status'=>'1'])->orderBy('id','desc')->get();
         $sliders = Slider::where('status',1)->get();
-        $services = Service::where('status',1)->orderByRaw('CONVERT(order_by, SIGNED) asc')->limit(6)->get();
+        $services = Service::where('status',1)->orderByRaw('CONVERT(order_by, SIGNED) asc')->limit(9)->get();
         $ndis_pricing = NdisPricing::where('status',1)->first();
 
         $phone = Setting::where(['key' => 'phone','status' => '1'])->first();
