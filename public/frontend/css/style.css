@@ -1409,6 +1409,9 @@ Responsive Codes
 .service-slider-section, .service-first-content-section, .service-second-content-section, .working-dice-section, .working-dice-form{
     padding: 3rem 6rem;
 }
+.service-first-content-section{
+    background: #f6f5f2;
+}
 .service-slider-section .row, .service-first-content-section .row, .service-second-content-section .row{
     display: flex;
     align-items: center;
