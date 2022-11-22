@@ -99,6 +99,7 @@ class ServiceSectionController extends Controller
             $icons = $request->icons ?? [];
             
             if($points[0] != null){
+               
             foreach($points as $key => $point){
 
                 $service_section_point = new ServiceSectionPoint();
@@ -205,13 +206,13 @@ class ServiceSectionController extends Controller
         }
         if($service_section->update()){
             $points = $request->points;
-            
             $point_descriptions = $request->point_descriptions ?? [];
             $icons = $request->icons ?? [];
+          
 
             if($points[0] != null){
                 $service_point = $service_section->service_section_point();
-                $service_point->delete();
+                // $service_point->delete();
             foreach($points as $key => $point){
 
                 $service_section_point = new ServiceSectionPoint();
@@ -254,7 +255,7 @@ class ServiceSectionController extends Controller
 
     public function service_point($service_point_id){
         if(Auth::user()){
-            $setting = ServicePoint::findorfail($service_point_id);
+            $setting = ServiceSectionPoint::findorfail($service_point_id);
             $setting->delete();
             return response()->json(['service_point_id' => $service_point_id]);
         }

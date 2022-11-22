@@ -169,7 +169,7 @@
                         /* remind that 'data' is the response of the AjaxController */
 
                         success: function (data) {
-                            debugger;
+                            
                             $('#point_old'+data.service_point_id).remove();
                         },
                         error: function(error) {

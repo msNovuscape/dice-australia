@@ -82,10 +82,14 @@
                                     <textarea class="summernote_class" name="meta_keyword"  >{{$about_us->meta_keyword}}</textarea>
                                 </div>
                             </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Point Title</label>
+                                    <textarea class="summernote_class" name="point_title"  >{{$about_us->point_title}}</textarea>
+                                </div>
+                            </div>
                             
-                        </div>
 
-                        @if($about_us->about_us_points->count() > 0)
                             <div class="row" id="point_dom">
                             <div class="col-md-6 rel-close" id="point_row_1">
                                 <div class="dom-box">
@@ -110,7 +114,6 @@
                             </div>
                             
                         </div>
-                        @endif
                         <div class="col-md-4">
                                 <div class="form-group">
                                     <label>Status <span style="color: red";> * </span> </label>

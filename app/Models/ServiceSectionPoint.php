@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class ServiceSectionPoint extends Model
 {
     use HasFactory;
+
+    public function service_section()
+    {
+        return $this->belongsTo(ServiceSection::class);
+    }
 }

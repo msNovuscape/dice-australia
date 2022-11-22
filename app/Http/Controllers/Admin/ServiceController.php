@@ -155,11 +155,11 @@ class ServiceController extends Controller
     public function update(Request $request, $id)
     {
         $this->validate(\request(),[
+
             'name' => 'required',
             'short_description' => 'required',
             'seo_title' => 'required',
             'keywords'=>'required',
-          
 
         ]);
         $service = new Service();

@@ -175,7 +175,7 @@ Route::group(['middleware'=>['auth']],function (){
         Route::get('services/{id}/section/{secId}/view',[ServiceSectionController::class,'show']);
         Route::post('services/{id}/section/{secId}',[ServiceSectionController::class,'update']);
         Route::get('services/{id}/section/delete',[ServiceSectionController::class,'delete']);
-        // Route::get('service_point/{service_point_id}',[ServiceSectionController::class,'service_point']);
+        Route::get('service_point/{service_point_id}',[ServiceSectionController::class,'service_point']);
 
         Route::get('testimonials',[TestimonialController::class,'index']);
         Route::get('testimonials/create',[TestimonialController::class,'create']);

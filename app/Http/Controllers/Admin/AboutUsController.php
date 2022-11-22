@@ -84,15 +84,24 @@ class AboutUsController extends Controller
                 }
             }
 
+                
+            
+    
         if($setting->save()){
-            // $points = $request->points;
-           
-            // foreach($points as $point){
-            //     $about_us_point = new AboutUsPoint();
-            //     $about_us_point->about_us_id = $setting->id;
-            //     $about_us_point->point = $point;
-            //     $about_us_point->save();
-            // }
+            $points = $request->points;
+                if($points[0] != null){
+                    foreach($points as $key => $point){
+        
+                        $about_us_point = new   AboutUsPoint();
+                        
+                        $about_us_point->about_us_id = $setting->id;
+                        
+                        
+                        $about_us_point->point = $point;
+                        $about_us_point->save();
+                    }
+                }
+ 
             Session::flash('success','About Us has been created!');
             return redirect($this->redirect);
         }
@@ -150,6 +159,7 @@ class AboutUsController extends Controller
         $setting->seo_title = \request('seo_title');
         $setting->meta_keyword = strip_tags(\request('meta_keyword'));
         $setting->seo_description = strip_tags(\request('seo_description'));
+        $setting->point_title = strip_tags(\request('point_title'));
         $setting->slug = Setting::create_slug(\request('seo_title'));
         if($request->hasFile('image')){
             $extension = \request()->file('image')->getClientOriginalExtension();

@@ -172,20 +172,24 @@
                     <h5>{!!strip_tags($about_us->first()->description ?? '')!!}</h5>
                     <p>{!!strip_tags($about_us->first()->sub_description ?? '')!!}</p>
                     <div class="point-block">
-                        <h4>In order to support your wellness, DICE focuses on:</h4>
+                        <h4>{{$about_us->first()->point_title}}:</h4>
                         <div class="row">
                             <div class="col-sm-12 col-md-6">
                                 <ul>
-                                    <li><i class="fa-solid fa-circle-check"></i>Encouragement</li>
-                                    <li><i class="fa-solid fa-circle-check"></i>Capability Enhancement</li>
-                                    <li><i class="fa-solid fa-circle-check"></i>Cooperation</li>
+                                @foreach($about_us->first()->about_us_points->take(3) as $point)
+                                    <li><i class="fa-solid fa-circle-check"></i>{{$point->point}}</li>
+                                    <!-- <li><i class="fa-solid fa-circle-check"></i>Capability Enhancement</li>
+                                    <li><i class="fa-solid fa-circle-check"></i>Cooperation</li> -->
+                                    @endforeach
                                 </ul>
                             </div>
                             <div class="col-sm-12 col-md-6">
                                 <ul>
-                                    <li><i class="fa-solid fa-circle-check"></i>Inclusiveness</li>
-                                    <li><i class="fa-solid fa-circle-check"></i>Diversity</li>
-                                    <li><i class="fa-solid fa-circle-check"></i>Personalized Services</li>
+                                @foreach($about_us->first()->about_us_points->skip(3) as $point)
+                                    <li><i class="fa-solid fa-circle-check"></i>{{$point->point}}</li>
+                                    <!-- <li><i class="fa-solid fa-circle-check"></i>Diversity</li>
+                                    <li><i class="fa-solid fa-circle-check"></i>Personalized Services</li> -->
+                                @endforeach    
                                 </ul>
                             </div>
                         </div>

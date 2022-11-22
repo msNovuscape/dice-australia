@@ -76,6 +76,13 @@
                                     <textarea class="summernote_class" name="meta_keyword"  >{{old('meta_keyword')}}</textarea>
                                 </div>
                             </div>
+
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Point Title</label>
+                                    <textarea class="summernote_class" name="point_title"  >{{old('point_title')}}</textarea>
+                                </div>
+                            </div>
                             
                         </div>
 
@@ -84,19 +91,22 @@
                                 <div class="dom-box">
                                     <div class="add-points card">
                                         <div class="form-group" id="point_g_1" >
-                                            <!-- <label for=""> Point Title <span style="color: red";> * </span></label> <br> -->
-                                            <!-- <input type="text" name="point_title" id="title1"  placeholder="Title"> <br> -->
                                             <div id="point1" class="point1" >
-                                                <label for="">Points <span style="color: red";> * </span> </label> <br>
-                                                <input type="text" class="point"  name="points[]"  placeholder="Points"> <br>
+                                                <label> Points</label><br>
+                                                <input type="text" class="point"  name="points[]"  placeholder="Point"> <br>
+                                                <!-- <button  class="close-point" onclick="deletePoint(1)" type="button"><i class="fa fa-trash" aria-hidden="true"></i></button> -->
+                                                
+                                                <!-- <label>Icon</label><br>
+                                                <input type="file" class="form-control"  name="icons[]"  placeholder="Point"> <br> -->
                                                 <button  class="close-point" onclick="deletePoint(1)" type="button"><i class="fa fa-trash" aria-hidden="true"></i></button>
                                             </div>
 
                                         </div>
-                                        <button type="button"  class="add-point-btn btn btn-primary" onclick="getPoint(1)">Add Points</button>
+                                        <button type="button"  class="add-point-btn btn btn-green" onclick="getPoint(1)">Add Points</button>
                                     </div>
                                 </div>
                             </div>
+                        </div>                      
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label>Status <span style="color: red";> * </span> </label>
