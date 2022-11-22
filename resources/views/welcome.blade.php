@@ -54,9 +54,7 @@
             <div class="col-md-6">
                 <div class="ndis-desc">
                     <h2>The National Insurance Disability Scheme (NDIS)</h2>
-                    <p>The NDIS connects anyone with disability to services in their community. The NDIS now supports over 500,000 Australians with disability to access the services and supports they need.</p>
-                    <p>Disability Inclusion for Community Empowerment (DICE) provide various assistance options to help you reach your objectives.</p>
-                    <!-- <p>Disability Inclusion for Community Empowerment (DICE) will collaborate with you to comprehend your unique preferences and maximize your independence howsoever you see fit.</p> -->
+                    <p>The NDIS offers financial assistance to eligible individuals with disabilities so they can spend more time with their loved ones, be more independent, have access to volunteering opportunities in their community and new skills, all of which improves their quality of life. We are a recognized NDIS Service Provider, assisting you or a loved one in requesting and acquiring optimum services for new or ongoing plans.</p>
                 </div>
             </div>
         </div>
@@ -174,13 +172,23 @@
                     <h5>{!!strip_tags($about_us->first()->description ?? '')!!}</h5>
                     <p>{!!strip_tags($about_us->first()->sub_description ?? '')!!}</p>
                     <div class="point-block">
-                        <h4>Our approach is to bring positive difference in people, families and communities by:</h4>
-                        <ul>
-                            <li><i class="fa-solid fa-circle-check"></i>individual training</li>
-                            <li><i class="fa-solid fa-circle-check"></i>employment options</li>
-                            <li><i class="fa-solid fa-circle-check"></i>community participation</li>
-                            <li><i class="fa-solid fa-circle-check"></i>career pathways</li>
-                        </ul>
+                        <h4>In order to support your wellness, DICE focuses on:</h4>
+                        <div class="row">
+                            <div class="col-sm-12 col-md-6">
+                                <ul>
+                                    <li><i class="fa-solid fa-circle-check"></i>Encouragement</li>
+                                    <li><i class="fa-solid fa-circle-check"></i>Capability Enhancement</li>
+                                    <li><i class="fa-solid fa-circle-check"></i>Cooperation</li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-12 col-md-6">
+                                <ul>
+                                    <li><i class="fa-solid fa-circle-check"></i>Inclusiveness</li>
+                                    <li><i class="fa-solid fa-circle-check"></i>Diversity</li>
+                                    <li><i class="fa-solid fa-circle-check"></i>Personalized Services</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                     <a href="{{url('/about')}}">View More</a>
                 </div>
@@ -188,7 +196,7 @@
             <div class="col-md-5">
                 <div class="about-image">
                     <!-- <img src="{{url($about_us->first()->image ?? '')}}" class="w-100" alt="about-image"/> -->
-                    <img src="{{url($about_us1->image ?? 'images/about_us1/About-image.png')}}" alt="">
+                    <img src="{{url($about_us1->image ?? 'images/about_us1/About-image.png')}}" alt="" class="img-fluid">
                 </div>
             </div>
         </div>
@@ -200,7 +208,7 @@
         <div class="row">
             <div class="col-md-5">
                 <div class="pricing-image">
-                    <img src="{{url($ndis_pricing->image)}}" class="w-100"/>
+                    <img src="{{url($ndis_pricing->image)}}" alt="" class="img-fluid"/>
                 </div>
             </div>
             <div class="col-md-7">
@@ -252,7 +260,7 @@
     <section class="subscription-section">
         <div class="row">
             <div class="col-md-7">
-                <img src="{{url('frontend/images/subscription-image.png')}}" class="img-fluid"/>
+                <img src="{{url('frontend/images/Laptop.svg')}}" class="img-fluid"/>
             </div>
             <div class="col-md-5">
                 <div class="subscription-desc">
