@@ -40,7 +40,7 @@
                 <div class="col-md-6">
                     <div class="form-group">
                         <label for="input-first-name">Phone Number</label>
-                        <input type="text" class="form-control" placeholder="Enter your Phone Name" id="reffullname" onkeyup="validatereffname()" name="name" value="{{old('name')}}">
+                        <input type="text" class="form-control" placeholder="Enter your Phone Number" id="phone" onkeyup="validatereffname()" name="phone" value="{{old('phone')}}">
                         <span id="ref-fname-error" class="error">
                     </span>
                     </div>
@@ -48,7 +48,7 @@
                 <div class="col-md-6">
                     <div class="form-group">
                         <label for="input-first-name">Email</label>
-                        <input type="text" class="form-control" placeholder="Enter your Full Name" id="reffullname" onkeyup="validatereffname()" name="name" value="{{old('name')}}">
+                        <input type="text" class="form-control" placeholder="Enter your Email" id="email" onkeyup="validatereffname()" name="email" value="{{old('email')}}">
                         <span id="ref-fname-error" class="error">
                     </span>
                     </div>
