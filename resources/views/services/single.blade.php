@@ -3,7 +3,7 @@
     <title>{{$service->seo_title}}</title>
     <meta name="description" content="{!!strip_tags($service->short_description)!!}"/>
     <meta name="og:title" content="{{$service->seo_title}}"/>
-    <meta name="og:image" content="{{url($service->service_sections->first()->image)}}"/>
+    <meta name="og:image" content="{{url($service->service_sections->first()->image ?? '')}}"/>
 @endsection
 @section('content')
 @php $first_service = $service->service_sections()->where('status','1')->orderby('order_by','asc')->get(); @endphp
@@ -54,6 +54,7 @@
                         <div class="second-content-desc">
                             <h2>{{$third_service->title}}</h2>
                             <h5>{{$third_service->sub_title}}</h5>
+                            
                             @if($third_service->description != '')
                                 <p>{!!strip_tags($third_service->description)!!}</p>
                             @endif

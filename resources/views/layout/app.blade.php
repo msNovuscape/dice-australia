@@ -63,14 +63,14 @@
             <a href="https://www.instagram.com/baneshwor_smiles/" target="_blank" class="instagram"><i class="fa-brands fa-instagram"></i></a>
             <a href="https://twitter.com/baneshworsmiles" target="_blank" class="linkdin"><i class="fa-brands fa-twitter"></i></a> -->
 
-            <?php if(\App\Models\Setting::where('slug','facebook-link')->exists()) : ?>
-                    <a href="{{url(\App\Models\Setting::where('slug','facebook-link')->first()->value ?? '')}}" target="_blank" class="facebook"><i class="fa-brands fa-facebook"></i></a>
+            <?php if(\App\Models\Setting::where('slug','facebook-link')->where('status','1')->exists()) : ?>
+                    <a href="{{url(\App\Models\Setting::where('slug','facebook-link')->where('status','1')->first()->value ?? '')}}" target="_blank" class="facebook"><i class="fa-brands fa-facebook"></i></a>
                     <?php endif; ?>
-                    <?php if(\App\Models\Setting::where('slug','instagram-link')->exists()) : ?>
-                        <a href="{{url(\App\Models\Setting::where('slug','instagram-link')->first()->value ?? '')}}" target="_blank" class="instagram"><i class="fa-brands fa-instagram"></i></a>                    
+                    <?php if(\App\Models\Setting::where('slug','instagram-link')->where('status','1')->exists()) : ?>
+                        <a href="{{url(\App\Models\Setting::where('slug','instagram-link')->where('status','1')->first()->value ?? '')}}" target="_blank" class="instagram"><i class="fa-brands fa-instagram"></i></a>                    
                     <?php endif; ?>
-                    <?php if(\App\Models\Setting::where('slug','twitter-link')->exists()) : ?>
-                        <a href="{{url(\App\Models\Setting::where('slug','twitter-link')->first()->value ?? '')}}" target="_blank" class="twitter"><i class="fa-brands fa-twitter"></i></a>
+                    <?php if(\App\Models\Setting::where('slug','twitter-link')->where('status','1')->exists()) : ?>
+                        <a href="{{url(\App\Models\Setting::where('slug','twitter-link')->where('status','1')->first()->value ?? '')}}" target="_blank" class="twitter"><i class="fa-brands fa-twitter"></i></a>
                     <?php endif; ?>
             <!-- Button trigger modal -->
             <a type="button" class="quick-enq-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
@@ -127,7 +127,7 @@
 <!-- Top section -->
 <!-- Header section -->
 <header class="header">
-    <a class="navbar-brand" href="/">
+    <a class="navbar-brand" href="{{url('/')}}">
         <img src="{{url(\App\Models\Setting::where('slug','logo')->first()->value ?? '')}}" class="img-fluid logo"  alt="">
     </a>
     <ul class="nav nav-inner navbar-list" id="navigation-links">
@@ -145,16 +145,16 @@
             </ul>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="/ndis">NDIS</a>
+            <a class="nav-link" href="{{url('/ndis')}}">NDIS</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="/referral">Make a Referral</a>
+            <a class="nav-link" href="{{url('/referral')}}">Make a Referral</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="/working-dice">Working at DICE </a>
+            <a class="nav-link" href="{{url('/working-dice')}}">Working at DICE </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="/contact">Contact us </a>
+            <a class="nav-link" href="{{url('/contact')}}">Contact us </a>
         </li>
     </ul>
     <div class="mobile-navbar-btn">
@@ -205,11 +205,11 @@
     <div class="booton-section">
         <div class="bootom-nav">
             <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/about">About us</a></li>
+                <li><a href="{{url('/')}}">Home</a></li>
+                <li><a href="{{url('/about')}}">About us</a></li>
                 <!-- <li><a href="/service">Services</a></li> -->
-                <li><a href="/referral">Make a Referral</a></li>
-                <li><a href="/contact">Contact us</a></li>
+                <li><a href="{{url('/referral')}}">Make a Referral</a></li>
+                <li><a href="{{url('/contact')}}">Contact us</a></li>
             </ul>
         </div>
         <div class="bottom-footer">

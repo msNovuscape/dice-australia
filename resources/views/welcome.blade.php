@@ -199,8 +199,8 @@
             </div>
             <div class="col-md-5">
                 <div class="about-image">
-                    <!-- <img src="{{url($about_us->first()->image ?? '')}}" class="w-100" alt="about-image"/> -->
-                    <img src="{{url($about_us1->image ?? 'images/about_us1/About-image.png')}}" alt="" class="img-fluid">
+                    <img src="{{url($about_us->first()->image ?? '')}}" class="w-100" alt="about-image"/>
+                    <!-- <img src="{{url($about_us1->image ?? 'images/about_us1/About-image.png')}}" alt="" class="img-fluid"> -->
                 </div>
             </div>
         </div>

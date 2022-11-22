@@ -127,8 +127,6 @@ Route::group(['middleware'=>['auth']],function (){
         Route::get('galleries/delete/{id}',[GalleryController::class,'delete']);
 
 
-        
-
         Route::get('referrals',[ReferralAdminController::class,'index']);
         Route::get('referrals/create',[ReferralAdminController::class,'create']);
         Route::post('referrals/store',[ReferralAdminController::class,'store']);
@@ -157,7 +155,6 @@ Route::group(['middleware'=>['auth']],function (){
         Route::get('departments/{id}/edit',[DepartmentController::class,'edit']);
         Route::post('departments/{id}',[DepartmentController::class,'update']);
         Route::get('departments/{id}/delete',[DepartmentController::class,'delete']);
-
 
         Route::get('services',[ServiceController::class,'index']);
         Route::get('services/create',[ServiceController::class,'create']);
