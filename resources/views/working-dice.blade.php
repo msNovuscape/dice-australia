@@ -20,7 +20,7 @@
             </div>
             <div class="col-md-6">
                 <div class="working-dice-img">
-                    <img src="{{url('frontend/images/who-img.png')}}" class="w-100" alt="">
+                    <img src="{{url('frontend/images/ndis.png')}}" class="w-100" alt="">
                 </div>
             </div>
         </div>

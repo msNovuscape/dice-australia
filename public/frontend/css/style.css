@@ -1489,8 +1489,8 @@ Responsive Codes
 .service-detail-banner h2, .first-content-desc h2, .second-content-desc h2{
     font-weight: 700;
     font-size: 34px;
-    color: #6B2976;
-    line-height: 48px;
+    color: #202023;
+    line-height: 44px;
     margin-bottom: 15px;
 }
 .service-detail-banner p{
@@ -1502,9 +1502,9 @@ Responsive Codes
 .first-content-desc h5, .second-content-desc h5{
     font-weight: 700;
     font-size: 20px;
-    color: #000000;
-    line-height: 1.9rem;
-    margin-bottom: 10px;
+    color: #e54e2e;
+    line-height: 1rem;
+    margin-bottom: 25px;
 }
 .service-first-img, .working-dice-img{
     width: 600px;
@@ -1515,10 +1515,11 @@ Responsive Codes
 }
 .second-content-desc ul {
     padding-left: 20px;
+    margin-top: 5px;
 }
 .second-content-desc ul li::before{
     content: "\f058";
-    color: #6B2976;
+    color: #e54e2e;
     font-family: FontAwesome;
     display: inline-block;
     margin-right: 0.6em;
@@ -1527,6 +1528,11 @@ Responsive Codes
 }
 .second-content-desc ul li{
     list-style: none;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 33px;
+    letter-spacing: 0.001em;
+    color: #221415;
 }
 .support-section{
     padding: 6rem;
