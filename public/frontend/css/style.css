@@ -1503,7 +1503,7 @@ Responsive Codes
     font-weight: 700;
     font-size: 20px;
     color: #e54e2e;
-    line-height: 1rem;
+    line-height: 1.6rem;
     margin-bottom: 25px;
 }
 .service-first-img, .working-dice-img{
@@ -1884,7 +1884,7 @@ Responsive Codes
     .first-content-desc h2, .second-content-desc h2 {
         font-weight: 700;
         font-size: 31px;
-        color: #6B2976;
+        color: #202023;
         line-height: 42px;
         margin-bottom: 15px;
     }
