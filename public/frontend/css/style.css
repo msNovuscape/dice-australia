@@ -4,15 +4,20 @@
     box-sizing: border-box;
 }
 body {
-    font-family: 'Lato', sans-serif important;
+    /* font-family: 'Lato', sans-serif important; */
+    /* font-family: 'Rubik', sans-serif; */
+    font-family: 'Asap', sans-serif;
     overflow-x: hidden;
 }
 p{
-    font-weight: 400;
-    font-size: 16px;
+    font-weight: 500;
+    font-size: 17px;
     line-height: 1.8rem;
     letter-spacing: 0.001em;
     color: #221415;
+}
+a, button{
+    transition: all 300ms ease-out;
 }
 h1{
     font-weight: 800;
@@ -26,13 +31,13 @@ h2{
     font-weight: 800;
     font-size: 28px;
     line-height: 34px;
-    color: #262535;
+    color: #202023;
 }
 h5{
     font-weight: 600;
     font-size: 18px;
     line-height: 2rem;
-    color: #262535;
+    color: #202023;
 }
 h4{
     font-weight: 700;
@@ -79,12 +84,12 @@ h4{
     font-weight: 600;
     font-size: 16px;
     line-height: 20px;
-    color: #3C3B3B !important;
+    color: #202023 !important;
 }
 
 .nav-link:hover,
 .nav-link:active {
-    color: #6B2976 !important;
+    color: #e54e2e !important;
 }
 
 .mobile-navbar-btn {
@@ -102,14 +107,19 @@ h4{
 .mobile-nav-icon[name="close-outline"] {
     display: none;
 }
+.dropdown-menu{
+    padding: 0;
+}
 .dropdown-menu a{
     font-weight: 600;
     font-size: 16px;
+    padding:0.5rem 1rem;
+    border-bottom:1px solid rgba(0,0,0,.15);
 }
 
 .dropdown-item:focus, .dropdown-item:hover {
-    color: #fff !important;
-    background-color: #6B2976 !important;
+    color: #e54e2e  !important;
+    background-color: #f2f2f2  !important;
     transition: all 300ms ease-in-out;
 }
 .social-links .fa-brands{
@@ -122,7 +132,6 @@ h4{
     padding: 9.6rem 0;
     background-color: #a5d8ff;
     height: 60vh;
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -207,7 +216,7 @@ Responsive Codes
 /* new nav */
 /* bootstrap modal */
 .enquiry-header{
-    background: #6B2976;
+    background: #ffe0da;
     display: block;
 }
 .modal-title{
@@ -216,7 +225,7 @@ Responsive Codes
     line-height: 55px;
     text-align: center;
     letter-spacing: 0.001em;
-    color: #FFFFFF;
+    color: #e54e2e;
 }
 .modal-detail .form-control .form-select {
     width: 100%;
@@ -261,8 +270,8 @@ Responsive Codes
     border: 2px solid #198754;
 }
 .modal-submit-btn{
-    background: #6B2976;
-    border: 2px solid #6B2976;
+    background: #e54e2e;
+    border: 1px solid #da4627;
     border-radius: 4px;
     padding: 10px 25px;
     font-weight: 500;
@@ -270,8 +279,8 @@ Responsive Codes
     color: #FFFFFF;
 }
 .modal-close-btn{
-    background: #6B2976;
-    border: 2px solid #6B2976;
+    background: #47465c;
+    border: 2px solid #333345;
     border-radius: 4px;
     font-weight: 500;
     font-size: 16px;
@@ -279,22 +288,28 @@ Responsive Codes
     color: #FFFFFF;
 }
 .modal-close-btn:hover{
-    color: #6B2976;
+    color: #47465c;
     background: #FFFFFF;
-    border: 2px solid #6B2976;
+    border: 2px solid #333345;
 }
 .modal-submit-btn:hover{
-    color: #6B2976;
+    color: #e54e2e;
     background: #FFFFFF;
-    border: 2px solid #6B2976;
+    border: 2px solid #da4627;
 }
 /* top bar */
 #topbar{
-    background: #6B2976;
+    background: #e54e2e;
     font-size: 14px;
     transition: all 0.5s;
-    color: #fff;
     padding: 0 6rem;
+}
+#topbar, #topbar a{
+    color:#fff;
+    font-weight: 500;
+}
+#topbar a:hover{
+    color:#87200a;
 }
 .contact-info, .social-links {
     display: flex;
@@ -311,6 +326,9 @@ Responsive Codes
     color: #FFFFFF;
 }
 .quick-enq-btn{
+    transition: all 300ms ease-out;
+}
+.quick-enq-btn{
     margin: 7px 10px;
 	padding: 3px 16px;
     color: white;
@@ -319,12 +337,14 @@ Responsive Codes
     justify-content: center;
     text-align: center;
     text-decoration: none;
-    border: 2px solid #B151C0;
+    background:#b72d10;
+    border: 2px solid #ad2d12;
     border-radius: 25px;
 }
 .quick-enq-btn:hover{
-    color: #B151C0;
-    background: #FFFFFF;
+    color: #fff!important;
+    background: #87200a;
+    border-color: #87220c;
 }
 /* Header css */
 /*  slider */
@@ -346,34 +366,36 @@ Responsive Codes
     font-size: 32px;
     line-height: 42px;
     letter-spacing: -0.04em;
-    color: #262535;
+    color: #202023;
 }
 .slider-content h2{
     font-weight: 800;
     font-size: 48px;
     line-height: 58px;
     letter-spacing: 0.01em;
-    color: #262535;
+    color: #e54e2e;
 }
 .slider-content p{
     font-weight: 600;
-    font-size: 20px;
+    font-size: 17px;
     line-height: 166%;
-    color: #262535;
+    color: #202023;
     margin-bottom: 50px;
 }
 .slider-content a{
     text-decoration: none;
     color: #FFFFFF;
-    padding: 10px 20px;
-    background: #1A2E35;
+    padding: 11px 26px;
+    background: #202023;
     border-radius: 25px;
-    border: 2px solid #1A2E35;
+    border: 2px solid #1c1c1f;
+    font-weight: 600;
+    letter-spacing: 0.01rem;
+    display: inline-block;
 }
 .slider-content a:hover{
     text-decoration: none;
     color: #1A2E35;
-    padding: 10px 20px;
     background: #FFFFFF;
     border-radius: 30px;
     border: 2px solid #1A2E35;
@@ -391,14 +413,14 @@ Responsive Codes
     height:10px !important;
     background: none !important;
     border-radius:100% !important;
-    border: 2px solid #6B2976 !important;
+    border: 2px solid #E54E2E  !important;
     display:inline-block;
     margin-right:7px;
     cursor:pointer;
     overflow:hidden;
 }
 .carousel-indicators [data-bs-target].active{
-    background:#6B2976 !important;
+    background:#E54E2E !important;
 }
 
 .carousel-control-prev-icon, .carousel-control-next-icon {
@@ -437,33 +459,33 @@ Responsive Codes
 }
 .box-border{
     width: 15px;
-    height: 250px;
+    height: 210px;
     border-left: 2px solid;
-    border-image: linear-gradient(to top, #262535 25%, #262535 25%, #E54E2E 50%,#E54E2E 50%, #E54E2E 75%, #E54E2E 75%) 5;
+    border-image: linear-gradient(to top, #202023 25%, #202023 25%, #E54E2E 50%,#E54E2E 50%, #E54E2E 75%, #E54E2E 75%) 5;
 }
 .ndis-desc h2{
     font-weight: 800;
-    font-size: 26px;
+    font-size: 30px;
     line-height: 34px;
     margin-bottom: 20px;
-    color: #262535;
+    color: #202023;
 }
 .ndis-left-desc h1{
     font-weight: 800;
     font-size: 38px;
     line-height: 46px;
-    color: #262535;
+    color: #202023;
 }
 .ndis-left-desc p{
     font-weight: 700;
     font-size: 16px;
     line-height: 19px;
-    color: #262535;
+    color: #202023;
 }
 /* ndis section css */
 /* Service section css */
 .services-section{
-    padding: 6rem 6rem 0 6rem;
+    padding: 4.5rem 6rem 0 6rem;
     background: #F9F9F9;
 }
 .service-desc h1{
@@ -471,32 +493,49 @@ Responsive Codes
     font-size: 38px;
     line-height: 46px;
     text-align: center;
-    color: #262535;
+    color: #202023;
 }
 .service-desc p{
     font-weight: 700;
     font-size: 16px;
     line-height: 28px;
-    padding: 0 27%;
+    padding: 0 20%;
     text-align: center;
-    color: #262535;
+    color: #202023;
 }
-.service-card-desc h1{
+.service-head{
+    display: flex;
+    align-items: center;
+}
+.service-head h1{
+    color: #202023;
+    font-size: 28px;
+    margin-left: 20px;
+    line-height: 34px;
+    font-weight: 700;
+    margin-bottom: 0;
+    letter-spacing: 0.001em;
+}
+.service-icon{
+    width: 76px;
+    height: 76px;
+}
+/* .service-card-desc h1{
     font-weight: 800;
     font-size: 22px;
     line-height: 26px;
     letter-spacing: 0.001em;
-    color: #262535;
-}
+    color: #202023;
+} */
 .service-card-desc p{
-    font-weight: 400;
+    font-weight: 500;
     font-size: 16px;
-    line-height: 21px;
+    line-height: 24px;
     letter-spacing: 0.001em;
-    color: #262535;
+    color: #202023;
 }
 .service-card{
-    background: #F5E5F8;
+    background: #F8D9D3;
     padding: 20px;
     text-decoration: none;
     display: flex;
@@ -520,7 +559,7 @@ Responsive Codes
     justify-content: space-between;
 }
 .service-card-fixth{
-    background: #FFFFFF;
+    background: #F8D9D3;
     padding: 20px;
     text-decoration: none;
     display: flex;
@@ -545,17 +584,17 @@ Responsive Codes
     transform: translateX(5px) rotate(0deg);
 }
 .services a:hover .learn-more-btn{
-    color: #6B2976;
+    color: #e54e2e;
 }
 .learn-more-btn{
     border: none;
     background: none;
     display: flex;
-    font-weight: 400;
+    font-weight: 500;
     font-size: 16px;
     line-height: 21px;
     letter-spacing: 0.001em;
-    color: #262535;
+    color: #202023;
     align-items: center;
     gap: 10px;
 }
@@ -574,30 +613,34 @@ Responsive Codes
     font-size: 38px;
     line-height: 46px;
     letter-spacing: 0.001em;
-    color: #262535;
+    color: #202023;
     margin-bottom: 15px;
 }
 .about-left h5{
     font-weight: 700;
     font-size: 18px;
     line-height: 154.5%;
-    color: #262535;
+    color: #202023;
     margin-bottom: 20px;
 }
 .about-left p{
-    font-weight: 400;
+    font-weight: 500;
     font-size: 16px;
     line-height: 1.8rem;
-    color: #262535;
-    margin-bottom: 40px;
+    color: #202023;
+    margin-bottom: 25px;
+}
+.about-left p, .about-left a, .pricing-detail a{
+    font-weight: 500;
 }
 .about-left a{
     text-decoration: none;
-    background: #1A2E35;
+    background: #202023;
     border-radius: 25px;
-    padding: 10px 20px;
+    padding: 10px 22px;
     color: #F9F9F9;
     transition: 0.4s;
+    display: inline-block;
 }
 .about-left a:hover{
     background: #E54E2E;
@@ -606,6 +649,22 @@ Responsive Codes
 .about-image{
     padding: 0 60px;
     width: 600px;
+}
+.point-block h4{
+    font-size:18px;
+    font-weight: 700;
+}
+.point-block ul{
+    margin-bottom: 30px;
+}
+.point-block ul li{
+    list-style: none;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 33px;
+}
+.point-block ul li i{
+    margin-right:12px;
 }
 /* Service section css */
 /* customer section css */
@@ -618,7 +677,7 @@ Responsive Codes
     font-size: 40px;
     text-align: center;
     letter-spacing: 0.001em;
-    color: #1A2E35;
+    color: #202023;
     margin-bottom: 20px;
 }
 .customer-header p{
@@ -626,7 +685,7 @@ Responsive Codes
     font-size: 18px;
     text-align: center;
     padding: 0 30%;
-    color: #1A2E35;
+    color: #202023;
 }
 .customer-review{
     margin-top: 30px;
@@ -646,7 +705,7 @@ Responsive Codes
 .customer-review .slick-dots li button:before{
     font-size: 16px;
     top: 30px;
-    border: 3px solid #1A2E35;
+    border: 3px solid #202023;
     border-radius: 50%;
     color: transparent;
     opacity: 1;
@@ -660,7 +719,7 @@ Responsive Codes
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
-    color: #1A2E35;
+    color: #202023;
     
 }
 .cutomer-details{
@@ -673,7 +732,7 @@ Responsive Codes
     font-style: normal;
     font-weight: 700;
     font-size: 18px;
-    color: #1A2E35;
+    color: #202023;
     margin-bottom: 0;
 }
 .cutomer-detail h5{
@@ -681,7 +740,7 @@ Responsive Codes
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
-    color: #1A2E35;
+    color: #202023;
 }
 .cutomer-image{
     width: 50px;
@@ -693,7 +752,7 @@ Responsive Codes
 /* customer section css */
 /* pricing section css */
 .pricing-section{
-    padding: 0 6rem;
+    padding: 0 6rem 4.5rem 6rem;
     background: #F9F9F9;
 }
 .pricing-section .row{
@@ -705,63 +764,68 @@ Responsive Codes
     font-size: 38px;
     line-height: 46px;
     letter-spacing: 0.001em;
-    color: #6B2976;
+    color: #e54e2e;
 }
 .pricing-detail h5{
     font-weight: 700;
     font-size: 18px;
     line-height: 173.5%;
-    color: #1A2E35;
+    color: #202023;
 }
 .pricing-detail p{
-    font-weight: 400;
+    font-weight: 500;
     font-size: 16px;
     margin-bottom: 40px;
-    color: #262535;
+    color: #202023;
 }
 .pricing-detail a{
     text-decoration: none;
-    background: #6B2976;
-    padding: 10px 30px;
+    background: #e54e2e;
+    padding: 10px 22px;
     color: #F9F9F9;
     border-radius: 25px;
     transition: 0.4s;
 }
 .pricing-detail a:hover{
-    background: #1A2E35;
+    background: #202023;
     color: #F9F9F9;
 }
 .pricing-image{
     padding: 0 80px 0 0;
-    width: 600px;
+    /* width: 600px; */
 }
 /* pricing section css */
 /* acknowledgement section css */
 .acknowledgement-section{
-    padding: 6rem;
+    padding: 4.5rem 6rem;
     background: #F9F9F9;
+}
+.acknowledgement-section .img-block{
+    width:240px;
+    margin: 0 auto;
 }
 .acknowledgement-desc h1{
     font-family: 'Delius';
     font-style: normal;
     font-weight: 400;
-    font-size: 48px;
-    line-height: 1.8rem;
+    font-size: 44px;
+    line-height: 1.2rem;
     text-align: center;
     letter-spacing: 0.001em;
-    color: #1A2E35;
-    margin-top: 50px;
+    color: #202023;
+    margin-top: 35px;
     margin-bottom: 30px;
 }
 .acknowledgement-desc p{
     font-family: 'Delius';
     font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
+    font-weight: 600;
+    font-size: 15px;
     line-height: 2rem;
     text-align: center;
-    color: #1A2E35;
+    color: #202023;
     padding: 0 10%;
+    margin:0;
 }
 /* acknowledgement section css */
 /* subscription section css */
@@ -778,43 +842,50 @@ Responsive Codes
 .subscription-desc h1{
     font-weight: 800;
     font-size: 26px;
-    color: #6B2976;
+    color: #202023;
 }
 .subscription-desc p{
     font-weight: 400;
     font-size: 16px;
-    color: #1A2E35;
+    color: #202023;
     padding-right: 30%;
 }
 .dice-from{
     display: block;
     width: 60%;
-    border: 1px solid #6B2976;
+    border: 1px solid #202023;
     padding: 10px;
 }
 .subscribe-btn{
     display: block;
     width: 60%;
-    border: 2px solid #6B2976;
+    border: 2px solid #202023;
     color: #FFFFFF;
     font-weight: 700;
     font-size: 18px;
     text-align: center;
-    background: #6B2976;
+    background: #202023;
     padding: 10px;
 }
 .subscribe-btn:hover{
     background: #FFFFFF;
-    color: #6B2976;
+    color: #202023;
 }
 /* subscription section css */
 /* Footer Css */
 .footer{
     background: #1A2E35;
-    padding: 2rem 6rem;
+    padding: 2rem 6rem 0rem 6rem;
 }
-.footer-top, .footer-details{
+.footer-logo{
+    width:90px;
+    margin:0 auto;
+}
+.footer-top{
     padding: 2rem 0;
+}
+.footer-details{
+    padding-bottom:2.5rem;
 }
 .socials-icons{
     display: flex;
@@ -837,24 +908,8 @@ Responsive Codes
     color: #E12727;
 }
 
-.fa-facebook:hover{
-    color: #4267B2;
-}
-.fa-twitter:hover{
-    color: #1DA1F2;
-}
-.fa-linkedin:hover{
-    color: #0077B5;
-}
-.fa-instagram:hover {
-    color: #d6249f;
-    /* background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%) !important;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent !important; */
-}
-.fa-linkedin-in:hover{
-    color: #0e76a8;
+.fa-facebook:hover, .fa-instagram:hover, .fa-twitter:hover, .fa-linkedin:hover, .fa-instagram:hover{
+    color: #87200a;
 }
 .box{
     width: 50px;
@@ -885,6 +940,8 @@ Responsive Codes
     justify-content: space-between;
     font-size: 12px;
     color: #868182;
+    margin: 0;
+    padding: 0.7rem;
 }
 .bottom-footer a{
     text-decoration: none;
@@ -919,11 +976,11 @@ Responsive Codes
 }
 .bootom-nav{
     color: #fff;
-    border-top: 2px solid #646464;
+    border-bottom: 1px solid #868182;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 4rem 0;
+    padding: 0rem 0;
 }
 .bootom-nav ul{
     display: flex;
@@ -1361,7 +1418,7 @@ Responsive Codes
     color: #6B2976;
 }
 .fa-solid{
-    color: #6B2976;
+    color:  #202023;
 }
 /* referral section */
 /* gallery section */
@@ -1697,7 +1754,7 @@ Responsive Codes
         text-align: center;
         letter-spacing: 0.001em;
         color: #1A2E35;
-        margin-top: 50px;
+        margin-top: 40px;
         margin-bottom: 16px;
     }
     .subscription-desc p{

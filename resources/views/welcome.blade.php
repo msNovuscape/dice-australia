@@ -43,7 +43,7 @@
             <div class="col-md-5">
                 <div class="ndis-left-desc">
                     <h1>Registered NDIS Provider</h1>
-                    <p>We're registered NDIS Service provider for people with disability.</p>
+                    <p>We are registered NDIS Service provider for people with disability.</p>
                 </div>
                 <div class="ndis-love">
                     <a href="/ndis" class="ndis-view-btn">View More</a>
@@ -54,7 +54,9 @@
             <div class="col-md-6">
                 <div class="ndis-desc">
                     <h2>The National Insurance Disability Scheme (NDIS)</h2>
-                    <p>We provide various assistance options to help you reach your objectives, whether you're searching for someone to handle all of your needs (full agency) or to assist you in handling key aspects of your care (plan management or self-management). As a certified NDIS care service provider, Disability Inclusion for Community Empowerment (DICE) will collaborate with you to comprehend your unique preferences and manage a team whose objective is to maximize your independence and provide you the opportunity to live your life howsoever you see fit.</p>
+                    <p>The NDIS connects anyone with disability to services in their community. The NDIS now supports over 500,000 Australians with disability to access the services and supports they need.</p>
+                    <p>Disability Inclusion for Community Empowerment (DICE) provide various assistance options to help you reach your objectives.</p>
+                    <!-- <p>Disability Inclusion for Community Empowerment (DICE) will collaborate with you to comprehend your unique preferences and maximize your independence howsoever you see fit.</p> -->
                 </div>
             </div>
         </div>
@@ -86,11 +88,13 @@
                 @endif
                 <a href="/service/{{$service->slug}}" class="service-card{{$class}}">
                     <div>
-                        <div class="service-icon mb-4">
-                            <img src="{{url($service->icon ?? 'frontend/icons/support-coordination.svg')}}" alt="">
+                        <div class="service-head mb-4">
+                            <div class="service-icon">
+                                <img src="{{url($service->icon ?? 'frontend/icons/support-coordination.svg')}}" alt="" class="w-100">
+                            </div>
+                            <h1>{{$service->name}}</h1>
                         </div>
                         <div class="service-card-desc">
-                            <h1>{{$service->name}}</h1>
                             <p>{!!strip_tags($service->short_description)!!}</p>
                         </div>
                     </div>
@@ -169,12 +173,22 @@
                     <h2>Why Choose us?</h2>
                     <h5>{!!strip_tags($about_us->first()->description ?? '')!!}</h5>
                     <p>{!!strip_tags($about_us->first()->sub_description ?? '')!!}</p>
+                    <div class="point-block">
+                        <h4>Our approach is to bring positive difference in people, families and communities by:</h4>
+                        <ul>
+                            <li><i class="fa-solid fa-circle-check"></i>individual training</li>
+                            <li><i class="fa-solid fa-circle-check"></i>employment options</li>
+                            <li><i class="fa-solid fa-circle-check"></i>community participation</li>
+                            <li><i class="fa-solid fa-circle-check"></i>career pathways</li>
+                        </ul>
+                    </div>
                     <a href="{{url('/about')}}">View More</a>
                 </div>
             </div>
             <div class="col-md-5">
                 <div class="about-image">
-                    <img src="{{url($about_us->first()->image ?? '')}}" class="w-100" alt="about-image"/>
+                    <!-- <img src="{{url($about_us->first()->image ?? '')}}" class="w-100" alt="about-image"/> -->
+                    <img src="{{url($about_us1->image ?? 'images/about_us1/About-image.png')}}" alt="">
                 </div>
             </div>
         </div>
@@ -203,7 +217,7 @@
     @endif
     <!-- pricing section -->
     <!-- customer section -->
-    <section class="customer-section">
+    <!-- <section class="customer-section">
         <div class="row">
             <div class="col-md-12 customer-header">
                 <h1>Voice of Our Happy Customers</h1>
@@ -228,73 +242,12 @@
                     </div>
                 </div>
             @endforeach    
-                <!-- <div class="customer-review-card">
-                    <div class="customer-card-review">
-                        <img src="{{url('frontend/icons/quoteicon.svg')}}"/>
-                        <p>All of the staff at DICE are so professional and patient. I am halfway through my treatment and I cannot recommend them enough.</p>
-                        <img src="{{url('frontend/images/starts.png')}}"/>
-                    </div>
-                    <div class="cutomer-details">
-                        <div class="cutomer-image">
-                            <img src="{{url('frontend/images/profile.png')}}" class="img-fluid customer-img"/>
-                        </div>
-                        <div class="cutomer-detail">
-                            <h3>Samir Bhandari</h3>
-                            <h5>Developer, Extratech Nepal</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="customer-review-card">
-                    <div class="customer-card-review">
-                        <img src="{{url('frontend/icons/quoteicon.svg')}}"/>
-                        <p>Support, care, and patience, these are the experiences that stand out our the most. I am very satisfied with my services at DICE and am grateful for their wonderful company.</p>
-                        <img src="{{url('frontend/images/starts.png')}}"/>
-                    </div>
-                    <div class="cutomer-details">
-                        <div class="cutomer-image">
-                            <img src="{{url('frontend/images/profile.png')}}" class="img-fluid customer-img"/>
-                        </div>
-                        <div class="cutomer-detail">
-                            <h3>Saroj  Dhakal</h3>
-                            <h5>Manager, Esewa</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="customer-review-card">
-                    <div class="customer-card-review">
-                        <img src="{{url('frontend/icons/quoteicon.svg')}}"/>
-                        <p>I loved the service that I received at DICE. It was wonderful, caring member always helped me to accomplish my daily task. I highly recommend them!!</p>
-                        <img src="{{url('frontend/images/starts.png')}}"/>
-                    </div>
-                    <div class="cutomer-details">
-                        <div class="cutomer-image">
-                            <img src="{{url('frontend/images/profile.png')}}" class="img-fluid customer-img"/>
-                        </div>
-                        <div class="cutomer-detail">
-                            <h3>Saroj  Dhakal</h3>
-                            <h5>Manager, Esewa</h5>
-                        </div>
-                    </div>
-                </div> -->
+                
             </div>
         </div>
-    </section>
+    </section> -->
     <!-- customer section -->
-    <!-- acknowledgement section -->
-    <section class="acknowledgement-section">
-        <div class="row">
-            <div class="col-md-12 text-center">
-                <img src="{{url('frontend/images/flag.png')}}" class="img-fluid"/>
-            </div>
-            <div class="col-md-12">
-                <div class="acknowledgement-desc">
-                    <h1>Acknowledgement of Country</h1>
-                    <p>DICE recognise the rich Indigenous heritage of this country and acknowledge the Wurundjeri Willum Clan and the Gunung-Willam-Balluk people as the traditional owners of the land. We pay our respects to the people, the cultures and the elders past, present and emerging.We pay our respects to the people, the cultures and the elders past, present and emerging.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- acknowledgement section -->
+    
     <!-- subscription section -->
     <section class="subscription-section">
         <div class="row">
@@ -339,6 +292,25 @@
         </div>
     </section>
     <!-- acknowledgement section -->
+
+    <!-- acknowledgement section -->
+    <section class="acknowledgement-section">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <div class="img-block">
+                    <img src="{{url('frontend/images/flag.png')}}" class="img-fluid"/ alt="">
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="acknowledgement-desc">
+                    <h1>Acknowledgement of Country</h1>
+                    <p>DICE recognise the rich Indigenous heritage of this country and acknowledge the Wurundjeri Willum Clan and the Gunung-Willam-Balluk people as the traditional owners of the land. We pay our respects to the people, the cultures and the elders past, present and emerging.We pay our respects to the people, the cultures and the elders past, present and emerging.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- acknowledgement section -->
+
 @endsection
 @section('script')
     <script>
