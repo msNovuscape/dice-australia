@@ -54,14 +54,14 @@
                         <div class="second-content-desc">
                             <h2>{{$third_service->title}}</h2>
                             <h5>{{$third_service->sub_title}}</h5>
+                            @if($third_service->description != '')
+                                <p>{!!strip_tags($third_service->description)!!}</p>
+                            @endif
                             <ul>
                             @foreach($third_service->service_section_point as $point)
                               <li>{{$point->point}} </li>
                             @endforeach
                             </ul>
-                            @if($third_service->description != '')
-                                <p>{!!strip_tags($third_service->description)!!}</p>
-                            @endif
                         </div>
                     </div>
                     <div class="col-md-6">

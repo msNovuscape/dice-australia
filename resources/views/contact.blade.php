@@ -11,7 +11,7 @@
         {{--start loader--}}<div class="loader loader-default" id="loader"></div>{{--end loader--}}
             <div class="contactus-header">
                 <h1>Contact Us</h1>
-                <p>Contact us today to arrange free, no-obligation care consultation<br/> for you or your loved one.</p>
+                <p>We can help you get the right care for yourself or someone you love. If you would like to find out more. Give us a call to schedule a free consultation.</p>
             </div>
             <div class="contactus-icons">
                 @if($phone !== null)
@@ -40,7 +40,7 @@
                         <i class="fa-solid fa-location-dot fa-lg"></i>
                     </div>
                     <div>
-                        <a href="https://goo.gl/maps/p6uwRWci1KUSYjtg9"  target="-_blank" rel="noreferrer">{{$address->value}}</a>
+                        <a href="https://goo.gl/maps/4x5Y3Mn1xAybeS2u6"  target="-_blank" rel="noreferrer">{{$address->value}}</a>
                     </div>
                 </div>
                 @endif
@@ -50,25 +50,26 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="form-header">
-                    <h5>WE’RE HERE FOR YOU!</h5>
-                    <h2>Talk to Us</h2>
-                    <p>Please fill out the form below. Our caring, capable, knowledgeable team are ready and willing to answer any questions or concerns you may have and will get back to you shortly.</p>
+                    <h5>Are you ready to join our growing family?</h5>
+                    <h2>Let us support you.</h2>
+                    <p>Fill in your details below, and our Customer Care Team will contact you shortly.</p>
                 </div>
                 <form class="contactus-form" id="contact_form">
-                    <div class="mb-3">
+                    <div class="row">
+                    <div class="mb-3 col-md-12">
                         <input type="text" class="form-control" name="fullname" id="fullname" placeholder="Full Name" onkeyup="contactFname()">
                         <span class="error-msg" id="contact-fname-error"></span>
                     </div>
-                    <div class="mb-3">
+                    <div class="mb-3 col-md-6">
                         <input type="email" class="form-control" name="email" id="email" placeholder="Email" onkeyup="contactEmail()">
                         <span class="error-msg" id="contact-email-error"></span>
                     </div>
-                    <div class="mb-3">
+                    <div class="mb-3 col-md-6">
                         <input type="text" class="form-control" name="phone" id="phone" placeholder="Phone Number" onkeyup="contactPhone()">
                         <span class="error-msg" id="contact-phone-error"></span>
                     </div>
                     <div class="mb-3">
-                        <textarea name="" class="form-control text-area" id="message" cols="50" rows="5" onkeyup="contactMessage()" placeholder="Type your message here"></textarea>
+                        <textarea name="" class="form-control text-area" id="message" cols="50" rows="4" onkeyup="contactMessage()" placeholder="Type your message here"></textarea>
                         <span class="error-msg" id="contact-message-error"></span>
                     </div>
                     <div class="">
@@ -90,6 +91,7 @@
                             </div>
                         </div>
                     </div>
+                </div>
                 </form>
             </div>
             <div class="col-md-6">

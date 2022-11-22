@@ -1175,9 +1175,9 @@ Responsive Codes
 }
 .form-header h5{
     font-weight: 700;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 26px;
-    color: #6B2976;
+    color: #e54e2e;
 }
 .form-header h2{
     font-weight: 700;
@@ -1188,36 +1188,36 @@ Responsive Codes
 .contactus-form .form-control{
     width: 100%;
     border: none;
-    border-bottom: 1px solid #6B2976;
+    border-bottom: 1px solid #202023;
     padding: 10px;
     font-size: 17px;
-    color: #6B2976;
+    color: #202023;
     margin-top: 12px;
     border-radius: 0;
 }
 .contactus-form .form-control:focus{
     box-shadow: none;
-    border-bottom: 1px solid #6B2976;
+    border-bottom: 1px solid #202023;
 }
 .contactus-form .text-area{
     margin-top: 30px;
-    border: 1px solid #6B2976;
+    border: 1px solid #202023;
 }
 
 .contactus-form input::-webkit-input-placeholder, .contactus-form textarea::-webkit-input-placeholder{
-    color: #6B2976;
+    color: #202023;
     font-size: 17px;
     line-height: 21px;
 }
 
 .contactus-form input:-moz-placeholder, .contactus-form textarea:-moz-placeholder{
-    color: #6B2976;
+    color: #202023;
     font-size: 17px;
     line-height: 21px;
 }
 .submit-btn{
-    background: #6B2976;
-    border: 1px solid #6B2976;
+    background: #202023;
+    border: 1px solid #202023;
     border-radius: 0px 9px 9px 9px;
     padding: 14px 40px;
     font-weight: 600;
@@ -1267,14 +1267,14 @@ Responsive Codes
     font-size: 36px;
     line-height: 36px;
     letter-spacing: 0.001em;
-    color: #6B2976;
+    color: #e54e2e;
     display: inline-block;
 }
 .referralform-top h1::after{
     content: '';
     margin-top: 8px;
     margin-bottom: 10px;
-    border-bottom: 5px solid #6B2976;
+    border-bottom: 5px solid #e54e2e;
     width: 100%;
     display: block;
 }
@@ -1324,17 +1324,20 @@ Responsive Codes
 }
 .referral-section .card input, .referral-section .card select, .working-dice-form select, .working-dice-form input{
     padding: 10px;
-    border: 2px solid #6B2976 !important;
+    border: 2px solid #202023 !important;
 }
 .referral-section .card input:focus, .referral-section .card select:focus, .referral-section .card textarea:focus,
-.working-dice-form select:focus, .working-dice-form input:focus{
+.working-dice-form select:focus, .working-dice-form input:focus, .working-dice-form textarea:focus{
     box-shadow: none;
 }
-.referral-section .card input::placeholder, .working-dice-form input::placeholder{
-    color: #6B2976 !important;
+.referral-section .card input::placeholder, .working-dice-form input::placeholder, .working-dice-form select{
+    color: #20202394 !important;
+}
+.working-dice-select{
+    color: #000000 !important;
 }
 .referral-section .textarea::placeholder, .working-dice-form .textarea::placeholder{
-    color: #6B2976 !important;
+    color: #20202394 !important;
 }
 .referral-section .card .gender-radio .form-check{
     padding-left: 0px;
@@ -1349,7 +1352,7 @@ Responsive Codes
     margin-bottom: 0;
 }
 .referral-section .form-select{
-    color: #6B2976!important;
+    color: #20202394!important;
 }
 .form-check .form-check-label{
     margin-left: 0.75rem;
@@ -1357,7 +1360,7 @@ Responsive Codes
 }
 .referral-section .next-button .next-submit{
     border:none;
-    background: #6B2976;
+    background: #202023;
     border-radius: 4px;
     font-size: 18px;
     color:#fff;
@@ -1367,7 +1370,7 @@ Responsive Codes
     width: 250px;
     height: 52px;
     border: none;
-    background: #6B2976;
+    background: #202023;
     border-radius: 4px;
     box-shadow: inset 0 0 0 0 #E54E2E;
     color: #FFFFFF;
@@ -1418,7 +1421,7 @@ Responsive Codes
     margin-bottom: 0;
     letter-spacing: 0.001em;
 
-    color: #6B2976;
+    color: #202023;
 }
 .fa-solid{
     color:  #202023;
@@ -2075,4 +2078,17 @@ Responsive Codes
 }
 .dice-inp-file{
     display: flex;
+}
+.dice-interest-areas{
+    margin: 15px 0;
+}
+.dice-interest-areas .form-check{
+    margin-bottom: 0.7rem;
+}
+.register-desc h2, .working-dice-content h2{
+    font-size: 34px;
+    line-height: 48px;
+}
+.register-desc {
+    margin-bottom: 1.6rem;
 }
