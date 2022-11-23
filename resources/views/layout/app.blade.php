@@ -166,7 +166,7 @@
 {{-- content section --}}
     @yield('content')
 
-    <section class="listen-icon" id="listen-icon">
+        <section class="listen-icon" id="listen-icon">
             <button class="listen" onclick="changeIcon(this)" id="show_hide_bt">
                 <div class="listen-img" id="listen-img">
                     <i id="volume-icon" class="fa-solid fa-volume-xmark"></i>

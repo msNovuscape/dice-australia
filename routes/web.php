@@ -28,6 +28,7 @@ use App\Http\Controllers\Admin\ServiceFaqController;
 use App\Http\Controllers\Admin\AddSectionController;
 use App\Http\Controllers\Admin\SeoTitleController;
 use App\Http\Controllers\Admin\TeamController;
+use App\Http\Controllers\Admin\ApplicantController;
 
 /*
 |--------------------------------------------------------------------------
@@ -231,6 +232,13 @@ Route::group(['middleware'=>['auth']],function (){
         Route::get('careers/{id}/edit',[CareerController::class,'edit']);
         Route::post('careers/{id}',[CareerController::class,'update']);
         Route::get('careers/{id}',[CareerController::class,'show']);
+
+        Route::get('applicants',[ApplicantController::class,'index']);
+        Route::get('applicants/create',[ApplicantController::class,'create']);
+        Route::post('applicants',[ApplicantController::class,'store']);
+        Route::get('applicants/{id}/edit',[ApplicantController::class,'edit']);
+        Route::post('applicants/{id}',[ApplicantController::class,'update']);
+        Route::get('applicants/{id}',[ApplicantController::class,'show']);
 
         Route::get('accomodations',[AccomodationController::class,'index']);
         Route::get('accomodations/create',[AccomodationController::class,'create']);

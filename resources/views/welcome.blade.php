@@ -7,10 +7,10 @@
 @endsection
 @section('content')
     <!-- Slider -->
-    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
             @foreach($sliders as $slider)
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="{{$loop->index}}" class="{{$loop->first ? 'active' : ''}}" aria-current="{{$loop->first ? 'true' : ''}}"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="{{$loop->index}}" class="{{$loop->first ? 'active' : ''}}" aria-current="{{$loop->first ? 'true' : ''}}"></button>
             @endforeach
         </div>
         <div class="carousel-inner">
@@ -43,7 +43,7 @@
             <div class="col-md-5">
                 <div class="ndis-left-desc">
                     <h1>Registered NDIS Provider</h1>
-                    <p>We are registered NDIS Service provider for people with disability.</p>
+                    <p>We are registered NDIS service provider for people with disability.</p>
                 </div>
                 <div class="ndis-love">
                     <a href="/ndis" class="ndis-view-btn">View More</a>
@@ -54,7 +54,7 @@
             <div class="col-md-6">
                 <div class="ndis-desc">
                     <h2>The National Insurance Disability Scheme (NDIS)</h2>
-                    <p>The NDIS offers financial assistance to eligible individuals with disabilities so they can spend more time with their loved ones, be more independent, have access to volunteering opportunities in their community and new skills, all of which improves their quality of life. We are a recognized NDIS Service Provider, assisting you or a loved one in requesting and acquiring optimum services for new or ongoing plans.</p>
+                    <p>The NDIS offers financial assistance to eligible individuals with disabilities so they can spend more time with their loved ones, be more independent, have access to volunteering opportunities in their community and new skills, all of which improves their quality of life. We are a recognized NDIS service provider, assisting you or a loved one in requesting and acquiring optimum services for new or ongoing plans.</p>
                 </div>
             </div>
         </div>
@@ -316,7 +316,7 @@
             <div class="col-md-12">
                 <div class="acknowledgement-desc">
                     <h1>Acknowledgement of Country</h1>
-                    <p>DICE recognise the rich Indigenous heritage of this country and acknowledge the Wurundjeri Willum Clan and the Gunung-Willam-Balluk people as the traditional owners of the land. We pay our respects to the people, the cultures and the elders past, present and emerging.We pay our respects to the people, the cultures and the elders past, present and emerging.</p>
+                    <p>DICE recognise the rich indigenous heritage of this country and acknowledge the Wurundjeri Willum Clan and the Gunung-Willam-Balluk people as the traditional owners of the land. We pay our respects to the people, the cultures and the elders past, present and emerging.</p>
                 </div>
             </div>
         </div>

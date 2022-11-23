@@ -170,6 +170,15 @@
                         </a>
                     </li>
 
+                    <li class="nav-item">
+                        <a href="{{url('admin/applicants')}}" class="nav-link">
+                            <i class="fa-solid fa-user-group"></i>
+                            <p>
+                                Applicants
+                            </p>
+                        </a>
+                    </li>
+
                     <!-- <li class="nav-item">
                         <a href="{{url('admin/seo_titles')}}" class="nav-link {{(Request::segment(2) == 'departments') ? 'active' : ''}}">
                             <i class="fa-solid fa-magnifying-glass"></i>

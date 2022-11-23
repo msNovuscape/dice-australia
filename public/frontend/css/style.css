@@ -2103,3 +2103,8 @@ Responsive Codes
 .register-desc {
     margin-bottom: 1.6rem;
 }
+
+
+.service-first-img img, .service-second-img img{
+    border-radius: 6px;
+}

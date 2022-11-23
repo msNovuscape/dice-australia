@@ -175,7 +175,7 @@
             start_loader();
             $.ajax({
 
-                url: "/contact_mail",
+                url: "{{url('/contact_mail')}}",
                 type:"POST",
                 data:{
                     fullname:fullname,

@@ -178,7 +178,6 @@ class ServiceSectionController extends Controller
      */
     public function update(Request $request, $id, $secId)
     {
-        
         $this->validate(\request(),[
             'title' => 'required',
             'status' => 'required',
@@ -211,28 +210,50 @@ class ServiceSectionController extends Controller
           
 
             if($points[0] != null){
-                $service_point = $service_section->service_section_point();
-                // $service_point->delete();
-            foreach($points as $key => $point){
-
+               foreach($request['point_ids'] as $key => $pid){
                 $service_section_point = new ServiceSectionPoint();
-                $service_section_point->service_section_id = $service_section->id;
-                if(array_key_exists($key,$point_descriptions)){
-                $service_section_point->point_description = $point_descriptions[$key];
-                }
-                if(array_key_exists($key,$icons)){
-                $extension = $icons[$key]->getClientOriginalExtension();
-                $image_folder_type = array_search('service',config('custom.image_folders')); //for image saved in folder
-            
-                $count = rand(100,999);
-            
-                $out_put_path = User::save_image($icons[$key],$extension,$count,$image_folder_type);
-                is_array($out_put_path) ? $service_section_point->icon = $out_put_path[0] : $service_section_point->icon = $out_put_path;
-                // $service_section_point->icon = $points_descriptions[$key];
+                $service_section_point = $service_section_point->findorfail($pid);
+                // $service_section_point =  ServiceSectionPoint::find($id);
+
+                    if(array_key_exists($key,$point_descriptions)){
+                         $service_section_point->point_description = $point_descriptions[$key];
+                    }
+                    if(array_key_exists($key,$icons)){
+                        $extension = $icons[$key]->getClientOriginalExtension();
+                        $image_folder_type = array_search('service',config('custom.image_folders')); //for image saved in folder
+                    
+                        $count = rand(100,999);
+                    
+                        $out_put_path = User::save_image($icons[$key],$extension,$count,$image_folder_type);
+                        is_array($out_put_path) ? $service_section_point->icon = $out_put_path[0] : $service_section_point->icon = $out_put_path;
+                         // $service_section_point->icon = $points_descriptions[$key];
+                    }
+                   $service_section_point->point = $points[$key];
+                   $service_section_point->update();
+
                }
-                $service_section_point->point = $point;
-                $service_section_point->save();
-            }
+                // $service_point = $service_section->service_section_point();
+                // $service_point->delete();
+            // foreach($points as $key => $point){
+
+            //     $service_section_point = new ServiceSectionPoint();
+            //     $service_section_point->service_section_id = $service_section->id;
+            //     if(array_key_exists($key,$point_descriptions)){
+            //     $service_section_point->point_description = $point_descriptions[$key];
+            //     }
+            //     if(array_key_exists($key,$icons)){
+            //     $extension = $icons[$key]->getClientOriginalExtension();
+            //     $image_folder_type = array_search('service',config('custom.image_folders')); //for image saved in folder
+            
+            //     $count = rand(100,999);
+            
+            //     $out_put_path = User::save_image($icons[$key],$extension,$count,$image_folder_type);
+            //     is_array($out_put_path) ? $service_section_point->icon = $out_put_path[0] : $service_section_point->icon = $out_put_path;
+            //     // $service_section_point->icon = $points_descriptions[$key];
+            //    }
+            //     $service_section_point->point = $point;
+            //     $service_section_point->update();
+            // }
             }
             Session::flash('success','Service Section has been successfully updated!');
             return redirect('admin/services/'.$id.'/sections');

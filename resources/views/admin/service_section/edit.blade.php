@@ -99,6 +99,7 @@
                                                 <label for="">Service Section Points <span style="color: red">*</span></label>
                                                 <br>
                                                 @foreach($service_section->service_section_point as $section_point)
+                                                <input type = "hidden" name = "point_ids[]" value = "{{$section_point->id}}"/>
                                                     <div id="point_old{{$section_point->id}}" class="point1" >
                                                         <input type="text" class="point"  name="points[]" value="{{$section_point->point}}"  placeholder="points"> <br>
                                                         <label>Description</label><br>
