@@ -3,6 +3,9 @@
     <title>Working at DICE</title>
 @endsection
 @section('content')
+@php
+          $msg =Session::get('msg') ?? null; 
+        @endphp
     <section class="working-dice-section"> 
         <div class="row">
             <div class="col-md-6">
@@ -23,7 +26,8 @@
         </div>
     </section>
     <section class="working-dice-form">
-        <form class="form-row" id="dice-working" name = "register-form">
+        <form class="form-row" id="dice-working" name = "register-form" enctype="multipart/form-data" method = "post" action = "{{route('career')}}">
+            @csrf
             <div class="row">
                 <div class="col-md-12">
                     <div class="register-desc  text-center">
@@ -58,10 +62,11 @@
                 <div class="col-md-6">
                     <div class="form-group">
                         <label for="input-first-name">State</label>
-                        <select class="form-select form-control" aria-label="Default select example" onclick="validateRegState()" id="regState" name = "test">
-                            <option hidden="" value="">Participant have a current NDIS plan or access to funding?</option>
-                            <option value="1" class="working-dice-select" >Test one state</option>
-                            <option value = "2" class="working-dice-select">Test two state</option>
+                        <select class="form-select form-control" aria-label="Default select example" onclick="validateRegState()" id="regState" name = "state">
+                            <option hidden="" value="">Select state</option>
+                            @foreach(config('custom.states') as $in => $val)
+                                <option value="{{$in}}" {{(old('state')==$in) ? 'selected':''}}>{{$val}}</option>
+                            @endforeach
                         </select>
                         <div id="reg-state-error" class="error"></div>
                     </span>
@@ -85,7 +90,7 @@
                 <div class="col-md-12">
                     <h4>Anything Else to Share?</h4>
                     <div class="form-group">
-                        <textarea class="form-control textarea" name="services_details" placeholder="Is there anyhting you need to share with us?" rows="5" cols="50" id="reginquiry" onkeyup="validateRegEnquiry()">{{old('details_services')}}</textarea>
+                        <textarea class="form-control textarea" name="message" placeholder="Is there anyhting you need to share with us?" rows="5" cols="50" id="reginquiry" onkeyup="validateRegEnquiry()">{{old('message')}}</textarea>
                         <span id="reg-inquiry-error" class="error"></span>
                     </div>
                 </div>
@@ -103,9 +108,9 @@
                     <p>You can upload your current CV and we will contact you with any new opportunities.</p>
                 </div>
                 <div class="col-md-6">
-                    <div class="gender-checkbox" onclick="validategender()">
+                    <div class="gender-checkbox">
                         <div class="form-check">
-                            <input class="form-check-input gender" type="radio" name="gender" value="1" {{(old('gender')=='1') ? 'checked':''}} id="gender">
+                            <input class="form-check-input gender" type="radio" name="is_in_mailing_list" value="1" {{(old('is_in_mailing_list')=='1') ? 'checked':''}} id="is_in_mailing_list">
                             <label class="form-check-label">
                                 Join our mailing list to receive further updates and local job opportunities.
                             </label>
@@ -114,7 +119,7 @@
                 </div>
                 <div class="col-md-12">
                     <div class="text-center">
-                        <button type="submit" onclick = "return validateRegisterForm()"  class="next-submit">SEND NOW</button>
+                        <button type="submit" onclick = "validateRegisterForm()"  class="next-submit">SEND NOW</button>
                     </div>
                 </div>
             </div>
@@ -122,7 +127,22 @@
     </section>
 @endsection
 @section('script')
+
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script>
+
+
+var php_var = "<?php echo $msg; ?>";
+        if(php_var.length !== 0){
+              Swal.fire({
+                  title: 'Submitted!!',
+                  text: php_var,
+                  icon: 'success'
+              })
+        }
+
+
         var fullnameError = document.getElementById('reg-fname-error');
         var phoneError = document.getElementById('reg-phone-error');
         var emailError = document.getElementById('reg-email-error');
@@ -245,9 +265,9 @@
             if(!validateRegFname() || !validateRegPhone() || !validateRegEmail() || !validateRegState() ||
             !validateRegServices() || !validateRegEnquiry() || !validateRegCV()){
                 return false;
-                console.log('true')
+                
             }else{
-                return true;
+                document.register-form.submit();
             }
         }
     </script>

@@ -151,7 +151,7 @@
             <a class="nav-link" href="{{url('/referral')}}">Make a Referral</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="{{url('/working-dice')}}">Working at DICE </a>
+            <a class="nav-link" href="{{url('/career')}}">Working at DICE </a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="{{url('/contact')}}">Contact us </a>

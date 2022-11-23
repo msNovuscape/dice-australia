@@ -63,6 +63,7 @@ class ReferralController extends Controller
 
     }
     dispatch(function() use ($referral,$services) {
+
     $pdf = PDF::loadView('referral_mail',array(
 
         'referral_id' => $referral->id,
@@ -167,7 +168,7 @@ class ReferralController extends Controller
        });
     });
 
-       return redirect()->back()->with(['msg' => 'Successfully submitted.']);
+    return redirect()->back()->with(['msg' => 'Successfully submitted.']);
 
 }
 

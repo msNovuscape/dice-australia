@@ -15,6 +15,17 @@ return [
         '2'=>'Notice',
         
     ],
+    'states' =>[
+        '1'=> 'Queensland',
+        '2'=> 'South Australia',
+        '3' => 'Tasmania',
+        '4' => 'Victoria',
+        '5' => 'Western Australia',
+        '6' => 'Northern Territory',
+        '7' => 'Australian Capital Territory',
+        '8' => 'New South Wales'
+        
+    ],
     'testimonial_types'=>[
         '1'=>'Service',
         '2'=>'Academy',
@@ -34,7 +45,7 @@ return [
         '8'=>'ndis_plan',
         '9' => 'testimonial',
         '10' => 'accomodation',
-        '11'=>'add_section',
+        '11'=>'applicant',
         '12'=>'ndis_pricing'
 
     ],

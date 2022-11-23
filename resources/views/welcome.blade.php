@@ -84,7 +84,7 @@
                     @if($loop->iteration == 5)
                     @php $class = '-fixth'; @endphp
                 @endif
-                <a href="/service/{{$service->slug}}" class="service-card{{$class}}">
+                <a href="{{url('/service/'.$service->slug)}}" class="service-card{{$class}}">
                     <div>
                         <div class="service-head mb-4">
                             <div class="service-icon">

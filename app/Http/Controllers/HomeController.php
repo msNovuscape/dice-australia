@@ -10,10 +10,10 @@ use App\Models\Gallery;
 use App\Models\Slider;
 use App\Models\Contact;
 use App\Models\Setting;
-use App\Models\Career;
+use App\Models\Applicant;
 use App\Models\NdisPricing;
 use App\Models\Subscription;
-use App\Models\SupportCoordination;
+use App\Models\ApplicantService;
 use App\Models\Testimonial;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -122,6 +122,78 @@ class HomeController extends Controller
         return response()->json(['success' => 'Thank you for your interest. We will get back to you soon.','status' =>'Ok'],200);
 
     }
+
+    public function save_career(Request $request){
+      
+        $applicant = new Applicant();
+        $subject = 'Career Enquiry';
+      
+        // $name = ($request['firstname'] != null) ? ($request['firstname'].' '.$request['lastname']) : $request['fullname'] ;
+        $name = $request['name'];
+        $applicant->name = $name;
+        $applicant->email = $request['email'];
+        $applicant->phone = $request['phone'];
+        $applicant->message = $request['message'];
+        $applicant->state = $request['state'];
+        $applicant->is_in_mailing_list = $request['is_in_mailing_list'];
+
+        if($request->hasFile('file')){
+            $extension = \request()->file('file')->getClientOriginalExtension();
+            $image_folder_type = array_search('applicant',config('custom.image_folders')); //for image saved in folder
+            $count = rand(100,999);
+            $out_put_path = User::save_image(\request('file'),$extension,$count,$image_folder_type);
+         
+            is_array($out_put_path) ? $applicant->resume = $out_put_path[0] : $applicant->resume = $out_put_path;
+        }
+        if($applicant->save()){
+            $services = $request['services'];
+            if(!is_null($services)){
+                foreach($services as $service){
+                    $applicant_service = new ApplicantService();
+                    $applicant_service->applicant_id = $applicant->id;
+                    $applicant_service->service_id = $service;
+                    $applicant_service->save();
+                }
+            }
+        }
+       
+ 
+       dispatch(function() use ($subject, $applicant ,$services) {
+         \Mail::send('career_mail', array(
+ 
+             'name' =>$applicant->name,
+ 
+             'email' =>$applicant->email,
+ 
+             'phone' =>$applicant->phone,
+ 
+             'message' =>$applicant->message,
+
+             'state' =>$applicant->state,
+
+             'services' =>$services,
+ 
+             'subject' =>$subject ,
+ 
+ 
+            ), function($message) use ($subject,$applicant){
+             // $subject=($service!= '') ? 'Enquiry for '.$service : 'Contact/Feedback';
+             $message->subject($subject);
+             if($applicant->resume != ''){
+                $resume = url($applicant->resume);
+                $message->attach($resume);
+              }
+             // $message->to('info@agilityhomecare.com.au', 'AgilityHomeCare')->subject($subject);
+             $message->to('mahesh@extratechs.com.au', 'Extratech')->subject($subject);
+             $message->cc('extratechweb@gmail.com', 'Extratech')->subject($subject);
+ 
+ 
+            });
+         });
+ 
+         return redirect()->back()->with(['msg' => 'Successfully submitted.']);
+ 
+     }
 
     public function testimonials(){
         $testimonials = Testimonial::where('status',1)->get();

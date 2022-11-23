@@ -41,6 +41,7 @@
                             <h2>{{$second_service->title}}</h2>
                             <h5>{{$second_service->sub_title}}</h5>
                             <p>{!!strip_tags($second_service->description)!!}</p>
+                            <p>{!!strip_tags($second_service->sub_description)!!}</p>
                         </div>
                     </div>
                 </div>
