@@ -160,20 +160,21 @@ class HomeController extends Controller
  
        dispatch(function() use ($subject, $applicant ,$services) {
          \Mail::send('career_mail', array(
- 
-             'name' =>$applicant->name,
- 
-             'email' =>$applicant->email,
- 
-             'phone' =>$applicant->phone,
- 
-             'message' =>$applicant->message,
+             
+            'name' => $applicant->first()->name,
+             
+            'email' => $applicant->first()->email,
 
-             'state' =>$applicant->state,
+            'phone' => $applicant->first()->phone,
 
-             'services' =>$services,
- 
-             'subject' =>$subject ,
+            'message_details' => $applicant->first()->message,
+
+            'state' => $applicant->first()->state,
+
+            'subject' =>$subject ,
+
+
+            'services' =>$services ,
  
  
             ), function($message) use ($subject,$applicant){

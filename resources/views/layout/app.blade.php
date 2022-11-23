@@ -165,6 +165,18 @@
 
 {{-- content section --}}
     @yield('content')
+
+    <section class="listen-icon" id="listen-icon">
+            <button class="listen" onclick="changeIcon(this)" id="show_hide_bt">
+                <div class="listen-img" id="listen-img">
+                    <i id="volume-icon" class="fa-solid fa-volume-xmark"></i>
+                </div>
+                <div class="listen-text">
+                    Mute
+                </div>
+            </button>
+        </section>
+
 {{--  content section --}}
 <!-- footer section -->
 <section class='footer'>
@@ -244,7 +256,15 @@
 <!-- hamburger link -->
 <script type="text/javascript" src="{{url('frontend/js/index.js')}}"></script>
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script id = "audio_js" src="https://code.responsivevoice.org/responsivevoice.js?key=gqRRrSwU"></script>
 <script>
+
+var scrollicon = document.getElementById('listen-icon')
+        window.onscroll= function(){
+            if(window.scrollY > 600){
+                scrollicon.style.display="block"
+            }
+        }
         
         var topfnameError = document.getElementById('app-fname-error')
         var toplnameError = document.getElementById('app-lname-error')
@@ -371,6 +391,32 @@
                 });
             }
             });
+
+            function changeIcon(button) {
+            var text = $(button).text().trim();
+            if ($(button).text().trim() == 'Listen') {
+                
+                $(button).html('<div class="listen-img" id="listen-img"> <i id="volume-icon" class="fa-solid fa-volume-xmark"></i> </div> <div class="listen-text">Mute </div>');
+                responsiveVoice = new ResponsiveVoice;
+                            responsiveVoice.init();
+                            responsiveVoice.resume();
+                
+
+                
+
+                
+            }
+            else {
+                $(button).html('<div class="listen-img" id="listen-img"> <i id="volume-icon" class="fa-solid fa-volume-high fa-xl"></i> </div> <div class="listen-text" id="showhide">Listen </div>');
+
+                
+                    responsiveVoice.pause();
+              
+                    responsiveVoice = null;
+                // element = document.getElementById('audio_js');
+                // element.remove();
+            }
+        }
 </script>
 @yield('script')
 </body>

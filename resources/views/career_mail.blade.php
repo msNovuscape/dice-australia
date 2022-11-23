@@ -18,7 +18,7 @@
         <b>Email:</b> {{ $email }}<br /><br />
         <b>Phone:</b> {{$phone}}<br /><br />
         <b>State:</b>{{config('custom.states')[$state]}}
-        <b>Message:</b> {{ $message }}<br /><br />
+        <b>Message:</b> {{ $message_details }}<br /><br />
 
         @if($services != null)
           <div class="column-one" style = "display:block; width:100%;">
