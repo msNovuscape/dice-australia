@@ -83,12 +83,12 @@
                     <div class="modal-content">
                         <div class="modal-header enquiry-header">
                             <h5 class="modal-title" id="exampleModalLabel">Quick Enquiry</h5>
-                            <!-- <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button> -->
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> 
                         </div>
-                        <div class="modal-body modal-detail">
+                        <div class="modal-body modal-detail enquiry-detail">
                         <form id="enquiry_form">
                                 <div class="row">
-                                    <div class="col-md-6 mb-3">
+                                    <div class="col-md-6 mb-1">
                                         <input type="text" class="form-control" id="app-fname" name="fname" placeholder="First Name" value="" onkeyup="validatetopfname()">
                                         <span class="error-msg" id="app-fname-error"></span>
                                     </div>
@@ -100,11 +100,11 @@
                                         <input type="email" class="form-control" id="app-email" placeholder="Email" name="email" value="" onkeyup="validatetopemail()">
                                         <span class="error-msg" id="app-email-error"></span>
                                     </div>
-                                    <div class="col-md-6 mb-3">
+                                    <div class="col-md-6 mb-1">
                                         <input type="number" class="form-control" id="app-phone" placeholder="Phone" name="phone" value="" onkeyup="validatetopPhone()">
                                         <span class="error-msg" id="app-phone-error"></span>
                                     </div>
-                                    <div class="col-md-12 mb-3">
+                                    <div class="col-md-12 mb-1">
                                         <textarea type="text" class="form-control" id="app-message" placeholder="Let us know how can we help" name="app-message" value="" onkeyup="validatetopmessage()"></textarea>
                                         <span class="error-msg" id="app-message-error"></span>
                                     </div>

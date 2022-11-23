@@ -214,10 +214,70 @@ Responsive Codes
 }
 
 /* new nav */
+/* listen icon css */
+.listen{
+    width: 80px;
+    height: 60px;
+    background:#e54e2e;
+    border-radius: 0 10px 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+}
+.listen-img{
+    background: #e54e2e;
+    width: 36%;
+    height: 100%;
+    padding: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.listen-img .fa-solid{
+    color: #FFFFFF;
+}
+.listen-icon{
+    display: none;
+    position: fixed;
+    top: 30%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    z-index: 999;
+}
+.listen-text{
+    padding: 0 8px;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    font-size: 18px;
+}
+
 /* bootstrap modal */
 .enquiry-header{
     background: #ffe0da;
-    display: block;
+    display: flex;
+}
+.enquiry-header .btn-close{
+    color: #333345;
+}
+.enquiry-detail input, .enquiry-detail textarea{
+    border: 2px solid #202023 !important;
+}
+.enquiry-detail input::-webkit-input-placeholder, .enquiry-detail textarea::-webkit-input-placeholder{
+    color: #202023;
+    font-size: 17px;
+    line-height: 21px;
+}
+.enquiry-detail .modal-footer{
+    border-top: 0;
+}
+/* sweet alert css */
+.swal2-styled.swal2-confirm {
+    background-color: #e54e2e;
 }
 .modal-title{
     font-weight: 700;
@@ -1687,6 +1747,27 @@ Responsive Codes
     } */
 }
 @media only screen and (min-width: 320px) and (max-width: 480px) {
+
+    /* listen icon css */
+    .listen {
+        width: 32px;
+        height: 100px;
+        background: #DD6227;
+        border-radius: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        flex-direction: column;
+    }
+    .listen-img {
+        background: none;
+        width: 100%;
+        height: 70%;
+    }
+    .listen-text {
+        font-size: 10px;
+    }
     #topbar {
         padding: 10px 0;
     }
