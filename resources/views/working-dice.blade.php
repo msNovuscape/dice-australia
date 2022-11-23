@@ -10,7 +10,8 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="working-dice-content">
-                    <h2>Become a Part of Our Family and Help Us Change Lives.</h2>
+                    <h2>Working at DICE</h2>
+                    <h5>Become a Part of Our Family and Help Us Change Lives.</h5>
                     <h5>If you are interested in supporting people with disabilities, there are several ways to do so.</h5>
                     <p>DICE is looking for individuals who love life and are passionate about helping others. We value diversity and offer very flexible schedules. At DICE, we respect, embrace, and support our carers.
                         <br><br>
@@ -20,7 +21,7 @@
             </div>
             <div class="col-md-6">
                 <div class="working-dice-img">
-                    <img src="{{url('frontend/images/ndis.png')}}" class="w-100" alt="">
+                    <img src="{{url('frontend/images/Working at dice.png')}}" class="w-100" alt="">
                 </div>
             </div>
         </div>

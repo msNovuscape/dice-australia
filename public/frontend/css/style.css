@@ -1473,7 +1473,13 @@ Responsive Codes
     padding: 3rem 6rem;
 }
 .service-first-content-section{
-    background: #f6f5f2;
+    background: #fff8f6;
+}
+.service-first-img{
+    padding-right:3.5rem;
+}
+.service-second-img, .working-dice-img{
+    padding-left: 3.5rem;
 }
 .service-slider-section .row, .service-first-content-section .row, .service-second-content-section .row{
     display: flex;
@@ -1535,8 +1541,8 @@ Responsive Codes
     color: #221415;
 }
 .support-section{
-    padding: 6rem;
-    background: #F0EFFD;
+    padding: 4rem 6rem;
+    background: #FFF0EB;
 }
 .support-desc h1{
     font-weight: 700;
@@ -1544,7 +1550,7 @@ Responsive Codes
     line-height: 55px;
     text-align: center;
     letter-spacing: 0.001em;
-    color: #6B2976;
+    color: #202023;
 }
 .support-desc p{
     font-weight: 700;
@@ -1552,7 +1558,7 @@ Responsive Codes
     line-height: 2rem;
     margin: 0 20%;
     text-align: center;
-    color: #000000;
+    color: #202023;
     margin-bottom: 30px;
  }
  /* .services{
@@ -1562,13 +1568,13 @@ Responsive Codes
      border-radius: 12px;
  } */
 .support-service-card{
-    background: #6B2976;
+    background: #ffffff;
     box-shadow: 0px 18px 25px rgba(32, 31, 30, 0.04);
     border-radius: 12px;
     padding: 20px;
     text-decoration: none;
     position: relative;
-    min-height: 24pc;
+    min-height: 21pc;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -1577,21 +1583,21 @@ Responsive Codes
 .support-service-card h1{
     font-weight: 700;
     font-size: 20px;
-    line-height: 34px;
+    line-height: 32px;
     letter-spacing: 0.001em;
-    color: #FFFFFF;
+    color: #202023;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 .support-service-card p{
     font-weight: 500;
     font-size: 16px;
     line-height: 2rem;
-    color: #FFFFFF;
+    color: #202023;
     text-align: center;
 }
 .support-service-icon{
-    background: #FFFFFF;
+    background: #FFF0EB;
     border-radius: 50%;
     width: 100px;
     height: 100px;
