@@ -119,7 +119,7 @@
                 </div>
                 <div class="col-md-12">
                     <div class="text-center">
-                        <button type="submit" onclick = "validateRegisterForm()"  class="next-submit">SEND NOW</button>
+                        <button type="submit" onclick = "return validateRegisterForm()"  class="next-submit">SEND NOW</button>
                     </div>
                 </div>
             </div>

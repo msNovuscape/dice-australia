@@ -73,7 +73,7 @@ h4{
     justify-content: center;
     align-items: center;
     text-align: center;
-    gap: 1.7rem;
+    gap: 1rem;
     text-decoration: none;
     padding: 0 0.8rem !important;
     list-style: none;
@@ -1012,11 +1012,11 @@ Responsive Codes
     display: flex;
     align-items: center;
 }
-.about-page-image{
+/* .about-page-image{
     padding: 0 50px;
     width: 600px;
     float: right;
-}
+} */
 .about-page-desc h5{
     font-weight: 600;
     font-size: 20px;
@@ -1506,13 +1506,13 @@ Responsive Codes
     line-height: 1.6rem;
     margin-bottom: 25px;
 }
-.service-first-img, .working-dice-img{
+/* .service-first-img, .working-dice-img{
     width: 600px;
-}
-.service-second-img{
+} */
+/* .service-second-img{
     width: 600px;
     float: right;
-}
+} */
 .second-content-desc ul {
     padding-left: 20px;
     margin-top: 5px;
@@ -1623,9 +1623,9 @@ Responsive Codes
     display: flex;
     align-items: center;
 }
-.ndis-scheme-img, .ndis-run-img, .ndis-finance-img{
+/* .ndis-scheme-img, .ndis-run-img, .ndis-finance-img{
     width: 600px;
-}
+} */
 .ndis-scheme-content h4, .ndis-finance-content h4{
     font-weight: 700;
     font-size: 32px;
@@ -1644,23 +1644,23 @@ Responsive Codes
         justify-content: center;
         align-items: center;
         text-align: center;
-        gap: 4rem;
+        gap: 3rem;
         text-decoration: none;
         padding: 0 0.8rem !important;
         list-style: none;
     }
-    .about-page-image, .about-team-image, .pricing-image, .working-dice-img{
+    /* .about-page-image, .about-team-image, .pricing-image, .working-dice-img{
         width: 700px;
         padding: 0 70px 0 0;
-    }
-    .about-image, .ndis-run-img, .ndis-finance-img{
+    } */
+    /* .about-image, .ndis-run-img, .ndis-finance-img{
         width: 700px;
         padding: 0 0 0 70px;
     }
     .ndis-scheme-img{
         width: 800px;
         padding: 0 0 0 70px;
-    }
+    } */
     .gallery-slider .slick-center img{
         height: 630px !important;
     }
@@ -1670,7 +1670,7 @@ Responsive Codes
     .gallery-slider .slick-center{
         width: 580px !important;
     }
-    .service-first-img{
+    /* .service-first-img{
         width: 780px;
         padding: 0 0 0 80px;
     }
@@ -1678,7 +1678,7 @@ Responsive Codes
         width: 780px;
         padding: 0 80 0 0;
         float: right;
-    }
+    } */
 }
 @media only screen and (min-width: 320px) and (max-width: 480px) {
     #topbar {
@@ -2066,7 +2066,6 @@ Responsive Codes
         width: 100%;
     }
     .about-page-image, .about-team-image {
-        padding: 0 280px;
         width: 100%;
     }
 }
