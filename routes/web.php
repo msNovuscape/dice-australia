@@ -238,7 +238,7 @@ Route::group(['middleware'=>['auth']],function (){
         Route::post('applicants',[ApplicantController::class,'store']);
         Route::get('applicants/{id}/edit',[ApplicantController::class,'edit']);
         Route::post('applicants/{id}',[ApplicantController::class,'update']);
-        Route::get('applicants/{id}',[ApplicantController::class,'show']);
+        Route::get('applicants/{id}/view',[ApplicantController::class,'show']);
 
         Route::get('accomodations',[AccomodationController::class,'index']);
         Route::get('accomodations/create',[AccomodationController::class,'create']);

@@ -85,7 +85,7 @@
                                         <p id = "success"></p>
                                     </div>
                                     <div class="modal-footer submit-footer-modal">
-                                        <a type="button" class="submit-close-btn" href="/contact">Close</a>
+                                        <a type="button" class="submit-close-btn" href="{{url('/contact')}}">Close</a>
                                     </div>
                                 </div>
                             </div>

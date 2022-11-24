@@ -46,7 +46,7 @@
                                                 </li>
                                                 <li class="d-flex">
                                                     <span>State:</span>
-                                                    <span>{{{config('custom.states')[$state]}}</span>
+                                                    <span>{{config('custom.states')[$applicants->state]}}</span>
                                                 </li>
                                             </ul>
                                         </div>
@@ -69,41 +69,20 @@
                                             </ul>
                                         </div>
 
-                                        @if($applicants->is_ndis == '1')
-                                        <div class="col-md-12 mt-4" >
-                                            <label for="service_name" style="font-weight: bold; font-size: 20px; color: #DD6227">NDIS Details</label></br>
-                                            <ul class="contact-info">
-                                                <li class="d-flex">
-                                                    <span>NDIS Number:</span>
-                                                    <span>{{$applicants->ndis_number}}</span>
-                                                </li>
-                                                <li class="d-flex">
-                                                    <span>NDIS Expiry Date:</span>
-                                                    <span>{{$applicants->ndis_expiry_date}}</span>
-                                                </li>
-                                                <li class="d-flex">
-                                                    <span>NDIS Plan:</span>
-                                                    <span>{{config('custom.ndis_plan')[$applicants->ndis_plan]}}</span>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        @endif
-
                                         <div class="col-md-12 mt-4">
                                             <label for="service_name" style="font-weight: bold; font-size: 20px; color: #DD6227">Service Details</label></br>
                                             <ul class="contact-info">
                                                 <li class="d-flex">
                                                     <span>Sevices:</span>
                                                     <span>
-                                                        @foreach($applicants->referral_services as $service)
-
+                                                        @foreach($applicants->applicant_service as $service)
                                                             {{App\Models\Service::find($service->service_id)->name}}<br />
                                                         @endforeach
                                                     </span>
                                                 </li>
                                                 <li class="d-flex">
-                                                    <span>Details: </span>
-                                                    <span>{{$referral->services_details}}</span>
+                                                    <span>Message: </span>
+                                                    <span>{{$applicants->message}}</span>
                                                 </li>
                                             </ul>
                                         </div>
