@@ -23,9 +23,9 @@
         @if($services != null)
           <div class="column-one" style = "display:block; width:100%;">
            
-            <b>Interested Services:</b><br/>
-            @foreach($services as $service)
-            {{App\Models\Service::find($service)->name}}<br />
+            <b>Interested Areas:</b><br/>
+            @foreach($services as $id => $service)
+            {{config('custom.career_areas')[$service]}}<br />
             @endforeach
           </div>
 	      @endif

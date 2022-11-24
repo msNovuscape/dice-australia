@@ -18,13 +18,6 @@ class ApplicantController extends Controller
        return view($this->view.'index',compact('settings'));
     }
 
-
-
-
-
-    
-
-    
     public function show($id){
        
         $applicants = Applicant::findorfail($id);

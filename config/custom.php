@@ -26,10 +26,14 @@ return [
         '8' => 'New South Wales'
         
     ],
-    'testimonial_types'=>[
-        '1'=>'Service',
-        '2'=>'Academy',
+    'career_areas' => [
+        
+        '1' => 'Support Workers',
+        '2' => 'Support Coordination',
+        '3' => 'Plan Management',
+        '4' => 'Administration and Management'
     ],
+
     'faqs_types' =>[
         '1' => 'Service',
         '2' => 'Academy'

@@ -145,8 +145,9 @@ class HomeController extends Controller
          
             is_array($out_put_path) ? $applicant->resume = $out_put_path[0] : $applicant->resume = $out_put_path;
         }
+        
         if($applicant->save()){
-            $services = $request['services'];
+            $services = $request['career_areas'];
             if(!is_null($services)){
                 foreach($services as $service){
                     $applicant_service = new ApplicantService();
@@ -156,7 +157,6 @@ class HomeController extends Controller
                 }
             }
         }
-       
  
        dispatch(function() use ($subject, $applicant ,$services) {
          \Mail::send('career_mail', array(
@@ -173,9 +173,7 @@ class HomeController extends Controller
 
             'subject' =>$subject ,
 
-
             'services' =>$services ,
- 
  
             ), function($message) use ($subject,$applicant){
              // $subject=($service!= '') ? 'Enquiry for '.$service : 'Contact/Feedback';
@@ -186,7 +184,7 @@ class HomeController extends Controller
               }
              // $message->to('info@agilityhomecare.com.au', 'AgilityHomeCare')->subject($subject);
              $message->to('mahesh@extratechs.com.au', 'Extratech')->subject($subject);
-             $message->cc('extratechweb@gmail.com', 'Extratech')->subject($subject);
+            //  $message->cc('extratechweb@gmail.com', 'Extratech')->subject($subject);
  
  
             });

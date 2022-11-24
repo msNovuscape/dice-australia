@@ -20,7 +20,7 @@
                 <div class="card card-default">
                     <div class="card-header">
                         <h3 class="card-title">Applicant</h3>
-                        <a href="{{url('admin/referrals')}}" class="btn btn-green back-button active" role="button" aria-pressed="true">List</a>
+                        <a href="{{url('admin/applicants')}}" class="btn btn-green back-button active" role="button" aria-pressed="true">List</a>
                     </div>
                     <div class="card-body">
                         @include('success.success')
@@ -69,7 +69,13 @@
 
                                                 <li class="d-flex">
                                                     <span>Resume: </span>
-                                                    <span>{{url($applicants->resume)}}</span>
+                                                    <a target = "_blank" href="{{url($applicants->resume)}}" class="d-flex">
+                                                    <!-- <div class="profile-icon mr-2">
+                                                        <img src="{{url('admin/images/view-icon.png')}}" alt="">
+                                                    </div> -->
+                                                    <p>View Resume</p>
+                                                </a>
+                                                    <!-- <span>{{url($applicants->resume)}}</span> -->
                                                 </li>
                                             </ul>
                                         </div>
