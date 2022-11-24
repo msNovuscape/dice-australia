@@ -27,7 +27,7 @@ class ApplicantController extends Controller
     
     public function show($id){
        
-        $applicants=Applicant::findorfail($id);
+        $applicants = Applicant::findorfail($id);
         return view($this->view.'show',compact('applicants'));
 
     }

@@ -28,7 +28,7 @@
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="col-md-12">
-                                            <label for="service_name" style="font-weight: bold; font-size: 20px; color: #DD6227">Participant Details</label></br>
+                                            <label for="service_name" style="font-weight: bold; font-size: 20px; color: #DD6227">Applicant Details</label></br>
                                             <ul class="contact-info">
                                                 <li class="d-flex">
                                                     <span>Full Name:</span>
@@ -52,25 +52,7 @@
                                         </div>
 
                                         <div class="col-md-12 mt-4">
-                                            <label for="service_name" style="font-weight: bold; font-size: 20px; color: #DD6227">Participant Address</label></br>
-                                            <ul class="contact-info">
-                                                <li class="d-flex">
-                                                    <span>Suburb:</span>
-                                                    <span>{{$applicants->suburb}}</span>
-                                                </li>
-                                                <li class="d-flex">
-                                                    <span>State/Region:</span>
-                                                    <span>{{$applicants->state_name}}</span>
-                                                </li>
-                                                <li class="d-flex">
-                                                    <span>Postal Code:</span>
-                                                    <span>{{$applicants->postalcode}}</span>
-                                                </li>
-                                            </ul>
-                                        </div>
-
-                                        <div class="col-md-12 mt-4">
-                                            <label for="service_name" style="font-weight: bold; font-size: 20px; color: #DD6227">Service Details</label></br>
+                                            <label for="service_name" style="font-weight: bold; font-size: 20px; color: #DD6227">Interested Areas</label></br>
                                             <ul class="contact-info">
                                                 <li class="d-flex">
                                                     <span>Sevices:</span>
@@ -84,23 +66,15 @@
                                                     <span>Message: </span>
                                                     <span>{{$applicants->message}}</span>
                                                 </li>
+
+                                                <li class="d-flex">
+                                                    <span>Resume: </span>
+                                                    <span>{{url($applicants->resume)}}</span>
+                                                </li>
                                             </ul>
                                         </div>
 
-                                        <div class="col-md-12 mt-4">
-                                            <label for="service_name" style="font-weight: bold; font-size: 20px; color: #DD6227">Referrer Details</label></br>
-                                            <ul class="contact-info">
-                                                <li class="d-flex">
-                                                    <span>Referrer Full Name:</span>
-                                                    <span>{{$referral->referrer_full_name}}</span>
-                                                </li>
-                                                <li class="d-flex">
-                                                    <span>Referrer Contact Number:</span>
-                                                    <span>{{$referral->referrer_contact_no}}</span>
-                                                </li>
-                                             
-                                            </ul>
-                                        </div>
+                                        
                                     </div>
                                 </div>
    
