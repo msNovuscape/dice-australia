@@ -157,7 +157,7 @@
             <a class="nav-link" href="{{url('/contact')}}">Contact Us </a>
         </li>
     </ul>
-    <div class="mobile-navbar-btn">
+    <div class="mobile-navbar-btn ms-auto">
         <ion-icon name="menu-outline" class="mobile-nav-icon"></ion-icon>
         <ion-icon name="close-outline" class="mobile-nav-icon"></ion-icon>
     </div>

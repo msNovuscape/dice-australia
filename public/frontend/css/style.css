@@ -1799,7 +1799,9 @@ Responsive Codes
     } */
 }
 @media only screen and (min-width: 320px) and (max-width: 480px) {
-
+    .contact-info div:last-of-type{
+        margin-right: 0;
+    }
     /* listen icon css */
     .listen {
         width: 32px;
@@ -2201,9 +2203,6 @@ Responsive Codes
 
     .active .mobile-navbar-btn .mobile-nav-icon[name="menu-outline"] {
         display: none;
-    }
-    .pricing-image, .about-image{
-        width: 700px;
     }
     .ndis-scheme-img, .ndis-run-img, .ndis-finance-img{
         width: 100%;
