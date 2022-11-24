@@ -73,6 +73,7 @@
                         <span class="error-msg" id="contact-message-error"></span>
                     </div>
                     <div class="">
+                        <!-- Button trigger modal -->
                         <button type="submit" class="submit-btn">Submit</button>
                         <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered">

@@ -216,7 +216,7 @@ Responsive Codes
 /* new nav */
 /* listen icon css */
 .listen{
-    width: 80px;
+    width: 90px;
     height: 60px;
     background:#e54e2e;
     border-radius: 0 10px 10px 0;
@@ -227,7 +227,7 @@ Responsive Codes
 }
 .listen-img{
     background: #e54e2e;
-    width: 36%;
+    width: 20%;
     height: 100%;
     padding: 2px;
     display: flex;
@@ -247,7 +247,7 @@ Responsive Codes
     z-index: 999;
 }
 .listen-text{
-    padding: 0 8px;
+    padding: 0 5px;
     color: #FFFFFF;
     display: flex;
     justify-content: center;
@@ -316,8 +316,8 @@ Responsive Codes
 }
 .submit-close-btn{
     text-decoration: none;
-    background: #6B2976;
-    border: 2px solid #6B2976;
+    background: #e54e2e;
+    border: 2px solid #e54e2e;
     border-radius: 4px;
     font-weight: 500;
     font-size: 16px;

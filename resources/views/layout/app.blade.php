@@ -407,7 +407,7 @@ var scrollicon = document.getElementById('listen-icon')
                 
             }
             else {
-                $(button).html('<div class="listen-img" id="listen-img"> <i id="volume-icon" class="fa-solid fa-volume-high fa-xl"></i> </div> <div class="listen-text" id="showhide">Listen </div>');
+                $(button).html('<div class="listen-img" id="listen-img"> <i id="volume-icon" class="fa-solid fa-volume-high"></i> </div> <div class="listen-text" id="showhide">Listen </div>');
 
                 
                     responsiveVoice.pause();

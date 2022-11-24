@@ -102,21 +102,8 @@
                             <input type="file" name="file" onclick="validateRegCV()" id="regCV" multiple>
                             <br><span id="reg-cv-error" class="error"></span>
                         </div>
-                        <div>
-                            <p>Max. File size: 50 MB</p>
-                        </div>
                     </div>
                     <p>You can upload your current CV and we will contact you with any new opportunities.</p>
-                </div>
-                <div class="col-md-6">
-                    <div class="gender-checkbox">
-                        <div class="form-check">
-                            <input class="form-check-input gender" type="radio" name="is_in_mailing_list" value="1" {{(old('is_in_mailing_list')=='1') ? 'checked':''}} id="is_in_mailing_list">
-                            <label class="form-check-label">
-                                Join our mailing list to receive further updates and local job opportunities.
-                            </label>
-                        </div>
-                    </div>
                 </div>
                 <div class="col-md-12">
                     <div class="text-center">
@@ -227,7 +214,7 @@ var php_var = "<?php echo $msg; ?>";
                 return true;
             }else{
                 $('#regServices').focus();
-                servicesError.innerHTML = "Please select your gender!";
+                servicesError.innerHTML = "Please select any areas of interest !";
                 return false;
             }
         }
