@@ -127,7 +127,7 @@
 <!-- Top section -->
 <!-- Header section -->
 <header class="header">
-    <a class="navbar-brand" href="{{url('/')}}">
+    <a class="navbar-brand" id="navbar-brand" href="{{url('/')}}">
         <img src="{{url(\App\Models\Setting::where('slug','logo')->first()->value ?? '')}}" class="img-fluid logo"  alt="">
     </a>
     <ul class="nav nav-inner navbar-list ms-md-auto" id="navigation-links">
@@ -259,10 +259,18 @@
 <script id = "audio_js" src="https://code.responsivevoice.org/responsivevoice.js?key=gqRRrSwU"></script>
 <script>
 
-var scrollicon = document.getElementById('listen-icon')
+var scrollicon = document.getElementById('listen-icon');
+var diceLogo = document.getElementById('navbar-brand');
         window.onscroll= function(){
-            if(window.scrollY > 600){
-                scrollicon.style.display="block"
+            if(window.scrollY > 300){
+                scrollicon.style.display="block";
+                diceLogo.style.top="0px";
+                diceLogo.style.width="110px"
+
+            }
+            if(window.scrollY==0){
+                diceLogo.style.top="-45px";
+                diceLogo.style.width="124px"
             }
         }
         

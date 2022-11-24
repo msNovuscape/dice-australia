@@ -62,7 +62,7 @@ h4{
 }
 .navbar-brand{
     /* width:294px; */
-    width: 142px;
+    width: 124px;
     position: absolute;
     padding: 18px;
     background: #fff;
@@ -248,7 +248,7 @@ Responsive Codes
 .listen-icon{
     display: none;
     position: fixed;
-    top: 30%;
+    top: 60%;
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
