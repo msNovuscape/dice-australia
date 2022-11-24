@@ -1230,9 +1230,9 @@ Responsive Codes
 .contact-form-section{
     padding: 3rem 6rem;
 }
-.form-header{
+/* .form-header{
     margin-bottom: 30px;
-}
+} */
 .form-header h5{
     font-weight: 700;
     font-size: 16px;
@@ -1321,8 +1321,6 @@ Responsive Codes
     display: flex;
 }
 .referralform-top h1{
-    font-family: 'Poppins';
-    font-style: normal;
     font-weight: 700;
     font-size: 36px;
     line-height: 36px;
@@ -1670,15 +1668,17 @@ Responsive Codes
 }
 .ndis-top-section h2{
     font-weight: 700;
-    font-size: 35px;
+    font-size: 32px;
     line-height: 48px;
     text-align: center;
-    color: #6B2976;
+    letter-spacing: 0.01em;
+    color: #e54e2e;
 }
 .ndis-top-section p{
     font-weight: 500;
-    font-size: 24px;
+    font-size: 22px;
     line-height: 38px;
+    padding: 0 15%;
     text-align: center;
     color: #121212;
 }
@@ -1692,12 +1692,38 @@ Responsive Codes
 /* .ndis-scheme-img, .ndis-run-img, .ndis-finance-img{
     width: 600px;
 } */
+.ndis-top-section{
+    background: #F0EFFD;
+}
 .ndis-scheme-content h4, .ndis-finance-content h4{
     font-weight: 700;
     font-size: 32px;
     color: #000000;
     line-height: 42px;
     margin-bottom: 20px;
+}
+.ndis-scheme-content ul li{
+    list-style: none;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 33px;
+    letter-spacing: 0.001em;
+    color: #221415;
+}
+.ndis-scheme-content ul li::before{
+    content: "\f058";
+    color: #221415;
+    font-family: FontAwesome;
+    display: inline-block;
+    margin-right: 0.6em;
+    margin-left: -1.3em;
+    width: 1.3em;
+}
+.ndis-scheme-img{
+    padding-left: 3.5rem;
+}
+.ndis-run-img{
+    padding-right: 3.5rem;
 }
 .ndis-finance-section{
     padding: 3rem 6rem;
@@ -1836,7 +1862,7 @@ Responsive Codes
         padding: 0;
         width: auto;
     }
-    .pricing-section .row{
+    .pricing-section .row, .ndis-run-section .row{
         flex-direction:column-reverse;
     }
     .pricing-image{
@@ -1946,6 +1972,7 @@ Responsive Codes
     .contactus-header h1, .ndis-top-section p{
         font-size: 22px;
         line-height: 30px;
+        padding: 0;
     }
     .contactus-header p{
         display: none;

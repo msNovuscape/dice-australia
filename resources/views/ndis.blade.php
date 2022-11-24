@@ -6,39 +6,144 @@
 @endsection
 @section('content')
     <section class="ndis-top-section">
-        <h2>National Disability Insurance Scheme (NDIS) – Everything You Need to Know</h2>
-        <p>DICE is an accredited NDIS providers of disability support, offering outstanding, dependable, and customized NDIS care assistance for all our valued clients.</p>
+        {{-- <h2>National Disability Insurance Scheme (NDIS) – Everything You Need to Know</h2>
+        <p>DICE is an accredited NDIS providers of disability support, offering outstanding, dependable, and customized NDIS care assistance for all our valued clients.</p> --}}
+
+        <h2>Get NDIS with Confidence in 7 simple steps.</h2>
+        <p>Follow these easy steps to take control of your NDIS experience.</p>
     </section>
     <section class="ndis-scheme-section"> 
         <div class="row">
-            <div class="col-md-6">
-                <div class="ndis-scheme-img">
-                    <img src="{{url('frontend/images/ndis-logo.png')}}" alt="" class="w-100">
+            <div class="col-md-7">
+                <div class="ndis-scheme-content">
+                    <h4>Step 1: Prepare yourself</h4>
+                    <p>Find out how the NDIS works and what is expected of you.</p>
+                    <ul>
+                        <li>Check your eligibility first and apply directly on the NDIS website.</li>
+                        <li>Complete our NDIS preparation checklist to help you think about your life goals in preparation for your first planning meeting.</li>
+                        <li>To arrange a planning meeting, get in touch with your local area coordinator (LAC) (in person if possible).</li>
+                    </ul>
                 </div>
             </div>
-            <div class="col-md-6">
-                <div class="ndis-scheme-content">
-                    <h4>What is the NDIS?</h4>
-                    <p>Depending on their particular needs, the NDIS offers funding to qualified individuals. NDIS financing has the potential to alter the game for Australians who live with a disability by enabling access to programs that will help them build their skills and lead richer, more independent lives. 4.4 million Australians, or one in six of us, have a disability, according to figures from the federal government. Living with a disability can be costly in addition to the difficulties it might provide on a daily basis. The National Disability Insurance Scheme (NDIS) can be quite helpful in this situation.
-                        <br><br>
-                        The National Disability Insurance Scheme is a nationwide program that gives funding directly to people with disabilities. Created to assist individuals with disabilities in obtaining the assistance they need to develop their skills; NDIS aims to increase their independence over time. Each NDIS member has a personal plan that details their objectives and the financial support they have acquired. Participants in the NDIS spend their funds on services and supports that will aid them in achieving their objectives. Everyone has varied objectives, like obtaining and maintaining a job, establishing friends, or taking part in a nearby community engagement, and the NDIS helps them achieve these. Participants in the NDIS also have control over the help they get, when they receive it, and from whom.</p>
+            <div class="col-md-5">
+                <div class="ndis-scheme-img">
+                    <img src="{{url('frontend/images/ndis/1-min.png')}}" alt="" class="w-100">
                 </div>
             </div>
         </div>
     </section>
     <section class="ndis-run-section"> 
         <div class="row">
-            <div class="col-md-6">
-                <div class="ndis-scheme-content">
-                    <h4>How does the NDIS Operate?</h4>
-                    <p>Based on an individual situation, the NDIS can assist with financial assistance for functions such as daily personal care, transportation and mobility (such as wheelchairs), access to employment and school, housework, home and vehicle adaptations, and therapy support. Wheelchairs, speech pathology visits, and services for delivering nutritious meals are just a few examples of the things that the NDIS may pay for. The NDIS plan may finance one of three categories of NDIS "support budgets". First is the "core supports" budget that covers consumables (regular things like continence aids), inexpensive mobility aids like walking sticks, assistance with daily tasks like housecleaning and yard work, social and community involvement, and transportation. 
-                        <br><br>
-                        Second is the "capacity building" budget that covers assisting participants reach their goals in areas like employment, health, education, relationships, and living arrangements. Finally, third is the "capital support" budget that is used to pay for home improvements like installing a hand rail in the bathroom or a ramp into the house, as well as for assistive technologies like wheelchairs or vehicle adaptations.</p>
+            <div class="col-md-5">
+                <div class="ndis-run-img">
+                    <img src="{{url('frontend/images/ndis/2-min.png')}}" alt="" class="w-100">
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-7">
+                <div class="ndis-scheme-content">
+                    <h4>Step 2: Meeting with your NDIS planning team</h4>
+                    <p>Prepare for your planning meeting to ensure that the NDIS plan you get meets your goals and needs.</p>
+                    <ul>
+                        <li>Make sure to bring your checklist and supporting documents.</li>
+                        <li>Ask a friend or family member to accompany you. Having someone else, there may help you remember something that you forgot or missed.</li>
+                        <li>Make notes to reflect on the conversation from your meeting.</li>
+                        <li>Clearly state your needs and goals, so your LAC knows what you want in your plan.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="ndis-scheme-section"> 
+        <div class="row">
+            <div class="col-md-7">
+                <div class="ndis-scheme-content">
+                    <h4>Step 3: Know your plan.</h4>
+                    <p>When you receive your draft NDIS plan, you'll need to check the details and ensure the funds have been allocated correctly.</p>
+                    <ul>
+                        <li>Request for a review if it doesn’t meet your goals.</li>
+                        <li>Inform your service providers after receiving your plan.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div class="ndis-scheme-img">
+                    <img src="{{url('frontend/images/ndis/3-min.png')}}" alt="" class="w-100">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="ndis-run-section"> 
+        <div class="row">
+            <div class="col-md-5">
                 <div class="ndis-run-img">
-                    <img src="{{url('frontend/images/thinking.png')}}" alt="" class="w-100">
+                    <img src="{{url('frontend/images/ndis/4-min.png')}}" alt="" class="w-100">
+                </div>
+            </div>
+            <div class="col-md-7">
+                <div class="ndis-scheme-content">
+                    <h4>Step 4: Manage your NDIS funds</h4>
+                    <p>Throughout the period of your plan, it is your responsibility to monitor your spending and ensure that service providers are paid on time.</p>
+                    <ul>
+                        <li>With your plan manager, set up a service agreement that outlines the services you'll get and how they'll be provided.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="ndis-scheme-section"> 
+        <div class="row">
+            <div class="col-md-7">
+                <div class="ndis-scheme-content">
+                    <h4>Step 5: Arrange your supports</h4>
+                    <p>Choosing service providers match your needs, and the people you communicate with will motivate you to achieve your goals.</p>
+                    <ul>
+                        <li>If your plan includes support coordination, it’s time to pick your support coordinator.</li>
+                        <li>With your service provider, set up a service agreement and confirm their costs and the support they’ll be providing.</li>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div class="ndis-scheme-img">
+                    <img src="{{url('frontend/images/ndis/5-min.png')}}" alt="" class="w-100">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="ndis-run-section"> 
+        <div class="row">
+            <div class="col-md-5">
+                <div class="ndis-run-img">
+                    <img src="{{url('frontend/images/ndis/6-min.png')}}" alt="" class="w-100">
+                </div>
+            </div>
+            <div class="col-md-7">
+                <div class="ndis-scheme-content">
+                    <h4>Step 6: Monitor your plan</h4>
+                    <p>Planning and arranging your support are now completed, it's time to receive your support and begin using all the advantages they bring to your life.</p>
+                    <ul>
+                        <li>Make sure to keep correct invoices and records of the support you received.</li>
+                        <li>Keep track of your budget and spending to avoid underspending or overspending.</li>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="ndis-scheme-section"> 
+        <div class="row">
+            <div class="col-md-7">
+                <div class="ndis-scheme-content">
+                    <h4>Step 7: Annual plan review</h4>
+                    <p>Your yearly plan review is an opportunity to determine whether your supports are still appropriate for you because needs and goals change over time.
+                        <br>
+                        We advise you to:</p>
+                    <ul>
+                        <li>Get ready beforehand. List the things you want to improve.</li>
+                        <li>Clearly state your desired changes so that your LAC knows your intended outcomes for your new plan.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div class="ndis-scheme-img">
+                    <img src="{{url('frontend/images/ndis/7-min.png')}}" alt="" class="w-100">
                 </div>
             </div>
         </div>
