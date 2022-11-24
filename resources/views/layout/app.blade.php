@@ -37,7 +37,7 @@
 <!-- Top section -->
 <section id="topbar" class="d-flex align-items-center">
     <div class="container-fluid d-flex justify-content-center justify-content-md-between">
-            <div class="contact-info">
+            <div class="contact-info ms-auto">
                     @php
                       $services = \App\Models\Service::where('status','1')->orderByRaw('CONVERT(order_by, SIGNED) asc')->get();
                       $phone = \App\Models\Setting::where('slug','phone')->get('value')->first()->value ?? '';
@@ -130,7 +130,7 @@
     <a class="navbar-brand" href="{{url('/')}}">
         <img src="{{url(\App\Models\Setting::where('slug','logo')->first()->value ?? '')}}" class="img-fluid logo"  alt="">
     </a>
-    <ul class="nav nav-inner navbar-list" id="navigation-links">
+    <ul class="nav nav-inner navbar-list ms-md-auto" id="navigation-links">
         <li class="nav-item">
             <a class="nav-link" href="{{url('/about')}}">About</a>
         </li>

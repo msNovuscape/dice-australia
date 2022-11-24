@@ -86,17 +86,20 @@
                 @endif
                 <a href="{{url('/service/'.$service->slug)}}" class="service-card{{$class}}">
                     <div>
-                        <div class="service-head mb-4">
+                        <div class="service-head">
                             <div class="service-icon">
                                 <img src="{{url($service->icon ?? 'frontend/icons/support-coordination.svg')}}" alt="" class="w-100">
                             </div>
-                            <h1>{{$service->name}}</h1>
+                            <div>
+                                <h1>{{$service->name}}</h1>
+                                <button class="learn-more-btn">Learn more <img src="{{url('frontend/icons/right-arrow.svg')}}" class="learn-more-icon"/></button>
+                            </div>
                         </div>
-                        <div class="service-card-desc">
+                        <!-- <div class="service-card-desc">
                             <p>{!!strip_tags($service->short_description)!!}</p>
-                        </div>
+                        </div> -->
                     </div>
-                    <button class="learn-more-btn">Learn more <img src="{{url('frontend/icons/right-arrow.svg')}}" class="learn-more-icon"/></button>
+                    
                 </a>
                 @endforeach
                 <!-- <a href="/service/" class="service-card-second">
@@ -261,7 +264,7 @@
     <!-- customer section -->
     
     <!-- subscription section -->
-    <section class="subscription-section">
+    <!-- <section class="subscription-section">
         <div class="row">
             <div class="col-md-7">
                 <img src="{{url('frontend/images/Laptop.svg')}}" class="img-fluid"/>
@@ -302,21 +305,24 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
     <!-- acknowledgement section -->
 
     <!-- acknowledgement section -->
     <section class="acknowledgement-section">
         <div class="row">
             <div class="col-md-12 text-center">
-                <div class="img-block">
-                    <img src="{{url('frontend/images/flag.png')}}" class="img-fluid"/ alt="">
-                </div>
+                <!-- <div class="img-block">
+                    <img src="{{url('frontend/images/flag.png')}}" class="img-fluid" alt="">
+                </div> -->
             </div>
             <div class="col-md-12">
                 <div class="acknowledgement-desc">
-                    <h1>Acknowledgement of Country</h1>
-                    <p>DICE recognise the rich indigenous heritage of this country and acknowledge the Wurundjeri Willum Clan and the Gunung-Willam-Balluk people as the traditional owners of the land. We pay our respects to the people, the cultures and the elders past, present and emerging.</p>
+                    <!-- <h1>Acknowledgement of Country</h1>
+                    <p>DICE recognise the rich indigenous heritage of this country and acknowledge the Wurundjeri Willum Clan and the Gunung-Willam-Balluk people as the traditional owners of the land. We pay our respects to the people, the cultures and the elders past, present and emerging.</p> -->
+                    <h1>
+                        <i class="img-block"><img src="{{url('frontend/images/Gunung-Willam-Balluk.jpg')}}" class="img-fluid" alt=""></i> Acknowledgement of Country <i class="img-block"><img src="{{url('frontend/images/Wurundjeri-Willum-Clan.jpg')}}" class="img-fluid" alt=""></i></h1>
+                    <p>DICE recognise the rich Indigenous heritage of this country and acknowledge the Wurundjeri Willum Clan and the Gunung-Willam-Balluk people as the traditional owners of the land. We pay our respects to the people, the cultures and the elders past, present and emerging.We pay our respects to the people, the cultures and the elders past, present and emerging.</p>
                 </div>
             </div>
         </div>
