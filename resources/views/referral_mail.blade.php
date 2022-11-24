@@ -60,8 +60,6 @@
 		}
 	</style>
 
-
-
     <h1>Referral Notice</h1>
     <br />
     <div class="main-column" style = "display:block; width:100%;">
@@ -75,13 +73,12 @@
 		<b>Mobile:</b> {{ $mobile_no }}<br /><br />
       </div>
       <div class="column-two" style = "display:block; width:100%;">
+	  
         <h3>PARTICIPANT ADDRESS</h3>
 
         <b>Suburb:</b> {{ $suburb }}<br /><br />
         <b>State:</b> {{ $state }}<br /><br />
-		<b>Street Name:</b> {{ $street_name }}<br /><br />
-		<b>Street Number:</b> {{ $street_number }}<br /><br />
-		<b>Unit Number:</b> {{ $unit_number }}<br /><br />
+		<b>Street:</b> {{ $street_number }}<br /><br />
         <b>Post Code:</b> {{ $post_code }}<br /><br /><br />
 
 
@@ -92,7 +89,6 @@
         <b>NDIS Number:</b>{{$ndis_number}}<br /><br />
         <b>NDIS Expiry Date:</b>{{$ndis_expiry_date}}<br /><br />
         <b>NDIS Plan:</b> {{ config('custom.ndis_plan')[$ndis_plan] }}<br /><br />
-		
       </div>
 	  @endif
 	  @if($services != null)

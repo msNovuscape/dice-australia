@@ -8,8 +8,8 @@
 @endsection
 {!! Html::style('frontend/css/css-loader.css') !!}
 @section('content')
-@php
-          $msg =Session::get('msg') ?? null; 
+        @php
+          $msg = Session::get('msg') ?? null; 
         @endphp
     <section class="referral-section">
         <div class="container-fluid">
@@ -53,7 +53,6 @@
                                         <span id="ref-dob-error" class="error"></span>
                                     </div>
                                 </div>
-
                                 <div class='col-md-3 gender-radio'>
                                     <label>
                                         Gender
@@ -95,7 +94,6 @@
                                         <span id="ref-language-error" class="error"></span>
                                     </div>
                                 </div>
-
                                 <div class='col-md-4'>
                                     <div class="form-group">
                                         <label>Participant have a current NDIS plan?</label>
@@ -108,7 +106,6 @@
                                         </div>
                                     </div>
                                 </div>
-
                             </div>
                             <!-- Start of NDIS Plan Block -->
                             <div class="row hideandshow" id = "ndis">
@@ -134,16 +131,14 @@
                                     <div class="form-group">
                                         <label for="ndis plan">Choose NDIS Plan</label>
                                         <select class="form-select form-control" aria-label="" name = "ndis_plan">
-                                        @foreach(config('custom.ndis_plan') as $index => $value)
-                                            <option value="{{$index}}" {{(old('ndis_plan')==$index) ? 'selected':''}}>{{$value}}</option>
-                                        @endforeach
-                                        
+                                            @foreach(config('custom.ndis_plan') as $index => $value)
+                                                <option value="{{$index}}" {{(old('ndis_plan')==$index) ? 'selected':''}}>{{$value}}</option>
+                                            @endforeach
                                         </select>
                                         <span id="date-error" class="error">
                                     </span>
                                     </div>
                                 </div>
-
                             </div>
                             <!-- End of NDIS Plan Block -->
                         </div>
@@ -153,7 +148,6 @@
                             </div>
                             <h1>PARTICIPANT ADDRESS</h1>
                         </div>
-
                         <div class='card-body'>
                             <div class="row g-4">
                                 <div class='col-md-6'>
@@ -207,7 +201,6 @@
                                                 <label class="form-check-label" for="{{$service->id}}">{{$service->name}}</label>
                                             </div>
                                         @endforeach
-                                     
                                     </div>
                                     <span id="ref-gender-error" class="error"></span>
                                 </div>
