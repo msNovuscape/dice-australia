@@ -2153,7 +2153,7 @@ Responsive Codes
         flex-direction: column-reverse;
     }
 }
-@media only screen and (min-width: 1024px) and (max-width: 1480px) {
+@media only screen and (min-width: 1024px) and (max-width: 1366px) {
     html {
         overflow-x: hidden;
     }
@@ -2214,7 +2214,7 @@ Responsive Codes
     .service-head h1{
         font-size: 22px;
     }
-
+}
 /* working at dice css */
 /* .working-dice-section, .working-dice-form{
     padding: 2rem 6rem;
@@ -2254,5 +2254,4 @@ Responsive Codes
    
   
   
-   
-}
+
