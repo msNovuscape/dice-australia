@@ -199,8 +199,8 @@
             </div>
             <div class="col-md-5">
                 <div class="about-image">
-                    <img src="{{url($about_us->first()->image ?? '')}}" class="w-100" alt="about-image"/>
-                    <!-- <img src="{{url($about_us1->image ?? 'images/about_us1/About-image.png')}}" alt="" class="img-fluid"> -->
+                    <!-- <img src="{{url($about_us->first()->image ?? '')}}" class="w-100" alt="about-image"/> -->
+                    <img src="{{url($about_us->first()->image ?? 'images/about_us1/About-image.png')}}" alt="" class="img-fluid">
                 </div>
             </div>
         </div>
@@ -272,11 +272,11 @@
                     <p>We're committed to your privacy. DICE uses the information you provide to us to contact you about our relevant content, products, and services.</p>
                     <form id="subs_form">
                         <div class="">
-                            <input type="text" class="dice-from" id="subs-fname" name="" placeholder="FullName" onkeyup="subsFname()">
+                            <input type="text" class="dice-from" id="subs-fname" name="" placeholder="Full Name" onkeyup="subsFname()">
                             <span id="subs-fname-error" class="error-msg"></span>
                         </div>
                         <div class="">
-                            <input type="email" class="dice-from" id="subs-email" name="" placeholder="Email address" onkeyup="subsEmail()">
+                            <input type="email" class="dice-from" id="subs-email" name="" placeholder="Email Address" onkeyup="subsEmail()">
                             <span id="subs-email-error" class="error-msg"></span>
                         </div>
                         <div class="mb-3">
@@ -398,7 +398,7 @@
 
             $.ajax({
 
-            url: "/subscribe",
+            url: "{{url('/subscribe')}}",
             type:"POST",
             data:{
               email:email.value,

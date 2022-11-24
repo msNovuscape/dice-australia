@@ -64,7 +64,7 @@
                     <div class="form-group">
                         <label for="input-first-name">State</label>
                         <select class="form-select form-control" aria-label="Default select example" onclick="validateRegState()" id="regState" name = "state">
-                            <option hidden="" value="">Select state</option>
+                            <option hidden="" value="">Select State</option>
                             @foreach(config('custom.states') as $in => $val)
                                 <option value="{{$in}}" {{(old('state')==$in) ? 'selected':''}}>{{$val}}</option>
                             @endforeach

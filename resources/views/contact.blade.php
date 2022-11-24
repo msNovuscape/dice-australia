@@ -52,7 +52,7 @@
                 <div class="form-header">
                     <h5>Are you ready to join our growing family?</h5>
                     <h2>Let us support you.</h2>
-                    <p>Fill in your details below, and our Customer Care Team will contact you shortly.</p>
+                    <p>Fill in your details below, and our customer care team will contact you shortly.</p>
                 </div>
                 <form class="contactus-form" id="contact_form">
                     <div class="row">

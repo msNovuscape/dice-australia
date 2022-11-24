@@ -22,7 +22,7 @@
                             <p>Please read the form carefully and complete all the sections.</p>
                         </div>
                     </div>
-                    <div class="card p-3 mt-5">
+                    <div class="card p-5 mt-5">
                         <div class='card-title'>
                             <div>
                                 <i class="fa-solid fa-user"></i>
@@ -31,7 +31,7 @@
                         </div>
                         <div class='card-body'>
                             <div class="row g-4">
-                                <div class="col-md-3">
+                                <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="input-first-name">Name</label>
                                         <input type="text" class="form-control" placeholder="Enter your Full Name" id="reffullname" onkeyup="validatereffname()" name="name" value="{{old('name')}}">
@@ -79,6 +79,20 @@
                                         </div>
                                     </div>
                                     <span id="ref-gender-error" class="error"></span>
+                                </div>
+                                <div class='col-md-6'>
+                                    <div class="form-group">
+                                        <label>Email Address</label>
+                                        <input  type="email" class="form-control" placeholder="Enter your E-mail Address" name="email" value="{{old('email')}}"  id="refemail" onkeyup="validaterefemail()"/>
+                                        <span id="ref-email-error" class="error"></span>
+                                    </div>
+                                </div>
+                                <div class='col-md-6'>
+                                    <div class="form-group">
+                                        <label>Date of Birth</label>
+                                        <input type="date" class="form-control getDate" placeholder="Select your date of birth" name="dob" value="{{old('dob')}}" id="refdob" onkeyup="validaterefdob()"/>
+                                        <span id="ref-dob-error" class="error"></span>
+                                    </div>
                                 </div>
                                 <div class='col-md-4'>
                                     <div class="form-group">
@@ -142,6 +156,8 @@
                             </div>
                             <!-- End of NDIS Plan Block -->
                         </div>
+                    </div>
+                    <div class="card mt-4 p-5">
                         <div class='card-title'>
                             <div>
                                 <i class="fa-solid fa-house-chimney"></i>
@@ -152,11 +168,27 @@
                             <div class="row g-4">
                                 <div class='col-md-6'>
                                     <div class="form-group">
-                                        <label>Street Number/Name</label>
+                                        <label>Unit Number</label>
+                                        <input type="text" class="form-control" placeholder="Enter your Unit Number" name='unit_number' value="{{old('unit_number')}}"  id="refunitNum" onkeyup="validaterefUnit()"/>
+                                        <span id="ref-unit-error" class="error"></span>
+                                    </div>
+                                </div>
+                                <div class='col-md-6'>
+                                    <div class="form-group">
+                                        <label>Street Number</label>
                                         <input type="text" class="form-control" placeholder="Enter your Street Number" name='street_number' value="{{old('street_number')}}"  id="refstreetNum" onkeyup="validaterefStreet()"/>
                                         <span id="ref-streetnum-error" class="error"></span>
                                     </div>
                                 </div>
+
+                                <div class='col-md-6'>
+                                    <div class="form-group">
+                                        <label>Street Name</label>
+                                        <input type="text" class="form-control" placeholder="Enter your Street Name" name='street_name' value="{{old('street_number')}}"  id="refstreetNum" onkeyup="validaterefStreet()"/>
+                                        <span id="ref-streetnum-error" class="error"></span>
+                                    </div>
+                                </div>
+                                
                                 <div class='col-md-6'>
                                     <div class="form-group">
                                         <label>Suburb</label>
@@ -181,7 +213,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="card mt-4 p-3">
+                    <div class="card mt-4 p-5">
                         <div class='card-title'>
                             <div>
                                 <i class="fa-solid fa-gear"></i>
@@ -214,7 +246,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="card mt-4 p-3">
+                    <div class="card mt-4 p-5">
                         <div class='card-title'>
                             <div>
                                 <i class="fa-solid fa-phone"></i>
@@ -232,8 +264,8 @@
                                 </div>
                                 <div class='col-md-6'>
                                     <div class="form-group">
-                                        <label for="input-last-name">Contact number</label>
-                                        <input type="text" class="form-control" name="referrer_contact_no" value="{{old('referrer_contact_no')}}" placeholder="Enter Contact Number"  id="refdetcontact" onkeyup="validaterefcontact()"/>
+                                        <label for="input-last-name">Contact Number</label>
+                                        <input type="text" class="form-control" name="referrer_contact_no" value="{{old('referrer_contact_no')}}" placeholder="Enter Phone Number"  id="refdetcontact" onkeyup="validaterefcontact()"/>
                                         <span id="ref-contact-error" class="error"></span>
                                     </div>
                                 </div>
@@ -246,7 +278,7 @@
                                 <h1>Privacy Statement and Declaration</h1>
                             </div>
                             <div class='card-body'>
-                                <p class='declare-text'>I declare that the information provided is, to the best of my understanding and knowledge, complete and correct. I understand that Extratech Pty. Ltd may perform random checks on the information I have provided, and I may be asked to provide evidence to verify the information in this form. I am aware that there are severe penalties for providing false or misleading information. I understand and acknowledge that there may be a need for the company to share my information with a third party, such as agencies, social medias, government bodies etc. I give my permission for the company to supply any relevant official records and my personal information when it is required for the delivery of services by DICE.</p>
+                                <p class='declare-text'>I declare that the information provided is, to the best of my understanding and knowledge, complete and correct. I understand that Disability Inclusion For Community Empowerment (DICE) may perform random checks on the information I have provided, and I may be asked to provide evidence to verify the information in this form. I am aware that there are severe penalties for providing false or misleading information. I understand and acknowledge that there may be a need for the company to share my information with a third party, such as agencies, social medias, government bodies etc. I give my permission for the company to supply any relevant official records and my personal information when it is required for the delivery of services by Disability Inclusion For Community Empowerment (DICE).</p>
                                 <div class='row'>
                                     <div class="col">
                                         <div class='form-check'>

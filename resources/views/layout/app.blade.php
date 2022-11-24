@@ -136,7 +136,7 @@
         </li>
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Our services
+                Our Services
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                 @foreach($services as $service)
@@ -154,7 +154,7 @@
             <a class="nav-link" href="{{url('/career')}}">Working at DICE </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="{{url('/contact')}}">Contact us </a>
+            <a class="nav-link" href="{{url('/contact')}}">Contact Us </a>
         </li>
     </ul>
     <div class="mobile-navbar-btn">
@@ -221,7 +221,7 @@
                 <li><a href="{{url('/about')}}">About us</a></li>
                 <!-- <li><a href="/service">Services</a></li> -->
                 <li><a href="{{url('/referral')}}">Make a Referral</a></li>
-                <li><a href="{{url('/contact')}}">Contact us</a></li>
+                <li><a href="{{url('/contact')}}">Contact Us</a></li>
             </ul>
         </div>
         <div class="bottom-footer">
