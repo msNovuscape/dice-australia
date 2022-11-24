@@ -1091,7 +1091,7 @@ Responsive Codes
 }
 .team-support-section{
     padding: 3rem 6rem;
-    background: #F8D9D3;
+    background: #fff8f6;
 }
 .team-support-section .row{
     display: flex;
@@ -1109,8 +1109,8 @@ Responsive Codes
     margin-bottom: 20px;
 }
 .our-value-section{
-    padding: 3rem 6rem;
-    background: #F0EFFD;
+    padding: 4rem 6rem;
+    background: #FFF0EB;
 }
 .our-value-section .row{
     margin: 40px 0;
@@ -1123,7 +1123,7 @@ Responsive Codes
     margin-bottom: 20px;
 }
 .about-value-card{
-    background: #6B2976;
+    background: #ffffff;
     box-shadow: 4px 4px 9px rgba(0, 0, 0, 0.15);
     border-radius: 11px;
     display: flex;
@@ -1133,7 +1133,7 @@ Responsive Codes
     min-height: 300px;
 }
 .about-value-image{
-    background: #FFFFFF;
+    background: #FFF0EB;
     border-radius: 50%;
     width: 100px;
     height: 100px;
@@ -1146,7 +1146,7 @@ Responsive Codes
     font-size: 25px;
     line-height: 2rem;
     text-align: center;
-    color: #FFFFFF;
+    color: #202023;
     margin-bottom: 10px;
 }
 .about-value-card-content p{
@@ -1154,7 +1154,7 @@ Responsive Codes
     font-size: 16px;
     line-height: 1.6rem;
     text-align: center;
-    color: #FFFFFF;
+    color: #202023;
     margin-bottom: 0;
 }
 .about-regirtered{
