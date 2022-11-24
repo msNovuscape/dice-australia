@@ -46,7 +46,7 @@
                     <p>We are registered NDIS service provider for people with disability.</p>
                 </div>
                 <div class="ndis-love">
-                    <a href="/ndis" class="ndis-view-btn">View More</a>
+                    <a target = "_blank" href="https://www.ndis.gov.au" class="ndis-view-btn">View More</a>
                     <img src="{{url('frontend/images/ndis-love.png')}}"/>
                 </div>
             </div>
