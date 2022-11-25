@@ -174,7 +174,7 @@
                                         <select class="form-select form-control" aria-label="Default select example" onclick="validaterefState()" id="refstateName" name = "state_name">
                                             <option hidden="" value="">Select State</option>
                                             @foreach(config('custom.states') as $in => $val)
-                                                <option value="{{$in}}" {{(old('state')==$in) ? 'selected':''}}>{{$val}}</option>
+                                                <option class = "working-dice-select" value="{{$in}}" {{(old('state')==$in) ? 'selected':''}}>{{$val}}</option>
                                             @endforeach
                                         </select>
                                         <span id="ref-statename-error" class="error"></span>
