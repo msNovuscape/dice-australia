@@ -322,7 +322,7 @@
                     <p>DICE recognise the rich indigenous heritage of this country and acknowledge the Wurundjeri Willum Clan and the Gunung-Willam-Balluk people as the traditional owners of the land. We pay our respects to the people, the cultures and the elders past, present and emerging.</p> -->
                     <h1>
                         <i class="img-block"><img src="{{url('frontend/images/Gunung-Willam-Balluk.jpg')}}" class="img-fluid" alt=""></i> Acknowledgement of Country <i class="img-block"><img src="{{url('frontend/images/Wurundjeri-Willum-Clan.jpg')}}" class="img-fluid" alt=""></i></h1>
-                    <p>DICE recognise the rich Indigenous heritage of this country and acknowledge the Wurundjeri Willum Clan and the Gunung-Willam-Balluk people as the traditional owners of the land. We pay our respects to the people, the cultures and the elders past, present and emerging.We pay our respects to the people, the cultures and the elders past, present and emerging.</p>
+                    <p>DICE recognise the rich Indigenous heritage of this country and acknowledge the Wurundjeri Willum Clan and the Gunung-Willam-Balluk people as the traditional owners of the land. We pay our respects to the people, the cultures and the elders past, present and emerging.</p>
                 </div>
             </div>
         </div>

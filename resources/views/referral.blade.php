@@ -200,12 +200,12 @@
                                     <div class="servicedetail-checkbox">
                                         @foreach($services as $service)
                                             <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="checkbox" id="{{$service->id}}" name = "services[]" value="{{$service->id}}" {{ in_array($service->id, old('services', [])) ? 'checked' : '' }}>
+                                                <input class="form-check-input diceservices" type="checkbox" id="{{$service->id}}" name = "services[]" onclick="validateDiceServices()" value="{{$service->id}}" {{ in_array($service->id, old('services', [])) ? 'checked' : '' }}>
                                                 <label class="form-check-label" for="{{$service->id}}">{{$service->name}}</label>
                                             </div>
                                         @endforeach
                                     </div>
-                                    <span id="ref-gender-error" class="error"></span>
+                                    <span id="ref-diceservices-error" class="error"></span>
                                 </div>
                                 <div class='col-md-12'>
                                     <div class="form-group">
@@ -314,7 +314,7 @@
     var suburbError = document.getElementById('ref-suburb-error');
     var stateError = document.getElementById('ref-statename-error');
     var postalError = document.getElementById('ref-postalcode-error');
-
+    var diceservicesError = document.getElementById('ref-diceservices-error');
     var detailError = document.getElementById('ref-detailservices-error');
 
     // referrer details declaration
@@ -411,23 +411,12 @@
         }
     }
 
-    function validaterefUnit(){
-        var unit = document.getElementById('refunitNum').value;
-        if(unit.length == 0){
-            $('#refunitNum').focus();
-            unitError.innerHTML = "Unit is required";
-            return false;
-        }else{
-            unitError.innerHTML = "";
-            return true;
-        }
-    }
 
     function validaterefStreet(){
         var street = document.getElementById('refstreetNum').value;
         if(street.length == 0){
             $('#refstreetNum').focus();
-            streetError.innerHTML = "Street Number is required";
+            streetError.innerHTML = "Street Number/ Name is required";
             return false;
         }else{
             streetError.innerHTML = "";
@@ -471,6 +460,26 @@
         }
     }
 
+    function validateDiceServices(){
+        var valid = false;
+        var diceservices = document.getElementsByClassName("diceservices");
+        for(var i=0;i<diceservices.length;i++){
+            if(diceservices[i].checked){
+                console.log(diceservices[i].value);
+                valid = true;
+                break;
+            }
+        }
+        if(valid){
+            diceservicesError.innerHTML = '';
+            return true;
+        }else{
+            $('#diceservices').focus();
+            diceservicesError.innerHTML = "Please select any services !";
+            return false;
+        }
+    }
+
     function validaterefdetails(){
         var details = document.getElementById('refdetails').value;
         if(details.length == 0){
@@ -482,6 +491,7 @@
             return true;
         }
     }
+    
 
     function validatereffullname(){
         var refname = document.getElementById('refdetfname').value;
@@ -525,8 +535,8 @@
     }
     
     function refferalValidation(){
-        if(!validatereffname() || !validategender() || !validaterefemail() || !validaterefdob() || !validaterefmob() || !validatereflang() ||
-        !validaterefUnit() || !validaterefStreet() || !validaterefSuburb() || !validaterefState() || !validaterefPostal() ||
+        if(!validatereffname() || !validategender() || !validaterefemail() || !validaterefdob() || !validaterefmob() || !validatereflang()
+        || !validaterefStreet() || !validaterefSuburb() || !validaterefState() || !validaterefPostal() || !validateDiceServices() ||
         !validaterefdetails() || !validatereffullname() || !validaterefcontact() || !validaterefprivacy()){
             return false;
         }else{
