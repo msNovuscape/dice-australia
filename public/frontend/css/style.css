@@ -285,7 +285,10 @@ Responsive Codes
 }
 /* sweet alert css */
 .swal2-styled.swal2-confirm {
-    background-color: #e54e2e;
+    background-color: #e54e2e !important;
+}
+.swal2-styled.swal2-confirm:focus{
+    box-shadow:none !important;
 }
 .modal-title{
     font-weight: 700;
@@ -2264,7 +2267,7 @@ Responsive Codes
 }
 
 
-.service-first-img img, .service-second-img img{
+.service-first-img img, .service-second-img img, .ndis-scheme-img img, .ndis-run-img img{
     border-radius: 6px;
 }
     

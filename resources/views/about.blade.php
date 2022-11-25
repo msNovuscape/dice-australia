@@ -17,11 +17,21 @@
                 <div class="about-page-desc">
                     <h5>ABOUT</h5>
                     <h2>Who We Are</h2>
-                    <p>At DICE, we understand that acquiring specialized disability support in your daily routine is helpful if you or a loved one is dealing with impairments or limitations of any kind. Thus, the NDIS care coordination staff at DICE always reach towards assisting your health and well in the best possible way, and giving you access to opportunities so that you may engage in jobs, schoolings, recreations, and other pursuits that you wish to be a cornerstone in. Working with differently-abled clients and their support system is a key component of what we do. Our devoted staff is here to serve you and give you access to all the disability support resources you need under one roof so you can do the things you love. We can demonstrate how to get the most of your plan's investment while connecting you to the best local resources. With us, you get personalized service from a knowledgeable and pleasant team. 
-                        <br><br>
-                        Furthermore, our skilled, bilingual team members are enthusiastic about the clients we assist as well as the services and initiatives we offer. DICE’s team has a wealth of knowledge in providing health and disability services in a variety of settings. We follow a person-centred paradigm where decisions are made with you in mind. We can support your efforts to develop new abilities, explore new places, meet new people, and—most importantly—do the activities you like. At DICE, we think that you should select the treatment that best fits your unique needs and approach to life. 
-                        <br><br>
-                        We aim to increase your freedom of choice, autonomy, and prosperity. Not only that, but we also assist you in achieving your objectives as a licensed NDIS disability services provider. Our team is led by knowledgeable employees with years of experience dealing with clients with disabilities from a wide range of cultures and circumstances. Additionally, our top management staff is also adorned with business degrees and a wealth of management and governance expertise. With this combination of abilities, we have created a dependable and efficient solution to help you achieve your goals. </p>
+                    <p>At DICE, we understand that acquiring specialised disability support in your daily routine is
+helpful if you or a loved one are dealing with impairments. Working with differently abled
+clients and their support system is a key component of what we do. Thus, our NDIS care
+coordination staff at DICE provide opportunities to engage in jobs, schooling, recreation, and
+other pursuits that you intend to be a cornerstone of. With us, you get personalised service from a
+knowledgeable and pleasant team.</br></br>
+Furthermore, our skilled, bilingual team members are enthusiastic about the clients we assist and
+the services and initiatives we offer. We follow a person-centred paradigm where decisions are
+made with you in mind. We can support your efforts to develop new abilities, explore new
+places, meet new people, and—most importantly—do the activities you like. At DICE, we think
+you should select the treatment that best fits your unique needs and approach to life.</br></br>
+We aim to increase your freedom of choice, autonomy, and prosperity. Not only that, but we also
+assist you in achieving your objectives as a licensed NDIS disability services provider. We have
+a top management team with business degrees and governance expertise. With this combination
+of abilities, we have created a dependable and efficient solution to help you achieve your goals.</p>
                 </div>
             </div>
         </div>

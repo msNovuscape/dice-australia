@@ -171,7 +171,12 @@
                                 <div class='col-md-6'>
                                     <div class="form-group">
                                         <label>State / Province / Region </label>
-                                        <input type="text" class="form-control" placeholder="Enter state" name='state_name' value="{{old('state_name')}}"  id="refstateName" onkeyup="validaterefState()"/>
+                                        <select class="form-select form-control" aria-label="Default select example" onclick="validateRegState()" id="regState" name = "state_name">
+                                            <option hidden="" value="">Select State</option>
+                                            @foreach(config('custom.states') as $in => $val)
+                                                <option value="{{$in}}" {{(old('state')==$in) ? 'selected':''}}>{{$val}}</option>
+                                            @endforeach
+                                        </select>
                                         <span id="ref-statename-error" class="error"></span>
                                     </div>
                                 </div>

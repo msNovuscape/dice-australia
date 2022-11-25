@@ -77,7 +77,7 @@
         <h3>PARTICIPANT ADDRESS</h3>
 
         <b>Suburb:</b> {{ $suburb }}<br /><br />
-        <b>State:</b> {{ $state }}<br /><br />
+        <b>State:</b> {{config('custom.states')[$state]}}<br /><br />
 		<b>Street:</b> {{ $street_number }}<br /><br />
         <b>Post Code:</b> {{ $post_code }}<br /><br /><br />
 
