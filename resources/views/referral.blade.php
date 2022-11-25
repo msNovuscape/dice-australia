@@ -171,7 +171,7 @@
                                 <div class='col-md-6'>
                                     <div class="form-group">
                                         <label>State / Province / Region </label>
-                                        <select class="form-select form-control" aria-label="Default select example" onclick="validateRegState()" id="regState" name = "state_name">
+                                        <select class="form-select form-control" aria-label="Default select example" onclick="validaterefState()" id="refstateName" name = "state_name">
                                             <option hidden="" value="">Select State</option>
                                             @foreach(config('custom.states') as $in => $val)
                                                 <option value="{{$in}}" {{(old('state')==$in) ? 'selected':''}}>{{$val}}</option>
