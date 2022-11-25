@@ -182,7 +182,7 @@
 <section class='footer'>
     <div class='row footer-top'>
         <div class='col-md-12'>
-            <div class="footer-logo">
+            <div class="footer-logo text-center">
                 <img src='{{url("frontend/images/white-logo.png")}}' class="img-fluid" alt="DICE-Logo">
             </div>
         </div>

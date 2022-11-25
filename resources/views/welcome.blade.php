@@ -16,7 +16,9 @@
         <div class="carousel-inner">
             @foreach($sliders as $slider)
             <div class="carousel-item {{$loop->first ? 'active' : ''}}">
-                <img src="{{url($slider->image ?? 'frontend/images/banner-two.png')}}" class="d-block w-100" alt="...">
+                <div class="slider-image">
+                    <img src="{{url($slider->image ?? 'frontend/images/banner-two.png')}}" class="d-block w-100" alt="...">
+                </div>
                 <div class="slider-content">
                     <h3>{{$slider->title1}}</h3>
                     <h2>{{$slider->title2}}</h2>
