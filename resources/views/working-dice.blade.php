@@ -91,7 +91,7 @@
                 <div class="col-md-12">
                     <h4>Anything Else to Share?</h4>
                     <div class="form-group">
-                        <textarea class="form-control textarea" name="message" placeholder="Is there anyhting you need to share with us?" rows="5" cols="50" id="reginquiry" onkeyup="validateRegEnquiry()">{{old('message')}}</textarea>
+                        <textarea class="form-control textarea" name="message" placeholder="Is there anyhting you need to share with us?" rows="5" cols="50" id="reginquiry">{{old('message')}}</textarea>
                         <span id="reg-inquiry-error" class="error"></span>
                     </div>
                 </div>
@@ -232,18 +232,18 @@ var php_var = "<?php echo $msg; ?>";
             }
         }
         
-        function validateRegEnquiry(){
-            var reginquiry = document.getElementById('reginquiry').value;
-            if(reginquiry.length == 0){
-                $('#reginquiry').focus();
-                inquiryError.innerHTML = "Inquiry filed is required !";
-                return false
-            }
-            else{
-                inquiryError.innerHTML = "";
-                return true;
-            }
-        }
+        // function validateRegEnquiry(){
+        //     var reginquiry = document.getElementById('reginquiry').value;
+        //     if(reginquiry.length == 0){
+        //         $('#reginquiry').focus();
+        //         inquiryError.innerHTML = "Inquiry filed is required !";
+        //         return false
+        //     }
+        //     else{
+        //         inquiryError.innerHTML = "";
+        //         return true;
+        //     }
+        // }
 
         function validateRegCV(){
             var regCV = document.getElementById('regCV').value;
@@ -264,7 +264,7 @@ var php_var = "<?php echo $msg; ?>";
 
         function validateRegisterForm(){
             if(!validateRegFname() || !validateRegPhone() || !validateRegEmail() || !validateRegState() ||
-            !validateRegServices() || !validateRegEnquiry() || !validateRegCV()){
+            !validateRegServices() || !validateRegCV()){
                 return false;
                 
             }else{

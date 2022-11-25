@@ -2,7 +2,7 @@
 
     <!-- Preloader -->
     <div class="preloader flex-column justify-content-center align-items-center">
-        <img class="animation__shake" src="{{url(\App\Models\Setting::where('slug','logo')->first()->value ?? '')}}" alt="AdminLTELogo" height="60" width="240">
+        <img class="animation__shake" src="{{url(\App\Models\Setting::where('slug','admin-logo')->first()->value ?? '')}}" alt="AdminLTELogo" height="60" width="240">
     </div>
 
     <!-- Navbar -->
@@ -45,7 +45,7 @@
         <!-- Brand Logo -->
         <a href="{{url('admin/index')}}" class="brand-link">
             <span class="brand-text font-weight-light">
-                <img class="extratech-logo" src="{{url(\App\Models\Setting::where('slug','logo')->first()->value ?? '')}}" alt="Insert Logo from Settings">
+                <img class="extratech-logo" src="{{url(\App\Models\Setting::where('slug','admin-logo')->first()->value ?? '')}}" alt="Insert Logo from Settings">
             </span>
         </a>
 

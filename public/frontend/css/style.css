@@ -679,7 +679,7 @@ Responsive Codes
 /* Service section css */
 .about-section{
     padding: 6rem;
-    background: #F9F9F9;
+    background: #FFFFFF;
 }
 .about-section .row{
     display: flex;
@@ -709,6 +709,9 @@ Responsive Codes
 }
 .about-left p, .about-left a, .pricing-detail a{
     font-weight: 500;
+}
+.about-left p{
+    text-align: justify;
 }
 .about-left a{
     text-decoration: none;
@@ -1804,16 +1807,27 @@ Responsive Codes
     }
     .navbar-brand{
         position: relative;
-        top: 0;
-        width: 70px;
+        top: 0 !important; 
+        width: 70px !important;
         padding: 10px;
+    }
+    .contact-info{
+        margin-left: 0 !important;
+    }
+    /* services dropdown */
+    .navbar-list .dropdown-menu.show{
+        transform: translate3d(-64px, 64px, 0px) !important;
+        width: 300px;
+    }
+    .navbar-list .dropdown-menu a{
+        text-align: center;
     }
     /* listen icon css */
     .listen {
-        width: 32px;
-        height: 100px;
+        width: 30px;
+        height: 80px;
         background: #DD6227;
-        border-radius: 0;
+        border-radius: 1;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -1823,7 +1837,7 @@ Responsive Codes
     .listen-img {
         background: none;
         width: 100%;
-        height: 70%;
+        height: 50%;
     }
     .listen-text {
         font-size: 10px;
@@ -2034,9 +2048,9 @@ Responsive Codes
     }
     .first-content-desc h2, .second-content-desc h2 {
         font-weight: 700;
-        font-size: 31px;
+        font-size: 24px;
         color: #202023;
-        line-height: 42px;
+        line-height: 34px;
         margin-bottom: 15px;
     }
 

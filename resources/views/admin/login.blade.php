@@ -28,7 +28,7 @@
     <div class="card card-outline card-primary">
         <div class="card-header text-center">
             <a href="../../index2.html" class="h1">
-                <img class="extratech-logo w-100" src="{{url(\App\Models\Setting::where('slug','logo')->first()->value ?? '')}}" alt="Insert Logo from Settings">
+                <img class="extratech-logo w-100" src="{{url(\App\Models\Setting::where('slug','admin-logo')->first()->value ?? '')}}" alt="Insert Logo from Settings">
             </a>
         </div>
         <div class="card-body">
