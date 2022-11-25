@@ -13,6 +13,7 @@
         @endphp
     <section class="referral-section">
         <div class="container-fluid">
+        @include('errors.error')
             <div class="referral-form">
                 <form class="form-row" id="referral" name = "referral_form" method="post" action = "{{url('/referral')}}">
                 @csrf
