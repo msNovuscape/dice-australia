@@ -261,20 +261,16 @@
 
 var scrollicon = document.getElementById('listen-icon');
 var diceLogo = document.getElementById('navbar-brand');
-var navHeader = documentt.getElementById('dice-nav-head');
+var navHeader = document.getElementById('dice-nav-head');
         window.onscroll= function(){
             if(window.scrollY > 300){
-                scrollicon.style.display="block";
-                diceLogo.style.top="0px";
-                diceLogo.style.width="298px";
-                navHeader.style.padding="0 6rem";
-                diceLogo.style.position="relative"
-
+                diceLogo.classList.add("navbar-brand-scroll");
+                navHeader.classList.add("header-scroll");
 
             }
             if(window.scrollY==0){
-                diceLogo.style.top="-45px";
-                diceLogo.style.width="420px"
+                navHeader.classList.remove("header-scroll");
+                diceLogo.classList.remove("navbar-brand-scroll");
             }
         }
         
