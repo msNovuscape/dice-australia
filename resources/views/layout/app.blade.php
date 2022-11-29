@@ -46,13 +46,13 @@
                     @endphp
             @if($phone !== '')        
             <div>
-                <img src="{{url('frontend/icons/phone-call.svg')}}" class="img-fluid"/>
+                <img src="{{url('frontend/icons/Calling.svg')}}" class="img-fluid"/>
                 <span><a href="tel:{{$phone}}" class="text-decoration-none">{{$phone}}</a></span></i>
             </div>
             @endif
             @if($email !== '')
             <div>
-                <img src=" {{url('frontend/icons/top-email.svg')}}" class="img-fluid"/>
+                <img src=" {{url('frontend/icons/Message.svg')}}" class="img-fluid"/>
                 <span><a href="mailto: {{$email}}" class="text-decoration-none">{{$email}}</a></span></i>
             </div>
             @endif
@@ -126,7 +126,7 @@
 </section>
 <!-- Top section -->
 <!-- Header section -->
-<header class="header">
+<header class="header" id="dice-nav-head">
     <a class="navbar-brand" id="navbar-brand" href="{{url('/')}}">
         <img src="{{url(\App\Models\Setting::where('slug','logo')->first()->value ?? '')}}" class="img-fluid logo"  alt="">
     </a>
@@ -154,7 +154,7 @@
             <a class="nav-link" href="{{url('/career')}}">Working at DICE </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="{{url('/contact')}}">Contact Us </a>
+            <a class="nav-link pr-0" href="{{url('/contact')}}">Contact Us </a>
         </li>
     </ul>
     <div class="mobile-navbar-btn ms-auto">
@@ -261,16 +261,20 @@
 
 var scrollicon = document.getElementById('listen-icon');
 var diceLogo = document.getElementById('navbar-brand');
+var navHeader = documentt.getElementById('dice-nav-head');
         window.onscroll= function(){
             if(window.scrollY > 300){
                 scrollicon.style.display="block";
                 diceLogo.style.top="0px";
-                diceLogo.style.width="110px"
+                diceLogo.style.width="298px";
+                navHeader.style.padding="0 6rem";
+                diceLogo.style.position="relative"
+
 
             }
             if(window.scrollY==0){
                 diceLogo.style.top="-45px";
-                diceLogo.style.width="124px"
+                diceLogo.style.width="420px"
             }
         }
         
