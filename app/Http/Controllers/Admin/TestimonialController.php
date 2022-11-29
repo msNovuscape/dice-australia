@@ -101,4 +101,16 @@ class TestimonialController extends Controller
 
 
     }
+
+    public function delete($id)
+    {
+        $setting=Testimonial::findorfail($id);
+        if (is_file(public_path().'/'.$setting->image) && file_exists(public_path().'/'.$setting->image)){
+            unlink(public_path().'/'.$setting->image);
+        }
+        $setting->delete();
+        Session::flash('success','Testimonial has been sucessfully deleted!');
+        return redirect($this->redirect);
+        //dd("here");
+    }
 }

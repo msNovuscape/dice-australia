@@ -96,6 +96,8 @@
                                                 <a href="{{url('admin/services/'.$service->id.'/edit')}}" class="btn btn-sm" data-bs-toggle="tooltip" data-bs-placement="top" title="edit">
                                                     <i class="fas fa-pencil-alt"></i>
                                                 </a>
+                                                <a href="{{url('admin/services/'.$service->id.'/delete')}}" class="btn btn-sm" data-bs-toggle="tooltip" data-bs-placement="top" title="delete" onclick="return confirm('Are you sure you want to delete?');">
+                                                    <i class="fas fa-trash"></i>
                                             </td>
                                         </tr>
                                     @endforeach

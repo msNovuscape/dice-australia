@@ -217,10 +217,18 @@ class ServiceController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function delete($id)
     {
-        //
+        $setting=Service::findorfail($id);
+        if (is_file(public_path().'/'.$setting->icon) && file_exists(public_path().'/'.$setting->icon)){
+            unlink(public_path().'/'.$setting->icon);
+        }
+        $setting->delete();
+        Session::flash('success','Service has been sucessfully deleted!');
+        return redirect($this->redirect);
+        //dd("here");
     }
+
 
     public function service_point($service_point_id){
         if(Auth::user()){

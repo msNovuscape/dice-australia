@@ -182,6 +182,7 @@ Route::group(['middleware'=>['auth']],function (){
         Route::get('testimonials/{id}/edit',[TestimonialController::class,'edit']);
         Route::post('testimonials/{id}',[TestimonialController::class,'update']);
         Route::get('testimonials/{id}',[TestimonialController::class,'show']);
+        Route::get('testimonials/{id}/delete',[TestimonialController::class,'delete']);
 
         Route::get('clients',[ClientController::class,'index']);
         Route::get('clients/create',[ClientController::class,'create']);
