@@ -13,6 +13,32 @@
                 <h1>Contact Us</h1>
                 <p>We can help you get the right care for yourself or someone you love. If you would like to find out more. Give us a call to schedule a free consultation.</p>
             </div>
+            <div class="dice-email-links">
+                <div class="dice-contact-links">
+                    <h5>General Enquiry</h5>
+                    @if($email !== null)
+                    <div class="contactus-email">
+                        <div class="contactus-icon">
+                            <i class="fa-solid fa-envelope fa-lg"></i>
+                        </div>
+                        <div>
+                            <a href="mailto:contact@dice.org.au">{{$email->value}}</a>
+                        </div>
+                    </div>
+                    @endif
+                </div>
+                <div class="dice-contact-links">
+                    <h5>Account</h5>
+                    <div class="contactus-email">
+                        <div class="contactus-icon">
+                            <i class="fa-solid fa-envelope fa-lg"></i>
+                        </div>
+                        <div>
+                            <a href="mailto:accounts@dice.org.au">accounts@dice.org.au</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="contactus-icons">
                 @if($phone !== null)
                 <div class="contactus-email">
@@ -24,7 +50,7 @@
                     </div>
                 </div>
                 @endif
-                @if($email !== null)
+                {{-- @if($email !== null)
                 <div class="contactus-email">
                     <div class="contactus-icon">
                         <i class="fa-solid fa-envelope fa-lg"></i>
@@ -33,7 +59,7 @@
                         <a href="mailto:contact@dice.org.au">{{$email->value}}</a>
                     </div>
                 </div>
-                @endif
+                @endif --}}
                 @if($address !== null)
                 <div class="contactus-location">
                     <div class="contactus-icon">

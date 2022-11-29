@@ -60,8 +60,15 @@ h4{
     background: #FFFFFF;
     box-shadow: 0 4px 4px rgb(0 0 0 / 8%);
 }
+.header-scroll{
+    padding: 0 6rem;
+}
+.navbar-brand-scroll{
+    position: relative !important;
+    top: 0 !important;
+    width:294px !important;
+}
 .navbar-brand{
-    /* width:294px; */
     width: 420px;
     position: absolute;
     padding: 8px;
@@ -1203,7 +1210,7 @@ Responsive Codes
 .contactus-section{
     padding: 6rem;
     background-repeat: no-repeat;
-    height: 40vh;
+    height: 50vh;
     box-shadow: inset 0 1700px rgb(0 0 0 / 30%);
     background-size: cover!important;
     position: relative;
@@ -1215,27 +1222,35 @@ Responsive Codes
 .contactus-header{
     text-align: center;
     position: absolute;
-    top: 40%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+.dice-email-links{
+    display: flex;
+    gap: 50px;
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translate(-40%, -50%);
 }
 .contactus-icons{
     position: absolute;
     bottom: 10%;
     left: 40%;
-    transform: translate(-30%, -50%);
+    transform: translate(-20%, -50%);
     margin: 0;
     display: flex;
     gap: 50px;
 }
-.contactus-icons a{
+.contactus-icons a, .dice-contact-links a{
     text-decoration: none;
     font-weight: 700;
     font-size: 15px;
     line-height: 1.6rem;
     color: #ffffff;
 }
-.contactus-icons .fa-solid{
+.contactus-icons .fa-solid, .dice-contact-links .fa-solid{
     color: #FFFFFF;
 }
 .contactus-header h1{
@@ -1250,6 +1265,13 @@ Responsive Codes
     font-weight: 700;
     font-size: 17px;
     line-height: 1.6rem;
+    color: #ffffff;
+}
+.dice-contact-links h5{
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 1.6rem;
+    margin-bottom: 0;
     color: #ffffff;
 }
 .contactus-email{
@@ -1771,7 +1793,7 @@ Responsive Codes
         justify-content: center;
         align-items: center;
         text-align: center;
-        gap: 3rem;
+        gap: 1rem;
         text-decoration: none;
         padding: 0 0.8rem !important;
         list-style: none;
@@ -1839,7 +1861,7 @@ Responsive Codes
     .navbar-brand{
         position: relative;
         top: 0 !important; 
-        width: 70px !important;
+        width: 150px !important;
         padding: 10px;
     }
     .contact-info{
@@ -1876,6 +1898,9 @@ Responsive Codes
     #topbar {
         padding: 10px 0;
     }
+    #topbar a{
+        font-size: 14px;
+    }
     .slider-content {
         position: absolute;
         padding: 3rem 1rem;
@@ -1911,7 +1936,8 @@ Responsive Codes
     .acknowledgement-section, .subscription-desc, .footer, .about-page-section, .team-support-section,
     .our-value-section, .about-regirtered, .gallery-section, .contact-form-section, .service-slider-section, 
     .service-first-content-section, .service-second-content-section, .support-section, .ndis-top-section, 
-    .ndis-scheme-section, .ndis-run-section, .ndis-finance-section, .working-dice-section, .working-dice-form{
+    .ndis-scheme-section, .ndis-run-section, .ndis-finance-section, .working-dice-section, .working-dice-form, 
+    .ndis-booklets-section{
         padding: 2rem;
     }
     .referral-section{
@@ -2053,6 +2079,17 @@ Responsive Codes
         width: 80%;
         transform: translate(-34%, 0);
     }
+    .dice-email-links{
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        bottom: 10%;
+        width: 80%;
+        transform: translate(-45%, 0);
+    }
+    .contactus-section{
+        height: 60vh;
+    }
     .contactus-header h1, .ndis-top-section p{
         font-size: 22px;
         line-height: 30px;
@@ -2066,7 +2103,7 @@ Responsive Codes
     }
     .first-content-desc h4, .service-detail-banner h3, .service-detail-banner h4,
     .second-content-desc h4, .support-desc h1, .ndis-scheme-content h4, .ndis-finance-content h4,
-    .ndis-top-section h2 {
+    .ndis-top-section h2, .ndis-booklets-section h4 {
         font-size: 24px;
         line-height: 34px;
     }
@@ -2104,42 +2141,31 @@ Responsive Codes
     }
 }
 @media only screen and (min-width: 768px) and (max-width: 1024px){
+    .navbar-brand{
+        position: relative;
+        top: 0 !important; 
+        width: 200px !important;
+        padding: 10px;
+    }
     .listen {
-
         width: 30px;
-
         height: 80px;
-
         background: #DD6227;
-
         border-radius: 1;
-
         display: flex;
-
         justify-content: center;
-
         align-items: center;
-
         border: none;
-
         flex-direction: column;
 
     }
-
     .listen-img {
-
         background: none;
-
         width: 100%;
-
         height: 50%;
-
     }
-
     .listen-text {
-
         font-size: 10px;
-
     }
     .header, #topbar{
         padding: 0 2rem;
@@ -2223,15 +2249,21 @@ Responsive Codes
         padding: 10px !important;
     }
     /* contact us page */
+    .contactus-section{
+        height: 30vh;
+    }
     .contactus-icons {
         position: absolute;
         bottom: 0%;
         left: 40%;
-        transform: translate(-25%, -80%);
+        transform: translate(-20%, -50%);
         margin: 0;
+        width: 90%;
         display: flex;
-        flex-direction: column;
         gap: 10px;
+    }
+    .dice-email-links{
+        bottom: 10%;
     }
     .contactus-header{
         top: 30%;
