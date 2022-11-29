@@ -148,6 +148,13 @@
             </div>
         </div>
     </section>
+    <section class="ndis-booklets-section">
+        <div class="text-center">
+            <h4>NDIS booklets and factsheets</h4>
+            <p>Guidance, tips and advice to help you begin your NDIS journey with confidence.</p>
+            <a href="https://www.ndis.gov.au/about-us/publications/booklets-and-factsheets" target="_blank" rel="noreferrer" class="start-here">Start Here</a>
+        </div>
+    </section>
     <section class="ndis-finance-section">
         <div class="row">
             <div class="col-md-5">

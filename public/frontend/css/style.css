@@ -719,7 +719,7 @@ Responsive Codes
 .about-left p{
     text-align: justify;
 }
-.about-left a{
+.about-left a, .ndis-booklets-section a{
     text-decoration: none;
     background: #202023;
     border-radius: 25px;
@@ -1698,7 +1698,7 @@ Responsive Codes
 }
 /* service detail section */
 /* ndis page */
-.ndis-top-section, .ndis-scheme-section, .ndis-run-section{
+.ndis-top-section, .ndis-scheme-section, .ndis-run-section, .ndis-booklets-section{
     padding: 3rem 6rem;
 }
 .ndis-top-section h2{
@@ -1730,7 +1730,7 @@ Responsive Codes
 .ndis-top-section{
     background: #F0EFFD;
 }
-.ndis-scheme-content h4, .ndis-finance-content h4{
+.ndis-scheme-content h4, .ndis-finance-content h4, .ndis-booklets-section h4{
     font-weight: 700;
     font-size: 32px;
     color: #000000;
