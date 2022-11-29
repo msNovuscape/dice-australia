@@ -212,7 +212,7 @@
     </section>
     <!-- about section -->
     <!-- pricing section -->
-    @if(($ndis_pricing) !== null)
+    {{-- @if(($ndis_pricing) !== null)
     <section class="pricing-section">
         <div class="row">
             <div class="col-md-5">
@@ -231,7 +231,7 @@
             </div>
         </div>
     </section>
-    @endif
+    @endif --}}
     <!-- pricing section -->
     <!-- customer section -->
     <!-- <section class="customer-section">

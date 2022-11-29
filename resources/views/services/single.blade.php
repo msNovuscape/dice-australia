@@ -142,6 +142,26 @@
                 </div>
             </div>
         </section>
+        @if(($ndis_pricing) !== null && $service->slug === "plan-management")
+        <section class="pricing-section">
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="pricing-image">
+                        <img src="{{url($ndis_pricing->image)}}" alt="" class="img-fluid"/>
+                    </div>
+                </div>
+                <div class="col-md-7">
+                    <div class="pricing-detail">
+                        <h2>{{$ndis_pricing->title}}</h2>
+                        <h5>{{$ndis_pricing->sub_title}}</h5>
+                        <p>{!!strip_tags($ndis_pricing->description)!!}
+                        <br><br> {!!strip_tags($ndis_pricing->sub_description)!!}</p>
+                        <a target = "_blank" href="{{$ndis_pricing->link}}">{{$ndis_pricing->button}}</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        @endif
         @endif
     @else
         <p>Content Needs to be added</p>

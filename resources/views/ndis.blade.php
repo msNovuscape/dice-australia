@@ -160,7 +160,10 @@
                     <h4>Who can Access the NDIS?</h4>
                     <p>Australian citizens, permanent residents, and those with special category visas who reside in Australia, are aged seven to 65, have a disability brought on by a chronic condition are eligible for the NDIS. According to the NDIS eligibility requirements, you must either require supports to either minimize your future demands or enable your family to improve your abilities. You are eligible for the NDIS if you need assistance or support to carry out everyday tasks that require disability-specific assistance from another person or specialized equipment.
                         <br><br>
-                        The NDIS website states that there is no predetermined amount of cash you will get from the program. Participants instead create an NDIS plan based on their unique requirements and circumstances, in which they can ask for funding for "fair" and "essential" assistance and services. A member of the NDIA will then examine and approve this.</p>
+                        The NDIS website states that there is no predetermined amount of cash you will get from the program. Participants instead create an NDIS plan based on their unique requirements and circumstances, in which they can ask for funding for "fair" and "essential" assistance and services. A member of the NDIA will then examine and approve this.
+                        <br>
+                        <a href="https://www.ndis.gov.au/applying-access-ndis/am-i-eligible" target="_blank" rel="noreferrer" style="color: #e54e2e">Am I eligible?</a>
+                    </p>
                 </div>
             </div>
         </div>
