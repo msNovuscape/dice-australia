@@ -69,7 +69,6 @@
                                             <td class="text-center">
                                                 <a href="{{url($service->icon ?? '')}}" target="_blank">
                                                     <img src="{{url($service->icon ?? '')}}" alt="" style="width: 100px;">
-
                                                 </a>
                                             </td>
                                             <td class="text-center">{{$service->seo_title}}</td>
