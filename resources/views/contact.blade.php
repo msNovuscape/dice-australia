@@ -12,64 +12,54 @@
             <div class="contactus-header">
                 <h1>Contact Us</h1>
                 <p>We can help you get the right care for yourself or someone you love. If you would like to find out more. Give us a call to schedule a free consultation.</p>
-            </div>
-            <div class="dice-email-links">
-                <div class="dice-contact-links">
-                    <h5>General Enquiry</h5>
-                    @if($email !== null)
+                <div class="dice-email-links">
+                    <div class="dice-contact-links">
+                        <h5>General Enquiry</h5>
+                        @if($email !== null)
+                        <div class="contactus-email">
+                            <div class="contactus-icon">
+                                <i class="fa-solid fa-envelope fa-lg"></i>
+                            </div>
+                            <div>
+                                <a href="mailto:contact@dice.org.au">{{$email->value}}</a>
+                            </div>
+                        </div>
+                        @endif
+                    </div>
+                    <div class="dice-contact-links">
+                        <h5>Account</h5>
+                        <div class="contactus-email">
+                            <div class="contactus-icon">
+                                <i class="fa-solid fa-envelope fa-lg"></i>
+                            </div>
+                            <div>
+                                <a href="mailto:accounts@dice.org.au">accounts@dice.org.au</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contactus-icons">
+                    @if($phone !== null)
                     <div class="contactus-email">
                         <div class="contactus-icon">
-                            <i class="fa-solid fa-envelope fa-lg"></i>
+                            <i class="fa-solid fa-phone fa-lg"></i>
                         </div>
                         <div>
-                            <a href="mailto:contact@dice.org.au">{{$email->value}}</a>
+                            <a href="tel:1300 050 051">{{$phone->value}}</a>
+                        </div>
+                    </div>
+                    @endif
+                    @if($address !== null)
+                    <div class="contactus-location">
+                        <div class="contactus-icon">
+                            <i class="fa-solid fa-location-dot fa-lg"></i>
+                        </div>
+                        <div>
+                            <a href="https://goo.gl/maps/4x5Y3Mn1xAybeS2u6"  target="-_blank" rel="noreferrer">{{$address->value}}</a>
                         </div>
                     </div>
                     @endif
                 </div>
-                <div class="dice-contact-links">
-                    <h5>Account</h5>
-                    <div class="contactus-email">
-                        <div class="contactus-icon">
-                            <i class="fa-solid fa-envelope fa-lg"></i>
-                        </div>
-                        <div>
-                            <a href="mailto:accounts@dice.org.au">accounts@dice.org.au</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="contactus-icons">
-                @if($phone !== null)
-                <div class="contactus-email">
-                    <div class="contactus-icon">
-                        <i class="fa-solid fa-phone fa-lg"></i>
-                    </div>
-                    <div>
-                        <a href="tel:1300 050 051">{{$phone->value}}</a>
-                    </div>
-                </div>
-                @endif
-                {{-- @if($email !== null)
-                <div class="contactus-email">
-                    <div class="contactus-icon">
-                        <i class="fa-solid fa-envelope fa-lg"></i>
-                    </div>
-                    <div>
-                        <a href="mailto:contact@dice.org.au">{{$email->value}}</a>
-                    </div>
-                </div>
-                @endif --}}
-                @if($address !== null)
-                <div class="contactus-location">
-                    <div class="contactus-icon">
-                        <i class="fa-solid fa-location-dot fa-lg"></i>
-                    </div>
-                    <div>
-                        <a href="https://goo.gl/maps/4x5Y3Mn1xAybeS2u6"  target="-_blank" rel="noreferrer">{{$address->value}}</a>
-                    </div>
-                </div>
-                @endif
             </div>
     </section>
     <section class="contact-form-section">
