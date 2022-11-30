@@ -1717,6 +1717,10 @@ Responsive Codes
 .ndis-top-section, .ndis-scheme-section, .ndis-run-section, .ndis-booklets-section{
     padding: 3rem 6rem;
 }
+.ndis-booklets-section img{
+    float: right;
+    margin-right: 40px;
+}
 .ndis-top-section h2{
     font-weight: 700;
     font-size: 32px;
@@ -1752,6 +1756,11 @@ Responsive Codes
     color: #000000;
     line-height: 42px;
     margin-bottom: 20px;
+}
+.ndis-finance-content a{
+    color: #e54e2e;
+    font-size: 20px;
+    font-weight: 600;
 }
 .ndis-scheme-content ul li{
     list-style: none;

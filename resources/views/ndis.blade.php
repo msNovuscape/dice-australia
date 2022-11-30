@@ -149,10 +149,15 @@
         </div>
     </section>
     <section class="ndis-booklets-section">
-        <div class="text-center">
-            <h4>NDIS Plan: Getting what you want</h4>
-            <p>Information for people with disability, NDIS providers and disability workers.</p>
-            <a href="https://www.ndis.gov.au/about-us/publications/booklets-and-factsheets" target="_blank" rel="noreferrer" class="start-here">Start Here</a>
+        <div class="row">
+            <div class="col-md-4">
+                <img src="{{url('frontend/images/ndis-plan.png')}}" class="img-fluid" alt="">
+            </div>
+            <div class="col-md-8">
+                <h4>NDIS Plan: Getting what you want</h4>
+                <p>Information for people with disability, NDIS providers and disability workers.</p>
+                <a href="https://www.ndis.gov.au/about-us/publications/booklets-and-factsheets" target="_blank" rel="noreferrer" class="start-here">Start Here</a>
+            </div>
         </div>
     </section>
     <section class="ndis-finance-section">
@@ -165,12 +170,11 @@
             <div class="col-md-7">
                 <div class="ndis-finance-content">
                     <h4>Who can Access the NDIS?</h4>
-                    <p>Australian citizens, permanent residents, and those with special category visas who reside in Australia, are aged seven to 65, have a disability brought on by a chronic condition are eligible for the NDIS. According to the NDIS eligibility requirements, you must either require supports to either minimize your future demands or enable your family to improve your abilities. You are eligible for the NDIS if you need assistance or support to carry out everyday tasks that require disability-specific assistance from another person or specialized equipment.
+                    <p>The NDIS is available to Australian citizens, permanent residents and special category visa holders who reside in Australia, are aged between seven to 65 and have a disability caused by a chronic condition. You qualify for the NDIS if you require assistance or support to complete daily chores requiring specialist tools or other people's disability-specific assistance.
                         <br><br>
-                        The NDIS website states that there is no predetermined amount of cash you will get from the program. Participants instead create an NDIS plan based on their unique requirements and circumstances, in which they can ask for funding for "fair" and "essential" assistance and services. A member of the NDIA will then examine and approve this.
-                        <br>
-                        <a href="https://www.ndis.gov.au/applying-access-ndis/am-i-eligible" target="_blank" rel="noreferrer" style="color: #e54e2e">Am I eligible?</a>
+                        To request funding for "fair" and "essential" help and services, participants instead develop NDIS plans based on their own needs and circumstances. There is no set sum of the amount you will receive from the program, according to the NDIS website.  NDIA members will then review and give their approval.
                     </p>
+                    <a href="https://www.ndis.gov.au/applying-access-ndis/am-i-eligible" target="_blank" rel="noreferrer">Am I eligible?</a>
                 </div>
             </div>
         </div>
