@@ -43,10 +43,17 @@
                             </div>
                             <div class="col-md-4">
                                 <div class="form-group">
-                                    <label>Link</label>
+                                    <label>Button Name</label>
+                                    <input type="text" class="form-control"  id="inputPassword3" name="button_name" value="{{$setting->button_name}}">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Button Link</label>
                                     <input type="text" class="form-control"  id="inputPassword3" name="link" value="{{$setting->link}}">
                                 </div>
                             </div>
+
 
 
                             <div class="col-md-4">

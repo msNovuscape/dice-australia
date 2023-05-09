@@ -23,11 +23,11 @@
                     <h3>{{$slider->title1}}</h3>
                     <h2>{{$slider->title2}}</h2>
                     <p>{!!strip_tags($slider->description)!!}</p>
-                    <a href="contact">Get a Free Consultation</a>
+                    <a href="{{ $slider->link }}">{{ $slider->button_name }}</a>
                 </div>
             </div>
             @endforeach
-            
+
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -72,7 +72,7 @@
                 </div>
             </div>
             <div class="services mt-4">
-                
+
                 @foreach($services as $service)
                 @php
                 $class = '' ;
@@ -101,7 +101,7 @@
                             <p>{!!strip_tags($service->short_description)!!}</p>
                         </div> -->
                     </div>
-                    
+
                 </a>
                 @endforeach
                 <!-- <a href="/service/" class="service-card-second">
@@ -194,7 +194,7 @@
                                     <li><i class="fa-solid fa-circle-check"></i>{{$point->point}}</li>
                                     <!-- <li><i class="fa-solid fa-circle-check"></i>Diversity</li>
                                     <li><i class="fa-solid fa-circle-check"></i>Personalized Services</li> -->
-                                @endforeach    
+                                @endforeach
                                 </ul>
                             </div>
                         </div>
@@ -258,13 +258,13 @@
                         </div>
                     </div>
                 </div>
-            @endforeach    
-                
+            @endforeach
+
             </div>
         </div>
     </section> -->
     <!-- customer section -->
-    
+
     <!-- subscription section -->
     <!-- <section class="subscription-section">
         <div class="row">
@@ -419,7 +419,7 @@
 
                     // alert(response.success);
                 //   $('#success-message').text(response.success);
-                    $('#success').text(response.success);  
+                    $('#success').text(response.success);
                     $('#subsModal').modal('show');
 
                   email.value = '';

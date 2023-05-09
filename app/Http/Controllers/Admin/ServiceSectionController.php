@@ -60,14 +60,14 @@ class ServiceSectionController extends Controller
      */
     public function store(Request $request,$id)
     {
-        
-       
+
+
         $this->validate(\request(),[
-            
+
             'title' => 'required',
             'status' => 'required',
             'order_by' => 'required'
-           
+
         ]);
         $service_section = new ServiceSection();
 
@@ -97,13 +97,13 @@ class ServiceSectionController extends Controller
             $points = $request->points;
             $point_descriptions = $request->point_descriptions ?? [];
             $icons = $request->icons ?? [];
-            
+
             if($points[0] != null){
-               
+
             foreach($points as $key => $point){
 
                 $service_section_point = new ServiceSectionPoint();
-                
+
                 $service_section_point->service_section_id = $service_section->id;
                 if(array_key_exists($key,$point_descriptions)){
                 $service_section_point->point_description = $point_descriptions[$key];
@@ -111,9 +111,9 @@ class ServiceSectionController extends Controller
                 if(array_key_exists($key,$icons)){
                 $extension = $icons[$key]->getClientOriginalExtension();
                 $image_folder_type = array_search('service',config('custom.image_folders')); //for image saved in folder
-            
+
                 $count = rand(100,999);
-            
+
                 $out_put_path = User::save_image($icons[$key],$extension,$count,$image_folder_type);
                 is_array($out_put_path) ? $service_section_point->icon = $out_put_path[0] : $service_section_point->icon = $out_put_path;
                 // $service_section_point->icon = $points_descriptions[$key];
@@ -137,8 +137,8 @@ class ServiceSectionController extends Controller
      */
     public function show($id,$secId)
     {
-        
-        
+
+
         // $service = new Service();
         // $service_section = new ServiceSection();
         $service = Service::findorfail($id);
@@ -221,9 +221,9 @@ class ServiceSectionController extends Controller
                     if(array_key_exists($key,$icons)){
                         $extension = $icons[$key]->getClientOriginalExtension();
                         $image_folder_type = array_search('service',config('custom.image_folders')); //for image saved in folder
-                    
+
                         $count = rand(100,999);
-                    
+
                         $out_put_path = User::save_image($icons[$key],$extension,$count,$image_folder_type);
                         is_array($out_put_path) ? $service_section_point->icon = $out_put_path[0] : $service_section_point->icon = $out_put_path;
                          // $service_section_point->icon = $points_descriptions[$key];
@@ -244,9 +244,9 @@ class ServiceSectionController extends Controller
             //     if(array_key_exists($key,$icons)){
             //     $extension = $icons[$key]->getClientOriginalExtension();
             //     $image_folder_type = array_search('service',config('custom.image_folders')); //for image saved in folder
-            
+
             //     $count = rand(100,999);
-            
+
             //     $out_put_path = User::save_image($icons[$key],$extension,$count,$image_folder_type);
             //     is_array($out_put_path) ? $service_section_point->icon = $out_put_path[0] : $service_section_point->icon = $out_put_path;
             //     // $service_section_point->icon = $points_descriptions[$key];

@@ -55,7 +55,7 @@
                                     <input type="text" class="form-control"   name="image_alt" >
                                 </div>
                             </div>
-                            
+
 
                             <div class="col-md-12" >
                                 <div class="form-group" >
@@ -63,10 +63,17 @@
                                     <textarea name="description" class="summernote_class" rows="5" style="height: 658px;" >{{old('description')}}</textarea>
                                 </div>
                             </div>
-                            
+
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label>Link</label>
+                                    <label>Button Name</label>
+                                    <input type="text" class="form-control"  id="inputPassword3" name="button_name" value="{{old('button_name')}}">
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Button Link</label>
                                     <input type="text" class="form-control"  id="inputPassword3" name="link" value="{{old('link')}}">
                                 </div>
                             </div>

@@ -54,6 +54,7 @@ class SliderController extends Controller
     {
         $this->validate(\request(),[
             'title1' => 'required',
+            'button_name' => 'required',
             // 'title2' => 'required',
             // 'description' => 'required',
             'image' => 'required|file|mimes:jpeg,png,jpg',
@@ -66,6 +67,7 @@ class SliderController extends Controller
         $setting->title2 = \request('title2');
         $setting->description = \request('description');
         $setting->status = \request('status');
+        $setting->button_name = \request('button_name');
         $setting->link = \request('link');
         $setting->image_alt = \request('image_alt');
         if($request->hasFile('image')){
@@ -134,6 +136,7 @@ class SliderController extends Controller
         $setting->title2 = \request('title2');
         $setting->description = \request('description');
         $setting->status = \request('status');
+        $setting->button_name = \request('button_name');
         $setting->link = \request('link');
         $setting->image_alt = \request('image_alt');
         if($request->hasFile('image')){
@@ -141,7 +144,7 @@ class SliderController extends Controller
             $image_folder_type = array_search('slider',config('custom.image_folders')); //for image saved in folder
             $count = rand(100,999);
             $out_put_path = User::save_image(\request('image'),$extension,$count,$image_folder_type);
-            
+
             $image_path = $out_put_path[0];
             if (is_file(public_path().'/'.$setting->image) && file_exists(public_path().'/'.$setting->image)){
                 unlink(public_path().'/'.$setting->image);
@@ -150,7 +153,7 @@ class SliderController extends Controller
                 $setting->image = $image_path;
 
             }
-            
+
 //                    $setting->doc_name = $out_put_path[2];
         }
 //        $requestData = $request->all();
