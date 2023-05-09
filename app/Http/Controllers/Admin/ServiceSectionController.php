@@ -26,7 +26,7 @@ class ServiceSectionController extends Controller
     public function index($id)
     {
         $service_name = Service::findorfail($id)->name;
-        $service_section = ServiceSection::where('service_id',$id);
+        $service_section = ServiceSection::where('service_id',$id)->orderBy('order_by', 'ASC');
 
 
         // if(\request('name')){
