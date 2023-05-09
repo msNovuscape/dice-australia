@@ -163,10 +163,10 @@
         </section>
         @endif
 
-        <section class="service-second-content-section">
+        <section class="service-third-content-section">
             <div class="row">
                 <div class="col-md-6">
-                    <div class="service-second-img">
+                    <div class="service-first-img">
                         <img src="{{url($third_service->image ?? 'frontend/images/independent-living.png')}}" alt="" class="w-100">
                     </div>
                 </div>

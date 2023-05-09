@@ -1578,7 +1578,7 @@ Responsive Codes
 }
 /* gallery section */
 /* service detail section */
-.service-slider-section, .service-first-content-section, .service-second-content-section, .working-dice-section, .working-dice-form{
+.service-slider-section, .service-first-content-section, .service-second-content-section, .service-third-content-section, .working-dice-section, .working-dice-form{
     padding: 3rem 6rem;
 }
 .service-first-content-section{
@@ -1590,7 +1590,7 @@ Responsive Codes
 .service-second-img, .working-dice-img{
     padding-left: 3.5rem;
 }
-.service-slider-section .row, .service-first-content-section .row, .service-second-content-section .row{
+.service-slider-section .row, .service-first-content-section .row, .service-second-content-section .row, .service-third-content-section .row{
     display: flex;
     align-items: center;
 }
@@ -1673,7 +1673,9 @@ Responsive Codes
 }
 .support-section{
     padding: 4rem 6rem;
-    background: #FFF0EB;
+    background:#FFF0EB;
+} .service-third-content-section{
+    background:#f8f1ee;
 }
 .support-desc h1{
     font-weight: 700;
@@ -1960,7 +1962,7 @@ Responsive Codes
     .ndis-section,.services-section, .about-section, .pricing-section, .customer-section, 
     .acknowledgement-section, .subscription-desc, .footer, .about-page-section, .team-support-section,
     .our-value-section, .about-regirtered, .gallery-section, .contact-form-section, .service-slider-section, 
-    .service-first-content-section, .service-second-content-section, .support-section, .ndis-top-section, 
+    .service-first-content-section, .service-second-content-section, .service-third-content-section, .support-section, .ndis-top-section, 
     .ndis-scheme-section, .ndis-run-section, .ndis-finance-section, .working-dice-section, .working-dice-form, 
     .ndis-booklets-section{
         padding: 2rem;
@@ -2212,7 +2214,7 @@ Responsive Codes
     }
     .ndis-section, .services-section, .about-section, .customer-section, .acknowledgement-section, 
     .about-page-section, .team-support-section, .our-value-section, .about-regirtered, .referral-section, 
-    .contact-form-section, .service-slider-section, .service-first-content-section, .service-second-content-section, 
+    .contact-form-section, .service-slider-section, .service-first-content-section, .service-second-content-section, .service-third-content-section,
     .support-section, .ndis-top-section, .ndis-scheme-section, .ndis-run-section, .ndis-finance-section, .working-dice-section, .working-dice-form{
         padding: 3rem;
     }
@@ -2221,7 +2223,7 @@ Responsive Codes
     }
     .about-section .row, .pricing-section .row, .subscription-section .row, 
     .about-page-section .row, .team-support-section .row, .service-slider-section .row, 
-    .service-first-content-section .row, .service-second-content-section .row, 
+    .service-first-content-section .row, .service-second-content-section .row, .service-third-content-section .row, 
     .ndis-scheme-section .row, .ndis-run-section .row, .ndis-finance-section .row,
     .working-dice-section .row{
         flex-direction: column;
@@ -2230,7 +2232,7 @@ Responsive Codes
     .about-section .row .col-md-7, .pricing-section .row .col-md-7, .subscription-section .row .col-md-7, 
     .subscription-section .row .col-md-5, .about-page-section .row .col-md-5, .about-page-section .row .col-md-7,
     .team-support-section .row .col-md-5, .team-support-section .row .col-md-7, .service-slider-section .row .col-md-6, 
-    .service-first-content-section .row .col-md-6, .service-second-content-section .row .col-md-6, 
+    .service-first-content-section .row .col-md-6, .service-second-content-section .row .col-md-6, .service-third-content-section .row .col-md-6,
     .ndis-scheme-section .row .col-md-6, .ndis-run-section .row .col-md-6, .ndis-finance-section .row .col-md-7, 
     .ndis-finance-section .row .col-md-5, .ndis-scheme-img, .ndis-run-img, .ndis-finance-img,
     .working-dice-section .row .col-md-6, .working-dice-img{
