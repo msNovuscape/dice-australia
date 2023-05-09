@@ -162,6 +162,56 @@
             </div>
         </section>
         @endif
+
+        <section class="service-second-content-section">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="service-second-img">
+                        <img src="{{url($third_service->image ?? 'frontend/images/independent-living.png')}}" alt="" class="w-100">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="third-content-desc">
+                        <h2>{{$third_service->title}}</h2>
+                        <!-- <h5>{{$third_service->sub_title}}</h5> -->
+                        
+                        @if($third_service->description != '')
+                            <p>{!!strip_tags($third_service->description)!!}</p>
+                        @endif
+
+                        <div class="point-desc-block">
+                            <h6>Coffee</h6>
+                            <p>freshly-made exceptional coffee with wide variety of regular dishes and daily specials menu</p>
+                        </div>
+
+                        <div class="point-desc-block">
+                            <h6>Breakfast</h6>
+                            <p>Stop in for yoghurt & chia cups, fruit salad, egg & bacon rolls and croissants.</p>
+                        </div>
+
+                        <div class="point-desc-block">
+                            <h6>Sandwiches, Rolls and Wraps</h6>
+                            <p>Choose ready-made assorted sandwich packs to go or ‘build your own’ from extensive sandwich bar options.</p>
+                        </div>
+
+                        <div class="point-desc-block">
+                            <h6>Pastries, Cakes, Slices, and Biscuits</h6>
+                            <p>Freshly baked in-house to satisfy your sweet tooth.</p>
+                        </div>
+
+                        
+
+                        <!-- <ul>
+                        @foreach($third_service->service_section_point as $point)
+                            <li>{{$point->point}} </li>
+                        @endforeach
+                        </ul> -->
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+
         @endif
     @else
         <p>Content Needs to be added</p>

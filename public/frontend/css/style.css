@@ -1601,7 +1601,7 @@ Responsive Codes
     line-height: 44px;
     margin-bottom: 15px;
 }
-.service-detail-banner h2, .first-content-desc h2, .second-content-desc h2{
+.service-detail-banner h2, .first-content-desc h2, .second-content-desc h2, .third-content-desc h2{
     font-weight: 700;
     font-size: 34px;
     color: #202023;
@@ -1614,7 +1614,7 @@ Responsive Codes
     line-height: 148.5%;
     color: #121212;
 }
-.first-content-desc h5, .second-content-desc h5{
+.first-content-desc h5, .second-content-desc h5, .third-content-desc h5{
     font-weight: 700;
     font-size: 20px;
     color: #e54e2e;
@@ -1648,6 +1648,28 @@ Responsive Codes
     line-height: 33px;
     letter-spacing: 0.001em;
     color: #221415;
+}
+.point-desc-block{
+    position: relative;
+    padding-left:30px;
+}
+.point-desc-block::before {
+    content: "\f124";
+    color: #e54e2e;
+    font-size: 20px;
+    font-family: FontAwesome;
+    position: absolute;
+    top:-3px;
+    left: 0;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+}
+.point-desc-block h6{
+    font-weight: 600;
+    font-size: 20px;
 }
 .support-section{
     padding: 4rem 6rem;
@@ -1959,6 +1981,9 @@ Responsive Codes
         font-size: 24px;
         line-height: 34px;
     }
+    .third-content-desc h2{
+        margin-top:25px;
+    }
     .about-left h2, .pricing-detail h2{
         font-size: 24px;
         line-height: 34px;
@@ -2215,6 +2240,9 @@ Responsive Codes
     .ndis-scheme-content{
         margin-top: 40px;
     }
+    .third-content-desc h2{
+        margin-top:25px;
+    }
     .customer-review-card{
         min-height: 500px;
     }
@@ -2262,7 +2290,7 @@ Responsive Codes
         margin: 0;
     }
     .service-first-img, .service-second-img, .ndis-scheme-img, .ndis-run-img, .ndis-finance-img{
-        padding: 0 150px;
+        padding: 0 0px;
         width: 100%;
     }
     .support-service-card {
