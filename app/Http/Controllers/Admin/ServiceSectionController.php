@@ -83,13 +83,16 @@ class ServiceSectionController extends Controller
 
 
         if($request->hasFile('image')){
-            $extension = \request()->file('image')->getClientOriginalExtension();
-            $image_folder_type = array_search('service',config('custom.image_folders')); //for image saved in folder
-            // dd($image_folder_type);
-            $count = rand(100,999);
-            $out_put_path = User::save_image(\request('image'),$extension,$count,$image_folder_type);
-                $image_path = $out_put_path[0];
-                $service_section->image = $image_path;
+          $extension = \request()->file('image')->getClientOriginalExtension();
+                $image_folder_type = array_search('service',config('custom.image_folders')); //for image saved in folder
+                $count = rand(100,999);
+                $out_put_path = User::save_image(\request('image'),$extension,$count,$image_folder_type);
+                // dd($out_put_path);
+                if($extension == "jpeg" || $extension == "jpg" || $extension == "png"){
+                    $image_path = $out_put_path[0];
+                    $service_section->image = $image_path;
+//                    $setting->doc_name = $out_put_path[2];
+                }
         }
 
 
@@ -99,14 +102,13 @@ class ServiceSectionController extends Controller
             $icons = $request->icons ?? [];
 
             if($points[0] != null){
-
             foreach($points as $key => $point){
 
                 $service_section_point = new ServiceSectionPoint();
 
                 $service_section_point->service_section_id = $service_section->id;
                 if(array_key_exists($key,$point_descriptions)){
-                $service_section_point->point_description = $point_descriptions[$key];
+                $service_section_point->point_description = strip_tags($point_descriptions[$key]);
                 }
                 if(array_key_exists($key,$icons)){
                 $extension = $icons[$key]->getClientOriginalExtension();
@@ -178,6 +180,7 @@ class ServiceSectionController extends Controller
      */
     public function update(Request $request, $id, $secId)
     {
+
         $this->validate(\request(),[
             'title' => 'required',
             'status' => 'required',
@@ -198,62 +201,40 @@ class ServiceSectionController extends Controller
             $count = rand(100,999);
             $out_put_path = User::save_image(\request('image'),$extension,$count,$image_folder_type);
             $image_path = $out_put_path[0];
-            if (is_file(public_path().'/'.$service_section->image) && file_exists(public_path().'/'.$service_section->image)){
-                unlink(public_path().'/'.$service_section->image);
+            if (is_file('/home/ruggb895obtt/public_html/'.$service_section->image) && file_exists('/home/ruggb895obtt/public_html/'.$service_section->image)){
+                unlink('/home/ruggb895obtt/public_html/'.$service_section->image);
             }
             $service_section->image = $image_path;
         }
         if($service_section->update()){
             $points = $request->points;
+
             $point_descriptions = $request->point_descriptions ?? [];
             $icons = $request->icons ?? [];
-          
 
-            if($points[0] != null){
-               foreach($request['point_ids'] as $key => $pid){
+            if($points != null){
+                $service_point = $service_section->service_section_point();
+                $service_point->delete();
+            foreach($points as $key => $point){
+
                 $service_section_point = new ServiceSectionPoint();
-                $service_section_point = $service_section_point->findorfail($pid);
-                // $service_section_point =  ServiceSectionPoint::find($id);
+                $service_section_point->service_section_id = $service_section->id;
+                if(array_key_exists($key,$point_descriptions)){
+                $service_section_point->point_description = strip_tags($point_descriptions[$key]);
+                }
+                if(array_key_exists($key,$icons)){
+                $extension = $icons[$key]->getClientOriginalExtension();
+                $image_folder_type = array_search('service',config('custom.image_folders')); //for image saved in folder
 
-                    if(array_key_exists($key,$point_descriptions)){
-                         $service_section_point->point_description = $point_descriptions[$key];
-                    }
-                    if(array_key_exists($key,$icons)){
-                        $extension = $icons[$key]->getClientOriginalExtension();
-                        $image_folder_type = array_search('service',config('custom.image_folders')); //for image saved in folder
+                $count = rand(100,999);
 
-                        $count = rand(100,999);
-
-                        $out_put_path = User::save_image($icons[$key],$extension,$count,$image_folder_type);
-                        is_array($out_put_path) ? $service_section_point->icon = $out_put_path[0] : $service_section_point->icon = $out_put_path;
-                         // $service_section_point->icon = $points_descriptions[$key];
-                    }
-                   $service_section_point->point = $points[$key];
-                   $service_section_point->update();
-
+                $out_put_path = User::save_image($icons[$key],$extension,$count,$image_folder_type);
+                is_array($out_put_path) ? $service_section_point->icon = $out_put_path[0] : $service_section_point->icon = $out_put_path;
+                // $service_section_point->icon = $points_descriptions[$key];
                }
-                // $service_point = $service_section->service_section_point();
-                // $service_point->delete();
-            // foreach($points as $key => $point){
-
-            //     $service_section_point = new ServiceSectionPoint();
-            //     $service_section_point->service_section_id = $service_section->id;
-            //     if(array_key_exists($key,$point_descriptions)){
-            //     $service_section_point->point_description = $point_descriptions[$key];
-            //     }
-            //     if(array_key_exists($key,$icons)){
-            //     $extension = $icons[$key]->getClientOriginalExtension();
-            //     $image_folder_type = array_search('service',config('custom.image_folders')); //for image saved in folder
-
-            //     $count = rand(100,999);
-
-            //     $out_put_path = User::save_image($icons[$key],$extension,$count,$image_folder_type);
-            //     is_array($out_put_path) ? $service_section_point->icon = $out_put_path[0] : $service_section_point->icon = $out_put_path;
-            //     // $service_section_point->icon = $points_descriptions[$key];
-            //    }
-            //     $service_section_point->point = $point;
-            //     $service_section_point->update();
-            // }
+                $service_section_point->point = $point;
+                $service_section_point->save();
+            }
             }
             Session::flash('success','Service Section has been successfully updated!');
             return redirect('admin/services/'.$id.'/sections');
